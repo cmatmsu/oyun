@@ -209,7 +209,7 @@ void PlayersPage::OnAddFileButton(wxCommandEvent & WXUNUSED(event))
 
 	fileDialog = new wxFileDialog(this, _("Select finite script automata..."), 
 								  wxT(""), wxT(""), wildCardFilter, 
-								  wxOPEN|wxMULTIPLE|wxFILE_MUST_EXIST);
+								  wxFD_OPEN|wxFD_MULTIPLE|wxFD_FILE_MUST_EXIST);
 	
 	if (fileDialog->ShowModal() == wxID_OK)
 	{
@@ -272,7 +272,7 @@ void PlayersPage::OnRemoveButton(wxCommandEvent & WXUNUSED(event))
 		return;
 	
 	void *clientData = list->GetClientData(selectedIndex);
-	int playerArrayIndex = (int)clientData;
+	intptr_t playerArrayIndex = (intptr_t)clientData;
 	
 	RemovePlayer (playerArrayIndex);
 }

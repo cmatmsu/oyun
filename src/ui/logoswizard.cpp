@@ -43,7 +43,7 @@
 
 
 #if !defined(__WXMSW__) && !defined(__WXPM__)
-  #include "../../build/autoconf/logos.xpm"
+  #include "../../build/logos.xpm"
 #endif
 
 

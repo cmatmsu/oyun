@@ -30,6 +30,7 @@
 #include <wx/file.h>
 #include <wx/textfile.h>
 #include <wx/filename.h>
+#include <wx/wfstream.h>
 
 #include "../tourney/evotournament.h"
 
@@ -93,22 +94,26 @@ void EvoFinishPage::OnSaveImage(wxCommandEvent & WXUNUSED(event))
 	// Figure out what the type of the file is
 	wxFileName filename(str);
 	wxString extension = filename.GetExt();
-	int imageType;
+	wxString mimeType;
 	
 	if (extension == wxT("jpg"))
-		imageType = wxBITMAP_TYPE_JPEG;
+		mimeType = "image/jpeg";
 	else if (extension == wxT("png"))
-		imageType = wxBITMAP_TYPE_PNG;
+		mimeType = "image/png";
 	else if (extension == wxT("bmp"))
-		imageType = wxBITMAP_TYPE_BMP;
+		mimeType = "image.bmp";
 	else
 	{
 		filename.SetExt(wxT("jpg"));
-		imageType = wxBITMAP_TYPE_JPEG;
+		mimeType = "image/jpeg";
 	}
 	
 	// Save the image file
-	previous->imageGraph.SaveFile(filename.GetFullPath(), imageType);
+	wxFileOutputStream fileStream(filename.GetFullPath());
+	if (fileStream.IsOk())
+		previous->imageGraph.SaveFile(fileStream, mimeType);
+	else
+		; // FIXME: show error box
 	
 	dataSaved = true;
 }

@@ -26,8 +26,8 @@
 class Tournament;
 class Match;
 
-class WXDLLEXPORT wxWizardPage;
-class WXDLLEXPORT wxSplitterWindow;
+#include <wx/wizard.h>
+#include <wx/splitter.h>
 #include <wx/listctrl.h>
 
 

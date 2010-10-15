@@ -22,10 +22,9 @@
 #define EVOPAGE_H__
 
 #include <wx/spinctrl.h>
+#include <wx/wizard.h>
+#include <wx/graphics.h>
 #include "tools/logoswizardpage.h"
-
-class WXDLLEXPORT wxGraphicsRenderer;
-class WXDLLEXPORT wxWizardPage;
 
 class EvoTournament;
 class EvoGraphWindow;

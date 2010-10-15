@@ -247,7 +247,7 @@ void OneShotFinishPage::OnSaveText(wxCommandEvent & WXUNUSED(event))
 	{
 		Player *player = previous->tourney->playerOneList[p];
 		int score = previous->tourney->scores[player->GetID()];
-		wxString scoreStr = wxString::Format(wxT("%d"), score);
+		wxString scoreStr = wxString::Format(wxT("%i"), score);
 		
 		wxString line;
 		line = wxT("{\\par\\pard\\plain ") +

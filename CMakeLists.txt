@@ -1,0 +1,17 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+
+PROJECT(Logos)
+
+SET(wxWidgets_USE_LIBS base core adv html)
+FIND_PACKAGE(wxWidgets REQUIRED)
+
+INCLUDE(${wxWidgets_USE_FILE})
+
+FILE(GLOB_RECURSE CPPUNIT_SOURCE lib/CppUnitLite/*.cpp lib/CppUnitLite/*.h)
+INCLUDE_DIRECTORIES(lib/CppUnitLite)
+
+FILE(GLOB_RECURSE LOGOS_SOURCE src/*.cpp src/*.h)
+
+ADD_EXECUTABLE(logos ${CPPUNIT_SOURCE} ${LOGOS_SOURCE})
+TARGET_LINK_LIBRARIES(logos ${wxWidgets_LIBRARIES})
+

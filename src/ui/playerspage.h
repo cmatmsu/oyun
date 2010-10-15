@@ -22,10 +22,9 @@
 #define PLAYERSPAGE_H__
 
 #include <wx/wizard.h>
+#include <wx/listbox.h>
 #include "tools/logoswizardpage.h"
 #include "../game/player.h"
-
-class WXDLLEXPORT wxListBox;
 
 
 /**

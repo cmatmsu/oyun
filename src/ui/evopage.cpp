@@ -323,7 +323,7 @@ void EvoGraphRenderer::SetPen(const wxPen &pen)
 	gc->SetPen(pen);
 	dc.SetPen(pen);
 	
-	wxColor &c = pen.GetColour();
+	wxColor c(pen.GetColour());
 	curR = c.Red();
 	curG = c.Green();
 	curB = c.Blue();
