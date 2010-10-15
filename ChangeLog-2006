@@ -1,0 +1,45 @@
+2006-08-28 06:38  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile, INSTALL, Makefile.am, NEWS, autogen.sh, config.guess,
+	  config.sub, configure.in, depcomp, install-sh, logos.kdevelop,
+	  logos.kdevelop.pcs, logos.kdevses, ltmain.sh, missing,
+	  mkinstalldirs, src/Makefile.am, src/main.h, src/prisoner.cpp,
+	  src/prisoner.h, templates: Ditching all autotools, etc
+
+2006-08-20 04:11  Charles Pence <cpence [at] gmail.com>
+
+	* configure.in, logos.kdevelop, logos.kdevelop.pcs, logos.kdevses,
+	  src/Makefile.am, src/fsaplayer.cpp, src/main.h, src/player.h,
+	  src/prisoner.h, src/random.h, src/titfortat.h: Add the game and
+	  player machinery from the 1.0 branch
+
+2006-08-20 03:29  Charles Pence <cpence [at] gmail.com>
+
+	* autogen.sh, logos.kdevelop, logos.kdevelop.pcs, logos.kdevses,
+	  src/Makefile.am, src/logos.cpp, src/logosapp.cpp, src/logosapp.h,
+	  src/main.h: Another round of updates
+
+2006-08-20 02:21  Charles Pence <cpence [at] gmail.com>
+
+	* src/logos.cpp: Commit this before moving it
+
+2006-08-20 01:45  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile: Added Doxygen control file
+
+2006-08-20 01:39  Charles Pence <cpence [at] gmail.com>
+
+	* ., AUTHORS, INSTALL, Makefile.am, NEWS, TODO, config.guess,
+	  config.sub, configure.in, depcomp, install-sh, logos.kdevelop,
+	  logos.kdevelop.pcs, logos.kdevses, ltmain.sh, missing,
+	  mkinstalldirs, src, src/Makefile.am, src/logos.cpp, src/main.h,
+	  templates, templates/cpp, templates/h: First commit on the 2.0
+	  alpha branch
+
+2006-08-19 21:33  Charles Pence <cpence [at] gmail.com>
+
+	* README, README.build, SConstruct, build, build_config.py,
+	  build_support.py, data/logos.exe.manifest, default.doxygen, docs,
+	  include, src, win32: Cleaned out the old 1.0 branch before
+	  starting work on 2.0 alpha
+

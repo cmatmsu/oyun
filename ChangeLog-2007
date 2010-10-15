@@ -1,0 +1,203 @@
+2007-05-04 20:07  Charles Pence <cpence [at] gmail.com>
+
+	* lib/CppUnitLite/TestResult.cpp, src/main.h,
+	  src/test/testmain.cpp, src/tourney/tournament.cpp,
+	  src/tourney/tournament.h: Added a Tournament class (from the 1.0
+	  series).
+
+2007-05-04 19:05  Charles Pence <cpence [at] gmail.com>
+
+	* src/common/common.h, src/common/mathlib.cpp,
+	  src/common/mathlib.h, src/game/fsaplayer.cpp, src/game/game.h,
+	  src/game/player.h, src/game/prisoner.cpp, src/game/prisoner.h,
+	  src/game/random.cpp, src/game/random.h, src/game/titfortat.cpp,
+	  src/game/titfortat.h, src/main.h, src/test/testgame.cpp,
+	  src/test/testgame.h, src/test/testmain.cpp,
+	  src/test/testplayer.cpp, src/test/testplayer.h,
+	  src/tourney/match.cpp, src/tourney/match.h, src/tourney/vars.cpp,
+	  src/tourney/vars.h, src/ui/evopage.h, src/ui/intropage.cpp,
+	  src/ui/intropage.h, src/ui/logosapp.cpp, src/ui/logosapp.h,
+	  src/ui/oneshotpage.cpp, src/ui/oneshotpage.h,
+	  src/ui/titledpage.cpp, src/ui/titledpage.h, src/ui/typepage.cpp,
+	  src/ui/typepage.h: Updated Copyright year to 2007.
+
+2007-05-04 18:50  Charles Pence <cpence [at] gmail.com>
+
+	* lib/CppUnitLite/Test.h, src/common/common.h,
+	  src/tourney/match.cpp: Added unit tests for the Match class.
+
+2007-05-04 01:37  Charles Pence <cpence [at] gmail.com>
+
+	* src/common/mathlib.cpp, src/tourney/match.cpp,
+	  src/tourney/match.h: Added a rudimentary Match class. Needs unit
+	  tests.
+
+2007-05-01 19:51  Charles Pence <cpence [at] gmail.com>
+
+	* lib/CppUnitLite/TestRegistry.cpp, lib/CppUnitLite/TestRegistry.h,
+	  src/game/titfortat.cpp, src/game/titfortat.h,
+	  src/test/testmain.cpp: Updated the test framework to be a little
+	  prettier, and added tests for the TitForTatPlayer.
+
+2007-05-01 19:34  Charles Pence <cpence [at] gmail.com>
+
+	* src/game/random.cpp, src/game/random.h: Added tests for the
+	  RandomPlayer.
+
+2007-05-01 04:14  Charles Pence <cpence [at] gmail.com>
+
+	* src/game/fsaplayer.h: Cleaned up FSA player documentation.
+
+2007-05-01 04:06  Charles Pence <cpence [at] gmail.com>
+
+	* build/root/data/test/tft.txt, src/game/fsaplayer.cpp: Added a
+	  more detailed logic test for FSAs.
+
+2007-05-01 04:02  Charles Pence <cpence [at] gmail.com>
+
+	* CMakeLists.txt, src/game/fsaplayer.cpp, src/game/game.h,
+	  src/game/player.h: Added unit tests for the FSA player.
+
+2007-04-28 04:08  Charles Pence <cpence [at] gmail.com>
+
+	* ., CMakeLists.txt, Doxyfile.cmake, build/root/data/test,
+	  build/root/data/test/testc.txt, build/root/data/test/testd.txt,
+	  build/root/doc, src, src/common/common.h, src/common/mathlib.cpp,
+	  src/common/mathlib.h, src/game/fsaplayer.cpp,
+	  src/game/fsaplayer.h, src/game/game.h, src/game/player.h,
+	  src/game/prisoner.cpp, src/game/prisoner.h, src/game/random.h,
+	  src/game/titfortat.h, src/main.h, src/test/testgame.h: Added
+	  Doxygen documentation to a significant part of the source.
+
+2007-04-27 20:13  Charles Pence <cpence [at] gmail.com>
+
+	* CMakeLists.txt, build/CompileFlags.cmake, lib/CppUnitLite/Test.h,
+	  lib/CppUnitLite/TestRegistry.cpp, lib/CppUnitLite/TestResult.cpp,
+	  src/common/common.h, src/game/game.h, src/game/prisoner.cpp,
+	  src/game/prisoner.h, src/main.h, src/test, src/test/testgame.cpp,
+	  src/test/testgame.h, src/test/testmain.cpp,
+	  src/test/testplayer.cpp, src/test/testplayer.h,
+	  src/tourney/vars.cpp, src/ui/logosapp.cpp: Added a first round of
+	  unit test framework. Unit tests are run automatically on every
+	  build, and we have a test-game and test-player class for testing
+	  other games and players.
+
+2007-04-27 16:26  Charles Pence <cpence [at] gmail.com>
+
+	* CMakeLists.txt, lib, lib/CppUnitLite,
+	  lib/CppUnitLite/Failure.cpp, lib/CppUnitLite/Failure.h,
+	  lib/CppUnitLite/Test.cpp, lib/CppUnitLite/Test.h,
+	  lib/CppUnitLite/TestHarness.h, lib/CppUnitLite/TestRegistry.cpp,
+	  lib/CppUnitLite/TestRegistry.h, lib/CppUnitLite/TestResult.cpp,
+	  lib/CppUnitLite/TestResult.h, src/ui/logosapp.cpp,
+	  src/ui/oneshotpage.cpp, src/ui/oneshotpage.h,
+	  src/ui/typepage.cpp, src/ui/typepage.h: Added CppUnitLite for
+	  unit testing (yet to write any unit tests, however), and reworked
+	  the page handling, especially in LogosApp.
+
+2007-04-27 14:33  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/intropage.cpp, src/ui/intropage.h: Added validation to the
+	  intro page.
+
+2007-04-27 05:04  Charles Pence <cpence [at] gmail.com>
+
+	* TODO: Updated to-do list.
+
+2007-04-27 04:58  Charles Pence <cpence [at] gmail.com>
+
+	* src/tourney/vars.cpp, src/ui/logosapp.cpp: Fixed the horrible
+	  global variable cleanup hack with a slightly less horrible (or at
+	  least contained) global variable cleanup hack.
+
+2007-04-27 04:56  Charles Pence <cpence [at] gmail.com>
+
+	* CMakeLists.txt, src/common, src/common/mathlib.cpp,
+	  src/common/mathlib.h, src/game/mathlib.cpp, src/game/mathlib.h,
+	  src/main.cpp, src/main.h, src/tourney, src/tourney/vars.cpp,
+	  src/tourney/vars.h, src/ui/intropage.cpp, src/ui/logosapp.cpp:
+	  Refactored the code a bit, cleaning up some of the more egregious
+	  hacks from earlier.
+
+2007-04-27 03:09  Charles Pence <cpence [at] gmail.com>
+
+	* src/game/fsaplayer.cpp, src/game/player.h, src/game/prisoner.h,
+	  src/game/random.h, src/game/titfortat.h, src/ui/evopage.h,
+	  src/ui/intropage.cpp, src/ui/logosapp.cpp, src/ui/oneshotpage.h,
+	  src/ui/titledpage.cpp, src/ui/typepage.cpp: Added wxT and _
+	  (translation) macros to the strings in the source.
+
+2007-04-27 02:23  Charles Pence <cpence [at] gmail.com>
+
+	* src/game/mathlib.cpp, src/game/mathlib.h, src/game/random.h,
+	  src/main.cpp, src/main.h, src/ui/intropage.cpp,
+	  src/ui/intropage.h, src/ui/logosapp.cpp: Player adding works. The
+	  current method of handling global variables is complete junk, and
+	  will be fixed in a future update.
+
+2007-04-27 01:46  Charles Pence <cpence [at] gmail.com>
+
+	* CMakeLists.txt: Updated the build, compiles properly.
+
+2007-04-27 01:45  Charles Pence <cpence [at] gmail.com>
+
+	* SConstruct: Removed the SConstruct.
+
+2007-04-27 01:44  Charles Pence <cpence [at] gmail.com>
+
+	* src/evopage.h, src/fsaplayer.cpp, src/fsaplayer.h, src/game,
+	  src/game.h, src/game/fsaplayer.cpp, src/game/fsaplayer.h,
+	  src/game/game.h, src/game/player.h, src/game/prisoner.cpp,
+	  src/game/prisoner.h, src/game/random.h, src/game/titfortat.h,
+	  src/intropage.h, src/logosapp.cpp, src/logosapp.h,
+	  src/oneshotpage.h, src/player.h, src/prisoner.cpp,
+	  src/prisoner.h, src/random.h, src/titfortat.h,
+	  src/titledpage.cpp, src/titledpage.h, src/typepage.cpp,
+	  src/typepage.h, src/ui, src/ui/evopage.h, src/ui/intropage.h,
+	  src/ui/logosapp.cpp, src/ui/logosapp.h, src/ui/oneshotpage.h,
+	  src/ui/titledpage.cpp, src/ui/titledpage.h, src/ui/typepage.cpp,
+	  src/ui/typepage.h: Non-working commit, re-arranged the source
+	  directory.
+
+2007-04-27 01:40  Charles Pence <cpence [at] gmail.com>
+
+	* src/evopage.h, src/intropage.h, src/logosapp.cpp, src/logosapp.h,
+	  src/oneshotpage.h, src/titledpage.cpp, src/titledpage.h,
+	  src/typepage.cpp, src/typepage.h: Added a bunch more pages and
+	  some skeleton controls.
+
+2007-04-26 21:50  Charles Pence <cpence [at] gmail.com>
+
+	* src/intropage.h, src/logosapp.cpp, src/logosapp.h, src/main.h,
+	  src/titledpage.h: Added the first page of the wizard with some
+	  present but non-functional controls.
+
+2007-04-26 21:06  Charles Pence <cpence [at] gmail.com>
+
+	* build/root/data, build/root/data/images, build/root/data/players,
+	  data: Moved the data directory into the build root.
+
+2007-04-26 21:06  Charles Pence <cpence [at] gmail.com>
+
+	* data/players/tests: Removed test players.
+
+2007-04-26 21:05  Charles Pence <cpence [at] gmail.com>
+
+	* data/images: Removed the images (way too cute).
+
+2007-04-26 21:03  Charles Pence <cpence [at] gmail.com>
+
+	* CMakeLists.txt, build/CompileFlags.cmake, build/debug,
+	  build/macosx, build/msvc, build/release, build/root, build/unix,
+	  src/logosapp.cpp: Switched the build system from scons to CMake.
+	  Better support, faster build time, prettier compiler output, more
+	  configuration options. Also likely to become more widely adopted
+	  once KDE4 comes out.
+
+2007-04-26 13:14  Charles Pence <cpence [at] gmail.com>
+
+	* ., SConstruct, build, build/debug, build/release, data, src,
+	  src/fsaplayer.cpp, src/fsaplayer.h, src/game.h, src/logosapp.cpp,
+	  src/logosapp.h, src/main.h, src/player.h, src/prisoner.h,
+	  src/random.h, src/titfortat.h:
+

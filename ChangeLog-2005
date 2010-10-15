@@ -1,0 +1,796 @@
+2005-09-17 16:39  Charles Pence <cpence [at] gmail.com>
+
+	* build/win32/debug, data, data/help.htb, data/images,
+	  data/images/logos.png, data/images/logos.xpm,
+	  data/images/wizard.bmp, data/plstnd5.fnt, data/plxtnd5.fnt,
+	  include/evotournament.h, include/fsaplayer.h,
+	  include/intropage.h, include/logosapp.h, include/logosframe.h,
+	  include/logoswizardpage.h, include/main.h,
+	  include/matchdetailpanel.h, include/player.h,
+	  include/playerspage.h, include/prisoner.h, include/random.h,
+	  include/titfortat.h, include/tournament.h,
+	  include/tournamentpanel.h, include/typepage.h,
+	  src/evolutionpanel.cpp, src/fsaplayer.cpp, src/intropage.cpp,
+	  src/logosapp.cpp, src/logosframe.cpp, src/logoswizardpage.cpp,
+	  src/matchdetailpanel.cpp, src/playerspage.cpp,
+	  src/tournamentpanel.cpp, src/typepage.cpp, win32/logos.aps,
+	  win32/logos.ico, win32/logos.ncb, win32/logos.rc,
+	  win32/logos.suo, win32/logos.vcproj, win32/resource.h: Halfway
+	  through converting to wizard system--saving this now as a backup
+
+2005-09-14 05:44  Charles Pence <cpence [at] gmail.com>
+
+	* build/win32/debug, include/evolutionpanel.h, include/main.h,
+	  include/plot, src/evolutionpanel.cpp, src/evotournament.cpp,
+	  src/plot, win32, win32/logos.ncb, win32/logos.sln,
+	  win32/logos.suo, win32/logos.vcproj: Added Win32 build system
+	  (see the win32 folder) for VC.NET 2003. Removed plPlot library
+	  entirely (still need to update SConstruct files). Replaced with
+	  custom (simpler) graph drawing library).
+
+2005-05-09 16:37  Charles Pence <cpence [at] gmail.com>
+
+	* TODO, build/win32/debug/SConscript,
+	  build/win32/release/SConscript, include/evolutionpanel.h,
+	  src/logosapp.cpp: Update to wx 2.6 on Windows, correct a redraw
+	  bug in the Evolution panel
+
+2005-05-09 15:29  Charles Pence <cpence [at] gmail.com>
+
+	* README: Updated README
+
+2005-05-09 07:53  Charles Pence <cpence [at] gmail.com>
+
+	* data/players/host-annotated.txt, data/players/host.txt,
+	  data/players/parasite-annotated.txt, data/players/parasite.txt,
+	  data/players/tf2t.txt, data/players/tft.txt,
+	  include/tournamentpanel.h, src/fsaplayer.cpp,
+	  src/tournamentpanel.cpp: Updated mime types on new players,
+	  fixing a few display bugs
+
+2005-05-09 07:41  Charles Pence <cpence [at] gmail.com>
+
+	* COPYING, README, README.build, README.build.txt, SConstruct,
+	  TODO, build/linux/SConscript, build/linux/debug/SConscript,
+	  build/linux/release/SConscript, docs, docs/annotated.html,
+	  docs/classCommon_1_1DeleteThis-members.html,
+	  docs/classCommon_1_1DeleteThis.html,
+	  docs/classEPGraphWindow-members.html,
+	  docs/classEPGraphWindow.html,
+	  docs/classEvoTournament-members.html,
+	  docs/classEvoTournament.html,
+	  docs/classEvolutionPanel-members.html,
+	  docs/classEvolutionPanel.html, docs/classFSAPlayer-members.html,
+	  docs/classFSAPlayer.html,
+	  docs/classFSAPlayer__inherit__graph.png,
+	  docs/classFSAState-members.html, docs/classFSAState.html,
+	  docs/classLogosApp-members.html, docs/classLogosApp.html,
+	  docs/classLogosFrame-members.html, docs/classLogosFrame.html,
+	  docs/classMatch-members.html, docs/classMatch.html,
+	  docs/classMatchDetailPanel-members.html,
+	  docs/classMatchDetailPanel.html, docs/classPlayer-members.html,
+	  docs/classPlayer.html, docs/classPlayer__inherit__graph.png,
+	  docs/classPrisonerDilemma-members.html,
+	  docs/classPrisonerDilemma.html,
+	  docs/classRandomPlayer-members.html, docs/classRandomPlayer.html,
+	  docs/classRandomPlayer__inherit__graph.png,
+	  docs/classTitForTatPlayer-members.html,
+	  docs/classTitForTatPlayer.html,
+	  docs/classTitForTatPlayer__inherit__graph.png,
+	  docs/classTournament-members.html, docs/classTournament.html,
+	  docs/classTournamentPanel-members.html,
+	  docs/classTournamentPanel.html, docs/dir_000000.html,
+	  docs/dir_000001.html, docs/dir_000002.html, docs/dir_000003.html,
+	  docs/dirs.html, docs/evolutionpanel_8cpp.html,
+	  docs/evolutionpanel_8cpp__incl.png, docs/evotournament_8cpp.html,
+	  docs/evotournament_8cpp__incl.png, docs/evotournament_8h.html,
+	  docs/evotournament_8h__dep__incl.png, docs/files.html,
+	  docs/fsaplayer_8cpp.html, docs/fsaplayer_8cpp__incl.png,
+	  docs/fsaplayer_8h.html, docs/fsaplayer_8h__dep__incl.png,
+	  docs/fsaplayer_8h__incl.png, docs/functions.html,
+	  docs/functions_func.html, docs/functions_type.html,
+	  docs/functions_vars.html, docs/globals.html,
+	  docs/globals_func.html, docs/graph_legend.html,
+	  docs/graph_legend.png, docs/hierarchy.html, docs/index.hhc,
+	  docs/index.hhk, docs/index.hhp, docs/index.html,
+	  docs/inherit__graph__0.png, docs/inherit__graph__1.png,
+	  docs/inherit__graph__10.png, docs/inherit__graph__11.png,
+	  docs/inherit__graph__12.png, docs/inherit__graph__13.png,
+	  docs/inherit__graph__14.png, docs/inherit__graph__15.png,
+	  docs/inherit__graph__16.png, docs/inherit__graph__17.png,
+	  docs/inherit__graph__18.png, docs/inherit__graph__19.png,
+	  docs/inherit__graph__2.png, docs/inherit__graph__20.png,
+	  docs/inherit__graph__21.png, docs/inherit__graph__22.png,
+	  docs/inherit__graph__23.png, docs/inherit__graph__24.png,
+	  docs/inherit__graph__25.png, docs/inherit__graph__26.png,
+	  docs/inherit__graph__27.png, docs/inherit__graph__28.png,
+	  docs/inherit__graph__29.png, docs/inherit__graph__3.png,
+	  docs/inherit__graph__30.png, docs/inherit__graph__31.png,
+	  docs/inherit__graph__32.png, docs/inherit__graph__33.png,
+	  docs/inherit__graph__34.png, docs/inherit__graph__35.png,
+	  docs/inherit__graph__36.png, docs/inherit__graph__37.png,
+	  docs/inherit__graph__38.png, docs/inherit__graph__4.png,
+	  docs/inherit__graph__5.png, docs/inherit__graph__6.png,
+	  docs/inherit__graph__7.png, docs/inherit__graph__8.png,
+	  docs/inherit__graph__9.png, docs/inherits.html,
+	  docs/logosapp_8cpp.html, docs/logosapp_8cpp__incl.png,
+	  docs/logosapp_8h.html, docs/logosapp_8h__dep__incl.png,
+	  docs/logosframe_8cpp.html, docs/logosframe_8cpp__incl.png,
+	  docs/logosframe_8h.html, docs/logosframe_8h__dep__incl.png,
+	  docs/logosframe_8h__incl.png, docs/main_8h.html,
+	  docs/main_8h__dep__incl.png, docs/main_8h__incl.png,
+	  docs/match_8h.html, docs/match_8h__dep__incl.png,
+	  docs/match_8h__incl.png, docs/matchdetailpanel_8cpp.html,
+	  docs/matchdetailpanel_8cpp__incl.png,
+	  docs/matchdetailpanel_8h.html,
+	  docs/matchdetailpanel_8h__dep__incl.png, docs/mathlib_8h.html,
+	  docs/mathlib_8h__dep__incl.png, docs/namespaceCommon.html,
+	  docs/namespacemembers.html, docs/namespacemembers_func.html,
+	  docs/namespaces.html, docs/pch_8cpp.html,
+	  docs/pch_8cpp__incl.png, docs/player_8h.html,
+	  docs/player_8h__dep__incl.png, docs/prisoner_8cpp.html,
+	  docs/prisoner_8cpp__incl.png, docs/prisoner_8h.html,
+	  docs/prisoner_8h__dep__incl.png, docs/random_8h.html,
+	  docs/random_8h__dep__incl.png, docs/random_8h__incl.png,
+	  docs/titfortat_8h.html, docs/titfortat_8h__dep__incl.png,
+	  docs/titfortat_8h__incl.png, docs/tournament_8cpp.html,
+	  docs/tournament_8cpp__incl.png, docs/tournament_8h.html,
+	  docs/tournament_8h__dep__incl.png, docs/tournament_8h__incl.png,
+	  docs/tournamentpanel_8cpp.html,
+	  docs/tournamentpanel_8cpp__incl.png,
+	  docs/tournamentpanel_8h.html,
+	  docs/tournamentpanel_8h__dep__incl.png,
+	  docs/tournamentpanel_8h__incl.png, include/evolutionpanel.h,
+	  include/evotournament.h, include/main.h, include/player.h,
+	  include/plot/plConfig.h, include/plot/plplotP.h,
+	  include/plot/wxPlot.h, include/random.h, include/titfortat.h,
+	  include/tournament.h, src/evolutionpanel.cpp,
+	  src/evotournament.cpp, src/logosapp.cpp, src/logosframe.cpp,
+	  src/plot/wxwin.cpp, src/tournamentpanel.cpp: Updates to get us
+	  back to compiling on Linux, mostly GCC4 and wxGTK 2.6
+
+2005-05-09 06:39  Charles Pence <cpence [at] gmail.com>
+
+	* src/tournamentpanel.cpp: Was accidentally still setting quick
+	  tournament to true in the TournamentPanel--this was only on for
+	  debugging the evolutionary setup
+
+2005-05-06 15:01  Charles Pence <cpence [at] gmail.com>
+
+	* data/players/brome.txt, data/players/carlson.txt,
+	  data/players/class, data/players/class/brome.txt,
+	  data/players/class/carlson.txt, data/players/class/edwards.txt,
+	  data/players/class/elga.txt, data/players/class/greco.txt,
+	  data/players/class/hedden.txt, data/players/class/jacobson.txt,
+	  data/players/class/kidd.txt, data/players/class/kleiner.txt,
+	  data/players/class/kompfner.txt, data/players/class/lara.txt,
+	  data/players/class/levine.txt, data/players/class/mielke.txt,
+	  data/players/class/rothman.txt, data/players/class/samberg.txt,
+	  data/players/class/stockum.txt, data/players/class/trivedi.txt,
+	  data/players/edwards.txt, data/players/elga.txt,
+	  data/players/greco.txt, data/players/hedden.txt,
+	  data/players/host-annotated.txt, data/players/host.txt,
+	  data/players/jacobson.txt, data/players/kidd.txt,
+	  data/players/kleiner.txt, data/players/kompfner.txt,
+	  data/players/lara.txt, data/players/levine.txt,
+	  data/players/mielke.txt, data/players/parasite-annotated.txt,
+	  data/players/parasite.txt, data/players/rothman.txt,
+	  data/players/samberg.txt, data/players/stockum.txt,
+	  data/players/tf2t.txt, data/players/tft.txt,
+	  data/players/trivedi.txt: Subfoldered the players from our class
+	  competition, added the ones from the paper I've written
+
+2005-05-06 05:55  Charles Pence <cpence [at] gmail.com>
+
+	* include/match.h, include/tournament.h, src/evotournament.cpp,
+	  src/tournament.cpp, src/tournamentpanel.cpp: Rework optimization,
+	  kill precision problems
+
+2005-05-05 22:53  Charles Pence <cpence [at] gmail.com>
+
+	* src/tournament.cpp: MASSIVE optimization to genetic tournaments,
+	  cache the results of deterministic games
+
+2005-05-05 22:05  Charles Pence <cpence [at] gmail.com>
+
+	* include/logosframe.h, src/logosframe.cpp: Added a long-overdue
+	  Clear Players option to the menu
+
+2005-05-05 15:57  Charles Pence <cpence [at] gmail.com>
+
+	* include/evolutionpanel.h, include/evotournament.h,
+	  include/fsaplayer.h, include/logosframe.h, include/plot/wxPlot.h,
+	  src/evolutionpanel.cpp, src/evotournament.cpp,
+	  src/logosframe.cpp, src/plot/plline.cpp, src/plot/wxPlot.cpp:
+	  Evolution panel fully functional, tentative checkin of 1.0
+	  pending bug testing
+
+2005-05-04 21:17  Charles Pence <cpence [at] gmail.com>
+
+	* src/fsaplayer.cpp: Fixed _critical_ bug in reading of FSA files
+
+2005-05-04 17:36  Charles Pence <cpence [at] gmail.com>
+
+	* include/evolutionpanel.h, include/evotournament.h,
+	  include/main.h, include/tournament.h, include/tournamentpanel.h,
+	  src/evotournament.cpp, src/tournament.cpp,
+	  src/tournamentpanel.cpp: Probably functional but as-of-yet
+	  untested EvoTournament class
+
+2005-05-04 15:04  Charles Pence <cpence [at] gmail.com>
+
+	* include/evolutionpanel.h, include/logosframe.h,
+	  include/tournament.h, include/tournamentpanel.h,
+	  src/evolutionpanel.cpp, src/logosframe.cpp, src/tournament.cpp,
+	  src/tournamentpanel.cpp: Moved the Tournament class inside the
+	  TournamentPanel, abstracted the only data held by LogosFrame to a
+	  list of Player pointers
+
+2005-05-04 02:45  Charles Pence <cpence [at] gmail.com>
+
+	* build/win32/SConscript, include/evolutionpanel.h,
+	  include/logosframe.h, include/main.h, include/matchdetailpanel.h,
+	  include/tournamentpanel.h, src/evolutionpanel.cpp,
+	  src/logosapp.cpp, src/logosframe.cpp, src/tournamentpanel.cpp:
+	  Refactoring: remove Boost, relegate events to their proper
+	  windows, clean up window IDs, prepare for proper evolutionary
+	  tournament
+
+2005-05-04 02:01  Charles Pence <cpence [at] gmail.com>
+
+	* include/evolutionpanel.h, include/logosframe.h, include/main.h,
+	  include/matchdetailpanel.h, src/evolutionpanel.cpp,
+	  src/logosframe.cpp, src/matchdetailpanel.cpp,
+	  src/plot/plvpor.cpp: Updated EvolutionPanel--fully functional
+	  test graph, as well as a refactoring of MatchDetailPanel
+
+2005-05-03 08:38  Charles Pence <cpence [at] gmail.com>
+
+	* include/evolutionpanel.h, include/logosframe.h,
+	  include/plot/plplotP.h, src/evolutionpanel.cpp,
+	  src/logosframe.cpp: The return of the once-removed
+	  EvolutionPanel, now that we have a plotting library
+
+2005-05-03 08:26  Charles Pence <cpence [at] gmail.com>
+
+	* SConstruct, build/linux/debug, build/linux/release,
+	  build/win32/debug, build/win32/debug/SConscript,
+	  build/win32/release, build/win32/release/SConscript,
+	  build_support.py, data/plstnd5.fnt, data/plxtnd5.fnt,
+	  include/main.h, include/plot, include/plot/drivers.h,
+	  include/plot/metadefs.h, include/plot/pdf.h,
+	  include/plot/plConfig.h, include/plot/plDevs.h,
+	  include/plot/plcore.h, include/plot/pldebug.h,
+	  include/plot/plplot.h, include/plot/plplotP.h,
+	  include/plot/plstrm.h, include/plot/wxPlot.h,
+	  include/tournamentpanel.h, src/logosframe.cpp, src/plot,
+	  src/plot/pdfutils.cpp, src/plot/plargs.cpp, src/plot/plbox.cpp,
+	  src/plot/plbuf.cpp, src/plot/plcont.cpp, src/plot/plcore.cpp,
+	  src/plot/plctrl.cpp, src/plot/plcvt.cpp, src/plot/pldtik.cpp,
+	  src/plot/plfill.cpp, src/plot/plhist.cpp, src/plot/plline.cpp,
+	  src/plot/plmap.cpp, src/plot/plot3d.cpp, src/plot/plpage.cpp,
+	  src/plot/plsdef.cpp, src/plot/plshade.cpp, src/plot/plstripc.cpp,
+	  src/plot/plsym.cpp, src/plot/pltick.cpp, src/plot/plvpor.cpp,
+	  src/plot/plwind.cpp, src/plot/wxPlot.cpp, src/plot/wxwin.cpp,
+	  src/tournamentpanel.cpp: Changed the main window to a splitter,
+	  committed the first working version of the old (PLplot-based)
+	  wxPlot library
+
+2005-04-28 06:57  Charles Pence <cpence [at] gmail.com>
+
+	* build/linux/SConscript, build/win32/debug/SConscript,
+	  build/win32/release/SConscript: Removed useless dependency on
+	  wxPlot library
+
+2005-04-28 06:40  Charles Pence <cpence [at] gmail.com>
+
+	* build/linux/SConscript, build/linux/debug/SConscript,
+	  build/linux/release/SConscript, build/win32/SConscript,
+	  data/games, data/players/kompfner.txt, data/players/samberg.txt,
+	  include/evolutionpanel.h, include/fsaplayer.h,
+	  include/logosframe.h, include/main.h, include/tournament.h,
+	  src/evolutionpanel.cpp, src/fsaplayer.cpp, src/logosframe.cpp,
+	  src/prisoner.cpp, src/tournament.cpp: Reverted work on
+	  evolutionary game, need to run at this another way
+
+2005-04-28 02:44  Charles Pence <cpence [at] gmail.com>
+
+	* include/evolutionpanel.h, include/fsaplayer.h,
+	  include/logosframe.h, include/match.h, include/player.h,
+	  include/prisoner.h, include/pythongame.h, include/random.h,
+	  include/titfortat.h, include/tournament.h,
+	  include/tournamentpanel.h, src/evolutionpanel.cpp,
+	  src/fsaplayer.cpp, src/logosframe.cpp, src/prisoner.cpp,
+	  src/pythongame.cpp, src/tournament.cpp, src/tournamentpanel.cpp:
+	  Moving to hard-coded Prisoner's Dilemma, non-working commit
+
+2005-04-27 21:47  Charles Pence <cpence [at] gmail.com>
+
+	* build/linux/debug/SConscript, build/linux/release/SConscript,
+	  include/evolutionpanel.h, include/logosframe.h, include/player.h,
+	  src/evolutionpanel.cpp, src/logosframe.cpp: Basic graph view
+	  working and connected to generations spinner
+
+2005-04-27 03:50  Charles Pence <cpence [at] gmail.com>
+
+	* README.build.txt, SConstruct, build/linux/SConscript,
+	  build/linux/debug/SConscript, build/linux/release/SConscript,
+	  build/win32/SConscript, build/win32/debug/SConscript,
+	  build/win32/release/SConscript, build_config.py,
+	  build_support.py, data/games/prisoner.py, data/games/staghunt.py,
+	  data/logos.exe.manifest, data/players/brome.txt,
+	  data/players/carlson.txt, data/players/edwards.txt,
+	  data/players/elga.txt, data/players/greco.txt,
+	  data/players/hedden.txt, data/players/jacobson.txt,
+	  data/players/kidd.txt, data/players/kleiner.txt,
+	  data/players/kompfner.txt, data/players/lara.txt,
+	  data/players/levine.txt, data/players/mielke.txt,
+	  data/players/rothman.txt, data/players/samberg.txt,
+	  data/players/stockum.txt, data/players/tests,
+	  data/players/tests/test-allc.txt,
+	  data/players/tests/test-alld.txt,
+	  data/players/tests/test-tft.txt, data/players/trivedi.txt,
+	  default.doxygen, docs/annotated.html,
+	  docs/classCommon_1_1DeleteThis-members.html,
+	  docs/classCommon_1_1DeleteThis.html,
+	  docs/classFSAPlayer-members.html, docs/classFSAPlayer.html,
+	  docs/classFSAState-members.html, docs/classFSAState.html,
+	  docs/classLogosApp-members.html, docs/classLogosApp.html,
+	  docs/classLogosFrame-members.html, docs/classLogosFrame.html,
+	  docs/classMatch-members.html, docs/classMatch.html,
+	  docs/classMatchDetailPanel-members.html,
+	  docs/classMatchDetailPanel.html, docs/classPlayer-members.html,
+	  docs/classPlayer.html, docs/classPythonGame-members.html,
+	  docs/classPythonGame.html, docs/classRandomPlayer-members.html,
+	  docs/classRandomPlayer.html,
+	  docs/classTitForTatPlayer-members.html,
+	  docs/classTitForTatPlayer.html,
+	  docs/classTournament-members.html, docs/classTournament.html,
+	  docs/classTournamentPanel-members.html,
+	  docs/classTournamentPanel.html, docs/classes.html,
+	  docs/doxygen.css, docs/files.html, docs/fsaplayer_8cpp.html,
+	  docs/fsaplayer_8h.html, docs/functions.html,
+	  docs/functions_func.html, docs/functions_type.html,
+	  docs/functions_vars.html, docs/globals.html,
+	  docs/globals_enum.html, docs/globals_func.html,
+	  docs/graph_legend.html, docs/hierarchy.html, docs/index.hhc,
+	  docs/index.hhk, docs/index.hhp, docs/inherits.html,
+	  docs/logosapp_8cpp.html, docs/logosapp_8h.html,
+	  docs/logosframe_8cpp.html, docs/logosframe_8h.html,
+	  docs/main.html, docs/main_8cpp.html, docs/main_8h.html,
+	  docs/match_8h.html, docs/matchdetailpanel_8cpp.html,
+	  docs/matchdetailpanel_8h.html, docs/mathlib_8h.html,
+	  docs/namespaceCommon.html, docs/namespacemembers.html,
+	  docs/namespacemembers_func.html, docs/namespaces.html,
+	  docs/pages.html, docs/pch_8cpp.html, docs/player_8h.html,
+	  docs/pythongame_8cpp.html, docs/pythongame_8h.html,
+	  docs/random_8h.html, docs/titfortat_8h.html, docs/todo.html,
+	  docs/tournament_8cpp.html, docs/tournament_8h.html,
+	  docs/tournamentpanel_8cpp.html, docs/tournamentpanel_8h.html,
+	  docs/tree.html, include/evolutionpanel.h, include/fsaplayer.h,
+	  include/logosapp.h, include/logosframe.h, include/main.h,
+	  include/match.h, include/matchdetailpanel.h, include/mathlib.h,
+	  include/player.h, include/pythongame.h, include/random.h,
+	  include/titfortat.h, include/tournament.h,
+	  include/tournamentpanel.h, src/evolutionpanel.cpp,
+	  src/fsaplayer.cpp, src/logosapp.cpp, src/logosframe.cpp,
+	  src/matchdetailpanel.cpp, src/mathlib.cpp, src/pch.cpp,
+	  src/pythongame.cpp, src/tournament.cpp, src/tournamentpanel.cpp:
+	  Added svn:eol-style parameters to everything
+
+2005-04-27 03:32  Charles Pence <cpence [at] gmail.com>
+
+	* README.build.txt, SConstruct, build/linux/SConscript,
+	  build/linux/debug/SConscript, build/linux/release/SConscript,
+	  build_config.py, build_support.py, data/games/prisoner.py,
+	  data/games/staghunt.py, data/help.htb, data/logos.exe.manifest,
+	  data/players/brome.txt, data/players/carlson.txt,
+	  data/players/edwards.txt, data/players/elga.txt,
+	  data/players/greco.txt, data/players/hedden.txt,
+	  data/players/jacobson.txt, data/players/kidd.txt,
+	  data/players/kleiner.txt, data/players/kompfner.txt,
+	  data/players/lara.txt, data/players/levine.txt,
+	  data/players/mielke.txt, data/players/rothman.txt,
+	  data/players/samberg.txt, data/players/stockum.txt,
+	  data/players/tests/test-allc.txt,
+	  data/players/tests/test-alld.txt,
+	  data/players/tests/test-tft.txt, data/players/trivedi.txt,
+	  default.doxygen, docs/annotated.html,
+	  docs/classCommon_1_1DeleteThis-members.html,
+	  docs/classCommon_1_1DeleteThis.html,
+	  docs/classFSAPlayer-members.html, docs/classFSAPlayer.html,
+	  docs/classFSAPlayer__inherit__graph.png,
+	  docs/classFSAState-members.html, docs/classFSAState.html,
+	  docs/classLogosApp-members.html, docs/classLogosApp.html,
+	  docs/classLogosFrame-members.html, docs/classLogosFrame.html,
+	  docs/classMatch-members.html, docs/classMatch.html,
+	  docs/classMatchDetailPanel-members.html,
+	  docs/classMatchDetailPanel.html, docs/classPlayer-members.html,
+	  docs/classPlayer.html, docs/classPlayer.png,
+	  docs/classPlayer__inherit__graph.png,
+	  docs/classPythonGame-members.html, docs/classPythonGame.html,
+	  docs/classRandomPlayer-members.html, docs/classRandomPlayer.html,
+	  docs/classRandomPlayer.png,
+	  docs/classRandomPlayer__coll__graph.png,
+	  docs/classRandomPlayer__inherit__graph.png,
+	  docs/classTitForTatPlayer-members.html,
+	  docs/classTitForTatPlayer.html, docs/classTitForTatPlayer.png,
+	  docs/classTitForTatPlayer__coll__graph.png,
+	  docs/classTitForTatPlayer__inherit__graph.png,
+	  docs/classTournament-members.html, docs/classTournament.html,
+	  docs/classTournamentPanel-members.html,
+	  docs/classTournamentPanel.html, docs/classes.html,
+	  docs/doxygen.css, docs/doxygen.png, docs/files.html,
+	  docs/fsaplayer_8cpp.html, docs/fsaplayer_8cpp__incl.png,
+	  docs/fsaplayer_8h.html, docs/fsaplayer_8h__dep__incl.png,
+	  docs/fsaplayer_8h__incl.png, docs/ftv2blank.png,
+	  docs/ftv2doc.png, docs/ftv2folderclosed.png,
+	  docs/ftv2folderopen.png, docs/ftv2lastnode.png,
+	  docs/ftv2link.png, docs/ftv2mlastnode.png, docs/ftv2mnode.png,
+	  docs/ftv2node.png, docs/ftv2plastnode.png, docs/ftv2pnode.png,
+	  docs/ftv2vertline.png, docs/functions.html,
+	  docs/functions_func.html, docs/functions_type.html,
+	  docs/functions_vars.html, docs/globals.html,
+	  docs/globals_enum.html, docs/globals_func.html,
+	  docs/graph_legend.html, docs/graph_legend.png,
+	  docs/hierarchy.html, docs/index.hhc, docs/index.hhk,
+	  docs/index.hhp, docs/inherit__graph__0.png,
+	  docs/inherit__graph__1.png, docs/inherit__graph__2.png,
+	  docs/inherit__graph__3.png, docs/inherit__graph__4.png,
+	  docs/inherit__graph__5.png, docs/inherit__graph__6.png,
+	  docs/inherit__graph__7.png, docs/inherit__graph__8.png,
+	  docs/inherit__graph__9.png, docs/inherits.html,
+	  docs/logosapp_8cpp.html, docs/logosapp_8cpp__incl.png,
+	  docs/logosapp_8h.html, docs/logosapp_8h__dep__incl.png,
+	  docs/logosframe_8cpp.html, docs/logosframe_8cpp__incl.png,
+	  docs/logosframe_8h.html, docs/logosframe_8h__dep__incl.png,
+	  docs/logosframe_8h__incl.png, docs/main.html,
+	  docs/main_8cpp.html, docs/main_8cpp__incl.png, docs/main_8h.html,
+	  docs/main_8h__dep__incl.png, docs/main_8h__incl.png,
+	  docs/match_8h.html, docs/match_8h__dep__incl.png,
+	  docs/match_8h__incl.png, docs/matchdetailpanel_8cpp.html,
+	  docs/matchdetailpanel_8cpp__incl.png,
+	  docs/matchdetailpanel_8h.html,
+	  docs/matchdetailpanel_8h__dep__incl.png, docs/mathlib_8h.html,
+	  docs/mathlib_8h__dep__incl.png, docs/namespaceCommon.html,
+	  docs/namespacemembers.html, docs/namespacemembers_func.html,
+	  docs/namespaces.html, docs/pages.html, docs/pch_8cpp.html,
+	  docs/pch_8cpp__incl.png, docs/player_8h.html,
+	  docs/player_8h__dep__incl.png, docs/pythongame_8cpp.html,
+	  docs/pythongame_8cpp__incl.png, docs/pythongame_8h.html,
+	  docs/pythongame_8h__dep__incl.png, docs/pythongame_8h__incl.png,
+	  docs/random_8h.html, docs/random_8h__dep__incl.png,
+	  docs/random_8h__incl.png, docs/titfortat_8h.html,
+	  docs/titfortat_8h__dep__incl.png, docs/titfortat_8h__incl.png,
+	  docs/todo.html, docs/tournament_8cpp.html,
+	  docs/tournament_8cpp__incl.png, docs/tournament_8h.html,
+	  docs/tournament_8h__dep__incl.png, docs/tournament_8h__incl.png,
+	  docs/tournamentpanel_8cpp.html,
+	  docs/tournamentpanel_8cpp__incl.png,
+	  docs/tournamentpanel_8h.html,
+	  docs/tournamentpanel_8h__dep__incl.png,
+	  docs/tournamentpanel_8h__incl.png, docs/tree.html,
+	  include/evolutionpanel.h, include/fsaplayer.h,
+	  include/logosapp.h, include/logosframe.h, include/main.h,
+	  include/match.h, include/matchdetailpanel.h, include/mathlib.h,
+	  include/player.h, include/pythongame.h, include/random.h,
+	  include/titfortat.h, include/tournament.h,
+	  include/tournamentpanel.h, src/evolutionpanel.cpp,
+	  src/fsaplayer.cpp, src/logosapp.cpp, src/logosframe.cpp,
+	  src/matchdetailpanel.cpp, src/mathlib.cpp, src/pch.cpp,
+	  src/pythongame.cpp, src/tournament.cpp, src/tournamentpanel.cpp:
+	  Added svn:mime-type properties for everything
+
+2005-04-27 02:18  Charles Pence <cpence [at] gmail.com>
+
+	* SConstruct, build/linux/debug/SConscript,
+	  build/linux/release/SConscript, build_config.py, include: Cleaned
+	  up SConscript files and added support for GCC precompiled headers
+	  that is disabled pending a GCC bug
+
+2005-04-26 21:01  Charles Pence <cpence [at] gmail.com>
+
+	* build/linux/debug/SConscript: An attempt at GCC PCH files on
+	  Linux, needs testing
+
+2005-04-26 20:57  Charles Pence <cpence [at] gmail.com>
+
+	* build/win32/debug, build/win32/debug/SConscript,
+	  build/win32/release, build/win32/release/SConscript: SCons now
+	  builds MSVC precompiled headers on Win32, giving a drastic
+	  compilation time speedup.
+
+2005-04-26 19:40  Charles Pence <cpence [at] gmail.com>
+
+	* include/match.h, include/pythongame.h, src/fsaplayer.cpp,
+	  src/matchdetailpanel.cpp: Fixed a silly bug that was causing the
+	  match detail panel to print the wrong game histories (wasn't
+	  resetting the gameHistory between games in a match).
+
+2005-04-26 14:45  Charles Pence <cpence [at] gmail.com>
+
+	* build/win32/release/SConscript: Make the Win32 build link to
+	  debug zlib library, for some reason the release library isn't
+	  working.
+
+2005-04-26 07:16  Charles Pence <cpence [at] gmail.com>
+
+	* ., .sconsign, SConstruct, build/linux, build/linux/.sconsign,
+	  build/linux/debug, build/linux/debug/SConscript,
+	  build/linux/release, build/linux/release/.sconsign,
+	  build/linux/release/SConscript, build/win32,
+	  build/win32/.sconsign, build/win32/debug,
+	  build/win32/debug/SConscript, build/win32/release,
+	  build/win32/release/SConscript, docs, docs/.sconsign, include,
+	  include/.sconsign, include/main.h, src, src/.sconsign: Removed
+	  .sconsign files from the repository, as well as a few fixes to
+	  correct building on Win32.
+
+2005-04-26 06:39  Charles Pence <cpence [at] gmail.com>
+
+	* data: Hopefully the last svn:ignore update
+
+2005-04-26 06:38  Charles Pence <cpence [at] gmail.com>
+
+	* ., build/linux/debug, build/linux/release,
+	  build/linux/release/.sconsign, build/win32/debug,
+	  build/win32/release, build_config.pyc, build_support.pyc: Flubbed
+	  commit, try again
+
+2005-04-26 06:30  Charles Pence <cpence [at] gmail.com>
+
+	* build/linux/release/logos, data/boost_python-vc71-mt-1_32.dll,
+	  data/logos, data/logos.exe: More cleanups/svn:ignore changes
+
+2005-04-26 06:28  Charles Pence <cpence [at] gmail.com>
+
+	* build/linux/debug, build/linux/release, build/win32/debug,
+	  build/win32/release: More svn:ignore changes
+
+2005-04-26 06:24  Charles Pence <cpence [at] gmail.com>
+
+	* data, data/logos.cfg: Setting svn:ignore flags, removing old
+	  logos.cfg
+
+2005-04-26 06:18  Charles Pence <cpence [at] gmail.com>
+
+	* Docs, default.doxygen: Removing old bad Docs directory
+
+2005-04-26 06:13  Charles Pence <cpence [at] gmail.com>
+
+	* ., .sconsign, Docs, Docs/annotated.html,
+	  Docs/classCommon_1_1DeleteThis-members.html,
+	  Docs/classCommon_1_1DeleteThis.html,
+	  Docs/classFSAPlayer-members.html, Docs/classFSAPlayer.html,
+	  Docs/classFSAPlayer__inherit__graph.map,
+	  Docs/classFSAPlayer__inherit__graph.md5,
+	  Docs/classFSAPlayer__inherit__graph.png,
+	  Docs/classFSAState-members.html, Docs/classFSAState.html,
+	  Docs/classLogosApp-members.html, Docs/classLogosApp.html,
+	  Docs/classLogosFrame-members.html, Docs/classLogosFrame.html,
+	  Docs/classMatch-members.html, Docs/classMatch.html,
+	  Docs/classMatchDetailPanel-members.html,
+	  Docs/classMatchDetailPanel.html, Docs/classPlayer-members.html,
+	  Docs/classPlayer.html, Docs/classPlayer__inherit__graph.map,
+	  Docs/classPlayer__inherit__graph.md5,
+	  Docs/classPlayer__inherit__graph.png,
+	  Docs/classPythonGame-members.html, Docs/classPythonGame.html,
+	  Docs/classRandomPlayer-members.html, Docs/classRandomPlayer.html,
+	  Docs/classRandomPlayer__inherit__graph.map,
+	  Docs/classRandomPlayer__inherit__graph.md5,
+	  Docs/classRandomPlayer__inherit__graph.png,
+	  Docs/classTitForTatPlayer-members.html,
+	  Docs/classTitForTatPlayer.html,
+	  Docs/classTitForTatPlayer__inherit__graph.map,
+	  Docs/classTitForTatPlayer__inherit__graph.md5,
+	  Docs/classTitForTatPlayer__inherit__graph.png,
+	  Docs/classTournament-members.html, Docs/classTournament.html,
+	  Docs/classTournamentPanel-members.html,
+	  Docs/classTournamentPanel.html, Docs/dir_000000.html,
+	  Docs/dir_000001.html, Docs/dirs.html, Docs/doxygen.css,
+	  Docs/doxygen.png, Docs/files.html, Docs/fsaplayer_8cpp.html,
+	  Docs/fsaplayer_8cpp__incl.map, Docs/fsaplayer_8cpp__incl.md5,
+	  Docs/fsaplayer_8cpp__incl.png, Docs/fsaplayer_8h.html,
+	  Docs/fsaplayer_8h__dep__incl.map,
+	  Docs/fsaplayer_8h__dep__incl.md5,
+	  Docs/fsaplayer_8h__dep__incl.png, Docs/fsaplayer_8h__incl.map,
+	  Docs/fsaplayer_8h__incl.md5, Docs/fsaplayer_8h__incl.png,
+	  Docs/functions.html, Docs/functions_func.html,
+	  Docs/functions_rela.html, Docs/functions_type.html,
+	  Docs/functions_vars.html, Docs/globals.html,
+	  Docs/globals_enum.html, Docs/globals_func.html,
+	  Docs/graph_legend.dot, Docs/graph_legend.html,
+	  Docs/graph_legend.png, Docs/hierarchy.html, Docs/index.hhc,
+	  Docs/index.hhk, Docs/index.hhp, Docs/index.html,
+	  Docs/inherit__graph__0.map, Docs/inherit__graph__0.md5,
+	  Docs/inherit__graph__0.png, Docs/inherit__graph__1.map,
+	  Docs/inherit__graph__1.md5, Docs/inherit__graph__1.png,
+	  Docs/inherit__graph__2.map, Docs/inherit__graph__2.md5,
+	  Docs/inherit__graph__2.png, Docs/inherit__graph__3.map,
+	  Docs/inherit__graph__3.md5, Docs/inherit__graph__3.png,
+	  Docs/inherit__graph__4.map, Docs/inherit__graph__4.md5,
+	  Docs/inherit__graph__4.png, Docs/inherit__graph__5.map,
+	  Docs/inherit__graph__5.md5, Docs/inherit__graph__5.png,
+	  Docs/inherit__graph__6.map, Docs/inherit__graph__6.md5,
+	  Docs/inherit__graph__6.png, Docs/inherit__graph__7.map,
+	  Docs/inherit__graph__7.md5, Docs/inherit__graph__7.png,
+	  Docs/inherit__graph__8.map, Docs/inherit__graph__8.md5,
+	  Docs/inherit__graph__8.png, Docs/inherit__graph__9.map,
+	  Docs/inherit__graph__9.md5, Docs/inherit__graph__9.png,
+	  Docs/inherits.html, Docs/logosapp_8cpp.html,
+	  Docs/logosapp_8cpp__incl.map, Docs/logosapp_8cpp__incl.md5,
+	  Docs/logosapp_8cpp__incl.png, Docs/logosapp_8h.html,
+	  Docs/logosapp_8h__dep__incl.map, Docs/logosapp_8h__dep__incl.md5,
+	  Docs/logosapp_8h__dep__incl.png, Docs/logosframe_8cpp.html,
+	  Docs/logosframe_8cpp__incl.map, Docs/logosframe_8cpp__incl.md5,
+	  Docs/logosframe_8cpp__incl.png, Docs/logosframe_8h.html,
+	  Docs/logosframe_8h__dep__incl.map,
+	  Docs/logosframe_8h__dep__incl.md5,
+	  Docs/logosframe_8h__dep__incl.png, Docs/logosframe_8h__incl.map,
+	  Docs/logosframe_8h__incl.md5, Docs/logosframe_8h__incl.png,
+	  Docs/main_8h.html, Docs/main_8h__dep__incl.map,
+	  Docs/main_8h__dep__incl.md5, Docs/main_8h__dep__incl.png,
+	  Docs/main_8h__incl.map, Docs/main_8h__incl.md5,
+	  Docs/main_8h__incl.png, Docs/match_8h.html,
+	  Docs/match_8h__dep__incl.map, Docs/match_8h__dep__incl.md5,
+	  Docs/match_8h__dep__incl.png, Docs/match_8h__incl.map,
+	  Docs/match_8h__incl.md5, Docs/match_8h__incl.png,
+	  Docs/matchdetailpanel_8cpp.html,
+	  Docs/matchdetailpanel_8cpp__incl.map,
+	  Docs/matchdetailpanel_8cpp__incl.md5,
+	  Docs/matchdetailpanel_8cpp__incl.png,
+	  Docs/matchdetailpanel_8h.html,
+	  Docs/matchdetailpanel_8h__dep__incl.map,
+	  Docs/matchdetailpanel_8h__dep__incl.md5,
+	  Docs/matchdetailpanel_8h__dep__incl.png, Docs/mathlib_8h.html,
+	  Docs/mathlib_8h__dep__incl.map, Docs/mathlib_8h__dep__incl.md5,
+	  Docs/mathlib_8h__dep__incl.png, Docs/namespaceCommon.html,
+	  Docs/namespacemembers.html, Docs/namespacemembers_func.html,
+	  Docs/namespaces.html, Docs/pages.html, Docs/pch_8cpp.html,
+	  Docs/pch_8cpp__incl.map, Docs/pch_8cpp__incl.md5,
+	  Docs/pch_8cpp__incl.png, Docs/player_8h.html,
+	  Docs/player_8h__dep__incl.map, Docs/player_8h__dep__incl.md5,
+	  Docs/player_8h__dep__incl.png, Docs/pythongame_8cpp.html,
+	  Docs/pythongame_8cpp__incl.map, Docs/pythongame_8cpp__incl.md5,
+	  Docs/pythongame_8cpp__incl.png, Docs/pythongame_8h.html,
+	  Docs/pythongame_8h__dep__incl.map,
+	  Docs/pythongame_8h__dep__incl.md5,
+	  Docs/pythongame_8h__dep__incl.png, Docs/pythongame_8h__incl.map,
+	  Docs/pythongame_8h__incl.md5, Docs/pythongame_8h__incl.png,
+	  Docs/random_8h.html, Docs/random_8h__dep__incl.map,
+	  Docs/random_8h__dep__incl.md5, Docs/random_8h__dep__incl.png,
+	  Docs/random_8h__incl.map, Docs/random_8h__incl.md5,
+	  Docs/random_8h__incl.png, Docs/titfortat_8h.html,
+	  Docs/titfortat_8h__dep__incl.map,
+	  Docs/titfortat_8h__dep__incl.md5,
+	  Docs/titfortat_8h__dep__incl.png, Docs/titfortat_8h__incl.map,
+	  Docs/titfortat_8h__incl.md5, Docs/titfortat_8h__incl.png,
+	  Docs/todo.html, Docs/tournament_8cpp.html,
+	  Docs/tournament_8cpp__incl.map, Docs/tournament_8cpp__incl.md5,
+	  Docs/tournament_8cpp__incl.png, Docs/tournament_8h.html,
+	  Docs/tournament_8h__dep__incl.map,
+	  Docs/tournament_8h__dep__incl.md5,
+	  Docs/tournament_8h__dep__incl.png, Docs/tournament_8h__incl.map,
+	  Docs/tournament_8h__incl.md5, Docs/tournament_8h__incl.png,
+	  Docs/tournamentpanel_8cpp.html,
+	  Docs/tournamentpanel_8cpp__incl.map,
+	  Docs/tournamentpanel_8cpp__incl.md5,
+	  Docs/tournamentpanel_8cpp__incl.png,
+	  Docs/tournamentpanel_8h.html,
+	  Docs/tournamentpanel_8h__dep__incl.map,
+	  Docs/tournamentpanel_8h__dep__incl.md5,
+	  Docs/tournamentpanel_8h__dep__incl.png,
+	  Docs/tournamentpanel_8h__incl.map,
+	  Docs/tournamentpanel_8h__incl.md5,
+	  Docs/tournamentpanel_8h__incl.png, README.build.txt, SConstruct,
+	  build, build/linux, build/linux/.sconsign,
+	  build/linux/SConscript, build/linux/debug,
+	  build/linux/debug/SConscript, build/linux/release,
+	  build/linux/release/.sconsign, build/linux/release/SConscript,
+	  build/linux/release/logos, build/win32, build/win32/.sconsign,
+	  build/win32/SConscript, build/win32/debug,
+	  build/win32/debug/SConscript, build/win32/release,
+	  build/win32/release/SConscript, build_config.py,
+	  build_config.pyc, build_support.py, build_support.pyc, data,
+	  data/boost_python-vc71-mt-1_32.dll, data/games,
+	  data/games/prisoner.py, data/games/staghunt.py, data/help.htb,
+	  data/logos, data/logos.cfg, data/logos.exe,
+	  data/logos.exe.manifest, data/players, data/players/brome.txt,
+	  data/players/carlson.txt, data/players/edwards.txt,
+	  data/players/elga.txt, data/players/greco.txt,
+	  data/players/hedden.txt, data/players/jacobson.txt,
+	  data/players/kidd.txt, data/players/kleiner.txt,
+	  data/players/kompfner.txt, data/players/lara.txt,
+	  data/players/levine.txt, data/players/mielke.txt,
+	  data/players/rothman.txt, data/players/samberg.txt,
+	  data/players/stockum.txt, data/players/tests,
+	  data/players/tests/test-allc.txt,
+	  data/players/tests/test-alld.txt,
+	  data/players/tests/test-tft.txt, data/players/trivedi.txt,
+	  default.doxygen, docs, docs/.sconsign, docs/annotated.html,
+	  docs/classCommon_1_1DeleteThis-members.html,
+	  docs/classCommon_1_1DeleteThis.html,
+	  docs/classFSAPlayer-members.html, docs/classFSAPlayer.html,
+	  docs/classFSAPlayer__inherit__graph.png,
+	  docs/classFSAState-members.html, docs/classFSAState.html,
+	  docs/classLogosApp-members.html, docs/classLogosApp.html,
+	  docs/classLogosFrame-members.html, docs/classLogosFrame.html,
+	  docs/classMatch-members.html, docs/classMatch.html,
+	  docs/classMatchDetailPanel-members.html,
+	  docs/classMatchDetailPanel.html, docs/classPlayer-members.html,
+	  docs/classPlayer.html, docs/classPlayer.png,
+	  docs/classPlayer__inherit__graph.png,
+	  docs/classPythonGame-members.html, docs/classPythonGame.html,
+	  docs/classRandomPlayer-members.html, docs/classRandomPlayer.html,
+	  docs/classRandomPlayer.png,
+	  docs/classRandomPlayer__coll__graph.png,
+	  docs/classRandomPlayer__inherit__graph.png,
+	  docs/classTitForTatPlayer-members.html,
+	  docs/classTitForTatPlayer.html, docs/classTitForTatPlayer.png,
+	  docs/classTitForTatPlayer__coll__graph.png,
+	  docs/classTitForTatPlayer__inherit__graph.png,
+	  docs/classTournament-members.html, docs/classTournament.html,
+	  docs/classTournamentPanel-members.html,
+	  docs/classTournamentPanel.html, docs/classes.html,
+	  docs/doxygen.css, docs/doxygen.png, docs/files.html,
+	  docs/fsaplayer_8cpp.html, docs/fsaplayer_8cpp__incl.png,
+	  docs/fsaplayer_8h.html, docs/fsaplayer_8h__dep__incl.png,
+	  docs/fsaplayer_8h__incl.png, docs/ftv2blank.png,
+	  docs/ftv2doc.png, docs/ftv2folderclosed.png,
+	  docs/ftv2folderopen.png, docs/ftv2lastnode.png,
+	  docs/ftv2link.png, docs/ftv2mlastnode.png, docs/ftv2mnode.png,
+	  docs/ftv2node.png, docs/ftv2plastnode.png, docs/ftv2pnode.png,
+	  docs/ftv2vertline.png, docs/functions.html,
+	  docs/functions_func.html, docs/functions_type.html,
+	  docs/functions_vars.html, docs/globals.html,
+	  docs/globals_enum.html, docs/globals_func.html,
+	  docs/graph_legend.html, docs/graph_legend.png,
+	  docs/hierarchy.html, docs/index.hhc, docs/index.hhk,
+	  docs/index.hhp, docs/index.hhp.cached,
+	  docs/inherit__graph__0.png, docs/inherit__graph__1.png,
+	  docs/inherit__graph__2.png, docs/inherit__graph__3.png,
+	  docs/inherit__graph__4.png, docs/inherit__graph__5.png,
+	  docs/inherit__graph__6.png, docs/inherit__graph__7.png,
+	  docs/inherit__graph__8.png, docs/inherit__graph__9.png,
+	  docs/inherits.html, docs/logosapp_8cpp.html,
+	  docs/logosapp_8cpp__incl.png, docs/logosapp_8h.html,
+	  docs/logosapp_8h__dep__incl.png, docs/logosframe_8cpp.html,
+	  docs/logosframe_8cpp__incl.png, docs/logosframe_8h.html,
+	  docs/logosframe_8h__dep__incl.png, docs/logosframe_8h__incl.png,
+	  docs/main.html, docs/main_8cpp.html, docs/main_8cpp__incl.png,
+	  docs/main_8h.html, docs/main_8h__dep__incl.png,
+	  docs/main_8h__incl.png, docs/match_8h.html,
+	  docs/match_8h__dep__incl.png, docs/match_8h__incl.png,
+	  docs/matchdetailpanel_8cpp.html,
+	  docs/matchdetailpanel_8cpp__incl.png,
+	  docs/matchdetailpanel_8h.html,
+	  docs/matchdetailpanel_8h__dep__incl.png, docs/mathlib_8h.html,
+	  docs/mathlib_8h__dep__incl.png, docs/namespaceCommon.html,
+	  docs/namespacemembers.html, docs/namespacemembers_func.html,
+	  docs/namespaces.html, docs/pages.html, docs/pch_8cpp.html,
+	  docs/pch_8cpp__incl.png, docs/player_8h.html,
+	  docs/player_8h__dep__incl.png, docs/pythongame_8cpp.html,
+	  docs/pythongame_8cpp__incl.png, docs/pythongame_8h.html,
+	  docs/pythongame_8h__dep__incl.png, docs/pythongame_8h__incl.png,
+	  docs/random_8h.html, docs/random_8h__dep__incl.png,
+	  docs/random_8h__incl.png, docs/titfortat_8h.html,
+	  docs/titfortat_8h__dep__incl.png, docs/titfortat_8h__incl.png,
+	  docs/todo.html, docs/tournament_8cpp.html,
+	  docs/tournament_8cpp__incl.png, docs/tournament_8h.html,
+	  docs/tournament_8h__dep__incl.png, docs/tournament_8h__incl.png,
+	  docs/tournamentpanel_8cpp.html,
+	  docs/tournamentpanel_8cpp__incl.png,
+	  docs/tournamentpanel_8h.html,
+	  docs/tournamentpanel_8h__dep__incl.png,
+	  docs/tournamentpanel_8h__incl.png, docs/tree.html, include,
+	  include/.sconsign, include/evolutionpanel.h, include/fsaplayer.h,
+	  include/logosapp.h, include/logosframe.h, include/main.h,
+	  include/match.h, include/matchdetailpanel.h, include/mathlib.h,
+	  include/player.h, include/pythongame.h, include/random.h,
+	  include/titfortat.h, include/tournament.h,
+	  include/tournamentpanel.h, src, src/.sconsign,
+	  src/evolutionpanel.cpp, src/fsaplayer.cpp, src/logosapp.cpp,
+	  src/logosframe.cpp, src/matchdetailpanel.cpp, src/mathlib.cpp,
+	  src/pch.cpp, src/pythongame.cpp, src/tournament.cpp,
+	  src/tournamentpanel.cpp: First import of repository
+

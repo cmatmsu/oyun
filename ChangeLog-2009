@@ -1,0 +1,2021 @@
+2009-04-03 18:24  Charles Pence <cpence [at] gmail.com>
+
+	* doc/manual/html/typepage.html, doc/manual/pdf/manual.pdf,
+	  doc/manual/pdf/typepage.tex, doc/manual/source/typepage.text,
+	  doc/manual/wxhelp/logos.htb, doc/manual/wxhelp/typepage.html:
+	  Finished Type Page docs (issue 15).
+
+2009-04-03 18:20  Charles Pence <cpence [at] gmail.com>
+
+	* doc/manual/html/install.html, doc/manual/pdf/install.tex,
+	  doc/manual/pdf/manual.pdf, doc/manual/source/install.text,
+	  doc/manual/wxhelp/install.html, doc/manual/wxhelp/logos.htb:
+	  Finished 'installation' docs (issue 15).
+
+2009-04-03 16:15  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/bakefiles/install.bkl,
+	  build/bakefiles/logos.bkl, build/bakefiles/win_dist.mk,
+	  build/msw/logos_logos.dsp, build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc8_logos.vcproj, build/msw/makefile.vc,
+	  build/msw/mingwm10.dll, src/common/filesystem.cpp: Added support
+	  for making a Win32 binary ZIP distribution -- I don't think we
+	  need a Windows installer, yet.
+
+2009-04-02 21:18  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/bakefiles/install.bkl,
+	  build/bakefiles/logos.bkl: Fixing issue 13 -- installing
+	  documentation to the right place when using Autoconf.
+
+2009-04-02 04:35  Charles Pence <cpence [at] gmail.com>
+
+	* src/common/filesystem.cpp, src/ui/logosapp.cpp: Fixed the
+	  bundle-resources code on OS X, we're now finding the
+	  documentation on all three platforms.
+
+2009-04-02 04:28  Charles Pence <cpence [at] gmail.com>
+
+	* build/tools/sane_build_disk_image.py: Fixed the disk-image-build
+	  script.
+
+2009-04-02 03:45  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in: Updated Makefile.
+
+2009-04-02 03:44  Charles Pence <cpence [at] gmail.com>
+
+	* build/bakefiles/osx.bkl: Error in the build disk image call.
+
+2009-04-02 03:42  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in: Updated Makefile.
+
+2009-04-02 03:41  Charles Pence <cpence [at] gmail.com>
+
+	* build/bakefiles/osx.bkl: Added the logos_image target. (Oops.)
+
+2009-04-02 03:39  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in: Updated Makefile.
+
+2009-04-02 03:39  Charles Pence <cpence [at] gmail.com>
+
+	* build/bakefiles/osx.bkl, build/macosx/Logos.dmg: Added a template
+	  Logos disk image for Mac and a build script for it.
+
+2009-04-02 03:16  Charles Pence <cpence [at] gmail.com>
+
+	* src/common/filesystem.cpp: Quick compilation fix on OS X.
+
+2009-04-02 03:11  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in: Updated the makefile.
+
+2009-04-02 03:09  Charles Pence <cpence [at] gmail.com>
+
+	* build/bakefiles/osx.bkl, build/macosx/Info.plist.in,
+	  build/macosx/logos.icns, build/macosx/wxmac.icns: Added a new
+	  Mac-format Logos icon.
+
+2009-04-02 03:00  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/autoconf/logos.png, build/bakefiles/logos.bkl:
+	  Added a rule to copy a Logos icon to $(DATADIR)/pixmaps.
+
+2009-04-02 02:14  Charles Pence <cpence [at] gmail.com>
+
+	* build/bakefiles/make_dist.mk: Fixed 'make dist' rule to copy the
+	  xpm icon.
+
+2009-04-02 02:13  Charles Pence <cpence [at] gmail.com>
+
+	* build/autoconf/logos.xpm, build/msw/logos.ico,
+	  build/msw/logos.rc, src/ui/logoswizard.cpp: Added a program icon
+	  in Windows and XPM format.
+
+2009-04-01 11:50  Charles Pence <cpence [at] gmail.com>
+
+	* build/tools/sane_build_disk_image.py: Added an OS X disk image
+	  building script. Will be adding a template DMG file soon.
+
+2009-03-31 20:49  Charles Pence <cpence [at] gmail.com>
+
+	* doc/manual/html/install.html, doc/manual/pdf/install.tex,
+	  doc/manual/pdf/manual.pdf, doc/manual/source/install.text,
+	  doc/manual/wxhelp/install.html, doc/manual/wxhelp/logos.htb,
+	  src/common/filesystem.cpp: Added support for an environment
+	  variable DOCDIR that we can use if a Linux user doesn't want to
+	  install the binary.
+
+2009-03-31 20:37  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/bakefiles,
+	  build/bakefiles/.bakefile_gen.state, build/bakefiles/files.bkl,
+	  build/bakefiles/logos.bkl, build/bakefiles/make_dist.mk,
+	  build/bakefiles/osx.bkl, build/bakefiles/version.bkl,
+	  build/msw/makefile.vc: We have a fully functional 'make dist'
+	  target, so we can now prepare source archives.
+
+2009-03-30 16:49  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/bakefiles/.bakefile_gen.state,
+	  build/bakefiles/osx.bkl: Should fix issue 10 for Mac OS.
+
+2009-03-30 16:46  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/bakefiles/.bakefile_gen.state,
+	  build/bakefiles/Bakefiles.bkgen, build/bakefiles/logos.bkl: Added
+	  support for installing documentation in the right place on Linux.
+
+2009-03-30 16:22  Charles Pence <cpence [at] gmail.com>
+
+	* build/tools/make-manual.sh, build/tools/make-wxdocs.sh,
+	  doc/manual/pdf/manual.pdf, doc/manual/wxhelp/logos.htb: Added
+	  logos.htb to the SVN repository.
+
+2009-03-30 16:14  Charles Pence <cpence [at] gmail.com>
+
+	* build/tools/make-docs.sh, build/tools/make-manual.sh,
+	  build/tools/make-wxdocs.sh: Split make-docs.sh into
+	  make-wxdocs.sh and make-manual.sh.
+
+2009-03-30 16:11  Charles Pence <cpence [at] gmail.com>
+
+	* src/common/filesystem.cpp, src/ui/logosapp.cpp: An attempt to
+	  find the documentation in the place where it ought to live on
+	  most platforms. Now we need to modify the build system to build
+	  it and put it there.
+
+2009-03-30 04:05  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/bakefiles/.bakefile_gen.state,
+	  build/bakefiles/logos.bkl, build/msw/logos_logos.dsp,
+	  build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc8_logos.vcproj, build/msw/makefile.vc,
+	  src/common/filesystem.cpp, src/common/filesystem.h,
+	  src/ui/logosapp.cpp: Added a function which determines the
+	  documentation path. Currently only implemented on Linux.
+
+2009-03-30 03:48  Charles Pence <cpence [at] gmail.com>
+
+	* build/bakefiles/.bakefile_gen.state,
+	  build/bakefiles/Bakefiles.bkgen, build/gnu: Removed support for
+	  the 'gnu' Bakefile type. We're not supporting building on Linux
+	  without Autoconf.
+
+2009-03-30 03:46  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/bakefiles/.bakefile_gen.state,
+	  build/bakefiles/files.bkl, build/gnu/makefile.gnu,
+	  build/msw/logos_logos.dsp, build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc8_logos.vcproj, build/msw/makefile.vc: Oops,
+	  forgot to commit the rest of the updated build files the last
+	  time around.
+
+2009-03-30 03:45  Charles Pence <cpence [at] gmail.com>
+
+	* src/common/filesystem.cpp, src/common/filesystem.h: Added code
+	  for the detection of the full path to the executable, in a
+	  buffer-safe, platform-agnostic way. We'll need this to find the
+	  documentation and resources on OS X.
+
+2009-03-27 02:37  Charles Pence <cpence [at] gmail.com>
+
+	* README: Added a README file based in part on the `welcome' page
+	  of the manual.
+
+2009-03-25 02:51  Charles Pence <cpence [at] gmail.com>
+
+	* lib/CppUnitLite/Test.h, lib/CppUnitLite/TestRegistry.cpp,
+	  lib/CppUnitLite/TestResult.cpp, src/ui/logosapp.cpp: Fixed some
+	  Unicode printing bugs. This still isn't perfect -- rather, it
+	  relies on our being built on a Unicode build. I probably won't
+	  fix this until wxWidgets 3 comes out.
+
+2009-03-25 02:26  Charles Pence <cpence [at] gmail.com>
+
+	* NEWS, build/tools/make-docs.sh, doc/manual/html/playerspage.html,
+	  doc/manual/html/release.html, doc/manual/html/typepage.html,
+	  doc/manual/pdf/manual.pdf, doc/manual/pdf/playerspage.tex,
+	  doc/manual/pdf/release.tex, doc/manual/pdf/typepage.tex,
+	  doc/manual/wxhelp/playerspage.html,
+	  doc/manual/wxhelp/release.html, doc/manual/wxhelp/typepage.html:
+	  Added support for generating a NEWS file from release.text in the
+	  manual. (Don't change the 'release.text' format too much!)
+
+2009-03-25 02:08  Charles Pence <cpence [at] gmail.com>
+
+	* doc/manual/source/release.text, lib/CppUnitLite/Failure.cpp,
+	  lib/CppUnitLite/Failure.h, lib/CppUnitLite/Test.cpp,
+	  lib/CppUnitLite/Test.h, lib/CppUnitLite/TestRegistry.cpp,
+	  lib/CppUnitLite/TestRegistry.h, lib/CppUnitLite/TestResult.cpp,
+	  src/ui/logosapp.cpp: Converted the internals of the testing
+	  library to WX functions, and added standard --help and --version
+	  parameters.
+
+2009-03-23 17:46  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen/annotated.html,
+	  doc/doxygen/classEvoFinishPage-members.html,
+	  doc/doxygen/classEvoFinishPage.html,
+	  doc/doxygen/classEvoGraphRenderer-members.html,
+	  doc/doxygen/classEvoGraphWindow-members.html,
+	  doc/doxygen/classEvoGraphWindow.html,
+	  doc/doxygen/classEvoPage-members.html,
+	  doc/doxygen/classEvoPage.html,
+	  doc/doxygen/classEvoTournament-members.html,
+	  doc/doxygen/classEvoTournament.html,
+	  doc/doxygen/classFSAPlayer-members.html,
+	  doc/doxygen/classFSAPlayer.html,
+	  doc/doxygen/classFSAState-members.html,
+	  doc/doxygen/classFSAState.html,
+	  doc/doxygen/classFinishPage-members.html,
+	  doc/doxygen/classFinishPage.html,
+	  doc/doxygen/classGame-members.html, doc/doxygen/classGame.html,
+	  doc/doxygen/classHtmlDialog-members.html,
+	  doc/doxygen/classHtmlDialog.html,
+	  doc/doxygen/classLogosApp-members.html,
+	  doc/doxygen/classLogosApp.html,
+	  doc/doxygen/classLogosWizard-members.html,
+	  doc/doxygen/classLogosWizard.html,
+	  doc/doxygen/classLogosWizardDropTarget-members.html,
+	  doc/doxygen/classLogosWizardDropTarget.html,
+	  doc/doxygen/classLogosWizardPage-members.html,
+	  doc/doxygen/classLogosWizardPage.html,
+	  doc/doxygen/classMatch-members.html, doc/doxygen/classMatch.html,
+	  doc/doxygen/classMatchDialog-members.html,
+	  doc/doxygen/classMatchDialog.html,
+	  doc/doxygen/classOneShotFinishPage-members.html,
+	  doc/doxygen/classOneShotFinishPage.html,
+	  doc/doxygen/classOneShotPage-members.html,
+	  doc/doxygen/classOneShotPage.html,
+	  doc/doxygen/classPlayer-members.html,
+	  doc/doxygen/classPlayer.html,
+	  doc/doxygen/classPlayersPage-members.html,
+	  doc/doxygen/classPlayersPage.html,
+	  doc/doxygen/classPrisonerDilemma-members.html,
+	  doc/doxygen/classPrisonerDilemma.html,
+	  doc/doxygen/classRandomPlayer-members.html,
+	  doc/doxygen/classRandomPlayer.html,
+	  doc/doxygen/classTitForTatPlayer-members.html,
+	  doc/doxygen/classTitForTatPlayer.html,
+	  doc/doxygen/classTournament-members.html,
+	  doc/doxygen/classTournament.html,
+	  doc/doxygen/classTypePage-members.html,
+	  doc/doxygen/classTypePage.html, doc/doxygen/classes.html,
+	  doc/doxygen/crosscompile.html, doc/doxygen/functions.html,
+	  doc/doxygen/functions_0x62.html, doc/doxygen/functions_0x63.html,
+	  doc/doxygen/functions_0x64.html, doc/doxygen/functions_0x65.html,
+	  doc/doxygen/functions_0x66.html, doc/doxygen/functions_0x67.html,
+	  doc/doxygen/functions_0x68.html, doc/doxygen/functions_0x69.html,
+	  doc/doxygen/functions_0x6c.html, doc/doxygen/functions_0x6d.html,
+	  doc/doxygen/functions_0x6e.html, doc/doxygen/functions_0x6f.html,
+	  doc/doxygen/functions_0x70.html, doc/doxygen/functions_0x72.html,
+	  doc/doxygen/functions_0x73.html, doc/doxygen/functions_0x74.html,
+	  doc/doxygen/functions_0x75.html, doc/doxygen/functions_0x77.html,
+	  doc/doxygen/functions_func.html, doc/doxygen/functions_type.html,
+	  doc/doxygen/functions_vars.html, doc/doxygen/group__common.html,
+	  doc/doxygen/group__game.html, doc/doxygen/group__tourney.html,
+	  doc/doxygen/group__ui.html, doc/doxygen/hierarchy.html,
+	  doc/doxygen/index.html, doc/doxygen/mainpages/crosscompile.h,
+	  doc/doxygen/mainpages/main.h, doc/doxygen/modules.html,
+	  doc/doxygen/pages.html, doc/doxygen/structEvoGraphRenderer.html,
+	  doc/doxygen/structEvoGraphRenderer_1_1SVGColor-members.html,
+	  doc/doxygen/structEvoGraphRenderer_1_1SVGColor.html: Removed the
+	  'other doc pages' from the SVN tree, and put them in the wiki.
+	  The Doxygen docs are now *just* a source-code reference.
+
+2009-03-21 00:57  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evopage.cpp, src/ui/oneshotpage.cpp, src/ui/oneshotpage.h,
+	  src/ui/playerspage.cpp: Hmm, not sure how that bug made it this
+	  long. You now have to run the tournament in order to advance past
+	  either of the tournament pages.
+
+2009-03-21 00:50  Charles Pence <cpence [at] gmail.com>
+
+	* doc/manual/source/playerspage.text,
+	  doc/manual/source/typepage.text, src/ui/evofinishpage.cpp,
+	  src/ui/evofinishpage.h, src/ui/evopage.cpp, src/ui/evopage.h,
+	  src/ui/oneshotfinishpage.cpp, src/ui/oneshotfinishpage.h,
+	  src/ui/oneshotpage.cpp, src/ui/oneshotpage.h,
+	  src/ui/playerspage.cpp, src/ui/playerspage.h,
+	  src/ui/typepage.cpp, src/ui/typepage.h: Added a little bit more
+	  documentation, and connected up the help buttons on each page to
+	  the appropriate help page.
+
+2009-03-21 00:27  Charles Pence <cpence [at] gmail.com>
+
+	* doc/manual/html/evopage.png, doc/manual/pdf/evopage.png,
+	  doc/manual/pdf/manual.pdf, doc/manual/source/evopage.png,
+	  doc/manual/wxhelp/evopage.png: Updated the EvoPage image to match
+	  the recent changes.
+
+2009-03-21 00:22  Charles Pence <cpence [at] gmail.com>
+
+	* ChangeLog, build/tools/make-changelog.sh,
+	  build/tools/make-docs.sh, build/tools/make-images.sh,
+	  make-docs.sh: Separated out the various documentation scripts so
+	  that we don't waste so much time generating docs.
+
+2009-03-20 02:22  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evopage.cpp, src/ui/evopage.h: That's one way to solve
+	  issue 8 -- we don't need that graph label anyway.
+
+2009-03-20 02:20  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/logosapp.cpp: Silly fix for building on OS X.
+
+2009-03-18 20:05  Charles Pence <cpence [at] gmail.com>
+
+	* doc/manual/html/evofinishpage.html,
+	  doc/manual/html/evofinishpage.png, doc/manual/html/evopage.html,
+	  doc/manual/html/evopage.png,
+	  doc/manual/html/oneshotfinishpage.html,
+	  doc/manual/html/oneshotfinishpage.png,
+	  doc/manual/html/oneshotpage.html,
+	  doc/manual/html/oneshotpage.png, doc/manual/html/pages.html,
+	  doc/manual/html/playerspage.html,
+	  doc/manual/html/playerspage.png, doc/manual/html/typepage.html,
+	  doc/manual/html/typepage.png, doc/manual/pdf/evofinishpage.png,
+	  doc/manual/pdf/evofinishpage.tex, doc/manual/pdf/evopage.png,
+	  doc/manual/pdf/evopage.tex, doc/manual/pdf/manual.pdf,
+	  doc/manual/pdf/manual.tex, doc/manual/pdf/oneshotfinishpage.png,
+	  doc/manual/pdf/oneshotfinishpage.tex,
+	  doc/manual/pdf/oneshotpage.png, doc/manual/pdf/oneshotpage.tex,
+	  doc/manual/pdf/pages.tex, doc/manual/pdf/playerspage.png,
+	  doc/manual/pdf/playerspage.tex, doc/manual/pdf/typepage.png,
+	  doc/manual/pdf/typepage.tex, doc/manual/source/evofinishpage.png,
+	  doc/manual/source/evofinishpage.text,
+	  doc/manual/source/evopage.png, doc/manual/source/evopage.text,
+	  doc/manual/source/oneshotfinishpage.png,
+	  doc/manual/source/oneshotfinishpage.text,
+	  doc/manual/source/oneshotpage.png,
+	  doc/manual/source/oneshotpage.text, doc/manual/source/pages.text,
+	  doc/manual/source/playerspage.png,
+	  doc/manual/source/playerspage.text,
+	  doc/manual/source/typepage.png, doc/manual/source/typepage.text,
+	  doc/manual/wxhelp/evofinishpage.html,
+	  doc/manual/wxhelp/evofinishpage.png,
+	  doc/manual/wxhelp/evopage.html, doc/manual/wxhelp/evopage.png,
+	  doc/manual/wxhelp/oneshotfinishpage.html,
+	  doc/manual/wxhelp/oneshotfinishpage.png,
+	  doc/manual/wxhelp/oneshotpage.html,
+	  doc/manual/wxhelp/oneshotpage.png, doc/manual/wxhelp/pages.html,
+	  doc/manual/wxhelp/playerspage.html,
+	  doc/manual/wxhelp/playerspage.png,
+	  doc/manual/wxhelp/typepage.html, doc/manual/wxhelp/typepage.png:
+	  Added screenshot images to all the different types of
+	  documentation. Would be easier if we could count on the presence
+	  of symbolic links, but we can't.
+
+2009-03-16 20:15  Charles Pence <cpence [at] gmail.com>
+
+	* AUTHORS, ChangeLog, ChangeLog-2005, ChangeLog-2006,
+	  ChangeLog-2007, ChangeLog-2008, THANKS, build/tools/authors.xml:
+	  Obfuscated e-mails in ChangeLog, cleaned up AUTHORS, and added
+	  THANKS.
+
+2009-03-16 19:47  Charles Pence <cpence [at] gmail.com>
+
+	* ChangeLog, ChangeLog-2005, ChangeLog-2006, ChangeLog-2007,
+	  ChangeLog-2008, build/tools, build/tools/authors.xml,
+	  build/tools/svn2cl.sh, build/tools/svn2cl.xsl, make-docs.sh:
+	  Added support for generating proper ChangeLog files, and created
+	  200{5,6,7,8} and current ChangeLog files.
+
+2009-03-16 03:00  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evopage.cpp: Fixed a problem preventing cross-compiling of
+	  Win32 binaries.
+
+2009-03-16 02:31  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/bakefiles/.bakefile_gen.state,
+	  build/gnu/makefile.gnu, build/msw/logos_logos.dsp,
+	  build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc8_logos.vcproj, build/msw/makefile.vc,
+	  doc/doxygen/index.html, doc/doxygen/mainpages/main.h,
+	  doc/manual/pdf/manual.pdf, src/ui/logosapp.cpp: We now only need
+	  to modify the Bakefile and the release notes (in the
+	  documentation) when we make a new minor release. A major release
+	  also needs a change in the Doxyfile.
+
+2009-03-16 02:22  Charles Pence <cpence [at] gmail.com>
+
+	* doc/manual/html/evofinishpage.html, doc/manual/html/evopage.html,
+	  doc/manual/html/glossary.html, doc/manual/html/install.html,
+	  doc/manual/html/logos.css,
+	  doc/manual/html/oneshotfinishpage.html,
+	  doc/manual/html/oneshotpage.html, doc/manual/html/pages.html,
+	  doc/manual/html/playerspage.html, doc/manual/html/release.html,
+	  doc/manual/html/started.html, doc/manual/html/tools/body.inc,
+	  doc/manual/html/tools/menuh.css, doc/manual/html/typepage.html,
+	  doc/manual/html/welcome.html, doc/manual/pdf/install.tex,
+	  doc/manual/pdf/manual.pdf, doc/manual/pdf/release.tex,
+	  doc/manual/pdf/started.tex, doc/manual/pdf/welcome.tex,
+	  doc/manual/source/install.text, doc/manual/source/release.text,
+	  doc/manual/source/started.text, doc/manual/source/welcome.text,
+	  doc/manual/wxhelp/install.html, doc/manual/wxhelp/release.html,
+	  doc/manual/wxhelp/started.html, doc/manual/wxhelp/welcome.html:
+	  Updating documentation (content now in the first four pages).
+
+2009-03-16 02:20  Charles Pence <cpence [at] gmail.com>
+
+	* build/bakefiles/logos.bkl, build/bakefiles/osx.bkl,
+	  build/bakefiles/version.bkl: First steps toward getting proper
+	  version numbering (that I only have to change in one location).
+
+2009-03-15 21:59  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile, src/game/player.h, src/tourney/match.h,
+	  src/ui/logosapp.cpp, src/ui/tools/logoswizardpage.cpp: Another
+	  round of commits on OS X. We have functional multi-wizard
+	  creating, and Logos acts like a good little OS X app.
+
+2009-03-15 20:23  Charles Pence <cpence [at] gmail.com>
+
+	* doc/manual/html/tools/csshover.htc,
+	  doc/manual/html/tools/menuh.css: Added mime types for CSS/HTC
+	  files.
+
+2009-03-15 20:21  Charles Pence <cpence [at] gmail.com>
+
+	* doc/manual/html/evofinishpage.html, doc/manual/html/evopage.html,
+	  doc/manual/html/glossary.html, doc/manual/html/install.html,
+	  doc/manual/html/logos-contents.hhc,
+	  doc/manual/html/logos-index.hhk, doc/manual/html/logos.css,
+	  doc/manual/html/logos.hhp, doc/manual/html/logos.hhp.cached,
+	  doc/manual/html/oneshotfinishpage.html,
+	  doc/manual/html/oneshotpage.html, doc/manual/html/pages.html,
+	  doc/manual/html/playerspage.html, doc/manual/html/release.html,
+	  doc/manual/html/started.html, doc/manual/html/tools,
+	  doc/manual/html/tools/body.inc,
+	  doc/manual/html/tools/csshover.htc,
+	  doc/manual/html/tools/end.inc, doc/manual/html/tools/header.inc,
+	  doc/manual/html/tools/menuh.css, doc/manual/html/typepage.html,
+	  doc/manual/html/welcome.html, doc/manual/pdf/manual.pdf,
+	  doc/manual/pdf/manual.tex, doc/manual/pdf/welcome.tex,
+	  doc/manual/source/welcome.text, doc/manual/wxhelp,
+	  doc/manual/wxhelp/evofinishpage.html,
+	  doc/manual/wxhelp/evopage.html, doc/manual/wxhelp/glossary.html,
+	  doc/manual/wxhelp/install.html,
+	  doc/manual/wxhelp/logos-contents.hhc,
+	  doc/manual/wxhelp/logos-index.hhk, doc/manual/wxhelp/logos.hhp,
+	  doc/manual/wxhelp/logos.hhp.cached,
+	  doc/manual/wxhelp/oneshotfinishpage.html,
+	  doc/manual/wxhelp/oneshotpage.html, doc/manual/wxhelp/pages.html,
+	  doc/manual/wxhelp/playerspage.html,
+	  doc/manual/wxhelp/release.html, doc/manual/wxhelp/started.html,
+	  doc/manual/wxhelp/typepage.html, doc/manual/wxhelp/welcome.html,
+	  make-docs.sh: Massive update to documentation once again. Now
+	  building separate browsable-html and wxHTML sets of
+	  documentation, and the PDF documentation looks much better.
+
+2009-03-15 19:37  Charles Pence <cpence [at] gmail.com>
+
+	* doc/manual/html/evofinishpage.html, doc/manual/html/evopage.html,
+	  doc/manual/html/glossary.html, doc/manual/html/index.html,
+	  doc/manual/html/install.html, doc/manual/html/logos.css,
+	  doc/manual/html/oneshotfinishpage.html,
+	  doc/manual/html/oneshotpage.html, doc/manual/html/pages.html,
+	  doc/manual/html/playerspage.html, doc/manual/html/release.html,
+	  doc/manual/html/started.html, doc/manual/html/typepage.html,
+	  doc/manual/html/welcome.html, make-docs.sh: Added a stylesheet
+	  which is now being linked into the documentation, this will help
+	  viewing on proper browsers.
+
+2009-03-15 19:31  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen/annotated.html,
+	  doc/doxygen/classEvoFinishPage-members.html,
+	  doc/doxygen/classEvoFinishPage.html,
+	  doc/doxygen/classEvoPage-members.html,
+	  doc/doxygen/classEvoPage.html,
+	  doc/doxygen/classFinishPage-members.html,
+	  doc/doxygen/classFinishPage.html,
+	  doc/doxygen/classLogosApp-members.html,
+	  doc/doxygen/classLogosApp.html,
+	  doc/doxygen/classLogosWizard-members.html,
+	  doc/doxygen/classLogosWizard.html,
+	  doc/doxygen/classLogosWizardDropTarget-members.html,
+	  doc/doxygen/classLogosWizardDropTarget.html,
+	  doc/doxygen/classLogosWizardPage-members.html,
+	  doc/doxygen/classLogosWizardPage.html,
+	  doc/doxygen/classOneShotFinishPage-members.html,
+	  doc/doxygen/classOneShotFinishPage.html,
+	  doc/doxygen/classOneShotPage-members.html,
+	  doc/doxygen/classOneShotPage.html,
+	  doc/doxygen/classPlayersPage-members.html,
+	  doc/doxygen/classPlayersPage.html,
+	  doc/doxygen/classTypePage-members.html,
+	  doc/doxygen/classTypePage.html, doc/doxygen/classes.html,
+	  doc/doxygen/functions.html, doc/doxygen/functions_0x63.html,
+	  doc/doxygen/functions_0x65.html, doc/doxygen/functions_0x66.html,
+	  doc/doxygen/functions_0x67.html, doc/doxygen/functions_0x6c.html,
+	  doc/doxygen/functions_0x6f.html, doc/doxygen/functions_0x70.html,
+	  doc/doxygen/functions_0x72.html, doc/doxygen/functions_0x73.html,
+	  doc/doxygen/functions_0x74.html, doc/doxygen/functions_0x75.html,
+	  doc/doxygen/functions_0x77.html, doc/doxygen/functions_func.html,
+	  doc/doxygen/functions_vars.html, doc/doxygen/group__ui.html,
+	  doc/doxygen/hierarchy.html, doc/manual/evofinishpage.html,
+	  doc/manual/evopage.html, doc/manual/glossary.html,
+	  doc/manual/html, doc/manual/html/evofinishpage.html,
+	  doc/manual/html/evopage.html, doc/manual/html/glossary.html,
+	  doc/manual/html/index.html, doc/manual/html/install.html,
+	  doc/manual/html/logos-contents.hhc,
+	  doc/manual/html/logos-index.hhk, doc/manual/html/logos.hhp,
+	  doc/manual/html/logos.hhp.cached,
+	  doc/manual/html/oneshotfinishpage.html,
+	  doc/manual/html/oneshotpage.html, doc/manual/html/pages.html,
+	  doc/manual/html/playerspage.html, doc/manual/html/release.html,
+	  doc/manual/html/started.html, doc/manual/html/typepage.html,
+	  doc/manual/html/welcome.html, doc/manual/index-browser.html,
+	  doc/manual/index.html, doc/manual/install.html,
+	  doc/manual/list.html, doc/manual/logos-contents.hhc,
+	  doc/manual/logos-index.hhk, doc/manual/logos.hhp,
+	  doc/manual/logos.hhp.cached, doc/manual/oneshotfinishpage.html,
+	  doc/manual/oneshotpage.html, doc/manual/pages.html,
+	  doc/manual/pdf, doc/manual/pdf/evofinishpage.tex,
+	  doc/manual/pdf/evopage.tex, doc/manual/pdf/glossary.tex,
+	  doc/manual/pdf/install.tex, doc/manual/pdf/manual.pdf,
+	  doc/manual/pdf/manual.tex, doc/manual/pdf/oneshotfinishpage.tex,
+	  doc/manual/pdf/oneshotpage.tex, doc/manual/pdf/pages.tex,
+	  doc/manual/pdf/playerspage.tex, doc/manual/pdf/release.tex,
+	  doc/manual/pdf/started.tex, doc/manual/pdf/typepage.tex,
+	  doc/manual/pdf/welcome.tex, doc/manual/playerspage.html,
+	  doc/manual/release.html, doc/manual/source,
+	  doc/manual/source/evofinishpage.text,
+	  doc/manual/source/evopage.text, doc/manual/source/glossary.text,
+	  doc/manual/source/install.text,
+	  doc/manual/source/oneshotfinishpage.text,
+	  doc/manual/source/oneshotpage.text, doc/manual/source/pages.text,
+	  doc/manual/source/playerspage.text,
+	  doc/manual/source/release.text, doc/manual/source/started.text,
+	  doc/manual/source/typepage.text, doc/manual/source/welcome.text,
+	  doc/manual/started.html, doc/manual/typepage.html, make-docs.sh,
+	  src/ui/logoswizard.h: Massive update to documentation. Doxygen
+	  docs are the same, but we're now building the user manual into
+	  HTML and PDF via Markdown source and Pandoc.
+
+2009-03-15 18:57  Charles Pence <cpence [at] gmail.com>
+
+	* build/doc: Oops. Decided to use Pandoc instead.
+
+2009-03-15 18:53  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile, doc/doxygen.css, doc/doxygen/tools,
+	  doc/doxygen/tools/doxygen.css, doc/doxygen/tools/footer.inc,
+	  doc/doxygen/tools/header.inc, doc/footer.inc, doc/header.inc:
+	  Cleaned up the doc/ folder, moving the Doxygen utilities to a new
+	  'tools' directory.
+
+2009-03-15 18:51  Charles Pence <cpence [at] gmail.com>
+
+	* build/doc, build/doc/markdown-license.text,
+	  build/doc/markdown-readme.text, build/doc/markdown.pl,
+	  build/doc/smartypants-readme.txt, build/doc/smartypants.pl: First
+	  step in documentation with Markdown: add Markdown and SmartyPants
+	  to the build tools.
+
+2009-03-15 18:22  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile: Changed Doxyfile to ensure we make documentation for
+	  Mac-specific code as well.
+
+2009-03-15 17:50  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/logosapp.cpp, src/ui/logosapp.h: Added a 'New' item to the
+	  OS X menu bar (untested, need to build this on OS X).
+
+2009-03-15 17:22  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/logosapp.cpp, src/ui/logosapp.h,
+	  src/ui/tools/logoswizardpage.cpp: Add a 'parent' parameter to the
+	  ShowHelp method, so we can properly parent the modal help dialog.
+
+2009-03-15 17:19  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/logosapp.cpp, src/ui/logosapp.h: Guard all the Mac OS X
+	  specific code in __WXMAC__ to keep the LogosApp clean on other
+	  platforms.
+
+2009-03-15 14:13  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, aclocal.m4, autoconf_inc.m4,
+	  build/bakefiles/.bakefile_gen.state, build/bakefiles/files.bkl,
+	  build/gnu/config.gnu, build/gnu/makefile.gnu,
+	  build/msw/config.vc, build/msw/logos_logos.dsp,
+	  build/msw/logos_vc7_cppunitlite.vcproj,
+	  build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc7_util-hhp2cached.vcproj,
+	  build/msw/logos_vc8_cppunitlite.vcproj,
+	  build/msw/logos_vc8_logos.vcproj,
+	  build/msw/logos_vc8_util-hhp2cached.vcproj,
+	  build/msw/makefile.vc, configure, src/ui/evofinishpage.cpp,
+	  src/ui/evofinishpage.h, src/ui/evopage.cpp, src/ui/evopage.h,
+	  src/ui/finishpage.cpp, src/ui/finishpage.h, src/ui/logosapp.cpp,
+	  src/ui/logosapp.h, src/ui/logoswizard.cpp, src/ui/logoswizard.h,
+	  src/ui/oneshotfinishpage.cpp, src/ui/oneshotfinishpage.h,
+	  src/ui/oneshotpage.cpp, src/ui/oneshotpage.h,
+	  src/ui/playerspage.cpp, src/ui/playerspage.h,
+	  src/ui/tools/logoswizardpage.cpp, src/ui/tools/logoswizardpage.h,
+	  src/ui/typepage.cpp, src/ui/typepage.h: Separated LogosApp into
+	  LogosApp and LogosWizard.
+
+2009-03-15 04:04  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, aclocal.m4, autoconf_inc.m4,
+	  build/bakefiles/.bakefile_gen.state, build/bakefiles/osx.bkl,
+	  build/gnu/config.gnu, build/gnu/makefile.gnu,
+	  build/msw/config.vc, build/msw/logos_vc7_cppunitlite.vcproj,
+	  build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc7_util-hhp2cached.vcproj,
+	  build/msw/logos_vc8_cppunitlite.vcproj,
+	  build/msw/logos_vc8_logos.vcproj,
+	  build/msw/logos_vc8_util-hhp2cached.vcproj,
+	  build/msw/makefile.vc, configure, src/ui/logosapp.cpp: Building
+	  and running successfully on OS X, for the first time. A little
+	  oddness in the file menu. Need to try to fix that, perhaps by
+	  making it possible to spawn multiple wizards?
+
+2009-03-14 23:59  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/logosapp.cpp, src/ui/logosapp.h: Added code (untested) to
+	  create an OS X menubar with Quit, About, and Help options.
+
+2009-03-14 23:29  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen/annotated.html,
+	  doc/doxygen/classEvoGraphRenderer-members.html,
+	  doc/doxygen/classEvoGraphWindow-members.html,
+	  doc/doxygen/classEvoGraphWindow.html,
+	  doc/doxygen/classEvoPage-members.html,
+	  doc/doxygen/classEvoPage.html,
+	  doc/doxygen/classFSAPlayer-members.html,
+	  doc/doxygen/classFSAPlayer.html, doc/doxygen/classes.html,
+	  doc/doxygen/functions_0x62.html, doc/doxygen/functions_0x63.html,
+	  doc/doxygen/functions_0x64.html, doc/doxygen/functions_0x65.html,
+	  doc/doxygen/functions_0x66.html, doc/doxygen/functions_0x67.html,
+	  doc/doxygen/functions_0x6c.html, doc/doxygen/functions_0x6f.html,
+	  doc/doxygen/functions_0x72.html, doc/doxygen/functions_0x73.html,
+	  doc/doxygen/functions_func.html, doc/doxygen/functions_vars.html,
+	  doc/doxygen/group__common.html, doc/doxygen/group__ui.html,
+	  doc/doxygen/hierarchy.html,
+	  doc/doxygen/structEvoGraphRenderer.html,
+	  doc/doxygen/structEvoGraphRenderer_1_1SVGColor-members.html,
+	  doc/doxygen/structEvoGraphRenderer_1_1SVGColor.html,
+	  src/ui/evopage.h: Updated documentation.
+
+2009-03-14 23:25  Charles Pence <cpence [at] gmail.com>
+
+	* build/msw/logos_vc9.sln, build/msw/logos_vc9.vcproj,
+	  build/msw/logos_vc9_cppunitlite.vcproj,
+	  build/msw/logos_vc9_logos.vcproj,
+	  build/msw/logos_vc9_util-hhp2cached.vcproj: Right, we'd removed
+	  automatic generation of VC9 projects, but we weren't updating
+	  them, so they were out of date. Fixed.
+
+2009-03-14 23:25  Charles Pence <cpence [at] gmail.com>
+
+	* build/msw/logos_vc7_wxplot.vcproj,
+	  build/msw/logos_vc8_wxplot.vcproj,
+	  build/msw/logos_vc9_wxplot.vcproj, build/msw/logos_wxplot.dsp:
+	  Removed a few wxplot projects that Bakefile had generated.
+
+2009-03-14 23:24  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evopage.cpp: Setting the bitmap depth to '32' seems to
+	  result in transparent PNGs, even though all my colors
+	  (pens/brushes) are fully opaque. Removing the '32' fixes it, so
+	  there you go.
+
+2009-03-14 23:20  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evopage.cpp, src/ui/evopage.h: Implemented very nice SVG
+	  output (best viewed in Firefox, Inkscape can't handle our
+	  font-placement tags yet).
+
+2009-03-14 21:00  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, autoconf_inc.m4,
+	  build/bakefiles/.bakefile_gen.state, build/bakefiles/logos.bkl,
+	  build/bakefiles/wxplot.bkl, build/gnu/config.gnu,
+	  build/gnu/makefile.gnu, build/msw/config.vc, build/msw/logos.dsw,
+	  build/msw/logos_logos.dsp, build/msw/logos_vc7.sln,
+	  build/msw/logos_vc7_cppunitlite.vcproj,
+	  build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc7_util-hhp2cached.vcproj,
+	  build/msw/logos_vc8.sln, build/msw/logos_vc8_cppunitlite.vcproj,
+	  build/msw/logos_vc8_logos.vcproj,
+	  build/msw/logos_vc8_util-hhp2cached.vcproj,
+	  build/msw/makefile.vc, lib/wxPlotLite, src/ui/evopage.cpp,
+	  src/ui/evopage.h: First stab at a home-grown graphing code.
+	  Already looks better. Bugs: not saving PNG files correctly (?!)
+	  and SVG output still to be written.
+
+2009-03-12 04:22  Charles Pence <cpence [at] gmail.com>
+
+	* lib/wxPlotLite/drivers.h, lib/wxPlotLite/plcore.cpp,
+	  lib/wxPlotLite/plcore.h, lib/wxPlotLite/plctrl.cpp,
+	  lib/wxPlotLite/plpage.cpp, lib/wxPlotLite/plplot.h,
+	  lib/wxPlotLite/plplotP.h, lib/wxPlotLite/plstrm.h,
+	  lib/wxPlotLite/wxPlot.cpp, lib/wxPlotLite/wxPlot.h,
+	  lib/wxPlotLite/wxwin.cpp: More simplification of the wxPlotLite
+	  code.
+
+2009-03-12 04:00  Charles Pence <cpence [at] gmail.com>
+
+	* lib/wxPlotLite/drivers.h, lib/wxPlotLite/plcore.cpp,
+	  lib/wxPlotLite/plcore.h, lib/wxPlotLite/plctrl.cpp,
+	  lib/wxPlotLite/plpage.cpp, lib/wxPlotLite/plplot.h,
+	  lib/wxPlotLite/plplotP.h, lib/wxPlotLite/plstrm.h,
+	  lib/wxPlotLite/wxPlot.cpp, lib/wxPlotLite/wxPlot.h,
+	  lib/wxPlotLite/wxwin.cpp: More tidying of wxPlotLite source.
+
+2009-03-12 03:46  Charles Pence <cpence [at] gmail.com>
+
+	* lib/wxPlotLite/drivers.h, lib/wxPlotLite/plcore.h,
+	  lib/wxPlotLite/wxwin.cpp: Removed the _char driver function. This
+	  would just be far too complicated.
+
+2009-03-12 03:22  Charles Pence <cpence [at] gmail.com>
+
+	* lib/wxPlotLite/drivers.h, lib/wxPlotLite/plcore.h,
+	  lib/wxPlotLite/plplot.h, lib/wxPlotLite/plsym.cpp,
+	  lib/wxPlotLite/wxPlot.cpp, lib/wxPlotLite/wxPlot.h,
+	  lib/wxPlotLite/wxwin.cpp: Some simplification on the way to
+	  wx-based font rendering.
+
+2009-03-12 02:51  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, autoconf_inc.m4,
+	  build/bakefiles/.bakefile_gen.state, build/bakefiles/logos.bkl,
+	  build/bakefiles/wxplot.bkl, build/gnu/config.gnu,
+	  build/gnu/makefile.gnu, build/msw/config.vc,
+	  build/msw/logos_logos.dsp,
+	  build/msw/logos_vc7_cppunitlite.vcproj,
+	  build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc7_util-hhp2cached.vcproj,
+	  build/msw/logos_vc7_wxplot.vcproj,
+	  build/msw/logos_vc8_cppunitlite.vcproj,
+	  build/msw/logos_vc8_logos.vcproj,
+	  build/msw/logos_vc8_util-hhp2cached.vcproj,
+	  build/msw/logos_vc8_wxplot.vcproj, build/msw/logos_wxplot.dsp,
+	  build/msw/makefile.vc, lib/wxPlot, lib/wxPlotLite,
+	  lib/wxPlotLite/plstrm.h, lib/wxPlotLite/wxPlot.cpp,
+	  lib/wxPlotLite/wxPlot.h, lib/wxPlotLite/wxwin.cpp: Renamed wxPlot
+	  to wxPlotLite -- I don't want people thinking this is *anything*
+	  like the original wxPlot.
+
+2009-03-12 02:46  Charles Pence <cpence [at] gmail.com>
+
+	* lib/wxPlot/plstrm.h, lib/wxPlot/wxPlot.cpp, lib/wxPlot/wxPlot.h,
+	  lib/wxPlot/wxwin.cpp, src/ui/evopage.cpp, src/ui/evopage.h:
+	  Finally we're properly working on OS X. Required a substantial
+	  overhaul to the bitmap saving code. We now have the wxPlot source
+	  drawing in tandem on both a wxGraphicsContext *and* a wxMemoryDC.
+
+2009-03-09 20:16  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evopage.cpp, src/ui/playerspage.cpp: Audit of strings
+	  before we start work on gettext support; found two bad strings.
+
+2009-03-09 17:45  Charles Pence <cpence [at] gmail.com>
+
+	* src/game/fsaplayer.cpp: Added some tests for various kinds of
+	  invalid user data (these should *always* have been here, and
+	  there should be more).
+
+2009-03-09 17:39  Charles Pence <cpence [at] gmail.com>
+
+	* src/common/error.cpp, src/common/error.h: Implemented an error
+	  stack, for now closing issue 6.
+
+2009-03-09 17:33  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evopage.cpp, src/ui/oneshotpage.cpp: Changed error
+	  reporting format.
+
+2009-03-09 04:25  Charles Pence <cpence [at] gmail.com>
+
+	* src/game/fsaplayer.cpp, src/ui/playerspage.cpp: Resolve issue 7:
+	  check FSA players for fully-valid moves and transitions at load
+	  time, and report errors.
+
+2009-03-08 22:42  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/bakefiles/.bakefile_gen.state,
+	  build/bakefiles/files.bkl, build/gnu/makefile.gnu,
+	  build/msw/logos_logos.dsp, build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc8_logos.vcproj, build/msw/makefile.vc,
+	  src/common/error.cpp, src/common/error.h, src/common/rng.h,
+	  src/game/fsaplayer.cpp, src/game/game.h,
+	  src/tourney/evotournament.cpp, src/tourney/match.cpp,
+	  src/tourney/tournament.cpp, src/ui/evopage.cpp,
+	  src/ui/oneshotpage.cpp: Added an error reporting facility (*very*
+	  basic), and we're now properly reporting tournament- and
+	  game-related errors.
+
+2009-03-08 16:10  Charles Pence <cpence [at] gmail.com>
+
+	* src/game/fsaplayer.cpp, src/game/fsaplayer.h,
+	  src/ui/playerspage.cpp: Added proper game-move checking
+	  (replacing a hack) in FSAPlayer::Load().
+
+2009-03-08 04:29  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen.css, doc/doxygen/annotated.html,
+	  doc/doxygen/classClickListBox-members.html,
+	  doc/doxygen/classClickListBox.html,
+	  doc/doxygen/classEvoFinishPage-members.html,
+	  doc/doxygen/classEvoFinishPage.html,
+	  doc/doxygen/classEvoGraphWindow-members.html,
+	  doc/doxygen/classEvoGraphWindow.html,
+	  doc/doxygen/classEvoPage-members.html,
+	  doc/doxygen/classEvoPage.html,
+	  doc/doxygen/classEvoTournament-members.html,
+	  doc/doxygen/classEvoTournament.html,
+	  doc/doxygen/classFSAPlayer-members.html,
+	  doc/doxygen/classFSAPlayer.html,
+	  doc/doxygen/classFSAState-members.html,
+	  doc/doxygen/classFSAState.html,
+	  doc/doxygen/classFinishPage-members.html,
+	  doc/doxygen/classFinishPage.html,
+	  doc/doxygen/classGame-members.html, doc/doxygen/classGame.html,
+	  doc/doxygen/classHtmlDialog-members.html,
+	  doc/doxygen/classHtmlDialog.html,
+	  doc/doxygen/classLogosApp-members.html,
+	  doc/doxygen/classLogosApp.html,
+	  doc/doxygen/classLogosDropTarget-members.html,
+	  doc/doxygen/classLogosDropTarget.html,
+	  doc/doxygen/classLogosWizardPage-members.html,
+	  doc/doxygen/classLogosWizardPage.html,
+	  doc/doxygen/classMatch-members.html, doc/doxygen/classMatch.html,
+	  doc/doxygen/classMatchDialog-members.html,
+	  doc/doxygen/classMatchDialog.html,
+	  doc/doxygen/classOneShotFinishPage-members.html,
+	  doc/doxygen/classOneShotFinishPage.html,
+	  doc/doxygen/classOneShotPage-members.html,
+	  doc/doxygen/classOneShotPage.html,
+	  doc/doxygen/classPlayer-members.html,
+	  doc/doxygen/classPlayer.html,
+	  doc/doxygen/classPlayersPage-members.html,
+	  doc/doxygen/classPlayersPage.html,
+	  doc/doxygen/classPrisonerDilemma-members.html,
+	  doc/doxygen/classPrisonerDilemma.html,
+	  doc/doxygen/classRandomPlayer-members.html,
+	  doc/doxygen/classRandomPlayer.html,
+	  doc/doxygen/classTitForTatPlayer-members.html,
+	  doc/doxygen/classTitForTatPlayer.html,
+	  doc/doxygen/classTournament-members.html,
+	  doc/doxygen/classTournament.html,
+	  doc/doxygen/classTypePage-members.html,
+	  doc/doxygen/classTypePage.html, doc/doxygen/classes.html,
+	  doc/doxygen/crosscompile.html, doc/doxygen/doxygen.css,
+	  doc/doxygen/doxygen.png, doc/doxygen/functions.html,
+	  doc/doxygen/functions_0x62.html, doc/doxygen/functions_0x63.html,
+	  doc/doxygen/functions_0x64.html, doc/doxygen/functions_0x65.html,
+	  doc/doxygen/functions_0x66.html, doc/doxygen/functions_0x67.html,
+	  doc/doxygen/functions_0x68.html, doc/doxygen/functions_0x69.html,
+	  doc/doxygen/functions_0x6c.html, doc/doxygen/functions_0x6d.html,
+	  doc/doxygen/functions_0x6e.html, doc/doxygen/functions_0x6f.html,
+	  doc/doxygen/functions_0x70.html, doc/doxygen/functions_0x71.html,
+	  doc/doxygen/functions_0x72.html, doc/doxygen/functions_0x73.html,
+	  doc/doxygen/functions_0x74.html, doc/doxygen/functions_0x75.html,
+	  doc/doxygen/functions_0x77.html, doc/doxygen/functions_func.html,
+	  doc/doxygen/functions_type.html, doc/doxygen/functions_vars.html,
+	  doc/doxygen/group__common.html, doc/doxygen/group__game.html,
+	  doc/doxygen/group__tourney.html, doc/doxygen/group__ui.html,
+	  doc/doxygen/hierarchy.html, doc/doxygen/index.html,
+	  doc/doxygen/modules.html, doc/doxygen/pages.html,
+	  doc/doxygen/tab_b.gif, doc/doxygen/tab_l.gif,
+	  doc/doxygen/tab_r.gif, doc/doxygen/tabs.css, doc/footer.inc,
+	  doc/header.inc, doc/manual/evofinishpage.html,
+	  doc/manual/evopage.html, doc/manual/glossary.html,
+	  doc/manual/index-browser.html, doc/manual/index.html,
+	  doc/manual/install.html, doc/manual/list.html,
+	  doc/manual/oneshotfinishpage.html, doc/manual/oneshotpage.html,
+	  doc/manual/pages.html, doc/manual/playerspage.html,
+	  doc/manual/release.html, doc/manual/started.html,
+	  doc/manual/typepage.html: Fixed a bunch of bad MIME-type
+	  properties (thanks to Google Code support group folks!).
+
+2009-03-06 21:01  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen/classEvoPage-members.html,
+	  doc/doxygen/classEvoPage.html, doc/doxygen/functions_0x70.html,
+	  doc/doxygen/functions_func.html: Whoops, didn't update
+	  documentation last time.
+
+2009-03-06 21:01  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen/classEvoPage-members.html,
+	  doc/doxygen/classEvoPage.html, doc/doxygen/functions_0x70.html,
+	  doc/doxygen/functions_func.html, src/ui/evopage.cpp,
+	  src/ui/evopage.h: Changed the EvoPage::PaintGraph() method to
+	  draw on a passed wxDC (particularly, a wxPaintDC from
+	  EvoGraphWindow::OnPaint). I *think* this will fix our problems
+	  with drawing on OS X (though I still need to test that).
+
+2009-03-06 20:41  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile, doc/doxygen.css, doc/doxygen/doxygen.css,
+	  doc/doxygen/footer.inc, doc/doxygen/header.inc, doc/footer.inc,
+	  doc/header.inc: Moved the CSS files, which were getting trampled
+	  on.
+
+2009-03-06 20:34  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile, doc/doxygen/annotated.html,
+	  doc/doxygen/classClickListBox-members.html,
+	  doc/doxygen/classClickListBox.html,
+	  doc/doxygen/classEvoFinishPage-members.html,
+	  doc/doxygen/classEvoFinishPage.html,
+	  doc/doxygen/classEvoGraphWindow-members.html,
+	  doc/doxygen/classEvoGraphWindow.html,
+	  doc/doxygen/classEvoPage-members.html,
+	  doc/doxygen/classEvoPage.html,
+	  doc/doxygen/classEvoTournament-members.html,
+	  doc/doxygen/classEvoTournament.html,
+	  doc/doxygen/classFSAPlayer-members.html,
+	  doc/doxygen/classFSAPlayer.html,
+	  doc/doxygen/classFSAState-members.html,
+	  doc/doxygen/classFSAState.html,
+	  doc/doxygen/classFinishPage-members.html,
+	  doc/doxygen/classFinishPage.html,
+	  doc/doxygen/classGame-members.html, doc/doxygen/classGame.html,
+	  doc/doxygen/classHtmlDialog-members.html,
+	  doc/doxygen/classHtmlDialog.html,
+	  doc/doxygen/classLogosApp-members.html,
+	  doc/doxygen/classLogosApp.html,
+	  doc/doxygen/classLogosDropTarget-members.html,
+	  doc/doxygen/classLogosDropTarget.html,
+	  doc/doxygen/classLogosWizardPage-members.html,
+	  doc/doxygen/classLogosWizardPage.html,
+	  doc/doxygen/classMatch-members.html, doc/doxygen/classMatch.html,
+	  doc/doxygen/classMatchDialog-members.html,
+	  doc/doxygen/classMatchDialog.html,
+	  doc/doxygen/classOneShotFinishPage-members.html,
+	  doc/doxygen/classOneShotFinishPage.html,
+	  doc/doxygen/classOneShotPage-members.html,
+	  doc/doxygen/classOneShotPage.html,
+	  doc/doxygen/classPlayer-members.html,
+	  doc/doxygen/classPlayer.html,
+	  doc/doxygen/classPlayersPage-members.html,
+	  doc/doxygen/classPlayersPage.html,
+	  doc/doxygen/classPrisonerDilemma-members.html,
+	  doc/doxygen/classPrisonerDilemma.html,
+	  doc/doxygen/classRandomPlayer-members.html,
+	  doc/doxygen/classRandomPlayer.html,
+	  doc/doxygen/classTitForTatPlayer-members.html,
+	  doc/doxygen/classTitForTatPlayer.html,
+	  doc/doxygen/classTournament-members.html,
+	  doc/doxygen/classTournament.html,
+	  doc/doxygen/classTypePage-members.html,
+	  doc/doxygen/classTypePage.html, doc/doxygen/classes.html,
+	  doc/doxygen/crosscompile.html, doc/doxygen/doxygen.css,
+	  doc/doxygen/doxygen.png, doc/doxygen/footer.inc,
+	  doc/doxygen/functions.html, doc/doxygen/functions_0x62.html,
+	  doc/doxygen/functions_0x63.html, doc/doxygen/functions_0x64.html,
+	  doc/doxygen/functions_0x65.html, doc/doxygen/functions_0x66.html,
+	  doc/doxygen/functions_0x67.html, doc/doxygen/functions_0x68.html,
+	  doc/doxygen/functions_0x69.html, doc/doxygen/functions_0x6c.html,
+	  doc/doxygen/functions_0x6d.html, doc/doxygen/functions_0x6e.html,
+	  doc/doxygen/functions_0x6f.html, doc/doxygen/functions_0x70.html,
+	  doc/doxygen/functions_0x71.html, doc/doxygen/functions_0x72.html,
+	  doc/doxygen/functions_0x73.html, doc/doxygen/functions_0x74.html,
+	  doc/doxygen/functions_0x75.html, doc/doxygen/functions_0x77.html,
+	  doc/doxygen/functions_func.html, doc/doxygen/functions_type.html,
+	  doc/doxygen/functions_vars.html, doc/doxygen/group__common.html,
+	  doc/doxygen/group__game.html, doc/doxygen/group__tourney.html,
+	  doc/doxygen/group__ui.html, doc/doxygen/header.inc,
+	  doc/doxygen/hierarchy.html, doc/doxygen/index.html,
+	  doc/doxygen/modules.html, doc/doxygen/pages.html,
+	  doc/doxygen/tab_b.gif, doc/doxygen/tab_l.gif,
+	  doc/doxygen/tab_r.gif, doc/doxygen/tabs.css, doc/footer.inc,
+	  doc/header.inc, doc/index.html, doc/logos-contents.hhc,
+	  doc/logos-index.hhk, doc/logos.hhp, doc/logos.hhp.cached,
+	  doc/manual, doc/manual/evofinishpage.html,
+	  doc/manual/evopage.html, doc/manual/glossary.html,
+	  doc/manual/index.html, doc/manual/install.html,
+	  doc/manual/logos-contents.hhc, doc/manual/logos-index.hhk,
+	  doc/manual/logos.hhp, doc/manual/logos.hhp.cached,
+	  doc/manual/oneshotfinishpage.html, doc/manual/oneshotpage.html,
+	  doc/manual/pages.html, doc/manual/playerspage.html,
+	  doc/manual/release.html, doc/manual/started.html,
+	  doc/manual/typepage.html, make-docs.sh: Committed a boatload of
+	  documentation changes, including not putting the Doxygen docs in
+	  the user manual/online documentation.
+
+2009-03-06 20:15  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile, doc/doxygen.css, doc/doxygen/DoxygenLayout.xml,
+	  doc/doxygen/annotated.html,
+	  doc/doxygen/classEvoFinishPage-members.html,
+	  doc/doxygen/classEvoFinishPage.html,
+	  doc/doxygen/classEvoGraphWindow-members.html,
+	  doc/doxygen/classEvoGraphWindow.html,
+	  doc/doxygen/classEvoPage-members.html,
+	  doc/doxygen/classEvoPage.html,
+	  doc/doxygen/classEvoTournament-members.html,
+	  doc/doxygen/classEvoTournament.html,
+	  doc/doxygen/classFSAPlayer-members.html,
+	  doc/doxygen/classFSAPlayer.html,
+	  doc/doxygen/classFSAState-members.html,
+	  doc/doxygen/classFSAState.html,
+	  doc/doxygen/classFinishPage-members.html,
+	  doc/doxygen/classFinishPage.html,
+	  doc/doxygen/classGame-members.html, doc/doxygen/classGame.html,
+	  doc/doxygen/classHtmlDialog-members.html,
+	  doc/doxygen/classHtmlDialog.html,
+	  doc/doxygen/classLogosApp-members.html,
+	  doc/doxygen/classLogosApp.html,
+	  doc/doxygen/classLogosDropTarget-members.html,
+	  doc/doxygen/classLogosDropTarget.html,
+	  doc/doxygen/classLogosWizardPage-members.html,
+	  doc/doxygen/classLogosWizardPage.html,
+	  doc/doxygen/classMatch-members.html, doc/doxygen/classMatch.html,
+	  doc/doxygen/classMatchDialog-members.html,
+	  doc/doxygen/classMatchDialog.html,
+	  doc/doxygen/classOneShotFinishPage-members.html,
+	  doc/doxygen/classOneShotFinishPage.html,
+	  doc/doxygen/classOneShotPage-members.html,
+	  doc/doxygen/classOneShotPage.html,
+	  doc/doxygen/classPlayer-members.html,
+	  doc/doxygen/classPlayer.html,
+	  doc/doxygen/classPlayersPage-members.html,
+	  doc/doxygen/classPlayersPage.html,
+	  doc/doxygen/classPrisonerDilemma-members.html,
+	  doc/doxygen/classPrisonerDilemma.html,
+	  doc/doxygen/classRandomPlayer-members.html,
+	  doc/doxygen/classRandomPlayer.html,
+	  doc/doxygen/classTitForTatPlayer-members.html,
+	  doc/doxygen/classTitForTatPlayer.html,
+	  doc/doxygen/classTournament-members.html,
+	  doc/doxygen/classTournament.html,
+	  doc/doxygen/classTypePage-members.html,
+	  doc/doxygen/classTypePage.html, doc/doxygen/classes.html,
+	  doc/doxygen/crosscompile.html, doc/doxygen/doxygen.css,
+	  doc/doxygen/functions.html, doc/doxygen/functions_0x62.html,
+	  doc/doxygen/functions_0x63.html, doc/doxygen/functions_0x64.html,
+	  doc/doxygen/functions_0x65.html, doc/doxygen/functions_0x66.html,
+	  doc/doxygen/functions_0x67.html, doc/doxygen/functions_0x68.html,
+	  doc/doxygen/functions_0x69.html, doc/doxygen/functions_0x6c.html,
+	  doc/doxygen/functions_0x6d.html, doc/doxygen/functions_0x6e.html,
+	  doc/doxygen/functions_0x6f.html, doc/doxygen/functions_0x70.html,
+	  doc/doxygen/functions_0x72.html, doc/doxygen/functions_0x73.html,
+	  doc/doxygen/functions_0x74.html, doc/doxygen/functions_0x75.html,
+	  doc/doxygen/functions_0x77.html, doc/doxygen/functions_func.html,
+	  doc/doxygen/functions_type.html, doc/doxygen/functions_vars.html,
+	  doc/doxygen/group__common.html, doc/doxygen/group__game.html,
+	  doc/doxygen/group__tourney.html, doc/doxygen/group__ui.html,
+	  doc/doxygen/hierarchy.html, doc/doxygen/index.html,
+	  doc/doxygen/modules.html, doc/doxygen/pages.html,
+	  doc/doxygen/tabs.css, doc/header.inc, src/ui/logosapp.h: Updated
+	  documentation and built with latest version of Doxygen.
+
+2009-03-06 19:49  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, autoconf_inc.m4,
+	  build/bakefiles/.bakefile_gen.state, build/bakefiles/logos.bkl,
+	  build/msw/logos.rc, build/msw/logos_logos.dsp,
+	  build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc8_logos.vcproj, build/msw/makefile.vc,
+	  configure: Added an .RC file to the Win32 executable, which
+	  includes the default wxWidgets resources.
+
+2009-03-06 19:39  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/oneshotpage.cpp: Changed window creation order in
+	  OneShotPage to give us the right tab-traversal order through the
+	  dialog box.
+
+2009-03-03 19:51  Charles Pence <cpence [at] gmail.com>
+
+	* src/common/rng.cpp, src/common/rng.h, src/game/random.cpp,
+	  src/ui/logosapp.cpp: Place the RNG in a namespace, and seed it
+	  with current time on startup.
+
+2009-03-03 19:33  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/bakefiles/.bakefile_gen.state,
+	  build/bakefiles/files.bkl, build/gnu/makefile.gnu,
+	  build/msw/logos_logos.dsp, build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc8_logos.vcproj, build/msw/makefile.vc,
+	  src/common/rtf.cpp, src/common/rtf.h,
+	  src/tourney/evotournament.cpp, src/tourney/evotournament.h,
+	  src/tourney/match.cpp, src/tourney/match.h,
+	  src/tourney/tournament.cpp, src/ui/oneshotfinishpage.cpp,
+	  src/ui/oneshotpage.cpp, src/ui/playerspage.cpp: Removed silly
+	  rtf.* code, and cleaned up a few dependencies.
+
+2009-02-25 22:34  Charles Pence <cpence [at] gmail.com>
+
+	* lib/CppUnitLite/Test.h, src/tourney/tournament.cpp,
+	  src/tourney/tournament.h: Added more robust unit tests for the
+	  Tournament class, and converted the testing macros to do { ... }
+	  while (0)
+
+2009-02-22 23:10  Charles Pence <cpence [at] gmail.com>
+
+	* src/game/player.h, src/tourney/tournament.cpp,
+	  src/tourney/tournament.h: Added some tests to the Tournament
+	  class, which exposed a bug in the MockPlayer. To prevent such
+	  bugs in the future, the Player class is now pure virtual; if you
+	  don't properly derive Think() and Clone(), you'll get an error.
+
+2009-02-22 22:46  Charles Pence <cpence [at] gmail.com>
+
+	* lib/CppUnitLite/Test.cpp, lib/CppUnitLite/Test.h,
+	  lib/CppUnitLite/TestRegistry.cpp, lib/CppUnitLite/TestRegistry.h,
+	  lib/CppUnitLite/TestResult.cpp, lib/CppUnitLite/TestResult.h,
+	  src/tourney/evotournament.cpp, src/tourney/tournament.cpp,
+	  src/ui/playerspage.cpp: Once more cleaned up the output of the
+	  unit tests.
+
+2009-02-22 22:27  Charles Pence <cpence [at] gmail.com>
+
+	* src/tourney/match.cpp: A little cleanup on the Match test suite,
+	  which was largely correctly done.
+
+2009-02-18 22:18  Charles Pence <cpence [at] gmail.com>
+
+	* src/game/fsaplayer.cpp, src/game/player.cpp,
+	  src/game/prisoner.cpp, src/game/random.cpp,
+	  src/game/titfortat.cpp: Updated all the game-tree unit tests to
+	  be more sane.
+
+2009-02-18 15:24  Charles Pence <cpence [at] gmail.com>
+
+	* lib/CppUnitLite/Test.cpp, lib/CppUnitLite/Test.h,
+	  lib/CppUnitLite/TestResult.cpp, lib/CppUnitLite/TestResult.h:
+	  Added a count of successful test conditions to the test harness.
+
+2009-02-18 15:17  Charles Pence <cpence [at] gmail.com>
+
+	* src/game/game.cpp, src/game/prisoner.cpp: Updated some unit tests
+	  for the Game and PrisonerDilemma.
+
+2009-02-16 04:43  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, aclocal.m4, autoconf_inc.m4,
+	  build/bakefiles/.bakefile_gen.state, build/bakefiles/osx.bkl,
+	  build/gnu/config.gnu, build/gnu/makefile.gnu,
+	  build/msw/config.vc, build/msw/logos_vc7_cppunitlite.vcproj,
+	  build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc7_util-hhp2cached.vcproj,
+	  build/msw/logos_vc7_wxplot.vcproj,
+	  build/msw/logos_vc8_cppunitlite.vcproj,
+	  build/msw/logos_vc8_logos.vcproj,
+	  build/msw/logos_vc8_util-hhp2cached.vcproj,
+	  build/msw/logos_vc8_wxplot.vcproj, build/msw/makefile.vc,
+	  configure: Made building the OSX bundle optional on the Autoconf
+	  build. Type 'make logos_bundle' to build it.
+
+2009-02-16 04:42  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/logosapp.cpp, src/ui/logosapp.h, src/ui/playerspage.cpp,
+	  src/ui/playerspage.h: Added support for file drag-and-drop on
+	  Windows, Mac OS X, and Linux. (Wow, that was easy.)
+
+2009-02-16 03:52  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, aclocal.m4, autoconf_inc.m4,
+	  build/bakefiles/.bakefile_gen.state,
+	  build/bakefiles/Bakefiles.bkgen, build/bakefiles/logos.bkl,
+	  build/bakefiles/osx.bkl, build/gnu/config.gnu,
+	  build/gnu/makefile.gnu, build/macosx, build/macosx/Info.plist.in,
+	  build/macosx/wxmac.icns, build/msw/config.vc,
+	  build/msw/logos_vc7_cppunitlite.vcproj,
+	  build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc7_util-hhp2cached.vcproj,
+	  build/msw/logos_vc7_wxplot.vcproj,
+	  build/msw/logos_vc8_cppunitlite.vcproj,
+	  build/msw/logos_vc8_logos.vcproj,
+	  build/msw/logos_vc8_util-hhp2cached.vcproj,
+	  build/msw/logos_vc8_wxplot.vcproj, build/msw/makefile.vc,
+	  configure, src/ui/oneshotpage.h: Updates for building on wxMac.
+	  We can create OS X bundles now, though we still need to
+	  deactivate it for non-OSX targets.
+
+2009-02-13 21:48  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/bakefiles/.bakefile_gen.state,
+	  build/bakefiles/files.bkl, build/gnu/makefile.gnu,
+	  build/msw/logos_logos.dsp, build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc8_logos.vcproj,
+	  build/msw/logos_vc9_logos.vcproj, build/msw/makefile.vc,
+	  src/common/rtf.cpp, src/common/rtf.h,
+	  src/ui/oneshotfinishpage.cpp: Added support for outputting a
+	  detailed RTF report of a one-shot tournament.
+
+2009-02-13 18:44  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/finishpage.cpp, src/ui/oneshotfinishpage.cpp: Fixed two
+	  bugs, one with the vertical text alignment on FinishPage buttons,
+	  and one with the data-save notification not being shown on the
+	  OneShotFinishPage.
+
+2009-02-12 01:11  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evofinishpage.cpp, src/ui/oneshotfinishpage.cpp,
+	  src/ui/oneshotpage.h: Added summary CSV export from the
+	  OneShotFinishPage.
+
+2009-02-12 00:52  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/finishpage.cpp, src/ui/finishpage.h, src/ui/logosapp.cpp,
+	  src/ui/oneshotfinishpage.cpp, src/ui/oneshotfinishpage.h: Added
+	  some buttons to the OneShotFinishPage, and fixed a few bugs
+	  (sizers on FinishPage, and client window size saving).
+
+2009-02-11 23:59  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/logosapp.cpp: Added configuration support to store the
+	  position and size of the main wizard window.
+
+2009-02-11 23:38  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen/annotated.html,
+	  doc/doxygen/classEvoFinishPage-members.html,
+	  doc/doxygen/classEvoFinishPage.html,
+	  doc/doxygen/classEvoPage-members.html,
+	  doc/doxygen/classEvoPage.html,
+	  doc/doxygen/classEvoTournament.html,
+	  doc/doxygen/classFSAPlayer-members.html,
+	  doc/doxygen/classFSAPlayer.html,
+	  doc/doxygen/classFinishPage-members.html,
+	  doc/doxygen/classFinishPage.html,
+	  doc/doxygen/classOneShotFinishPage-members.html,
+	  doc/doxygen/classOneShotFinishPage.html,
+	  doc/doxygen/classPlayer-members.html,
+	  doc/doxygen/classPlayer.html,
+	  doc/doxygen/classRandomPlayer-members.html,
+	  doc/doxygen/classRandomPlayer.html,
+	  doc/doxygen/classTitForTatPlayer-members.html,
+	  doc/doxygen/classTitForTatPlayer.html,
+	  doc/doxygen/classTournament-members.html,
+	  doc/doxygen/classTournament.html, doc/doxygen/functions.html,
+	  doc/doxygen/functions_0x64.html, doc/doxygen/functions_0x66.html,
+	  doc/doxygen/functions_0x67.html, doc/doxygen/functions_0x69.html,
+	  doc/doxygen/functions_0x6f.html, doc/doxygen/functions_0x70.html,
+	  doc/doxygen/functions_0x72.html, doc/doxygen/functions_0x73.html,
+	  doc/doxygen/functions_0x74.html, doc/doxygen/functions_func.html,
+	  doc/doxygen/functions_type.html, doc/doxygen/functions_vars.html,
+	  doc/doxygen/group__tourney.html, doc/doxygen/group__ui.html,
+	  src/game/fsaplayer.h, src/game/random.h, src/game/titfortat.h,
+	  src/ui/oneshotfinishpage.h: Updated documentation.
+
+2009-02-11 23:35  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evofinishpage.cpp: Converted the allocated array to a
+	  wxArrayString in CSV generation.
+
+2009-02-11 23:32  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evofinishpage.cpp: Added support for saving CSV files.
+
+2009-02-11 19:18  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile, src/game/fsaplayer.h, src/game/player.h,
+	  src/game/random.h, src/game/titfortat.h,
+	  src/tourney/evotournament.cpp, src/tourney/evotournament.h,
+	  src/tourney/tournament.cpp, src/tourney/tournament.h,
+	  src/ui/evopage.cpp, src/ui/oneshotpage.cpp,
+	  src/ui/playerspage.cpp: Major architectural update -- can now add
+	  multiple players of the same name and author to the tournament.
+
+2009-02-11 18:42  Charles Pence <cpence [at] gmail.com>
+
+	* lib/wxPlot/lsvg.h, src/ui/evofinishpage.cpp, src/ui/evopage.h,
+	  src/ui/logosapp.cpp: Functional image and SVG saving on the
+	  EvoFinishPage. [Needs more testing.]
+
+2009-01-31 22:55  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evofinishpage.cpp, src/ui/evofinishpage.h,
+	  src/ui/finishpage.cpp, src/ui/finishpage.h: Added some bare-bones
+	  UI to the EvoFinishPage.
+
+2009-01-31 21:56  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen/annotated.html,
+	  doc/doxygen/classEvoFinishPage-members.html,
+	  doc/doxygen/classEvoFinishPage.html,
+	  doc/doxygen/classFinishPage-members.html,
+	  doc/doxygen/classFinishPage.html,
+	  doc/doxygen/classLogosWizardPage.html,
+	  doc/doxygen/classOneShotFinishPage-members.html,
+	  doc/doxygen/classOneShotFinishPage.html,
+	  doc/doxygen/functions.html, doc/doxygen/functions_func.html,
+	  doc/doxygen/functions_vars.html, doc/doxygen/group__ui.html,
+	  doc/doxygen/hierarchy.html: Updated documentation.
+
+2009-01-31 21:35  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/bakefiles/.bakefile_gen.state,
+	  build/bakefiles/files.bkl, build/gnu/makefile.gnu,
+	  build/msw/logos_logos.dsp, build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc8_logos.vcproj,
+	  build/msw/logos_vc9_logos.vcproj, build/msw/makefile.vc,
+	  src/ui/evofinishpage.cpp, src/ui/evofinishpage.h,
+	  src/ui/finishpage.cpp, src/ui/finishpage.h,
+	  src/ui/oneshotfinishpage.cpp, src/ui/oneshotfinishpage.h: Split
+	  off all the hideous duplicated code in the two finishing pages
+	  into a base class.
+
+2009-01-31 20:38  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen/annotated.html, doc/doxygen/classEvoFinishPage.html,
+	  doc/doxygen/classOneShotFinishPage.html,
+	  doc/doxygen/group__ui.html, src/ui/evofinishpage.h,
+	  src/ui/oneshotfinishpage.h: Fixed a few documentation errors.
+
+2009-01-31 20:37  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen/annotated.html,
+	  doc/doxygen/classEvoFinishPage-members.html,
+	  doc/doxygen/classEvoFinishPage.html,
+	  doc/doxygen/classEvoPage-members.html,
+	  doc/doxygen/classEvoPage.html,
+	  doc/doxygen/classLogosApp-members.html,
+	  doc/doxygen/classLogosApp.html,
+	  doc/doxygen/classLogosWizardPage.html,
+	  doc/doxygen/classMatchDialog-members.html,
+	  doc/doxygen/classMatchDialog.html,
+	  doc/doxygen/classOneShotFinishPage-members.html,
+	  doc/doxygen/classOneShotFinishPage.html,
+	  doc/doxygen/classOneShotPage-members.html,
+	  doc/doxygen/classOneShotPage.html, doc/doxygen/functions.html,
+	  doc/doxygen/functions_0x62.html, doc/doxygen/functions_0x63.html,
+	  doc/doxygen/functions_0x64.html, doc/doxygen/functions_0x65.html,
+	  doc/doxygen/functions_0x66.html, doc/doxygen/functions_0x67.html,
+	  doc/doxygen/functions_0x68.html, doc/doxygen/functions_0x69.html,
+	  doc/doxygen/functions_0x6c.html, doc/doxygen/functions_0x6d.html,
+	  doc/doxygen/functions_0x6e.html, doc/doxygen/functions_0x6f.html,
+	  doc/doxygen/functions_0x70.html, doc/doxygen/functions_0x71.html,
+	  doc/doxygen/functions_0x72.html, doc/doxygen/functions_0x73.html,
+	  doc/doxygen/functions_0x74.html, doc/doxygen/functions_0x75.html,
+	  doc/doxygen/functions_0x77.html, doc/doxygen/functions_func.html,
+	  doc/doxygen/functions_vars.html, doc/doxygen/group__ui.html,
+	  doc/doxygen/hierarchy.html: Updated documentation.
+
+2009-01-31 20:31  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/bakefiles/.bakefile_gen.state,
+	  build/bakefiles/files.bkl, build/gnu/makefile.gnu,
+	  build/msw/logos_logos.dsp, build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc8_logos.vcproj,
+	  build/msw/logos_vc9_logos.vcproj, build/msw/makefile.vc,
+	  src/ui/evofinishpage.cpp, src/ui/evofinishpage.h,
+	  src/ui/logosapp.cpp, src/ui/logosapp.h,
+	  src/ui/oneshotfinishpage.cpp, src/ui/oneshotfinishpage.h: Added a
+	  bare-bones skeleton of the OneShotFinishPage and EvoFinishPage.
+
+2009-01-31 17:51  Charles Pence <cpence [at] gmail.com>
+
+	* lib/wxPlot/lsvg.h, lib/wxPlot/plstrm.h, lib/wxPlot/wxPlot.cpp,
+	  lib/wxPlot/wxPlot.h, lib/wxPlot/wxwin.cpp, src/ui/evopage.cpp,
+	  src/ui/evopage.h: Saving the graph image in the EvoPage as both a
+	  bitmap image (imageGraph) and as an SVG file (svgGraph) for use
+	  by the soon-to-be-written ending page.
+
+2009-01-31 16:56  Charles Pence <cpence [at] gmail.com>
+
+	* lib/wxPlot/plvpor.cpp: Fixed the clipping problem we were having
+	  with the graph window border.
+
+2009-01-31 16:42  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evopage.cpp, src/ui/logosapp.cpp, src/ui/matchdialog.cpp,
+	  src/ui/tools/htmldialog.cpp: Fixed some control positioning/size
+	  issues in MatchDialog and HtmlDialog, and fixed the scrolling
+	  issue on the MatchDialog text boxes.
+
+2009-01-28 02:57  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/bakefiles/.bakefile_gen.state,
+	  build/bakefiles/files.bkl, build/gnu/makefile.gnu,
+	  build/msw/logos_logos.dsp, build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc8_logos.vcproj,
+	  build/msw/logos_vc9_logos.vcproj, build/msw/makefile.vc,
+	  src/ui/logosapp.cpp, src/ui/matchdialog.cpp,
+	  src/ui/matchdialog.h, src/ui/oneshotpage.cpp,
+	  src/ui/oneshotpage.h, src/ui/tools/htmldialog.cpp,
+	  src/ui/tools/logoswizardpage.cpp: A first step at adding back the
+	  match-details view. Still rather broken, but coming along.
+
+2009-01-27 04:21  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile, configure, configure.ac, doc/doxygen/classPlayer.html,
+	  doc/doxygen/classPlayersPage-members.html,
+	  doc/doxygen/classPlayersPage.html,
+	  doc/doxygen/classRandomPlayer-members.html,
+	  doc/doxygen/classRandomPlayer.html, doc/doxygen/functions.html,
+	  doc/doxygen/functions_func.html, lib/wxPlot/plbox.cpp,
+	  lib/wxPlot/plcore.cpp, lib/wxPlot/plctrl.cpp,
+	  lib/wxPlot/plcvt.cpp, lib/wxPlot/plline.cpp, lib/wxPlot/plplot.h,
+	  lib/wxPlot/plplotP.h, lib/wxPlot/plsym.cpp,
+	  lib/wxPlot/wxPlot.cpp, lib/wxPlot/wxPlot.h, lib/wxPlot/wxwin.cpp,
+	  src/game/game.h, src/game/player.h,
+	  src/tourney/evotournament.cpp, src/tourney/tournament.cpp,
+	  src/ui/evopage.cpp, src/ui/evopage.h, src/ui/logosapp.cpp,
+	  src/ui/oneshotpage.cpp, src/ui/playerspage.cpp,
+	  src/ui/playerspage.h, src/ui/tools/logoswizardpage.cpp,
+	  src/ui/typepage.cpp: Now compiling entirely without warnings with
+	  GCC 4.3.2 -Wall -Wextra.
+
+2009-01-27 03:41  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile, doc/doxygen/annotated.html,
+	  doc/doxygen/classEvoGraphWindow-members.html,
+	  doc/doxygen/classEvoGraphWindow.html,
+	  doc/doxygen/classEvoPage-members.html,
+	  doc/doxygen/classEvoPage.html,
+	  doc/doxygen/classEvoTournament-members.html,
+	  doc/doxygen/classFSAPlayer-members.html,
+	  doc/doxygen/classGame-members.html,
+	  doc/doxygen/classLogosApp-members.html,
+	  doc/doxygen/classLogosApp.html,
+	  doc/doxygen/classLogosWizardPage-members.html,
+	  doc/doxygen/classLogosWizardPage.html,
+	  doc/doxygen/classOneShotPage-members.html,
+	  doc/doxygen/classOneShotPage.html,
+	  doc/doxygen/classPlayer-members.html,
+	  doc/doxygen/classPlayer.html,
+	  doc/doxygen/classPlayersPage-members.html,
+	  doc/doxygen/classPrisonerDilemma-members.html,
+	  doc/doxygen/classRandomPlayer-members.html,
+	  doc/doxygen/classRandomPlayer.html,
+	  doc/doxygen/classTitForTatPlayer-members.html,
+	  doc/doxygen/classTournament-members.html,
+	  doc/doxygen/classTypePage.html, doc/doxygen/functions.html,
+	  doc/doxygen/functions_func.html, doc/doxygen/functions_vars.html,
+	  doc/doxygen/group__ui.html, doc/doxygen/hierarchy.html,
+	  src/game/random.h, src/ui/evopage.cpp, src/ui/evopage.h,
+	  src/ui/tools/logoswizardpage.h: With this, as far as I know, we
+	  should have all the current code documented.
+
+2009-01-26 02:13  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/logosapp.cpp, src/ui/logosapp.h: Modified the main
+	  execution such that we're actually creating a top-level window
+	  and using the main wxWidgets loop. This should make us actually
+	  work on wxMac.
+
+2009-01-25 14:51  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/oneshotpage.cpp: A quick build fix for wxMac.
+
+2009-01-24 21:22  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/tools/htmldialog.cpp, src/ui/tools/logoswizardpage.cpp:
+	  Did the same wxID_ANY change to the tools that I did to the rest
+	  earlier.
+
+2009-01-24 19:13  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/playerspage.cpp: Added the default-button trick to the
+	  PlayersPage.
+
+2009-01-24 18:59  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evopage.cpp, src/ui/evopage.h, src/ui/logosapp.cpp,
+	  src/ui/logosapp.h, src/ui/oneshotpage.cpp,
+	  src/ui/playerspage.cpp: Cleaned up the OneShotPage constructor,
+	  and switched to using wxID_ANY instead of '-1' when we mean
+	  wxID_ANY.
+
+2009-01-23 18:00  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evopage.cpp, src/ui/logosapp.h, src/ui/oneshotpage.cpp,
+	  src/ui/oneshotpage.h, src/ui/tools/logoswizardpage.cpp,
+	  src/ui/tools/logoswizardpage.h: Added tab order and
+	  default-button magic to the OneShotPage, which caused a crazy
+	  battle for focus. Now we're making sure to guard focus logic with
+	  IsShownOnScreen() and adding a wxEVT_DATA_UPDATE every time the
+	  page changes.
+
+2009-01-23 01:03  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evopage.cpp, src/ui/evopage.h: Fixed the tab order on the
+	  EvoPage, and played with the default button order.
+
+2009-01-22 05:32  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evopage.cpp: Bah! Finally! The dialog-control-creation
+	  order trick works on wxWidgets just like Windows.
+
+2009-01-21 21:37  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evopage.cpp: Yipes, non-building commit earlier!
+
+2009-01-21 21:36  Charles Pence <cpence [at] gmail.com>
+
+	* make-docs.sh: Updated the docs script to build out of tree.
+
+2009-01-21 21:34  Charles Pence <cpence [at] gmail.com>
+
+	* doc, doc/doxygen/annotated.html,
+	  doc/doxygen/classPlayersPage-members.html,
+	  doc/doxygen/classPlayersPage.html, doc/doxygen/functions.html,
+	  doc/doxygen/functions_func.html, doc/doxygen/functions_vars.html,
+	  doc/doxygen/group__ui.html, doc/doxygen/hierarchy.html,
+	  doc/logos.htb: Updated documentation. Also, ignoring the built
+	  .htb file in the doc directory.
+
+2009-01-21 21:32  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evopage.cpp, src/ui/evopage.h, src/ui/logosapp.cpp: The
+	  mnemonic for the generation spinner is still broken, but I'm
+	  committing in order to run a custom build for a colleague.
+
+2009-01-18 20:16  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/playerspage.cpp: The behavior of the apps-key (a
+	  ContextMenuEvent with position (-1, -1)) was entirely wrong.
+	  Fixed.
+
+2009-01-18 15:40  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/bakefiles/.bakefile_gen.state,
+	  build/bakefiles/files.bkl, build/gnu/makefile.gnu,
+	  build/msw/logos_logos.dsp, build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc8_logos.vcproj,
+	  build/msw/logos_vc9_logos.vcproj, build/msw/makefile.vc,
+	  src/ui/evopage.cpp, src/ui/evopage.h, src/ui/playerspage.cpp,
+	  src/ui/playerspage.h, src/ui/tools/clicklistbox.cpp,
+	  src/ui/tools/clicklistbox.h: Removed the ClickListBox -- turns
+	  out there's a wxContextMenuEvent that gets propagated to the
+	  parent automatically, and also handles things like the
+	  right-click menu key for free. Also, moved the graph legend
+	  display in the EvoPage from a graph click to a dedicated "Show
+	  Legend" button which is disabled until the tournament is run.
+
+2009-01-18 03:24  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen/annotated.html, doc/doxygen/classLogosApp.html,
+	  doc/doxygen/classLogosWizardPage.html,
+	  doc/doxygen/classOneShotPage-members.html,
+	  doc/doxygen/classOneShotPage.html,
+	  doc/doxygen/classTypePage.html, doc/doxygen/functions.html,
+	  doc/doxygen/functions_func.html, doc/doxygen/functions_vars.html,
+	  doc/doxygen/group__ui.html, doc/doxygen/hierarchy.html,
+	  src/ui/oneshotpage.h: Documented the OneShotPage.
+
+2009-01-18 02:52  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen/annotated.html, doc/doxygen/classLogosApp.html,
+	  doc/doxygen/classLogosWizardPage.html,
+	  doc/doxygen/classPlayersPage-members.html,
+	  doc/doxygen/classPlayersPage.html,
+	  doc/doxygen/classTypePage-members.html,
+	  doc/doxygen/classTypePage.html, doc/doxygen/functions.html,
+	  doc/doxygen/functions_func.html, doc/doxygen/functions_vars.html,
+	  doc/doxygen/group__ui.html, doc/doxygen/hierarchy.html,
+	  src/ui/playerspage.h, src/ui/tools/clicklistbox.h,
+	  src/ui/typepage.cpp, src/ui/typepage.h: Documented the TypePage
+	  and PlayersPage (and fixed a bug I introduced while documenting
+	  [!]).
+
+2009-01-18 01:56  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen/annotated.html,
+	  doc/doxygen/classClickListBox-members.html,
+	  doc/doxygen/classClickListBox.html, doc/doxygen/functions.html,
+	  doc/doxygen/functions_func.html, doc/doxygen/functions_vars.html,
+	  doc/doxygen/group__ui.html, doc/doxygen/hierarchy.html,
+	  src/ui/tools/clicklistbox.h: Documented the ClickListBox class.
+
+2009-01-17 04:06  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen/annotated.html,
+	  doc/doxygen/classHtmlDialog-members.html,
+	  doc/doxygen/classHtmlDialog.html, doc/doxygen/functions.html,
+	  doc/doxygen/functions_func.html, doc/doxygen/functions_vars.html,
+	  doc/doxygen/group__ui.html, doc/doxygen/hierarchy.html,
+	  src/ui/evopage.cpp, src/ui/playerspage.cpp,
+	  src/ui/tools/htmldialog.h: Documented the HtmlDialog class.
+
+2009-01-17 02:43  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/bakefiles/.bakefile_gen.state,
+	  build/bakefiles/files.bkl, build/gnu/makefile.gnu,
+	  build/msw/logos_logos.dsp, build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc8_logos.vcproj,
+	  build/msw/logos_vc9_logos.vcproj, build/msw/makefile.vc,
+	  src/ui/playerspage.cpp, src/ui/tools/clicklistbox.cpp,
+	  src/ui/tools/clicklistbox.h, src/ui/tools/listbox.cpp,
+	  src/ui/tools/listbox.h: Renamed "listbox.*" to "clicklistbox.*"
+	  to match the class name.
+
+2009-01-16 21:02  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen/classFSAPlayer-members.html,
+	  doc/doxygen/classFSAPlayer.html,
+	  doc/doxygen/classPlayer-members.html,
+	  doc/doxygen/classPlayer.html,
+	  doc/doxygen/classRandomPlayer-members.html,
+	  doc/doxygen/classRandomPlayer.html,
+	  doc/doxygen/classTitForTatPlayer-members.html,
+	  doc/doxygen/classTitForTatPlayer.html,
+	  doc/doxygen/classTournament.html, doc/doxygen/functions.html,
+	  doc/doxygen/functions_func.html, src/game/fsaplayer.cpp,
+	  src/game/fsaplayer.h, src/game/player.cpp, src/game/player.h,
+	  src/game/random.cpp, src/game/random.h, src/game/titfortat.cpp,
+	  src/game/titfortat.h, src/tourney/evotournament.cpp,
+	  src/tourney/tournament.cpp, src/tourney/tournament.h: Renamed the
+	  CreateNew method of the Player class to Clone, which makes more
+	  sense.
+
+2009-01-16 20:57  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen/group__ui.html, src/ui/logosapp.h: Added detailed
+	  documentation for our custom event types.
+
+2009-01-16 15:53  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile, doc/doxygen/annotated.html,
+	  doc/doxygen/classLogosWizardPage-members.html,
+	  doc/doxygen/classLogosWizardPage.html,
+	  doc/doxygen/functions.html, doc/doxygen/functions_func.html,
+	  doc/doxygen/functions_vars.html, doc/doxygen/group__ui.html,
+	  doc/doxygen/hierarchy.html, src/ui/tools/logoswizardpage.cpp,
+	  src/ui/tools/logoswizardpage.h: Documented the LogosWizardPage
+	  class.
+
+2009-01-16 02:57  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen.css, doc/doxygen/annotated.html,
+	  doc/doxygen/classEvoTournament-members.html,
+	  doc/doxygen/classEvoTournament.html,
+	  doc/doxygen/classFSAPlayer-members.html,
+	  doc/doxygen/classFSAPlayer.html,
+	  doc/doxygen/classFSAState-members.html,
+	  doc/doxygen/classFSAState.html,
+	  doc/doxygen/classGame-members.html, doc/doxygen/classGame.html,
+	  doc/doxygen/classLogosApp-members.html,
+	  doc/doxygen/classLogosApp.html,
+	  doc/doxygen/classMatch-members.html, doc/doxygen/classMatch.html,
+	  doc/doxygen/classPlayer-members.html,
+	  doc/doxygen/classPlayer.html,
+	  doc/doxygen/classPrisonerDilemma-members.html,
+	  doc/doxygen/classPrisonerDilemma.html,
+	  doc/doxygen/classRandomPlayer-members.html,
+	  doc/doxygen/classRandomPlayer.html,
+	  doc/doxygen/classTitForTatPlayer-members.html,
+	  doc/doxygen/classTitForTatPlayer.html,
+	  doc/doxygen/classTournament-members.html,
+	  doc/doxygen/classTournament.html, doc/doxygen/crosscompile.html,
+	  doc/doxygen/doxygen.css, doc/doxygen/functions.html,
+	  doc/doxygen/functions_func.html, doc/doxygen/functions_type.html,
+	  doc/doxygen/functions_vars.html, doc/doxygen/group__common.html,
+	  doc/doxygen/group__game.html, doc/doxygen/group__tourney.html,
+	  doc/doxygen/group__ui.html, doc/doxygen/hierarchy.html,
+	  doc/doxygen/index.html, doc/doxygen/mainpages/crosscompile.h,
+	  doc/doxygen/mainpages/main.h, doc/doxygen/modules.html,
+	  doc/doxygen/pages.html: Added instructions for Windows
+	  cross-compiling to the documentation.
+
+2009-01-16 01:24  Charles Pence <cpence [at] gmail.com>
+
+	* configure, configure.ac, src/ui/oneshotpage.cpp,
+	  src/ui/oneshotpage.h: Added a few fixes that let
+	  cross-compilation work.
+
+2009-01-15 14:02  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile, src/tourney/evotournament.h, src/ui/evopage.cpp: Fixed
+	  a compilation bug, and added a keyboard shortcut in the EvoPage.
+
+2009-01-15 13:52  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile, doc/doxygen/annotated.html,
+	  doc/doxygen/classLogosApp-members.html,
+	  doc/doxygen/classLogosApp.html, doc/doxygen/functions.html,
+	  doc/doxygen/functions_func.html, doc/doxygen/functions_vars.html,
+	  doc/doxygen/group__ui.html, doc/doxygen/hierarchy.html,
+	  doc/doxygen/index.html, doc/doxygen/modules.html,
+	  src/ui/logosapp.cpp, src/ui/logosapp.h: Documented the LogosApp
+	  class.
+
+2009-01-11 17:14  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile: Ignore not just all the *files* in the SVN directories,
+	  but the directories themselves, so they don't show up in the
+	  Doxygen output.
+
+2009-01-11 17:11  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile, doc/doxygen/annotated.html,
+	  doc/doxygen/classEvoTournament-members.html,
+	  doc/doxygen/classEvoTournament.html,
+	  doc/doxygen/classFSAPlayer-members.html,
+	  doc/doxygen/classFSAPlayer.html,
+	  doc/doxygen/classFSAState-members.html,
+	  doc/doxygen/classFSAState.html,
+	  doc/doxygen/classGame-members.html, doc/doxygen/classGame.html,
+	  doc/doxygen/classMatch-members.html, doc/doxygen/classMatch.html,
+	  doc/doxygen/classPlayer-members.html,
+	  doc/doxygen/classPlayer.html,
+	  doc/doxygen/classPrisonerDilemma-members.html,
+	  doc/doxygen/classPrisonerDilemma.html,
+	  doc/doxygen/classRandomPlayer-members.html,
+	  doc/doxygen/classRandomPlayer.html,
+	  doc/doxygen/classTitForTatPlayer-members.html,
+	  doc/doxygen/classTitForTatPlayer.html,
+	  doc/doxygen/classTournament-members.html,
+	  doc/doxygen/classTournament.html, doc/doxygen/functions.html,
+	  doc/doxygen/functions_func.html, doc/doxygen/functions_type.html,
+	  doc/doxygen/functions_vars.html, doc/doxygen/group__common.html,
+	  doc/doxygen/group__game.html, doc/doxygen/group__tourney.html,
+	  doc/doxygen/hierarchy.html, doc/doxygen/index.html,
+	  doc/doxygen/modules.html, doc/footer.inc,
+	  src/tourney/evotournament.cpp, src/tourney/evotournament.h:
+	  Documented the EvoTournament class, and removed the timestamp
+	  from the HTML footer so that *all* the docs aren't updated every
+	  time we re-generate.
+
+2009-01-11 04:24  Charles Pence <cpence [at] gmail.com>
+
+	* lib/wxPlot/plbox.cpp, src/game/game.cpp,
+	  src/tourney/tournament.h, src/ui/evopage.cpp, src/ui/evopage.h,
+	  src/ui/logosapp.cpp, src/ui/logosapp.h, src/ui/oneshotpage.cpp,
+	  src/ui/oneshotpage.h, src/ui/playerspage.cpp,
+	  src/ui/playerspage.h, src/ui/tools/htmldialog.cpp,
+	  src/ui/tools/htmldialog.h, src/ui/tools/listbox.cpp,
+	  src/ui/tools/listbox.h, src/ui/tools/logoswizardpage.cpp,
+	  src/ui/tools/logoswizardpage.h, src/ui/typepage.cpp,
+	  src/ui/typepage.h: Added wxWidgets RTTI macros to all classes,
+	  and fixed a few slight bugs/compiler warnings.
+
+2009-01-11 04:06  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile, doc/doxygen/annotated.html,
+	  doc/doxygen/classFSAPlayer-members.html,
+	  doc/doxygen/classFSAPlayer.html,
+	  doc/doxygen/classFSAState-members.html,
+	  doc/doxygen/classFSAState.html,
+	  doc/doxygen/classGame-members.html, doc/doxygen/classGame.html,
+	  doc/doxygen/classMatch-members.html, doc/doxygen/classMatch.html,
+	  doc/doxygen/classPlayer-members.html,
+	  doc/doxygen/classPlayer.html,
+	  doc/doxygen/classPrisonerDilemma-members.html,
+	  doc/doxygen/classPrisonerDilemma.html,
+	  doc/doxygen/classRandomPlayer-members.html,
+	  doc/doxygen/classRandomPlayer.html,
+	  doc/doxygen/classTitForTatPlayer-members.html,
+	  doc/doxygen/classTitForTatPlayer.html,
+	  doc/doxygen/classTournament-members.html,
+	  doc/doxygen/classTournament.html, doc/doxygen/functions.html,
+	  doc/doxygen/functions_func.html, doc/doxygen/functions_type.html,
+	  doc/doxygen/functions_vars.html, doc/doxygen/group__common.html,
+	  doc/doxygen/group__game.html, doc/doxygen/group__tourney.html,
+	  doc/doxygen/hierarchy.html, doc/doxygen/index.html,
+	  doc/doxygen/modules.html, src/tourney/tournament.cpp,
+	  src/tourney/tournament.h: Documented the Tournament class.
+
+2009-01-07 03:26  Charles Pence <cpence [at] gmail.com>
+
+	* Makefile.in, build/bakefiles/.bakefile_gen.state,
+	  build/bakefiles/hhp2cached.bkl, build/bakefiles/logos.bkl,
+	  build/gnu/makefile.gnu, build/msw/logos.dsw,
+	  build/msw/logos_util-hhp2cached.dsp, build/msw/logos_vc7.sln,
+	  build/msw/logos_vc7_util-hhp2cached.vcproj,
+	  build/msw/logos_vc8.sln,
+	  build/msw/logos_vc8_util-hhp2cached.vcproj,
+	  build/msw/logos_vc9.sln,
+	  build/msw/logos_vc9_util-hhp2cached.vcproj,
+	  build/msw/makefile.vc, doc/doxygen.css,
+	  doc/doxygen/annotated.html,
+	  doc/doxygen/classFSAPlayer-members.html,
+	  doc/doxygen/classFSAPlayer.html,
+	  doc/doxygen/classFSAState-members.html,
+	  doc/doxygen/classFSAState.html,
+	  doc/doxygen/classGame-members.html, doc/doxygen/classGame.html,
+	  doc/doxygen/classMatch-members.html, doc/doxygen/classMatch.html,
+	  doc/doxygen/classPlayer-members.html,
+	  doc/doxygen/classPlayer.html,
+	  doc/doxygen/classPrisonerDilemma-members.html,
+	  doc/doxygen/classPrisonerDilemma.html,
+	  doc/doxygen/classRandomPlayer-members.html,
+	  doc/doxygen/classRandomPlayer.html,
+	  doc/doxygen/classTitForTatPlayer-members.html,
+	  doc/doxygen/classTitForTatPlayer.html, doc/doxygen/doxygen.css,
+	  doc/doxygen/functions.html, doc/doxygen/functions_func.html,
+	  doc/doxygen/functions_type.html, doc/doxygen/functions_vars.html,
+	  doc/doxygen/group__common.html, doc/doxygen/group__game.html,
+	  doc/doxygen/group__tourney.html, doc/doxygen/hierarchy.html,
+	  doc/doxygen/index.html, doc/doxygen/modules.html,
+	  doc/logos.hhp.cached, doc/logos.htb, doc/utils,
+	  doc/utils/hhp2cached.cpp, make-docs.sh, src/game/fsaplayer.h,
+	  src/tourney/match.cpp, src/tourney/match.h,
+	  src/tourney/tournament.h: Started tournament documentation and,
+	  more importantly, added hhp2cached to the document tree, enabled
+	  compiling it, and added support for it in the make-docs.sh
+	  script.
+
+2009-01-07 01:13  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen/annotated.html,
+	  doc/doxygen/classFSAPlayer-members.html,
+	  doc/doxygen/classFSAPlayer.html,
+	  doc/doxygen/classFSAState-members.html,
+	  doc/doxygen/classFSAState.html,
+	  doc/doxygen/classGame-members.html, doc/doxygen/classGame.html,
+	  doc/doxygen/classMatch-members.html, doc/doxygen/classMatch.html,
+	  doc/doxygen/classPlayer-members.html,
+	  doc/doxygen/classPlayer.html,
+	  doc/doxygen/classPrisonerDilemma-members.html,
+	  doc/doxygen/classPrisonerDilemma.html,
+	  doc/doxygen/classRandomPlayer-members.html,
+	  doc/doxygen/classRandomPlayer.html,
+	  doc/doxygen/classTitForTatPlayer-members.html,
+	  doc/doxygen/classTitForTatPlayer.html,
+	  doc/doxygen/functions.html, doc/doxygen/functions_func.html,
+	  doc/doxygen/functions_type.html, doc/doxygen/functions_vars.html,
+	  doc/doxygen/group__common.html, doc/doxygen/group__game.html,
+	  doc/doxygen/hierarchy.html, doc/doxygen/index.html,
+	  doc/doxygen/modules.html, doc/logos.htb, make-docs.sh: Added a
+	  script to generate the compressed documentation.
+
+2009-01-07 01:05  Charles Pence <cpence [at] gmail.com>
+
+	* doc/doxygen.css: Forgot a file.
+
+2009-01-07 00:39  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile, doc/doxygen/annotated.html,
+	  doc/doxygen/classFSAPlayer-members.html,
+	  doc/doxygen/classFSAPlayer.html,
+	  doc/doxygen/classFSAState-members.html,
+	  doc/doxygen/classFSAState.html,
+	  doc/doxygen/classGame-members.html, doc/doxygen/classGame.html,
+	  doc/doxygen/classMatch-members.html, doc/doxygen/classMatch.html,
+	  doc/doxygen/classPlayer-members.html,
+	  doc/doxygen/classPlayer.html,
+	  doc/doxygen/classPrisonerDilemma-members.html,
+	  doc/doxygen/classPrisonerDilemma.html,
+	  doc/doxygen/classRandomPlayer-members.html,
+	  doc/doxygen/classRandomPlayer.html,
+	  doc/doxygen/classTitForTatPlayer-members.html,
+	  doc/doxygen/classTitForTatPlayer.html, doc/doxygen/doxygen.css,
+	  doc/doxygen/functions.html, doc/doxygen/functions_func.html,
+	  doc/doxygen/functions_type.html, doc/doxygen/functions_vars.html,
+	  doc/doxygen/group__common.html, doc/doxygen/group__game.html,
+	  doc/doxygen/hierarchy.html, doc/doxygen/index.html,
+	  doc/doxygen/mainpages, doc/doxygen/mainpages/main.h,
+	  doc/doxygen/modules.html, doc/footer.inc, doc/header.inc: Added a
+	  Doxygen main page, and cleaned up some of the HTML.
+
+2009-01-07 00:22  Charles Pence <cpence [at] gmail.com>
+
+	* Doxyfile, Makefile.in, TODO, build/bakefiles/.bakefile_gen.state,
+	  build/bakefiles/files.bkl, build/gnu/makefile.gnu,
+	  build/msw/logos_logos.dsp, build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc8_logos.vcproj,
+	  build/msw/logos_vc9_logos.vcproj, build/msw/makefile.vc, doc,
+	  doc/doxygen, doc/doxygen/annotated.html,
+	  doc/doxygen/classFSAPlayer-members.html,
+	  doc/doxygen/classFSAPlayer.html,
+	  doc/doxygen/classFSAState-members.html,
+	  doc/doxygen/classFSAState.html,
+	  doc/doxygen/classGame-members.html, doc/doxygen/classGame.html,
+	  doc/doxygen/classMatch-members.html, doc/doxygen/classMatch.html,
+	  doc/doxygen/classPlayer-members.html,
+	  doc/doxygen/classPlayer.html,
+	  doc/doxygen/classPrisonerDilemma-members.html,
+	  doc/doxygen/classPrisonerDilemma.html,
+	  doc/doxygen/classRandomPlayer-members.html,
+	  doc/doxygen/classRandomPlayer.html,
+	  doc/doxygen/classTitForTatPlayer-members.html,
+	  doc/doxygen/classTitForTatPlayer.html, doc/doxygen/doxygen.css,
+	  doc/doxygen/doxygen.png, doc/doxygen/functions.html,
+	  doc/doxygen/functions_func.html, doc/doxygen/functions_type.html,
+	  doc/doxygen/functions_vars.html, doc/doxygen/group__common.html,
+	  doc/doxygen/group__game.html, doc/doxygen/hierarchy.html,
+	  doc/doxygen/index.html, doc/doxygen/modules.html,
+	  doc/doxygen/tab_b.gif, doc/doxygen/tab_l.gif,
+	  doc/doxygen/tab_r.gif, doc/doxygen/tabs.css, doc/index.html,
+	  doc/logos-contents.hhc, doc/logos-index.hhk, doc/logos.hhp,
+	  src/common/mathlib.cpp, src/common/mathlib.h, src/common/rng.cpp,
+	  src/common/rng.h, src/game/fsaplayer.cpp, src/game/fsaplayer.h,
+	  src/game/game.cpp, src/game/game.h, src/game/player.cpp,
+	  src/game/player.h, src/game/prisoner.cpp, src/game/prisoner.h,
+	  src/game/random.cpp, src/game/random.h, src/game/titfortat.cpp,
+	  src/game/titfortat.h, src/tourney/match.cpp, src/ui/logosapp.cpp,
+	  src/ui/logosapp.h, src/ui/tools/logoswizardpage.cpp,
+	  src/ui/tools/logoswizardpage.h: Added Doxygen documentation, with
+	  docs currently available for the 'common' and 'game' modules.
+
+2009-01-04 03:47  Charles Pence <cpence [at] gmail.com>
+
+	* src/game/fsaplayer.cpp, src/game/fsaplayer.h, src/game/player.h,
+	  src/game/random.h, src/game/titfortat.h,
+	  src/tourney/evotournament.cpp, src/tourney/evotournament.h,
+	  src/tourney/tournament.cpp, src/tourney/tournament.h,
+	  src/ui/evopage.cpp, src/ui/evopage.h, src/ui/logosapp.cpp,
+	  src/ui/logosapp.h, src/ui/oneshotpage.cpp, src/ui/oneshotpage.h,
+	  src/ui/playerspage.cpp, src/ui/playerspage.h,
+	  src/ui/tools/logoswizardpage.cpp, src/ui/tools/logoswizardpage.h,
+	  src/ui/typepage.cpp, src/ui/typepage.h: A load of updates to get
+	  rid of *almost* all global data. Still have the Game* parameter
+	  to deal with.
+
+2009-01-04 02:54  Charles Pence <cpence [at] gmail.com>
+
+	* src/tourney/tournament.cpp, src/ui/evopage.cpp, src/ui/evopage.h,
+	  src/ui/logosapp.cpp, src/ui/logosapp.h, src/ui/oneshotpage.cpp,
+	  src/ui/oneshotpage.h, src/ui/playerspage.cpp,
+	  src/ui/playerspage.h, src/ui/tools/listbox.cpp,
+	  src/ui/tools/logoswizardpage.cpp, src/ui/tools/logoswizardpage.h,
+	  src/ui/typepage.cpp, src/ui/typepage.h: A first round of updates
+	  to take some of the pseudo-global wxGetApp() variables away.
+
+2009-01-04 01:25  Charles Pence <cpence [at] gmail.com>
+
+	* build/root: Removed trunk build-root.
+
+2009-01-04 01:24  Charles Pence <cpence [at] gmail.com>
+
+	* build/root/data/test: Moved test players from trunk build-root to
+	  data root.
+
+2009-01-04 01:23  Charles Pence <cpence [at] gmail.com>
+
+	* build/root/data/players: Moved players from trunk build-root to
+	  data root.
+
+2009-01-04 01:16  Charles Pence <cpence [at] gmail.com>
+
+	* ., CMakeLists.txt, INSTALL, Makefile.in, aclocal.m4,
+	  autoconf_inc.m4, build/autoconf,
+	  build/autoconf/ax_cflags_warn_all.m4,
+	  build/autoconf/ax_cxx_check_flag.m4, build/autoconf/wxwin.m4,
+	  build/bakefiles, build/bakefiles/.bakefile_gen.state,
+	  build/bakefiles/Bakefiles.bkgen, build/bakefiles/cppunitlite.bkl,
+	  build/bakefiles/files.bkl, build/bakefiles/logos.bkl,
+	  build/bakefiles/wx.bkl, build/bakefiles/wx_unix.bkl,
+	  build/bakefiles/wx_win32.bkl, build/bakefiles/wx_xrc.bkl,
+	  build/bakefiles/wxplot.bkl, build/gnu, build/gnu/config.gnu,
+	  build/gnu/makefile.gnu, build/macosx, build/msvc, build/msw,
+	  build/msw/config.vc, build/msw/logos.dsp, build/msw/logos.dsw,
+	  build/msw/logos_cppunitlite.dsp, build/msw/logos_logos.dsp,
+	  build/msw/logos_vc7.sln, build/msw/logos_vc7.vcproj,
+	  build/msw/logos_vc7_cppunitlite.vcproj,
+	  build/msw/logos_vc7_logos.vcproj,
+	  build/msw/logos_vc7_wxplot.vcproj, build/msw/logos_vc8.sln,
+	  build/msw/logos_vc8.vcproj,
+	  build/msw/logos_vc8_cppunitlite.vcproj,
+	  build/msw/logos_vc8_logos.vcproj,
+	  build/msw/logos_vc8_wxplot.vcproj, build/msw/logos_vc9.sln,
+	  build/msw/logos_vc9.vcproj,
+	  build/msw/logos_vc9_cppunitlite.vcproj,
+	  build/msw/logos_vc9_logos.vcproj,
+	  build/msw/logos_vc9_wxplot.vcproj, build/msw/logos_wxplot.dsp,
+	  build/msw/makefile.vc, build/unix, config.guess, config.sub,
+	  configure, configure.ac, install-sh: Switched from a CMake to a
+	  Bakefile build. Bakefile is nice since it doesn't have to be
+	  installed for users just to compile.
+
+2009-01-01 05:09  Charles Pence <cpence [at] gmail.com>
+
+	* src/common/mathlib.cpp, src/common/mathlib.h,
+	  src/game/fsaplayer.cpp, src/game/fsaplayer.h, src/game/game.cpp,
+	  src/game/game.h, src/game/player.cpp, src/game/player.h,
+	  src/game/prisoner.cpp, src/game/prisoner.h, src/game/random.cpp,
+	  src/game/random.h, src/game/titfortat.cpp, src/game/titfortat.h,
+	  src/tourney/evotournament.cpp, src/tourney/evotournament.h,
+	  src/tourney/match.cpp, src/tourney/match.h,
+	  src/tourney/tournament.cpp, src/tourney/tournament.h,
+	  src/ui/evopage.cpp, src/ui/evopage.h, src/ui/logosapp.cpp,
+	  src/ui/logosapp.h, src/ui/oneshotpage.cpp, src/ui/oneshotpage.h,
+	  src/ui/playerspage.cpp, src/ui/playerspage.h,
+	  src/ui/tools/htmldialog.cpp, src/ui/tools/htmldialog.h,
+	  src/ui/tools/listbox.cpp, src/ui/tools/listbox.h,
+	  src/ui/tools/logoswizardpage.cpp, src/ui/tools/logoswizardpage.h,
+	  src/ui/typepage.cpp, src/ui/typepage.h: Updated copyright
+	  notices. Happy New Year!
+
+2009-01-01 05:05  Charles Pence <cpence [at] gmail.com>
+
+	* CMakeLists.txt, lib/wxPlot/plctrl.cpp, lib/wxPlot/plplotP.h,
+	  lib/wxPlot/plsym.cpp, lib/wxPlot/wxPlot.cpp, src/common/common.h,
+	  src/game/fsaplayer.cpp, src/game/fsaplayer.h, src/game/game.cpp,
+	  src/game/game.h, src/game/player.cpp, src/game/player.h,
+	  src/game/prisoner.cpp, src/game/prisoner.h, src/game/random.cpp,
+	  src/game/random.h, src/game/titfortat.cpp, src/game/titfortat.h,
+	  src/main.h, src/tourney/evotournament.cpp,
+	  src/tourney/evotournament.h, src/tourney/match.cpp,
+	  src/tourney/match.h, src/tourney/tournament.cpp,
+	  src/tourney/tournament.h, src/ui/evopage.cpp,
+	  src/ui/logosapp.cpp, src/ui/logosapp.h, src/ui/oneshotpage.cpp,
+	  src/ui/playerspage.cpp, src/ui/tools/htmldialog.cpp,
+	  src/ui/tools/listbox.cpp, src/ui/tools/logoswizardpage.cpp,
+	  src/ui/typepage.cpp: Removed (!) main.h, removed all direct
+	  reference to the STL (since it throws exceptions), switched to wx
+	  Array and Map classes, and so forth.
+

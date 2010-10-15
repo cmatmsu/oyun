@@ -1,0 +1,263 @@
+2008-12-31 00:40  Charles Pence <cpence [at] gmail.com>
+
+	* src/common/common.h, src/common/mathlib.cpp,
+	  src/common/mathlib.h, src/game/fsaplayer.h, src/game/game.cpp,
+	  src/game/game.h, src/game/player.h, src/game/prisoner.cpp,
+	  src/game/prisoner.h, src/game/random.cpp, src/game/random.h,
+	  src/game/titfortat.cpp, src/game/titfortat.h, src/main.h,
+	  src/tourney/evotournament.cpp, src/tourney/match.cpp,
+	  src/tourney/match.h, src/tourney/tournament.cpp,
+	  src/tourney/tournament.h, src/ui/evopage.cpp,
+	  src/ui/logosapp.cpp: Cleaned up the include sections of all the
+	  source files.
+
+2008-12-31 00:32  Charles Pence <cpence [at] gmail.com>
+
+	* CMakeLists.txt, src/game/fsaplayer.cpp, src/game/game.cpp,
+	  src/game/player.cpp, src/game/prisoner.cpp, src/game/random.cpp,
+	  src/game/random.h, src/game/titfortat.cpp, src/main.h,
+	  src/tourney/evotournament.cpp, src/tourney/match.cpp,
+	  src/tourney/tournament.cpp, src/ui/evopage.cpp, src/ui/evopage.h,
+	  src/ui/logosapp.cpp, src/ui/oneshotpage.cpp,
+	  src/ui/oneshotpage.h, src/ui/playerspage.cpp,
+	  src/ui/playerspage.h, src/ui/tools/htmldialog.cpp,
+	  src/ui/tools/listbox.cpp, src/ui/tools/logoswizardpage.cpp,
+	  src/ui/typepage.cpp, src/ui/typepage.h: Removed the silly
+	  automatic-include for all the subsidiary source directories.
+
+2008-12-31 00:13  Charles Pence <cpence [at] gmail.com>
+
+	* lib/wxPlot/plbox.cpp, lib/wxPlot/plcore.cpp,
+	  lib/wxPlot/plctrl.cpp, lib/wxPlot/plcvt.cpp,
+	  lib/wxPlot/pldtik.cpp, lib/wxPlot/plline.cpp,
+	  lib/wxPlot/plpage.cpp, lib/wxPlot/plsdef.cpp,
+	  lib/wxPlot/plstrm.h, lib/wxPlot/plsym.cpp, lib/wxPlot/pltick.cpp,
+	  lib/wxPlot/plvpor.cpp, lib/wxPlot/plwind.cpp,
+	  lib/wxPlot/wxPlot.cpp, lib/wxPlot/wxwin.cpp,
+	  src/game/fsaplayer.cpp, src/game/game.cpp, src/game/player.cpp,
+	  src/game/prisoner.cpp, src/game/random.cpp,
+	  src/game/titfortat.cpp, src/main.h,
+	  src/tourney/evotournament.cpp, src/tourney/match.cpp,
+	  src/tourney/tournament.cpp, src/ui/evopage.cpp, src/ui/evopage.h,
+	  src/ui/logosapp.cpp, src/ui/logosapp.h, src/ui/oneshotpage.cpp,
+	  src/ui/oneshotpage.h, src/ui/playerspage.cpp,
+	  src/ui/playerspage.h, src/ui/tools/htmldialog.cpp,
+	  src/ui/tools/htmldialog.h, src/ui/tools/listbox.cpp,
+	  src/ui/tools/logoswizardpage.cpp, src/ui/tools/logoswizardpage.h,
+	  src/ui/typepage.cpp, src/ui/typepage.h: Cleaned out the main.h
+	  include file and added the proper include code for the wx
+	  precompiled header.
+
+2008-12-30 23:29  Charles Pence <cpence [at] gmail.com>
+
+	* CMakeLists.txt, lib/wxPlot/plcore.cpp, lib/wxPlot/plcore.h,
+	  lib/wxPlot/plctrl.cpp, lib/wxPlot/plplot.h, lib/wxPlot/plplotP.h,
+	  lib/wxPlot/wxPlot.cpp, lib/wxPlot/wxPlot.h,
+	  src/game/fsaplayer.cpp, src/game/game.cpp, src/game/game.h,
+	  src/game/player.cpp, src/game/player.h, src/game/random.cpp,
+	  src/game/titfortat.cpp, src/test, src/tourney/match.cpp,
+	  src/ui/evopage.cpp, src/ui/oneshotpage.cpp: Moved the "test"
+	  subdirectory into mock objects in game.* and player.*, and
+	  cleaned up the wxPlot errors.
+
+2008-12-30 22:52  Charles Pence <cpence [at] gmail.com>
+
+	* TODO, src/ui/evopage.cpp, src/ui/evopage.h,
+	  src/ui/oneshotpage.cpp, src/ui/oneshotpage.h,
+	  src/ui/playerspage.cpp, src/ui/playerspage.h,
+	  src/ui/tools/logoswizardpage.cpp, src/ui/tools/logoswizardpage.h,
+	  src/ui/tools/titledpage.cpp, src/ui/tools/titledpage.h,
+	  src/ui/typepage.cpp, src/ui/typepage.h: Renamed TitledPage to
+	  LogosWizardPage.
+
+2008-12-30 18:11  Charles Pence <cpence [at] gmail.com>
+
+	* TODO: Updated TODO -- several of these things are actually done
+	  (!).
+
+2008-12-30 18:09  Charles Pence <cpence [at] gmail.com>
+
+	* lib/wxPlot/drivers.h, lib/wxPlot/metadefs.h,
+	  lib/wxPlot/plbox.cpp, lib/wxPlot/plcont.cpp,
+	  lib/wxPlot/plcore.cpp, lib/wxPlot/plcore.h, lib/wxPlot/plcvt.cpp,
+	  lib/wxPlot/pldtik.cpp, lib/wxPlot/plfill.cpp,
+	  lib/wxPlot/plline.cpp, lib/wxPlot/plpage.cpp,
+	  lib/wxPlot/plplot.h, lib/wxPlot/plplotP.h, lib/wxPlot/plsdef.cpp,
+	  lib/wxPlot/pltick.cpp, lib/wxPlot/plvpor.cpp,
+	  lib/wxPlot/plwind.cpp, lib/wxPlot/wxPlot.cpp,
+	  lib/wxPlot/wxPlot.h: More work trimming down the wxPlot source.
+
+2008-12-30 17:59  Charles Pence <cpence [at] gmail.com>
+
+	* build/root/plstnd5.fnt, build/root/plxtnd5.fnt,
+	  lib/wxPlot/drivers.h, lib/wxPlot/pdf.h, lib/wxPlot/pdfutils.cpp,
+	  lib/wxPlot/plctrl.cpp, lib/wxPlot/plfonts.cpp,
+	  lib/wxPlot/plplotP.h, lib/wxPlot/plstrm.h, lib/wxPlot/plsym.cpp,
+	  lib/wxPlot/wxPlot.cpp, lib/wxPlot/wxPlot.h, src/ui/evopage.cpp:
+	  Compiled in the plPlot font data (plfonts.cpp), removing the need
+	  for those external files.
+
+2008-12-30 16:39  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evopage.cpp, src/ui/playerspage.cpp: Fixed two bugs, one
+	  regarding the legend on the EvoPage and one regarding duplicate
+	  players on the PlayersPage.
+
+2008-12-30 04:27  Charles Pence <cpence [at] gmail.com>
+
+	* CMakeLists.txt, build/root/plstnd5.fnt, build/root/plxtnd5.fnt,
+	  lib/CppUnitLite/Test.cpp, lib/CppUnitLite/Test.h, lib/wxPlot,
+	  lib/wxPlot/drivers.h, lib/wxPlot/metadefs.h, lib/wxPlot/pdf.h,
+	  lib/wxPlot/pdfutils.cpp, lib/wxPlot/plConfig.h,
+	  lib/wxPlot/plbox.cpp, lib/wxPlot/plcont.cpp,
+	  lib/wxPlot/plcore.cpp, lib/wxPlot/plcore.h,
+	  lib/wxPlot/plctrl.cpp, lib/wxPlot/plcvt.cpp,
+	  lib/wxPlot/pldtik.cpp, lib/wxPlot/plfill.cpp,
+	  lib/wxPlot/plline.cpp, lib/wxPlot/plpage.cpp,
+	  lib/wxPlot/plplot.h, lib/wxPlot/plplotP.h, lib/wxPlot/plsdef.cpp,
+	  lib/wxPlot/plstrm.h, lib/wxPlot/plsym.cpp, lib/wxPlot/pltick.cpp,
+	  lib/wxPlot/plvpor.cpp, lib/wxPlot/plwind.cpp,
+	  lib/wxPlot/wxPlot.cpp, lib/wxPlot/wxPlot.h, lib/wxPlot/wxwin.cpp,
+	  src/main.h, src/tourney/evotournament.cpp,
+	  src/tourney/evotournament.h, src/ui/evopage.cpp,
+	  src/ui/evopage.h, src/ui/logosapp.cpp, src/ui/logosapp.h,
+	  src/ui/oneshotpage.cpp, src/ui/typepage.cpp: Added wxPlot and a
+	  bunch of the original evolutionary-tournament code.
+
+2008-12-29 15:16  Charles Pence <cpence [at] gmail.com>
+
+	* src/tourney/evotournament.cpp, src/tourney/evotournament.h,
+	  src/ui/evopage.cpp, src/ui/evopage.h, src/ui/logosapp.h: Added
+	  the evolutionary-tournament code from Logos 1.0, and split out
+	  the evolutionary tournament UI page into a CPP file in
+	  preparation for writing it.
+
+2008-12-29 00:13  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/oneshotpage.cpp: Updated dialog item spacing in the
+	  OneShotPage.
+
+2008-12-29 00:11  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/oneshotpage.cpp, src/ui/oneshotpage.h,
+	  src/ui/playerspage.cpp, src/ui/typepage.cpp: First round of UI
+	  improvements on the OneShotPage.
+
+2008-12-28 23:23  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/evopage.h, src/ui/oneshotpage.cpp, src/ui/playerspage.cpp,
+	  src/ui/tools/titledpage.cpp, src/ui/tools/titledpage.h,
+	  src/ui/typepage.cpp: A load of UI enhancements, based on both the
+	  Windows and GNOME interface guidelines.
+
+2008-12-28 21:49  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/tools/htmldialog.cpp: Not setting a title on the OK
+	  button, which enables it to get the default, platform-localized
+	  string.
+
+2008-12-28 19:50  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/typepage.cpp, src/ui/typepage.h: Replaced the RadioBox
+	  with self-constructed RadioButtons, which look better.
+
+2008-12-28 18:12  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/intropage.cpp, src/ui/intropage.h, src/ui/logosapp.cpp,
+	  src/ui/logosapp.h, src/ui/playerspage.cpp, src/ui/playerspage.h,
+	  src/ui/tools/listbox.cpp, src/ui/tools/listbox.h: Split out the
+	  click-forwarding list box to its own class and renamed IntroPage
+	  to PlayersPage.
+
+2008-12-28 17:40  Charles Pence <cpence [at] gmail.com>
+
+	* CMakeLists.txt, src/ui/evopage.h, src/ui/intropage.cpp,
+	  src/ui/intropage.h, src/ui/oneshotpage.h,
+	  src/ui/tools/htmldialog.cpp, src/ui/tools/htmldialog.h,
+	  src/ui/typepage.h: Added an HTML dialog box used to display the
+	  source code of players on the intro page.
+
+2008-12-28 16:32  Charles Pence <cpence [at] gmail.com>
+
+	* CMakeLists.txt, src/ui/evopage.h, src/ui/intropage.h,
+	  src/ui/oneshotpage.h, src/ui/titledpage.cpp, src/ui/titledpage.h,
+	  src/ui/tools, src/ui/tools/titledpage.cpp,
+	  src/ui/tools/titledpage.h, src/ui/typepage.h: Reorganized some of
+	  the UI files.
+
+2008-12-21 01:09  Charles Pence <cpence [at] gmail.com>
+
+	* src/game/fsaplayer.cpp, src/game/fsaplayer.h, src/game/player.h,
+	  src/game/random.h, src/game/titfortat.h, src/ui/intropage.cpp,
+	  src/ui/intropage.h: First round of hacks for a right-click menu
+	  on the intro list box.
+
+2008-12-17 00:08  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/intropage.cpp, src/ui/intropage.h: Added a "Remove player"
+	  button to the first page of the wizard.
+
+2008-12-16 03:45  Charles Pence <cpence [at] gmail.com>
+
+	* COPYING, build/root/doc, src/common/common.h,
+	  src/common/mathlib.cpp, src/common/mathlib.h,
+	  src/game/fsaplayer.cpp, src/game/fsaplayer.h, src/game/game.h,
+	  src/game/player.h, src/game/prisoner.cpp, src/game/prisoner.h,
+	  src/game/random.cpp, src/game/random.h, src/game/titfortat.cpp,
+	  src/game/titfortat.h, src/main.h, src/test/testgame.cpp,
+	  src/test/testgame.h, src/test/testplayer.cpp,
+	  src/test/testplayer.h, src/tourney/match.cpp,
+	  src/tourney/match.h, src/tourney/tournament.cpp,
+	  src/tourney/tournament.h, src/ui/evopage.h, src/ui/intropage.cpp,
+	  src/ui/intropage.h, src/ui/logosapp.cpp, src/ui/logosapp.h,
+	  src/ui/oneshotpage.cpp, src/ui/oneshotpage.h,
+	  src/ui/titledpage.cpp, src/ui/titledpage.h, src/ui/typepage.cpp,
+	  src/ui/typepage.h: Removed outdated documentation, upgraded
+	  license to GPLv3.
+
+2008-12-16 03:37  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/oneshotpage.cpp, src/ui/typepage.cpp: Some little UI
+	  tidying (mostly, made default window size much larger).
+
+2008-12-15 21:12  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/logosapp.cpp: Some more fiddling with the application
+	  class.
+
+2008-12-15 21:06  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/logosapp.cpp, src/ui/logosapp.h: Fiddled some with the
+	  wxApp code.
+
+2008-12-15 20:42  Charles Pence <cpence [at] gmail.com>
+
+	* src/ui/logosapp.cpp: Added support for running unit tests from
+	  the command line.
+
+2008-12-15 20:07  Charles Pence <cpence [at] gmail.com>
+
+	* CMakeLists.txt, Doxyfile.cmake, build/CompileFlags.cmake,
+	  src/test/testmain.cpp, src/tourney/tournament.cpp,
+	  src/tourney/vars.cpp, src/tourney/vars.h, src/ui/intropage.cpp,
+	  src/ui/logosapp.cpp, src/ui/logosapp.h, src/ui/oneshotpage.cpp,
+	  src/ui/typepage.cpp: Removed the tournament vars in favor of
+	  storing things in the wxApp. Fixed a few updating bugs; the
+	  update logic CLEARLY needs to be re-examined.
+
+2008-01-01 20:44  Charles Pence <cpence [at] gmail.com>
+
+	* CMakeLists.txt: Fix for a linking bug.
+
+2008-01-01 20:39  Charles Pence <cpence [at] gmail.com>
+
+	* CMakeLists.txt, lib/CppUnitLite/Test.cpp, lib/CppUnitLite/Test.h,
+	  src/common/common.h, src/game/fsaplayer.cpp, src/game/random.cpp,
+	  src/game/titfortat.cpp, src/main.h, src/test/testplayer.cpp,
+	  src/tourney/match.h, src/tourney/tournament.cpp,
+	  src/tourney/tournament.h, src/tourney/vars.cpp,
+	  src/tourney/vars.h, src/ui/intropage.cpp, src/ui/logosapp.cpp,
+	  src/ui/oneshotpage.cpp, src/ui/oneshotpage.h,
+	  src/ui/typepage.cpp, src/ui/typepage.h: A load of updates,
+	  haven't committed in quite some time. All the tests pass, though.
+
