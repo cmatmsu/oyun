@@ -1,0 +1,10 @@
+% One-Shot Tournament Page
+% Charles Pence
+% March 15, 2009
+
+  The one-shot tournament page:
+ --------------------------------------------------------------
+  <img src="oneshotpage.png" alt="The one-shot tournament page"/>  
+  \includegraphics[width=0.75\textwidth]{oneshotpage.png}  
+
+

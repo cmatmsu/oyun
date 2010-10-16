@@ -3,7 +3,7 @@
 # Get the source lists
 ##########
 file (GLOB_RECURSE LOGOS_SOURCE *.cpp)
-if (WIN32 or MSVC)
+if (MSVC OR WIN32)
   list (APPEND LOGOS_SOURCE "${LOGOS_SOURCE_DIR}/build/logos.rc")
 endif()
 file (GLOB_RECURSE LOGOS_HEADERS *.h)

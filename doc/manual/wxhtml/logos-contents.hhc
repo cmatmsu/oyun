@@ -1,0 +1,79 @@
+<ul>
+
+	<li>
+	<object type="text/sitemap">
+	<param name="Name" value="Welcome">
+	<param name="Local" value="welcome.html">
+	</object>
+	
+	<li>
+	<object type="text/sitemap">
+	<param name="Name" value="Installation">
+	<param name="Local" value="install.html">
+	</object>
+	
+	<li>
+	<object type="text/sitemap">
+	<param name="Name" value="Release Notes">
+	<param name="Local" value="release.html">
+	</object>
+	
+	<li>
+	<object type="text/sitemap">
+	<param name="Name" value="Getting Started">
+	<param name="Local" value="started.html">
+	</object>
+	
+	<li>
+	<object type="text/sitemap">
+	<param name="Name" value="Logos Task Pages">
+	<param name="Local" value="pages.html">
+	</object>
+	
+	<ul>
+		
+		<li>
+		<object type="text/sitemap">
+		<param name="Name" value="Player Selection Page">
+		<param name="Local" value="playerspage.html">
+		</object>
+		
+		<li>
+		<object type="text/sitemap">
+		<param name="Name" value="Tournament Type Page">
+		<param name="Local" value="typepage.html">
+		</object>
+		
+		<li>
+		<object type="text/sitemap">
+		<param name="Name" value="One-Shot Tournament Page">
+		<param name="Local" value="oneshotpage.html">
+		</object>
+		
+		<li>
+		<object type="text/sitemap">
+		<param name="Name" value="One-Shot Tournament Finished Page">
+		<param name="Local" value="oneshotfinishpage.html">
+		</object>
+		
+		<li>
+		<object type="text/sitemap">
+		<param name="Name" value="Evolutionary Tournament Page">
+		<param name="Local" value="evopage.html">
+		</object>
+		
+		<li>
+		<object type="text/sitemap">
+		<param name="Name" value="Evolutionary Tournament Finished Page">
+		<param name="Local" value="evofinishpage.html">
+		</object>
+		
+	</ul>
+	
+	<li>
+	<object type="text/sitemap">
+	<param name="Name" value="Glossary">
+	<param name="Local" value="glossary.html">
+	</object>
+	
+</ul>

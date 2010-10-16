@@ -1,0 +1,10 @@
+% One-Shot Tournament Finished Page
+% Charles Pence
+% March 15, 2009
+
+  The one-shot tournament finished page:
+ --------------------------------------------------------------
+  <img src="oneshotfinishpage.png" alt="The one-shot tournament finished page"/>  
+  \includegraphics[width=0.75\textwidth]{oneshotfinishpage.png}  
+
+

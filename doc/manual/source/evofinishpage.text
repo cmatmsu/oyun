@@ -1,0 +1,10 @@
+% Evolutionary Tournament Finished Page
+% Charles Pence
+% March 15, 2009
+
+  The evolutionary tournament finished page:
+ --------------------------------------------------------------
+  <img src="evofinishpage.png" alt="The evolutionary tournament finished page"/>  
+  \includegraphics[width=0.75\textwidth]{evofinishpage.png}  
+
+
