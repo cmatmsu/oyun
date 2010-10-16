@@ -1,0 +1,66 @@
+2010-10-16  Charles Pence <charles@charlespence.net>
+
+  * doc/manual/CMakeLists.txt: Don't attempt to (circularly) copy the
+  manual.tex file if building in-tree, which causes it to be deleted on 'make
+  clean'.
+
+  * doc/manual/pdf/.gitignore: Don't ignore manual.tex.
+
+  * .gitignore, doc/manual/.gitignore, doc/manual/pdf/.gitignore,
+  src/.gitignore, tools/hhp2cached/.gitignore: Added .gitignore files to
+  prevent anything from going into git if you build in-tree. (Don't build
+  in-tree!)
+
+  * CMakeLists.txt, doc/manual/CMakeLists.txt, doc/manual/pdf/manual.tex,
+  doc/manual/source/evofinishpage.png, doc/manual/source/evofinishpage.text,
+  doc/manual/source/evopage.png, doc/manual/source/evopage.text,
+  doc/manual/source/glossary.text, doc/manual/source/install.text,
+  doc/manual/source/oneshotfinishpage.png,
+  doc/manual/source/oneshotfinishpage.text, doc/manual/source/oneshotpage.png,
+  doc/manual/source/oneshotpage.text, doc/manual/source/pages.text,
+  doc/manual/source/playerspage.png, doc/manual/source/playerspage.text,
+  doc/manual/source/release.text, doc/manual/source/started.text,
+  doc/manual/source/typepage.png, doc/manual/source/typepage.text,
+  doc/manual/source/welcome.text, doc/manual/wxhtml/logos-contents.hhc,
+  doc/manual/wxhtml/logos-index.hhk, doc/manual/wxhtml/logos.hhp,
+  src/CMakeLists.txt, tools/hhp2cached/CMakeLists.txt,
+  tools/hhp2cached/hhp2cached.cpp: Added support for building the manual, in
+  PDF and wxHTML modes.
+
+  * .gitignore, CMakeLists.txt, build/logos.icns, build/logos.ico,
+  build/logos.rc, lib/CppUnitLite/CMakeLists.txt, src/CMakeLists.txt: Splitting
+  out the build files a bit, added building support for Mac bundles and the
+  Win32 RC file.
+
+2010-10-15  Charles Pence <charles@charlespence.net>
+
+  * CMakeLists.txt, build/logos.png, build/logos.xpm, src/ui/evofinishpage.cpp,
+  src/ui/evopage.cpp, src/ui/evopage.h, src/ui/logoswizard.cpp,
+  src/ui/oneshotfinishpage.cpp, src/ui/oneshotpage.h, src/ui/playerspage.cpp,
+  src/ui/playerspage.h: Added build system, initial tweaks so that the thing at
+  least builds.
+
+  * AUTHORS, COPYING, ChangeLog-2005, ChangeLog-2006, ChangeLog-2007,
+  ChangeLog-2008, ChangeLog-2009, INSTALL, NEWS, README, THANKS,
+  lib/CppUnitLite/Failure.cpp, lib/CppUnitLite/Failure.h,
+  lib/CppUnitLite/Test.cpp, lib/CppUnitLite/Test.h,
+  lib/CppUnitLite/TestHarness.h, lib/CppUnitLite/TestRegistry.cpp,
+  lib/CppUnitLite/TestRegistry.h, lib/CppUnitLite/TestResult.cpp,
+  lib/CppUnitLite/TestResult.h, src/common/error.cpp, src/common/error.h,
+  src/common/filesystem.cpp, src/common/filesystem.h, src/common/rng.cpp,
+  src/common/rng.h, src/game/fsaplayer.cpp, src/game/fsaplayer.h,
+  src/game/game.cpp, src/game/game.h, src/game/player.cpp, src/game/player.h,
+  src/game/prisoner.cpp, src/game/prisoner.h, src/game/random.cpp,
+  src/game/random.h, src/game/titfortat.cpp, src/game/titfortat.h,
+  src/tourney/evotournament.cpp, src/tourney/evotournament.h,
+  src/tourney/match.cpp, src/tourney/match.h, src/tourney/tournament.cpp,
+  src/tourney/tournament.h, src/ui/evofinishpage.cpp, src/ui/evofinishpage.h,
+  src/ui/evopage.cpp, src/ui/evopage.h, src/ui/finishpage.cpp,
+  src/ui/finishpage.h, src/ui/logosapp.cpp, src/ui/logosapp.h,
+  src/ui/logoswizard.cpp, src/ui/logoswizard.h, src/ui/matchdialog.cpp,
+  src/ui/matchdialog.h, src/ui/oneshotfinishpage.cpp,
+  src/ui/oneshotfinishpage.h, src/ui/oneshotpage.cpp, src/ui/oneshotpage.h,
+  src/ui/playerspage.cpp, src/ui/playerspage.h, src/ui/tools/htmldialog.cpp,
+  src/ui/tools/htmldialog.h, src/ui/tools/logoswizardpage.cpp,
+  src/ui/tools/logoswizardpage.h, src/ui/typepage.cpp, src/ui/typepage.h:
+  Import of source from last version; no build system yet.
