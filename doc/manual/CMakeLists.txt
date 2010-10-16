@@ -29,10 +29,12 @@ foreach (doc ${DOC_SOURCE})
   list (APPEND HTML_FILES "${CMAKE_CURRENT_BINARY_DIR}/html/${outfile}.html")
 endforeach (doc)
 
-# The main manual file is simply copied
-add_custom_command (OUTPUT "pdf/manual.tex"
-  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/pdf/manual.tex" "${CMAKE_CURRENT_BINARY_DIR}/pdf/manual.tex"
-  MAIN_DEPENDENCY "pdf/manual.tex")
+# The main manual file is simply copied, but only if source and binary are different
+if (NOT (${CMAKE_CURRENT_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_BINARY_DIR}))
+  add_custom_command (OUTPUT "pdf/manual.tex"
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/pdf/manual.tex" "${CMAKE_CURRENT_BINARY_DIR}/pdf/manual.tex"
+    MAIN_DEPENDENCY "pdf/manual.tex")
+endif()
 
 
 ##########
