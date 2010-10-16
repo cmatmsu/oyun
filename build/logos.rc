@@ -1,0 +1,19 @@
+
+//
+// Our program icon
+//
+
+// Make sure this comes first in the file and alphabetically so we
+// don't get any confusion
+aaaaaaaa ICON "logos.ico"
+
+// this icon is used with wxFrame::SetIcon()
+logosicon ICON "logos.ico"
+
+
+//
+// Just include the Win32 resource file from WX
+//
+#include <wx/msw/wx.rc>
+
+
