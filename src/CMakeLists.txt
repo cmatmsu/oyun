@@ -1,5 +1,15 @@
 
 ##########
+# Add a few things for some CMake parameters
+##########
+add_definitions (-DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX})
+if (CMAKE_BUILD_TYPE STREQUAL "")
+  # Don't let things build without a build type (default to Release)
+  set (CMAKE_BUILD_TYPE "Release")
+endif()
+
+
+##########
 # Get the source lists
 ##########
 file (GLOB_RECURSE LOGOS_SOURCE *.cpp)
@@ -26,8 +36,6 @@ include (${wxWidgets_USE_FILE})
 ##########
 # Link the executable
 ##########
-add_definitions (-DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX})
-
 add_executable (logos ${LOGOS_SOURCE} ${LOGOS_HEADERS})
 target_link_libraries (logos cppunitlite ${wxWidgets_LIBRARIES})
 
