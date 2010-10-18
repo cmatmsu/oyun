@@ -1,6 +1,5 @@
 % Welcome to Logos
 % Charles Pence
-% March 15, 2009
 
 Logos is a program you can use to run tournaments between various strategies
 playing normal-form games such as the prisoner's dilemma.  The classic work on
@@ -13,4 +12,4 @@ tournaments or "evolutionary" tournaments in which strategies compete to
 increase their proportion in a "population" over a number of generations.
 
 For more information about Logos, please visit the other sections of the user
-manual, or the Logos website at [http://code.google.com/p/logos-simulator/](http://code.google.com/p/logos-simulator/).
+manual, or the Logos website at [http://github.com/cpence/logos/](http://github.com/cpence/logos/).

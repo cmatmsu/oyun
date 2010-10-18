@@ -1,6 +1,5 @@
 % Installation
 % Charles Pence
-% March 15, 2009
 
 Installation on Windows
 -----------------------
@@ -25,7 +24,7 @@ Installation on Linux
 At the moment, we do not offer any binary packages for Logos on Linux.  However,
 Linux installation can always be performed by compiling from source.  For
 information about this, please consult the technical documentation available
-at the [Logos website](http://code.google.com/p/logos-simulator/).  In short, 
+at the [Logos website](http://github.com/cpence/logos/).  In short, 
 the standard `configure; make; sudo make install` recipe should work.  If you
 want to run the binary in a location other than the prefix under which it was
 compiled, you will need to set the environment variable `DOCDIR` to the 

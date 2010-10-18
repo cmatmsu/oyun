@@ -1,6 +1,6 @@
 /*
-    Copyright (C) 2004-2009 by Charles Pence
-    [cpence at gmail dot com]
+    Copyright (C) 2004-2010 by Charles Pence
+    charles@charlespence.net
 
     This file is part of Logos.
 
@@ -71,7 +71,7 @@ bool LogosApp::OnInit()
 			const wchar_t *version = wxT(STRINGIZE( LOGOS_VERSION ));
 			const wxChar *verstring =
 				_("Logos %ls\n"
-				  "Copyright (C) 2009 Charles Pence\n"
+				  "Copyright (C) 2004-2010 Charles Pence\n"
 				  "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 				  "This is free software: you are free to change and redistribute it.\n"
 				  "There is NO WARRANTY, to the extent permitted by law.\n");
@@ -89,8 +89,8 @@ bool LogosApp::OnInit()
 				  "  --help       display this help and exit\n"
 				  "  --version    output version information and exit\n"
 				  "\n"
-				  "Report bugs to: <cpence@gmail.com>.\n"
-				  "Logos home page: <http://code.google.com/p/logos-simulator/>.\n");
+				  "Report bugs to: <charles@charlespence.net>.\n"
+				  "Logos home page: <http://github.com/cpence/logos/>.\n");
 			wxPrintf(wxT("%s"), helpstring);
 			
 			return false;
@@ -221,7 +221,7 @@ void LogosApp::OnMenuAbout(wxCommandEvent & WXUNUSED(event))
 	wxString appName = wxT("Logos");
 	wxString appVersion = wxT( STRINGIZE( LOGOS_VERSION ) );
 	wxString appInfo = _("An evolutionary game theory simulator");
-	wxString appCopyright = _("(C) 2004-2009 Charles Pence");
+	wxString appCopyright = _("(C) 2004-2010 Charles Pence");
 
 	wxAboutDialogInfo info;
 	

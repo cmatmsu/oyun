@@ -1,6 +1,6 @@
 /*
-    Copyright (C) 2004-2009 by Charles Pence
-    [cpence at gmail dot com]
+    Copyright (C) 2004-2010 by Charles Pence
+    charles@charlespence.net
 
     This file is part of Logos.
 

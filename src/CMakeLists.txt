@@ -2,6 +2,7 @@
 ##########
 # Add a few things for some CMake parameters
 ##########
+add_definitions (-DLOGOS_VERSION=${LOGOS_VERSION})
 add_definitions (-DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX})
 if (CMAKE_BUILD_TYPE STREQUAL "")
   # Don't let things build without a build type (default to Release)
