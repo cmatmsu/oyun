@@ -12,6 +12,7 @@ file (GLOB DOC_IMAGES RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" source/*.png)
 set (TEX_FILES "${CMAKE_CURRENT_BINARY_DIR}/pdf/manual.tex")
 set (TEX_IMAGES "")
 set (HTML_FILES "")
+set (HTML_IMAGES "")
 
 foreach (doc ${DOC_SOURCE})
   get_filename_component (outfile ${doc} NAME_WE)
@@ -51,6 +52,7 @@ foreach (image ${DOC_IMAGES})
     MAIN_DEPENDENCY "${image}")
   
   list (APPEND TEX_IMAGES "${CMAKE_CURRENT_BINARY_DIR}/pdf/${outfile}")
+  list (APPEND HTML_IMAGES "${CMAKE_CURRENT_BINARY_DIR}/html/${outfile}")
 endforeach (image)
 
 
@@ -98,8 +100,8 @@ add_custom_command (OUTPUT html/logos.hhp.cached
 # Pack everything into an HTB
 ##########
 add_custom_command (OUTPUT html/logos.htb
-  COMMAND zip -q --quiet -j "logos.htb" ${HTML_FILES} logos-contents.hhc logos-index.hhk logos.hhp logos.hhp.cached
-  DEPENDS html/logos.hhp.cached
+  COMMAND zip -q --quiet -j "logos.htb" ${HTML_FILES} ${HTML_IMAGES} logos-contents.hhc logos-index.hhk logos.hhp logos.hhp.cached
+  DEPENDS html/logos.hhp.cached ${HTML_IMAGES}
   WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/html")
 
 
