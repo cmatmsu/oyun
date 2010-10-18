@@ -103,4 +103,13 @@ add_custom_command (OUTPUT html/logos.htb
   WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/html")
 
 
+##########
+# Install the PDF and HTB manuals to $PREFIX/share
+##########
+install (FILES ${CMAKE_CURRENT_BINARY_DIR}/pdf/manual.pdf
+  DESTINATION share/doc/logos)
+install (FILES ${CMAKE_CURRENT_BINARY_DIR}/html/logos.htb
+  DESTINATION share/logos)
+
+
 add_custom_target (docs-manual ALL DEPENDS pdf/manual.pdf html/logos.htb)
