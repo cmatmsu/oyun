@@ -328,9 +328,9 @@ void OneShotPage::UpdatePlayerList()
 
 	// Sort--if we've played, by col. 1 numerically descending, else by col. 2
 	if (tourney->IsPlayed())
-		playerList->SortItems(PlayerNumSortColumn1, (long)this);
+		playerList->SortItems((wxListCtrlCompare)PlayerNumSortColumn1, (long)this);
 	else
-		playerList->SortItems(PlayerAlphaSortColumn0, (long)this);
+		playerList->SortItems((wxListCtrlCompare)PlayerAlphaSortColumn0, (long)this);
 }
 
 void OneShotPage::UpdateMatchList()
@@ -403,7 +403,7 @@ void OneShotPage::UpdateMatchList()
 	CalcColumnWidth(matchList, 3);
 
 	// Sort
-	matchList->SortItems(MatchAlphaSortColumn0, (long)this);
+	matchList->SortItems((wxListCtrlCompare)MatchAlphaSortColumn0, (long)this);
 }
 
 

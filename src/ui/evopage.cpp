@@ -482,10 +482,10 @@ void EvoPage::PaintGraph(wxWindowDC &pdc)
 	renderer.SetFont(font);
 	
 	// Here's some constants for graph formatting
-	const float sideSeparatorX = 0.05;
-	const float tickWidth = 0.01;
-	const float sideSeparatorY = 0.1;
-	const float tickHeight = 0.01;
+	const float sideSeparatorX = 0.05f;
+	const float tickWidth = 0.01f;
+	const float sideSeparatorY = 0.1f;
+	const float tickHeight = 0.01f;
 	
 	// Draw a frame for the graph
 	renderer.DrawLine(sideSeparatorX, sideSeparatorY, 1.0 - sideSeparatorX, sideSeparatorY);
