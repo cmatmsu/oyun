@@ -122,7 +122,6 @@ bool LogosApp::OnInit()
 	
 #ifdef __WXMAC__
 	// Create the common OS X menu bar if we need it
-	SetExitOnFrameDelete(false);
 	CreateMacMenuBar();
 #endif
 	
