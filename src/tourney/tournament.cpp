@@ -30,6 +30,7 @@
 #include <wx/progdlg.h>
 #include <TestHarness.h>
 
+#include "../ui/logosapp.h"
 #include "../game/game.h"
 #include "tournament.h"
 #include "match.h"
@@ -129,7 +130,7 @@ void Tournament::RecalculateMatchList()
 	}
 }
 
-bool Tournament::Run(bool showProgress)
+bool Tournament::Run()
 {
 	// See if we need to reset the matches and such
 	if (played)
@@ -139,38 +140,20 @@ bool Tournament::Run(bool showProgress)
 	if (!playerOneList.size() || !playerTwoList.size() || !matches.GetCount())
 		return false;
 
-	// Create a progress dialog if requested
-	size_t size = matches.GetCount();
-	wxProgressDialog *progress = NULL;
-
-	if (showProgress)
-	{
-		progress = new wxProgressDialog(_("Running tournament..."),
-		                                _("Running tournament:"), 
-	                                        size + 1);
-		progress->Update(1);
-	}
+	wxBeginBusyCursor();
 
 	// Run the tournament itself
-	for (size_t i = 0 ; i < size ; i++)
+	for (size_t i = 0 ; i < matches.GetCount() ; i++)
 	{
 		// Error already set in Match::Play()
 		if (!matches[i]->Play(game, false))
-		{
-			if (showProgress)
-				progress->Destroy();
 			return false;
-		}
-		
-		if (showProgress)
-			progress->Update(i+1);
 	}
-	
-	if (showProgress)
-		progress->Destroy();
+
+	wxEndBusyCursor();
 
 	// Accumulate the scores for each player
-	for (size_t i = 0 ; i < size ; i++)
+	for (size_t i = 0 ; i < matches.GetCount() ; i++)
 	{
 		scores[matches[i]->playerOne->GetID()] += matches[i]->playerOneScore;
 		scores[matches[i]->playerTwo->GetID()] += matches[i]->playerTwoScore;
@@ -279,7 +262,7 @@ TEST(Tournament, Run)
 	tourney.AddPlayer(&p1);
 	tourney.AddPlayer(&p2);
 	
-	CHECK(tourney.Run(false));
+	CHECK(tourney.Run());
 	
 	// Make sure we have scores for both players
 	CHECK_EQUAL(2, tourney.scores.size());
@@ -302,7 +285,7 @@ TEST(Tournament, Reset)
 	tourney.AddPlayer(&p1);
 	tourney.AddPlayer(&p2);
 	
-	CHECK(tourney.Run(false));
+	CHECK(tourney.Run());
 	
 	// Now, reset
 	tourney.Reset();

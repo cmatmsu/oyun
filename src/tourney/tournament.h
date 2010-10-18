@@ -108,10 +108,9 @@ public:
 	    Run the actual matches in the tournament, accumulating the
 	    player scores into the \c scores member.
 	    
-	    \param showProgress If true (default), show a progress dialog
 	    \returns True if the tournament ran successfully, false otherwise
 	*/
-	bool Run(bool showProgress = true);
+	bool Run();
 
 	/**
 	    \brief Reset all internal data
