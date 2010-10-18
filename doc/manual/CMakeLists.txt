@@ -110,7 +110,7 @@ add_custom_command (OUTPUT html/logos.htb
 ##########
 if (APPLE)
   set (MANUAL_DESTINATION ".")
-  set (DOCBOOK_DESTINATION "logos.app/Contents/Resources")
+  set (DOCBOOK_DESTINATION "Logos.app/Contents/Resources")
 else ()
   set (MANUAL_DESTINATION "share/doc/logos")
   set (DOCBOOK_DESTINATION "share/logos")
