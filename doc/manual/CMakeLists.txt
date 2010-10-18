@@ -104,12 +104,20 @@ add_custom_command (OUTPUT html/logos.htb
 
 
 ##########
-# Install the PDF and HTB manuals to $PREFIX/share
+# Install the PDF and HTB manuals to $PREFIX/share or to the bundle on Mac
 ##########
+if (APPLE)
+  set (MANUAL_DESTINATION ".")
+  set (DOCBOOK_DESTINATION "logos.app/Contents/Resources")
+else ()
+  set (MANUAL_DESTINATION "share/doc/logos")
+  set (DOCBOOK_DESTINATION "share/logos")
+endif ()
+
 install (FILES ${CMAKE_CURRENT_BINARY_DIR}/pdf/manual.pdf
-  DESTINATION share/doc/logos)
+  DESTINATION ${MANUAL_DESTINATION})
 install (FILES ${CMAKE_CURRENT_BINARY_DIR}/html/logos.htb
-  DESTINATION share/logos)
+  DESTINATION ${DOCBOOK_DESTINATION})
 
 
 add_custom_target (docs-manual ALL DEPENDS pdf/manual.pdf html/logos.htb)

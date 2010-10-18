@@ -26,6 +26,8 @@ include (${wxWidgets_USE_FILE})
 ##########
 # Link the executable
 ##########
+add_definitions (-DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX})
+
 add_executable (logos ${LOGOS_SOURCE} ${LOGOS_HEADERS})
 target_link_libraries (logos cppunitlite ${wxWidgets_LIBRARIES})
 

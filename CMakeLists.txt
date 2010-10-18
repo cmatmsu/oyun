@@ -25,11 +25,13 @@ add_custom_target (changes ${CMAKE_CURRENT_SOURCE_DIR}/build/gitlog2changelog.py
 
 
 ##########
-# Install root-level files to the documentation directory
+# Install root-level files to the documentation directory, if we're on *nix
 ##########
-install (FILES AUTHORS COPYING ChangeLog ChangeLog-2009 ChangeLog-2008 ChangeLog-2007
-  ChangeLog-2006 ChangeLog-2005 NEWS README THANKS
-  DESTINATION share/doc/logos)
+if (NOT APPLE AND NOT WIN32 AND NOT MSVC)
+  install (FILES AUTHORS COPYING ChangeLog ChangeLog-2009 ChangeLog-2008 ChangeLog-2007
+    ChangeLog-2006 ChangeLog-2005 NEWS README THANKS
+    DESTINATION share/doc/logos)
+endif()
 
 
 ##########

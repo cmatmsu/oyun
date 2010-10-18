@@ -323,14 +323,29 @@ wxString GetBundleResourcesPath()
 
 #endif
 
+#if defined(__WXMSW__)
+
+wxString GetExecutablePath()
+{
+	// If we fail, return current-dir
+	const wxString fail(wxT("./"));
+
+	// Get the real path to the executable
+	wxString executablePath;
+	if (!GetRealPath(wxGetApp().argv[0], executablePath))
+		return fail;
+
+	return executablePath;
+}
+
+#endif
 
 wxString GetDocPath()
 {
 #if defined(__WXMSW__)
 
-	// On Win32, we just copy the HTB file to the installation
-	// directory.
-	return wxT("./logos.htb");
+	// FIXME: I think this will go to executable-directory/share/logos/logos.htb
+	return GetExecutablePath() + wxT("/share/logos/logos.htb");
 
 #elif defined(__WXMAC__)
 
@@ -341,7 +356,7 @@ wxString GetDocPath()
 
 	// Everywhere else, assume we've used autoconf to build, and the
 	// user has installed Logos into some prefix or other
-	wxString docDir(STRINGIZE(ACDATADIR), *wxConvCurrent);
+	wxString docDir(STRINGIZE(CMAKE_INSTALL_PREFIX), *wxConvCurrent);
 	if (docDir[docDir.length() - 1] != wxT('/'))
 		docDir.Append(wxT('/'));
 	docDir.Append(wxT("logos/"));
