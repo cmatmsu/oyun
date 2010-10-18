@@ -69,15 +69,11 @@ void EvoTournament::RemovePlayer(const Player *player)
 
 bool EvoTournament::Run(int numGenerations)
 {
+	wxBeginBusyCursor();
+
 	// If we've already played, reset
 	if (played)
 		Reset();
-
-        // Create a progress dialog
-        wxProgressDialog *progress = new wxProgressDialog(_("Running tournament..."),
-                                                          _("Running tournament:"),
-                                                          numGenerations + 1);
-        progress->Update(1);
 
 	// Create some variables we'll need later: the number of players,
 	// a temporary weight object that will get pushed back onto data,
@@ -124,10 +120,7 @@ bool EvoTournament::Run(int numGenerations)
 				
 				// Error already set in Match::Play()
 				if (!match.Play(game, true))
-				{
-					progress->Destroy();
 					return false;
-				}
 
 				// What's that mean for our intrepid warrior?
 				double floatScore = odds * match.playerOneScore;
@@ -157,15 +150,14 @@ bool EvoTournament::Run(int numGenerations)
 		// Add it to the data
 		delete[] newIntWeights;
 		data.push_back(weights);
-
-                progress->Update(gen+1);
 	}
 
 	delete[] intWeights;
-        progress->Destroy();
 
 	// Set the played variable
 	played = true;
+
+	wxEndBusyCursor();
 
 	return true;
 }
