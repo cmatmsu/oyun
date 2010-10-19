@@ -344,8 +344,29 @@ wxString GetDocPath()
 {
 #if defined(__WXMSW__)
 
-	// FIXME: I think this will go to executable-directory/share/logos/logos.htb
-	return GetExecutablePath() + wxT("/share/logos/logos.htb");
+	// The install structure on Windows looks like this:
+	//
+	// Program Files\Logos
+	//   \bin
+	//      logos
+	//   \share
+	//      \logos
+	//         logos.htb
+	//      \doc\logos
+	//         manual.pdf
+
+	// Get the executable file path
+	wxFileName fileName(GetExecutablePath());
+	
+	// Remove the last directory (which should be bin) and add share/logos
+	fileName.RemoveLastDir();
+	fileName.AppendDir(wxT("share"));
+	fileName.AppendDir(wxT("logos"));
+	
+	// Change the filename to logos.htb
+	fileName.SetFullName(wxT("logos.htb"));
+
+	return fileName.GetFullPath();
 
 #elif defined(__WXMAC__)
 

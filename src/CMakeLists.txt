@@ -69,5 +69,5 @@ endif ()
 # Install the executable
 ##########
 install (TARGETS ${LOGOS_TARGET} 
-  RUNTIME DESTINATION bin COMPONENT Runtime
-  BUNDLE DESTINATION . COMPONENT Runtime)
+  RUNTIME DESTINATION bin
+  BUNDLE DESTINATION .)
