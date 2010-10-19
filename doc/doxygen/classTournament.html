@@ -56,8 +56,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add a player to the internal list.  <a href="#ae79fe421146ef9d92a9d7227ae55fa85"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTournament.html#a6ca7507ec2e1436865a5c0c3f8aeaf09">RemovePlayer</a> (const <a class="el" href="classPlayer.html">Player</a> *player)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Remove a player like this from the internal list.  <a href="#a6ca7507ec2e1436865a5c0c3f8aeaf09"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTournament.html#a068b96ce89f38953da384c1ea83b071b">Run</a> (bool showProgress=true)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Run the tournament.  <a href="#a068b96ce89f38953da384c1ea83b071b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTournament.html#aea1bc77ba82fc35549ea592a4e37c0de">Run</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Run the tournament.  <a href="#aea1bc77ba82fc35549ea592a4e37c0de"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTournament.html#a37b15381f66365da0cd0b35db8e198ad">Reset</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Reset all internal data.  <a href="#a37b15381f66365da0cd0b35db8e198ad"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTournament.html#a65a4ba698c41efce9d9588fcb3e4c605">IsPlayed</a> () const </td></tr>
@@ -319,15 +319,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a068b96ce89f38953da384c1ea83b071b"></a><!-- doxytag: member="Tournament::Run" ref="a068b96ce89f38953da384c1ea83b071b" args="(bool showProgress=true)" -->
+<a class="anchor" id="aea1bc77ba82fc35549ea592a4e37c0de"></a><!-- doxytag: member="Tournament::Run" ref="aea1bc77ba82fc35549ea592a4e37c0de" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool Tournament::Run </td>
           <td>(</td>
-          <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>showProgress</em> = <code>true</code></td>
+          <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
@@ -337,12 +336,6 @@ Private Attributes</h2></td></tr>
 
 <p>Run the tournament. </p>
 <p>Run the actual matches in the tournament, accumulating the player scores into the <code>scores</code> member.</p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>showProgress</em>&nbsp;</td><td>If true (default), show a progress dialog </td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>True if the tournament ran successfully, false otherwise </dd></dl>
 
 </div>
