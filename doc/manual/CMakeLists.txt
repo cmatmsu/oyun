@@ -9,7 +9,7 @@ file (GLOB DOC_IMAGES RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" source/*.png)
 ##########
 # Generate TeX and HTML from Markdown
 ##########
-set (TEX_FILES "${CMAKE_CURRENT_BINARY_DIR}/pdf/manual.tex")
+set (TEX_FILES "${CMAKE_CURRENT_BINARY_DIR}/manual.tex")
 set (TEX_IMAGES "")
 set (HTML_FILES "")
 set (HTML_IMAGES "")
@@ -21,21 +21,18 @@ foreach (doc ${DOC_SOURCE})
     COMMAND ${CMAKE_COMMAND} -E make_directory "${CMAKE_CURRENT_BINARY_DIR}/html"
     COMMAND pandoc -f markdown -t html -s -o "${CMAKE_CURRENT_BINARY_DIR}/html/${outfile}.html" -S "${CMAKE_CURRENT_SOURCE_DIR}/${doc}"
     MAIN_DEPENDENCY "${doc}")
-  add_custom_command (OUTPUT "pdf/${outfile}.tex"
-    COMMAND ${CMAKE_COMMAND} -E make_directory "${CMAKE_CURRENT_BINARY_DIR}/pdf"
-    COMMAND pandoc -f markdown -t latex -o "${CMAKE_CURRENT_BINARY_DIR}/pdf/${outfile}.tex" "${CMAKE_CURRENT_SOURCE_DIR}/${doc}"
+  add_custom_command (OUTPUT "${outfile}.tex"
+    COMMAND pandoc -f markdown -t latex -o "${CMAKE_CURRENT_BINARY_DIR}/${outfile}.tex" "${CMAKE_CURRENT_SOURCE_DIR}/${doc}"
     MAIN_DEPENDENCY "${doc}")
   
-  list (APPEND TEX_FILES "${CMAKE_CURRENT_BINARY_DIR}/pdf/${outfile}.tex")
+  list (APPEND TEX_FILES "${CMAKE_CURRENT_BINARY_DIR}/${outfile}.tex")
   list (APPEND HTML_FILES "${CMAKE_CURRENT_BINARY_DIR}/html/${outfile}.html")
 endforeach (doc)
 
-# The main manual file is simply copied, but only if source and binary are different
-if (NOT (${CMAKE_CURRENT_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_BINARY_DIR}))
-  add_custom_command (OUTPUT "pdf/manual.tex"
-    COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/pdf/manual.tex" "${CMAKE_CURRENT_BINARY_DIR}/pdf/manual.tex"
-    MAIN_DEPENDENCY "pdf/manual.tex")
-endif()
+# The main manual file is simply copied
+add_custom_command (OUTPUT "manual.tex"
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/pdf/manual.tex" "${CMAKE_CURRENT_BINARY_DIR}/manual.tex"
+  MAIN_DEPENDENCY "pdf/manual.tex")
 
 
 ##########
@@ -47,11 +44,11 @@ foreach (image ${DOC_IMAGES})
   add_custom_command (OUTPUT "html/${outfile}"
     COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/${image}" "${CMAKE_CURRENT_BINARY_DIR}/html/${outfile}"
     MAIN_DEPENDENCY "${image}")
-  add_custom_command (OUTPUT "pdf/${outfile}"
-    COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/${image}" "${CMAKE_CURRENT_BINARY_DIR}/pdf/${outfile}"
+  add_custom_command (OUTPUT "${outfile}"
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/${image}" "${CMAKE_CURRENT_BINARY_DIR}/${outfile}"
     MAIN_DEPENDENCY "${image}")
   
-  list (APPEND TEX_IMAGES "${CMAKE_CURRENT_BINARY_DIR}/pdf/${outfile}")
+  list (APPEND TEX_IMAGES "${CMAKE_CURRENT_BINARY_DIR}/${outfile}")
   list (APPEND HTML_IMAGES "${CMAKE_CURRENT_BINARY_DIR}/html/${outfile}")
 endforeach (image)
 
@@ -65,12 +62,11 @@ else()
   set (NULDEV "/dev/null")
 endif()
 
-add_custom_command (OUTPUT pdf/manual.pdf
+add_custom_command (OUTPUT manual.pdf
   COMMAND pdflatex manual -interaction batchmode > "${NULDEV}" 2>&1
   COMMAND pdflatex manual -interaction batchmode > "${NULDEV}" 2>&1
   COMMAND pdflatex manual -interaction batchmode > "${NULDEV}" 2>&1
-  DEPENDS ${TEX_FILES} ${TEX_IMAGES}
-  WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/pdf/")
+  DEPENDS ${TEX_FILES} ${TEX_IMAGES})
 
 
 ##########
@@ -116,10 +112,10 @@ else ()
   set (DOCBOOK_DESTINATION "share/logos")
 endif ()
 
-install (FILES ${CMAKE_CURRENT_BINARY_DIR}/pdf/manual.pdf
+install (FILES ${CMAKE_CURRENT_BINARY_DIR}/manual.pdf
   DESTINATION ${MANUAL_DESTINATION})
 install (FILES ${CMAKE_CURRENT_BINARY_DIR}/html/logos.htb
   DESTINATION ${DOCBOOK_DESTINATION})
 
 
-add_custom_target (docs-manual ALL DEPENDS pdf/manual.pdf html/logos.htb)
+add_custom_target (docs-manual ALL DEPENDS manual.pdf html/logos.htb)
