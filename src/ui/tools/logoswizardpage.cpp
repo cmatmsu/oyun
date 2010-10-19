@@ -88,8 +88,7 @@ LogosWizardPage::LogosWizardPage(const wxString &titleStr, const wxString &subti
 
 void LogosWizardPage::OnWizardCancel(wxWizardEvent &event)
 {
-#ifndef __WXMAC__
-	if (wxMessageBox(_("Cancelling this wizard will quit Logos.\n\n"
+	if (wxMessageBox(_("Closing this wizard will quit Logos.\n\n"
 	                   "Are you sure you want to quit?"),
 	                 _("Quit"), wxICON_QUESTION | wxYES_NO, this) != wxYES)
 	{
@@ -97,7 +96,6 @@ void LogosWizardPage::OnWizardCancel(wxWizardEvent &event)
 		event.Veto();
 		return;
 	}
-#endif
 	
 	// Otherwise, let this go
 	event.Skip();
