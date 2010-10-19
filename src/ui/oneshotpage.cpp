@@ -145,7 +145,6 @@ OneShotPage::OneShotPage(LogosWizard *parent, wxWizardPage *prev, wxWizardPage *
 	winnerFlags |= wxRESERVE_SPACE_EVEN_IF_HIDDEN;
 #endif
 	rightSizer->Add(winner, 0, winnerFlags, 12);
-	rightSizer->Show(winner, false);
 
 	rightSizer->Layout();
 	rightWindow->SetSizerAndFit(rightSizer);
@@ -158,6 +157,10 @@ OneShotPage::OneShotPage(LogosWizard *parent, wxWizardPage *prev, wxWizardPage *
 
 	// Throw it all in the page sizer
 	sizer->Add(splitter, 1, wxEXPAND | wxALL, 6);
+
+
+	// And hide the winner display, or things go wrong
+	winner->Show(false);
 }
 
 OneShotPage::~OneShotPage()
