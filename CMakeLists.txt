@@ -64,5 +64,7 @@ else ()
   set (CPACK_GENERATOR "TBZ2")
   set (CPACK_PACKAGE_FILE_NAME "logos-${LOGOS_VERSION}-linux")
 endif()
+set (CPACK_SOURCE_PACKAGE_FILE_NAME "logos-${LOGOS_VERSION}")
+set (CPACK_SOURCE_GENERATOR "TBZ2;TGZ")
 
 include (CPack)
