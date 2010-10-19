@@ -134,6 +134,26 @@ private:
 	    \brief The radio button for choosing an evolutionary tournament
 	*/
 	wxRadioButton *rbEvolutionary;
+
+	/**
+		\brief The text label for the first radio button
+	*/
+	wxStaticText *rbOneShotLabel;
+
+	/**
+		\brief The text label for the second radio button
+	*/
+	wxStaticText *rbEvolutionaryLabel;
+
+	/**
+		\brief A horizontal sizer containing the first radio button and its text
+	*/
+	wxBoxSizer *rbOneShotSizer;
+
+	/**
+		\brief A horizontal sizer containing the second radio button and its text
+	*/
+	wxBoxSizer *rbEvolutionarySizer;
 };
 
 #endif
