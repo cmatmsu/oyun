@@ -101,7 +101,7 @@ void EvoFinishPage::OnSaveImage(wxCommandEvent & WXUNUSED(event))
 	else if (extension == wxT("png"))
 		mimeType = "image/png";
 	else if (extension == wxT("bmp"))
-		mimeType = "image.bmp";
+		mimeType = "image/x-bmp";
 	else
 	{
 		filename.SetExt(wxT("jpg"));
