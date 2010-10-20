@@ -36,7 +36,7 @@
 #include "match.h"
 
 
-Tournament::Tournament(Game *newGame) : game(newGame), played(false)
+Tournament::Tournament(Game *newGame) : played(false), game(newGame)
 { }
 
 Tournament::~Tournament()

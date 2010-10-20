@@ -46,9 +46,9 @@ public:
 	    \param newAction Initial value of the \c action member
 	    \param newTransitions Initial values of the \c transitions member
 	*/
-	FSAState(wxChar newAction, const long *newTransitions)
+	FSAState(wxChar newAction, const long *newTransitions) :
+		action (newAction)
 	{
-		action = newAction;
 		transitions[0] = newTransitions[0];
 		transitions[1] = newTransitions[1];
 	}

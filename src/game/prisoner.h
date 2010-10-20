@@ -40,7 +40,7 @@
 class PrisonerDilemma : public Game
 {
 public:
-	PrisonerDilemma() 
+	PrisonerDilemma()
 	{ gameMoves = wxT("CD"); }
 	virtual ~PrisonerDilemma() { }
 

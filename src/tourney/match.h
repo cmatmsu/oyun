@@ -45,7 +45,9 @@ public:
 	    \param one Initial value of the \c playerOne member
 	    \param two Initial value of the \c playerTwo member
 	*/
-	Match(Player *one, Player *two) : playerOne(one), playerTwo(two) {}
+	Match(Player *one, Player *two) : playerOne(one), playerTwo(two),
+	                                  playerOneScore(0), playerTwoScore(0)
+	{ }
 
 	/**
 	    \brief Play a match between two players
