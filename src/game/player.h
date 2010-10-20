@@ -251,3 +251,7 @@ public:
 /** \endcond */
 
 #endif
+
+// Local Variables:
+// mode: c++
+// End:

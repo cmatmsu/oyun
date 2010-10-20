@@ -83,3 +83,6 @@ double GenerateFloatHigh(void);
 
 #endif
 
+// Local Variables:
+// mode: c++
+// End:

@@ -60,3 +60,7 @@ wxString GetDocPath();
 
 #endif
 
+// Local Variables:
+// mode: c++
+// End:
+

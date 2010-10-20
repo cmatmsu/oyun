@@ -50,3 +50,6 @@ const wxString Get(void);
 
 #endif
 
+// Local Variables:
+// mode: c++
+// End:

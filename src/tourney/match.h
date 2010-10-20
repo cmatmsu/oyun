@@ -103,3 +103,7 @@ WX_DEFINE_ARRAY_PTR(Match *, MatchPtrArray);
 	
 
 #endif
+
+// Local Variables:
+// mode: c++
+// End:

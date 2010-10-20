@@ -166,3 +166,7 @@ DECLARE_APP(LogosApp);
 
 
 #endif
+
+// Local Variables:
+// mode: c++
+// End:
