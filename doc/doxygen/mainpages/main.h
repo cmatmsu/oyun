@@ -4,7 +4,7 @@
 
 \mainpage Logos: An evolutionary game-theory simulator
 \author Charles Pence
-\date January 2009
+\date October 2010
 
 \section code_reference Code Reference:
 
