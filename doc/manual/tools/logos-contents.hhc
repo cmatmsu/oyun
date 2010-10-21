@@ -72,6 +72,12 @@
 	
 	<li>
 	<object type="text/sitemap">
+	<param name="Name" value="Sample Players">
+	<param name="Local" value="Sample-Players.html">
+	</object>
+
+	<li>
+	<object type="text/sitemap">
 	<param name="Name" value="Glossary">
 	<param name="Local" value="Glossary.html">
 	</object>
