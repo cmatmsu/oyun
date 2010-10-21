@@ -27,6 +27,7 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <h1>FSAPlayer Class Reference<br/>
@@ -49,8 +50,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor.  <a href="#ada7710b70d3d97facb8cefd63bd77054"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFSAPlayer.html#aea052be7e1d143937ec41b4e43e1314d">FSAPlayer</a> (const <a class="el" href="classFSAPlayer.html">FSAPlayer</a> &amp;p)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Copy constructor.  <a href="#aea052be7e1d143937ec41b4e43e1314d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFSAPlayer.html#a29b208abc20bf9d0adfc168c896ece89">Load</a> (const <a class="el" href="classGame.html">Game</a> *game, const wxString &amp;fsaScript)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Load a finite state machine script.  <a href="#a29b208abc20bf9d0adfc168c896ece89"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFSAPlayer.html#a66c1e01e626a8bee79bb0bbba00938f3">Load</a> (const <a class="el" href="classGame.html">Game</a> *game, const wxString &amp;fileName)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Load a finite state machine script.  <a href="#a66c1e01e626a8bee79bb0bbba00938f3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFSAPlayer.html#ae3633fb0a78431f6f820766b7594f1b9">LoadFromString</a> (const <a class="el" href="classGame.html">Game</a> *game, const wxString &amp;fsaScript)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Load a finite state machine script from a string.  <a href="#ae3633fb0a78431f6f820766b7594f1b9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classPlayer.html">Player</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFSAPlayer.html#aa9473a07e4e32fd26ca815eeac1af5c7">Clone</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create a newly allocated copy of the current player.  <a href="#aa9473a07e4e32fd26ca815eeac1af5c7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFSAPlayer.html#a7144eb348cb69c99a06fafdad30243b7">Think</a> (const <a class="el" href="classGame.html">Game</a> *gamePlayed, const <a class="el" href="classPlayer.html">Player</a> *nextOpponent)</td></tr>
@@ -65,6 +68,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the source code for this player.  <a href="#a2ecf6f5db0b518a0ff54e9d4d9fcb5e8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFSAPlayer.html#a42cbed971f27765f52e59ca29258e1bf">GetNumLines</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the number of machine states.  <a href="#a42cbed971f27765f52e59ca29258e1bf"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFSAPlayer.html#ab5391ba90bf5408c0f9d7bcbea676262">DoLoad</a> (const <a class="el" href="classGame.html">Game</a> *game, const wxArrayString &amp;fsaScript)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Internal function which actually loads the FSA script.  <a href="#ab5391ba90bf5408c0f9d7bcbea676262"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">wxString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFSAPlayer.html#a1ead944651af8e06a196ad6ff3c822ff">playerName</a></td></tr>
@@ -165,6 +172,44 @@ D, 0, 1 </pre></div><p>Hopefully this is enough documentation that the machines 
 
 </div>
 </div>
+<a class="anchor" id="ab5391ba90bf5408c0f9d7bcbea676262"></a><!-- doxytag: member="FSAPlayer::DoLoad" ref="ab5391ba90bf5408c0f9d7bcbea676262" args="(const Game *game, const wxArrayString &amp;fsaScript)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FSAPlayer::DoLoad </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGame.html">Game</a> *&nbsp;</td>
+          <td class="paramname"> <em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wxArrayString &amp;&nbsp;</td>
+          <td class="paramname"> <em>fsaScript</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Internal function which actually loads the FSA script. </p>
+<p>This is the generalized loading code, called by both <a class="el" href="classFSAPlayer.html#a66c1e01e626a8bee79bb0bbba00938f3" title="Load a finite state machine script.">Load()</a> and <a class="el" href="classFSAPlayer.html#ae3633fb0a78431f6f820766b7594f1b9" title="Load a finite state machine script from a string.">LoadFromString()</a>.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>game</em>&nbsp;</td><td>The game against which to check the player moves </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>fsaScript</em>&nbsp;</td><td>The script file to be loaded, an array of lines </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>True if the file is successfully loaded, false otherwise </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a42cbed971f27765f52e59ca29258e1bf"></a><!-- doxytag: member="FSAPlayer::GetNumLines" ref="a42cbed971f27765f52e59ca29258e1bf" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -245,12 +290,50 @@ D, 0, 1 </pre></div><p>Hopefully this is enough documentation that the machines 
 
 </div>
 </div>
-<a class="anchor" id="a29b208abc20bf9d0adfc168c896ece89"></a><!-- doxytag: member="FSAPlayer::Load" ref="a29b208abc20bf9d0adfc168c896ece89" args="(const Game *game, const wxString &amp;fsaScript)" -->
+<a class="anchor" id="a66c1e01e626a8bee79bb0bbba00938f3"></a><!-- doxytag: member="FSAPlayer::Load" ref="a66c1e01e626a8bee79bb0bbba00938f3" args="(const Game *game, const wxString &amp;fileName)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool FSAPlayer::Load </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGame.html">Game</a> *&nbsp;</td>
+          <td class="paramname"> <em>game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wxString &amp;&nbsp;</td>
+          <td class="paramname"> <em>fileName</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Load a finite state machine script. </p>
+<p>Load the source code for this player's finite state machine from the given external file.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>game</em>&nbsp;</td><td>The game against which to check the player moves </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>fileName</em>&nbsp;</td><td>The script file to be loaded </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>True if the file is successfully loaded, false otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae3633fb0a78431f6f820766b7594f1b9"></a><!-- doxytag: member="FSAPlayer::LoadFromString" ref="ae3633fb0a78431f6f820766b7594f1b9" args="(const Game *game, const wxString &amp;fsaScript)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FSAPlayer::LoadFromString </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classGame.html">Game</a> *&nbsp;</td>
           <td class="paramname"> <em>game</em>, </td>
@@ -270,12 +353,12 @@ D, 0, 1 </pre></div><p>Hopefully this is enough documentation that the machines 
 </div>
 <div class="memdoc">
 
-<p>Load a finite state machine script. </p>
-<p>Load the source code for this player's finite state machine from the given external file.</p>
+<p>Load a finite state machine script from a string. </p>
+<p>Load the source code for this player's finite state machine from the given string. This is useful primarily for testing.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>game</em>&nbsp;</td><td>The game against which to check the player moves </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>fsaScript</em>&nbsp;</td><td>The script file to be loaded </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>fsaScript</em>&nbsp;</td><td>The finite state script to be loaded </td></tr>
   </table>
   </dd>
 </dl>
