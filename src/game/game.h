@@ -91,8 +91,8 @@ public:
 		gameHistory.Add(thisTurn);
 		
 		// Tell the players what just happened
-		playerOne->GetPayoff(playerTwo, playerTwo->nextMove, playerOneScore);
-		playerTwo->GetPayoff(playerOne, playerOne->nextMove, playerTwoScore);
+		playerOne->AddPayoff(playerTwo, playerTwo->nextMove, playerOneScore);
+		playerTwo->AddPayoff(playerOne, playerOne->nextMove, playerTwoScore);
 		
 		return true;
 	}

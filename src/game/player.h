@@ -145,7 +145,7 @@ public:
 	    \param opponentsMove The move the opponent took this game
 	    \param payoff The score this player received this game
 	*/
-	void GetPayoff(const Player *opponent, char opponentsMove, int payoff)
+	void AddPayoff(const Player *opponent, char opponentsMove, int payoff)
 	{
 		// Add in the payoff to the score
 		score += payoff;
