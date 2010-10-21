@@ -109,9 +109,9 @@ else ()
   set (DOCBOOK_DESTINATION "share/logos")
 endif ()
 
-install (FILES logos-manual.pdf
+install (FILES "${CMAKE_CURRENT_BINARY_DIR}/logos-manual.pdf"
   DESTINATION ${MANUAL_DESTINATION})
-install (FILES logos.htb
+install (FILES "${CMAKE_CURRENT_BINARY_DIR}/logos.htb"
   DESTINATION ${DOCBOOK_DESTINATION})
 
 
