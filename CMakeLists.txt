@@ -20,7 +20,14 @@ add_subdirectory (src)
 ##########
 # ChangeLog
 ##########
-add_custom_target (changes ${CMAKE_CURRENT_SOURCE_DIR}/build/gitlog2changelog.py
+add_custom_target (changelog_file ${CMAKE_CURRENT_SOURCE_DIR}/build/gitlog2changelog.py
+  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+
+
+##########
+# NEWS file
+##########
+add_custom_target (news_file pandoc -f markdown -t plain -o ${CMAKE_CURRENT_SOURCE_DIR}/NEWS ${CMAKE_CURRENT_SOURCE_DIR}/doc/manual/gh-wiki/Release-Notes.md
   WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 
 
