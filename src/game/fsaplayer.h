@@ -143,11 +143,24 @@ public:
 	    given external file.
 	    
 	    \param game The game against which to check the player moves
-	    \param fsaScript The script file to be loaded
+	    \param fileName The script file to be loaded
 	    \returns True if the file is successfully loaded, false otherwise
 	*/
-	bool Load(const Game *game, const wxString &fsaScript);
+	bool Load(const Game *game, const wxString &fileName);
 
+	/**
+	    \brief Load a finite state machine script from a string
+
+	    Load the source code for this player's finite state machine from the
+	    given string.  This is useful primarily for testing.
+
+	    \param game The game against which to check the player moves
+	    \param fsaScript The finite state script to be loaded
+	    \returns True if the file is successfully loaded, false otherwise
+	*/
+	bool LoadFromString(const Game *game, const wxString &fsaScript);
+
+	
 	virtual Player *Clone() const
 	{ return new FSAPlayer(*this); }
 
@@ -179,6 +192,19 @@ public:
 	int GetNumLines() { return machine.size(); }
 
 private:
+	/**
+	    \brief Internal function which actually loads the FSA script
+
+	    This is the generalized loading code, called by both Load()
+	    and LoadFromString().
+
+		\param game The game against which to check the player moves
+	    \param fsaScript The script file to be loaded, an array of lines
+	    \returns True if the file is successfully loaded, false otherwise
+	*/
+	bool DoLoad (const Game *game, const wxArrayString &fsaScript);
+	
+	
 	/**
 	    \brief Name of this player
 	*/
