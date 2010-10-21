@@ -1,0 +1,3 @@
+[submodule "doc/manual/gh-wiki"]
+	path = doc/manual/gh-wiki
+	url = git@github.com:cpence/logos.wiki.git
