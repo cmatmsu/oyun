@@ -53,7 +53,10 @@ foreach (doc ${WIKI_DOCS})
   get_filename_component (basename ${doc} NAME_WE)
   
   add_custom_command (OUTPUT "${basename}.html"
-    COMMAND pandoc -f markdown -t html -s -o "${CMAKE_CURRENT_BINARY_DIR}/${basename}.html" "${CMAKE_CURRENT_SOURCE_DIR}/${doc}"
+    COMMAND pandoc -f markdown -t html --template="${CMAKE_CURRENT_SOURCE_DIR}/tools/template.html" -o "${CMAKE_CURRENT_BINARY_DIR}/${basename}.html" "${CMAKE_CURRENT_SOURCE_DIR}/${doc}"
+    COMMAND ${CMAKE_COMMAND} -D CMAKE_CURRENT_BINARY_DIR:string="${CMAKE_CURRENT_BINARY_DIR}" -D basename:string="${basename}" -P "${CMAKE_CURRENT_SOURCE_DIR}/RunHTMLTidy.cmake"
+    COMMAND sed -i "" -e "\"s@<DIV id=.*>@@g\"" "${CMAKE_CURRENT_BINARY_DIR}/${basename}.html"
+    COMMAND sed -i "" -e "\"s@</DIV>@@g\"" "${CMAKE_CURRENT_BINARY_DIR}/${basename}.html"
     MAIN_DEPENDENCY "${doc}")
   add_custom_command (OUTPUT "${basename}.tex"
     COMMAND pandoc -f markdown -t latex -o "${CMAKE_CURRENT_BINARY_DIR}/${basename}.tex" "${CMAKE_CURRENT_SOURCE_DIR}/${doc}"
