@@ -84,6 +84,9 @@ EvoPage::EvoPage(LogosWizard *parent, wxWizardPage *prev, wxWizardPage *next) :
 	genSpinner = new wxSpinCtrl(this, ID_GEN_SPINNER, wxT("200"), wxDefaultPosition, wxDefaultSize,
 	                            wxSP_ARROW_KEYS, 10, 10000, 200);
 
+	// The spinner seems to come out small unless we call this
+	genSpinner->SetInitialSize(genSpinner->GetBestSize());
+			
 	graphWindow = new EvoGraphWindow(this);
 
 	// Make a sizer and add the controls to it
