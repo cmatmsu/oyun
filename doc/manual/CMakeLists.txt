@@ -1,60 +1,71 @@
 
 ##########
-# Get a list of the documentation source files
+# First step: copy the images to the binary directory
 ##########
-file (GLOB DOC_SOURCE RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" source/*.text)
-file (GLOB DOC_IMAGES RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" source/*.png)
+file (GLOB WIKI_IMAGES RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" gh-wiki/images/*.png)
+set (BINARY_DIR_IMAGES "")
 
-
-##########
-# Generate TeX and HTML from Markdown
-##########
-set (TEX_FILES "${CMAKE_CURRENT_BINARY_DIR}/manual.tex")
-set (TEX_IMAGES "")
-set (HTML_FILES "")
-set (HTML_IMAGES "")
-
-foreach (doc ${DOC_SOURCE})
-  get_filename_component (outfile ${doc} NAME_WE)
+foreach (image ${WIKI_IMAGES})
+  get_filename_component (filename ${image} NAME)
   
-  add_custom_command (OUTPUT "html/${outfile}.html"
-    COMMAND ${CMAKE_COMMAND} -E make_directory "${CMAKE_CURRENT_BINARY_DIR}/html"
-    COMMAND pandoc -f markdown -t html -s -o "${CMAKE_CURRENT_BINARY_DIR}/html/${outfile}.html" -S "${CMAKE_CURRENT_SOURCE_DIR}/${doc}"
-    MAIN_DEPENDENCY "${doc}")
-  add_custom_command (OUTPUT "${outfile}.tex"
-    COMMAND pandoc -f markdown -t latex -o "${CMAKE_CURRENT_BINARY_DIR}/${outfile}.tex" "${CMAKE_CURRENT_SOURCE_DIR}/${doc}"
-    MAIN_DEPENDENCY "${doc}")
-  
-  list (APPEND TEX_FILES "${CMAKE_CURRENT_BINARY_DIR}/${outfile}.tex")
-  list (APPEND HTML_FILES "${CMAKE_CURRENT_BINARY_DIR}/html/${outfile}.html")
-endforeach (doc)
-
-# The main manual file is simply copied
-add_custom_command (OUTPUT "manual.tex"
-  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/pdf/manual.tex" "${CMAKE_CURRENT_BINARY_DIR}/manual.tex"
-  MAIN_DEPENDENCY "pdf/manual.tex")
-
-
-##########
-# Copy images to binary directory
-##########
-foreach (image ${DOC_IMAGES})
-  get_filename_component (outfile ${image} NAME)
-
-  add_custom_command (OUTPUT "html/${outfile}"
-    COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/${image}" "${CMAKE_CURRENT_BINARY_DIR}/html/${outfile}"
-    MAIN_DEPENDENCY "${image}")
-  add_custom_command (OUTPUT "${outfile}"
-    COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/${image}" "${CMAKE_CURRENT_BINARY_DIR}/${outfile}"
+  add_custom_command (OUTPUT "images/${filename}"
+    COMMAND ${CMAKE_COMMAND} -E make_directory "${CMAKE_CURRENT_BINARY_DIR}/images"
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/${image}" "${CMAKE_CURRENT_BINARY_DIR}/images/${filename}"
     MAIN_DEPENDENCY "${image}")
   
-  list (APPEND TEX_IMAGES "${CMAKE_CURRENT_BINARY_DIR}/${outfile}")
-  list (APPEND HTML_IMAGES "${CMAKE_CURRENT_BINARY_DIR}/html/${outfile}")
+  list (APPEND BINARY_DIR_IMAGES "images/${filename}")
 endforeach (image)
 
 
 ##########
-# Build main TeX file
+# Second step: copy the TeX main-file over to the build directory
+##########
+set (TEX_DOCS "logos-manual.tex")
+
+add_custom_command (OUTPUT logos-manual.tex
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/tools/logos-manual.tex" "${CMAKE_CURRENT_BINARY_DIR}/logos-manual.tex"
+  MAIN_DEPENDENCY "tools/logos-manual.tex")
+
+
+##########
+# Third step: copy the HTML utility files over to the build directory
+##########
+set (HTML_DOCS "logos-contents.hhc;logos-index.hhk;logos.hhp")
+
+add_custom_command (OUTPUT logos-contents.hhc
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/tools/logos-contents.hhc" "${CMAKE_CURRENT_BINARY_DIR}/logos-contents.hhc"
+  MAIN_DEPENDENCY tools/logos-contents.hhc)
+add_custom_command (OUTPUT logos-index.hhk
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/tools/logos-index.hhk" "${CMAKE_CURRENT_BINARY_DIR}/logos-index.hhk"
+  MAIN_DEPENDENCY tools/logos-index.hhk)
+add_custom_command (OUTPUT logos.hhp
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/tools/logos.hhp" "${CMAKE_CURRENT_BINARY_DIR}/logos.hhp"
+  MAIN_DEPENDENCY tools/logos.hhp)
+
+
+##########
+# Fourth step: convert the gh-wiki Markdown into HTML and TeX in the build
+# directory
+##########
+file (GLOB WIKI_DOCS RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" gh-wiki/*.md)
+
+foreach (doc ${WIKI_DOCS})
+  get_filename_component (basename ${doc} NAME_WE)
+  
+  add_custom_command (OUTPUT "${basename}.html"
+    COMMAND pandoc -f markdown -t html -s -o "${CMAKE_CURRENT_BINARY_DIR}/${basename}.html" "${CMAKE_CURRENT_SOURCE_DIR}/${doc}"
+    MAIN_DEPENDENCY "${doc}")
+  add_custom_command (OUTPUT "${basename}.tex"
+    COMMAND pandoc -f markdown -t latex -o "${CMAKE_CURRENT_BINARY_DIR}/${basename}.tex" "${CMAKE_CURRENT_SOURCE_DIR}/${doc}"
+    MAIN_DEPENDENCY "${doc}")
+  
+  list (APPEND TEX_DOCS "${basename}.tex")
+  list (APPEND HTML_DOCS "${basename}.html")
+endforeach (doc)
+
+
+##########
+# Fifth step: Build main TeX file
 ##########
 if (WIN32 OR MSVC)
   set (NULDEV "NUL")
@@ -62,43 +73,29 @@ else()
   set (NULDEV "/dev/null")
 endif()
 
-add_custom_command (OUTPUT manual.pdf
-  COMMAND pdflatex manual -interaction batchmode > "${NULDEV}" 2>&1
-  COMMAND pdflatex manual -interaction batchmode > "${NULDEV}" 2>&1
-  COMMAND pdflatex manual -interaction batchmode > "${NULDEV}" 2>&1
-  DEPENDS ${TEX_FILES} ${TEX_IMAGES})
+add_custom_command (OUTPUT logos-manual.pdf
+  COMMAND pdflatex logos-manual -interaction batchmode > "${NULDEV}" 2>&1
+  COMMAND pdflatex logos-manual -interaction batchmode > "${NULDEV}" 2>&1
+  COMMAND pdflatex logos-manual -interaction batchmode > "${NULDEV}" 2>&1
+  MAIN_DEPENDENCY logos-manual.tex
+  DEPENDS ${TEX_DOCS} ${BINARY_DIR_IMAGES})
 
 
 ##########
-# Copy wxHTML files to binary directory
+# 6. Build the cached version of the HHP
 ##########
-add_custom_command (OUTPUT html/logos-contents.hhc
-  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/wxhtml/logos-contents.hhc" "${CMAKE_CURRENT_BINARY_DIR}/html/logos-contents.hhc"
-  MAIN_DEPENDENCY wxhtml/logos-contents.hhc)
-add_custom_command (OUTPUT html/logos-index.hhk
-  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/wxhtml/logos-index.hhk" "${CMAKE_CURRENT_BINARY_DIR}/html/logos-index.hhk"
-  MAIN_DEPENDENCY wxhtml/logos-index.hhk)
-add_custom_command (OUTPUT html/logos.hhp
-  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/wxhtml/logos.hhp" "${CMAKE_CURRENT_BINARY_DIR}/html/logos.hhp"
-  MAIN_DEPENDENCY wxhtml/logos.hhp)
+add_custom_command (OUTPUT logos.hhp.cached
+  COMMAND hhp2cached "${CMAKE_CURRENT_BINARY_DIR}/logos.hhp"
+  MAIN_DEPENDENCY "${CMAKE_CURRENT_BINARY_DIR}/logos.hhp"
+  DEPENDS ${HTML_DOCS})
 
 
 ##########
-# Build the cached version of the HHP
+# 7. Pack everything into an HTB
 ##########
-add_custom_command (OUTPUT html/logos.hhp.cached
-  COMMAND hhp2cached "${CMAKE_CURRENT_BINARY_DIR}/html/logos.hhp"
-  MAIN_DEPENDENCY "${CMAKE_CURRENT_BINARY_DIR}/html/logos.hhp"
-  DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/html/logos-contents.hhc" "${CMAKE_CURRENT_BINARY_DIR}/html/logos-index.hhk" ${HTML_FILES})
-
-
-##########
-# Pack everything into an HTB
-##########
-add_custom_command (OUTPUT html/logos.htb
-  COMMAND zip -q --quiet -j "logos.htb" ${HTML_FILES} ${HTML_IMAGES} logos-contents.hhc logos-index.hhk logos.hhp logos.hhp.cached
-  DEPENDS html/logos.hhp.cached ${HTML_IMAGES}
-  WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/html")
+add_custom_command (OUTPUT logos.htb
+  COMMAND zip -q --quiet "logos.htb" ${HTML_DOCS} ${BINARY_DIR_IMAGES} logos.hhp.cached
+  DEPENDS logos.hhp.cached ${HTML_DOCS} ${BINARY_DIR_IMAGES})
 
 
 ##########
@@ -112,10 +109,10 @@ else ()
   set (DOCBOOK_DESTINATION "share/logos")
 endif ()
 
-install (FILES ${CMAKE_CURRENT_BINARY_DIR}/manual.pdf
+install (FILES logos-manual.pdf
   DESTINATION ${MANUAL_DESTINATION})
-install (FILES ${CMAKE_CURRENT_BINARY_DIR}/html/logos.htb
+install (FILES logos.htb
   DESTINATION ${DOCBOOK_DESTINATION})
 
 
-add_custom_target (docs-manual ALL DEPENDS manual.pdf html/logos.htb)
+add_custom_target (docs-manual ALL DEPENDS logos-manual.pdf logos.htb)

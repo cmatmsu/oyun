@@ -1,1 +1,14 @@
-html
+images
+*.tex
+*.hhc
+*.hhk
+*.hhp
+*.html
+*.pdf
+*.aux
+*.toc
+*.log
+*.out
+*.cached
+*.htb
+

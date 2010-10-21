@@ -3,31 +3,31 @@
 	<li>
 	<object type="text/sitemap">
 	<param name="Name" value="Welcome">
-	<param name="Local" value="welcome.html">
+	<param name="Local" value="Welcome-to-Logos.html">
 	</object>
 	
 	<li>
 	<object type="text/sitemap">
 	<param name="Name" value="Installation">
-	<param name="Local" value="install.html">
+	<param name="Local" value="Installation.html">
 	</object>
 	
 	<li>
 	<object type="text/sitemap">
 	<param name="Name" value="Release Notes">
-	<param name="Local" value="release.html">
+	<param name="Local" value="Release-Notes.html">
 	</object>
 	
 	<li>
 	<object type="text/sitemap">
 	<param name="Name" value="Getting Started">
-	<param name="Local" value="started.html">
+	<param name="Local" value="Getting-Started.html">
 	</object>
 	
 	<li>
 	<object type="text/sitemap">
 	<param name="Name" value="Logos Task Pages">
-	<param name="Local" value="pages.html">
+	<param name="Local" value="Logos-Task-Pages.html">
 	</object>
 	
 	<ul>
@@ -35,37 +35,37 @@
 		<li>
 		<object type="text/sitemap">
 		<param name="Name" value="Player Selection Page">
-		<param name="Local" value="playerspage.html">
+		<param name="Local" value="Player-Selection-Page.html">
 		</object>
 		
 		<li>
 		<object type="text/sitemap">
 		<param name="Name" value="Tournament Type Page">
-		<param name="Local" value="typepage.html">
+		<param name="Local" value="Tournament-Type-Page.html">
 		</object>
 		
 		<li>
 		<object type="text/sitemap">
 		<param name="Name" value="One-Shot Tournament Page">
-		<param name="Local" value="oneshotpage.html">
+		<param name="Local" value="One-Shot-Tournament-Page.html">
 		</object>
 		
 		<li>
 		<object type="text/sitemap">
 		<param name="Name" value="One-Shot Tournament Finished Page">
-		<param name="Local" value="oneshotfinishpage.html">
+		<param name="Local" value="One-Shot-Tournament-Finished-Page.html">
 		</object>
 		
 		<li>
 		<object type="text/sitemap">
 		<param name="Name" value="Evolutionary Tournament Page">
-		<param name="Local" value="evopage.html">
+		<param name="Local" value="Evolutionary-Tournament-Page.html">
 		</object>
 		
 		<li>
 		<object type="text/sitemap">
 		<param name="Name" value="Evolutionary Tournament Finished Page">
-		<param name="Local" value="evofinishpage.html">
+		<param name="Local" value="Evolutionary-Tournament-Finished-Page.html">
 		</object>
 		
 	</ul>
@@ -73,7 +73,7 @@
 	<li>
 	<object type="text/sitemap">
 	<param name="Name" value="Glossary">
-	<param name="Local" value="glossary.html">
+	<param name="Local" value="Glossary.html">
 	</object>
 	
 </ul>
