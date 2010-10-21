@@ -5,7 +5,7 @@ To get a tournament going in Logos, you'll need to (i) write a set of players,
 (ii) load them up, and (iii) run a tournament of your choice.
 
 Writing Players
----------------
+===============
 
 Tournaments in Logos can be run with two different sorts of players: built-in
 players and external players written as finite state machines.  There are only
@@ -62,7 +62,7 @@ More examples of finite state machine players are available on the wiki at the
 Logos website.
 
 Loading Players
----------------
+===============
 
 Load the players you've written on the first page of Logos.  You can also drag
 and drop finite state machine text files onto the Logos window.  If there are
@@ -73,7 +73,7 @@ upon loading the file.
 Click "Next" to continue.
 
 Running a Tournament
---------------------
+====================
 
 You now need to choose which type of tournament to run.  You can either choose
 a round-robin (or "one-shot") tournament, in which each player plays every 

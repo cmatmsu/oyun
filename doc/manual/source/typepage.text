@@ -12,7 +12,7 @@ you would like to run.  You may choose either a One-Shot Tournament or an
 Evolutionary Tournament.
 
 One-Shot Tournament
--------------------
+===================
 
 A one-shot tournament is a single run of a tournament in which each player plays
 against each other player in a round-robin format.  The "winner" of the one-shot
@@ -20,7 +20,7 @@ tournament is the player with the highest total-sum score.  (For more
 information, see the documentation for the One-Shot Tournament Page.)
 
 Evolutionary Tournament
------------------------
+=======================
 
 An evolutionary tournament is a tournament in which a virtual "population" is
 created, containing an equal amount of each sort of player.  The relative score

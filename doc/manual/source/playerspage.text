@@ -14,7 +14,7 @@ power) to how many players may be added to the tournament, and any individual
 player or type of player may be added as many times as you wish.
 
 Built-In Players
-----------------
+================
 
 Currently there are two types of built-in players: the random player, which
 makes a random move each turn, and the tit-for-tat player, which implements the
@@ -25,7 +25,7 @@ the built-in player you want from the list.  Click OK to add the player, or
 Cancel to return to the player selection screen.
 
 Finite State Machines
----------------------
+=====================
 
 Finite state machines are a file format with which you can design custom players
 for use in Logos.  For a detailed description of their file format and how you
@@ -44,7 +44,7 @@ Also, you can drag and drop finite state machine text files onto the player
 list, and Logos will add them automatically.
 
 The Player List
----------------
+===============
 
 The player list shows you all the players that have been added to the
 tournament so far.  To remove a player, select it and press "Remove Player".

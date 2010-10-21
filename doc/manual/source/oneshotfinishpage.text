@@ -11,7 +11,7 @@ This screen allows you to save the data from a finished One-Shot
 Tournament.  There are two varieties of data that may be saved.
 
 Save CSV...
------------
+===========
 
 Pressing this button will create a spreadsheet (in CSV format, which
 may be opened by Microsoft Excel or the spreadsheet program of your
@@ -24,7 +24,7 @@ To save a CSV, press this button and select a location for the
 resulting file.
 
 Save Details...
----------------
+===============
 
 Pressing this button will create a document (in RTF format, which may
 be opened by Microsoft Word or the word processor of your choice)
