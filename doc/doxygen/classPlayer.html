@@ -58,8 +58,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Determine the next game move.  <a href="#a06113c36b596c695a66ad3fcd57885eb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a3b25a8a72994e3e23ca487ee2608685e">Reset</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Reset the player state.  <a href="#a3b25a8a72994e3e23ca487ee2608685e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a809431fc52ad8d1407bb296c1c3eda04">GetPayoff</a> (const <a class="el" href="classPlayer.html">Player</a> *opponent, char opponentsMove, int payoff)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Register the result of a game interaction.  <a href="#a809431fc52ad8d1407bb296c1c3eda04"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a1b530f6c3f10c0314fd7a05d5c275aeb">AddPayoff</a> (const <a class="el" href="classPlayer.html">Player</a> *opponent, char opponentsMove, int payoff)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Register the result of a game interaction.  <a href="#a1b530f6c3f10c0314fd7a05d5c275aeb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const wxString &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#af5138c0c3a315fe47ca613ebf213ccf6">GetPlayerName</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the player's name.  <a href="#af5138c0c3a315fe47ca613ebf213ccf6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const wxString &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#aea4d9eeda23fe560bb79abad71b71f12">GetPlayerAuthor</a> () const </td></tr>
@@ -158,6 +158,50 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a1b530f6c3f10c0314fd7a05d5c275aeb"></a><!-- doxytag: member="Player::AddPayoff" ref="a1b530f6c3f10c0314fd7a05d5c275aeb" args="(const Player *opponent, char opponentsMove, int payoff)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::AddPayoff </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPlayer.html">Player</a> *&nbsp;</td>
+          <td class="paramname"> <em>opponent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&nbsp;</td>
+          <td class="paramname"> <em>opponentsMove</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>payoff</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Register the result of a game interaction. </p>
+<p>This function accumulates the <code>pastGames</code> buffer as well as handling keeping score. Once again, only the address of the <code>opponent</code> parameter should be used.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>opponent</em>&nbsp;</td><td>The opponent against which the score was obtained </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>opponentsMove</em>&nbsp;</td><td>The move the opponent took this game </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>payoff</em>&nbsp;</td><td>The score this player received this game </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="af811ff1b44b68d33460842931b01b58a"></a><!-- doxytag: member="Player::Clone" ref="af811ff1b44b68d33460842931b01b58a" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
@@ -217,50 +261,6 @@ Protected Attributes</h2></td></tr>
 <div class="memdoc">
 
 <p>Get the player's ID. </p>
-
-</div>
-</div>
-<a class="anchor" id="a809431fc52ad8d1407bb296c1c3eda04"></a><!-- doxytag: member="Player::GetPayoff" ref="a809431fc52ad8d1407bb296c1c3eda04" args="(const Player *opponent, char opponentsMove, int payoff)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Player::GetPayoff </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classPlayer.html">Player</a> *&nbsp;</td>
-          <td class="paramname"> <em>opponent</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char&nbsp;</td>
-          <td class="paramname"> <em>opponentsMove</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>payoff</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Register the result of a game interaction. </p>
-<p>This function accumulates the <code>pastGames</code> buffer as well as handling keeping score. Once again, only the address of the <code>opponent</code> parameter should be used.</p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>opponent</em>&nbsp;</td><td>The opponent against which the score was obtained </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>opponentsMove</em>&nbsp;</td><td>The move the opponent took this game </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>payoff</em>&nbsp;</td><td>The score this player received this game </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
