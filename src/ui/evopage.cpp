@@ -113,7 +113,7 @@ EvoPage::~EvoPage()
 
 void EvoPage::OnHelp(wxWizardEvent & WXUNUSED(event))
 {
-	wxGetApp().ShowHelp(this, wxT("evopage.html"));
+	wxGetApp().ShowHelp(this, wxT("Evolutionary-Tournament-Page.html"));
 }
 
 void EvoPage::OnRunTournament(wxCommandEvent & WXUNUSED(event))

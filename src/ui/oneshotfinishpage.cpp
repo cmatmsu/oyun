@@ -69,7 +69,7 @@ OneShotFinishPage::OneShotFinishPage(LogosWizard *parent, OneShotPage *prev) :
 
 void OneShotFinishPage::OnHelp(wxWizardEvent & WXUNUSED(event))
 {
-	wxGetApp().ShowHelp(this, wxT("oneshotfinishpage.html"));
+	wxGetApp().ShowHelp(this, wxT("One-Shot-Tournament-Finished-Page.html"));
 }
 
 void OneShotFinishPage::OnSaveCSV(wxCommandEvent & WXUNUSED(event))

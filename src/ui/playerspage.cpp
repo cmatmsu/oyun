@@ -111,7 +111,7 @@ PlayersPage::~PlayersPage()
 
 void PlayersPage::OnHelp(wxWizardEvent & WXUNUSED(event))
 {
-	wxGetApp().ShowHelp(this, wxT("playerspage.html"));
+	wxGetApp().ShowHelp(this, wxT("Player-Selection-Page.html"));
 }
 
 void PlayersPage::OnDataUpdate(wxNotifyEvent & WXUNUSED(event))

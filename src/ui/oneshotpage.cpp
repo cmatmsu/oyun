@@ -435,7 +435,7 @@ void OneShotPage::OnPageChanging(wxWizardEvent &event)
 
 void OneShotPage::OnHelp(wxWizardEvent & WXUNUSED(event))
 {
-	wxGetApp().ShowHelp(this, wxT("oneshotpage.html"));
+	wxGetApp().ShowHelp(this, wxT("One-Shot-Tournament-Page.html"));
 }
 
 void OneShotPage::OnRunTournament(wxCommandEvent & WXUNUSED(event))

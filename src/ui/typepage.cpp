@@ -102,7 +102,7 @@ TypePage::TypePage(LogosWizard *parent, wxWizardPage *prev, wxWizardPage *onesho
 
 void TypePage::OnHelp(wxWizardEvent & WXUNUSED(event))
 {
-	wxGetApp().ShowHelp(this, wxT("typepage.html"));
+	wxGetApp().ShowHelp(this, wxT("Tournament-Type-Page.html"));
 }
 
 void TypePage::OnRadioButton(wxCommandEvent & WXUNUSED(event))

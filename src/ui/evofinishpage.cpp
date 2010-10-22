@@ -77,7 +77,7 @@ EvoFinishPage::EvoFinishPage(LogosWizard *parent, EvoPage *prev) :
 
 void EvoFinishPage::OnHelp(wxWizardEvent & WXUNUSED(event))
 {
-	wxGetApp().ShowHelp(this, wxT("evofinishpage.html"));
+	wxGetApp().ShowHelp(this, wxT("Evolutionary-Tournament-Finished-Page.html"));
 }
 
 void EvoFinishPage::OnSaveImage(wxCommandEvent & WXUNUSED(event))
