@@ -1,0 +1,11 @@
+How does cooperation spontaneously evolve in a population?  This question has received much attention in evolutionary biology, and with good reason.  Game theory, especially under a model like the Prisoner's Dilemma, has given us reason to doubt that such cooperation can emerge from a population driven by selfish evolutionary interests.
+
+The Prisoner's Dilemma is one of the simplest games in game theory.  In it, you and I are locked up in jail in adjacent cells with no way to communicate.  The authorities suspect us of having committed some crime.  We are each given the choice to either turn for the prosecution and rat out the other (to "defect"), or to remain silent (to "cooperate").
+
+If we both cooperate, the police have insufficient evidence to convict us of a major crime, and we both receive a light sentence (one year, say).  If we both defect, the authorities know one of us is lying, and we are punished with an increased prison sentence (five years or so).  If one of us defects and the other cooperates, however, the person who defects walks free while the other prisoner receives the maximum sentence (a ten year term).
+
+So, what move should I make when faced with a Prisoner's Dilemma (PD for short)?  Sum my possible options.  If I cooperate, I either get one year of jail time, or ten, for an average of five and a half years.  But, if I defect, I either get five years or none at all, for an average of two and a half years.  Obviously, my best choice is to defect.
+
+But this doesn't bode well for cooperation--both the prisoners, as a group, would be doing better if they always cooperated, but it's in neither of their immediate best interests to do so!  How can we solve this problem?  One answer is to keep playing--play several PD games in a row.  Now I have a reputation to maintain.  If you remember me as the kind of person who is likely to cooperate, you will be far more willing to cooperate yourself.
+
+This is the scenario that Logos is designed to simulate.  When faced with the iterated Prisoner's Dilemma, there are many different strategies one can use to play the game--some prove to work better than others.  Logos allows you to run tournaments between such strategies to see which perform best, and which can manage to take the highest scores!

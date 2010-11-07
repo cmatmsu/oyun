@@ -1,12 +1,25 @@
-<html>
-<head>
-<title>Logos on GitHub</title>
-<meta http-equiv="refresh" content="0;url=http://github.com/cpence/logos/wiki" >
-</head>
-<body>
-<h1>Logos</h1>
-<p>Documentation is available through the <a href="http://github.com/cpence/logos/wiki/">Logos
-Wiki on GitHub.</a></p>
-</body>
-</html>
+---
+layout: default
+title: Logos: Evolutionary Game Theory Simulator
+---
 
+<div class="main">
+  <div style="text-align: center">
+    <img src="http://cpence.github.com/logos/logo/logos-logo.png" width="200" height="141" alt="Logos Logo" />
+  </div>
+  
+  <p>Welcome to the website for Logos, a simulator designed to allow users to run 
+  tournaments in which various strategies (coded in C++ or as finite state machines) 
+  compete at 2x2 games like the Prisoner's Dilemma. Competitions can either be one-off 
+  round-robin tournaments, or an evolutionary tournament in which fraction of population 
+  is proportional to score in the last round of the tournament.</p>
+
+  <p>The current version of Logos is v2.0 Beta 2, released on October 21, 2010.</p>
+
+  <h2>Logos Documentation</h2>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &mdash; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>

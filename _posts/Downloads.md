@@ -1,0 +1,1 @@
+Logos is available as a binary package for Windows, Mac, and Linux, as well as C++ source which can be compiled on a wide array of systems.
