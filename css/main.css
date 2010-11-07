@@ -85,6 +85,12 @@ a:link, a:visited, a:hover
 }
 
 
+img.icon
+{
+  vertical-align: middle;
+  margin: 0 3em;
+}
+
 .docnav
 {
   margin: 2em 0;
