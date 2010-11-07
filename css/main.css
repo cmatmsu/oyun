@@ -85,11 +85,17 @@ a:link, a:visited, a:hover
 }
 
 
+p.sep
+{
+  margin: 1em 0;
+}
+
 img.icon
 {
   vertical-align: middle;
-  margin: 0 3em;
+  margin: 0 1em 0 3em;
 }
+
 
 .docnav
 {
