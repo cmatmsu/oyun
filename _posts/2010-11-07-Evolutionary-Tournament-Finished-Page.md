@@ -5,7 +5,7 @@ title: Evolutionary Tournament Finished Page
 
   The evolutionary tournament finished page:
  --------------------------------------------------------------
-  ![Screenshot](images/evofinishpage.png)
+  ![Screenshot](images/evofinishpage.png){:width="575"}
 
 
 This screen allows you to save the data from a finished Evolutionary

@@ -5,7 +5,7 @@ title: Evolutionary Tournament Page
 
   The evolutionary tournament page:
  --------------------------------------------------------------
-  ![Screenshot](images/evopage.png)
+  ![Screenshot](images/evopage.png){:width="575"}
 
 
 On this page, you can run an Evolutionary Tournament, in which a

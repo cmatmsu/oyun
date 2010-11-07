@@ -6,7 +6,7 @@ title: Player Selection Page
 
   The player-selection page:
  --------------------------------------------------------------
-  ![Screenshot](images/playerspage.png)
+  ![Screenshot](images/playerspage.png){:width="575"}
 
 
 On this page, you can add all the players you wish to compete in your

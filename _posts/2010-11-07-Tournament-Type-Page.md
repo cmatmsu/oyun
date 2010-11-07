@@ -6,7 +6,7 @@ title: Tournament Type Page
 
   The tournament type page:
  --------------------------------------------------------------
-  ![Screenshot](images/typepage.png)
+  ![Screenshot](images/typepage.png){:width="575"}
 
 
 There are two types of tournament in Logos, and this page lets you decide which

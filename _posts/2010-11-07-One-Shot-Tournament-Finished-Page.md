@@ -6,7 +6,7 @@ title: One Shot Tournament Finished Page
 
   The one-shot tournament finished page:
  --------------------------------------------------------------
-  ![Screensot](images/oneshotfinishpage.png)
+  ![Screensot](images/oneshotfinishpage.png){:width="575"}
 
 
 This screen allows you to save the data from a finished One-Shot

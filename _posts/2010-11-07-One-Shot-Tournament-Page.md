@@ -6,7 +6,7 @@ title: One Shot Tournament Page
 
   The one-shot tournament page:
  --------------------------------------------------------------
-  ![Screenshot](images/oneshotpage.png)
+  ![Screenshot](images/oneshotpage.png){:width="575"}
 
 
 On this page, you can run a One-Shot Tournament, which consists of a
