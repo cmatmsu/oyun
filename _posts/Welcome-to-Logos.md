@@ -1,3 +1,8 @@
+---
+layout: post
+title: Welcome to Logos
+---
+
 Logos is a program you can use to run tournaments between various strategies
 playing normal-form games such as the prisoner's dilemma.  The classic work on
 such tournaments is Robert Axelrod's *The Evolution of Cooperation,* and Logos

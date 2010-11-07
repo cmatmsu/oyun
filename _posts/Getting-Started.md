@@ -1,3 +1,8 @@
+---
+layout: post
+title: Getting Started
+---
+
 
 To get a tournament going in Logos, you'll need to (i) write a set of players,
 (ii) load them up, and (iii) run a tournament of your choice.

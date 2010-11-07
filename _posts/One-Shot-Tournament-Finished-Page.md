@@ -1,3 +1,8 @@
+---
+layout: post
+title: One Shot Tournament Finished Page
+---
+
 
   The one-shot tournament finished page:
  --------------------------------------------------------------

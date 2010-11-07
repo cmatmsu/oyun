@@ -1,3 +1,8 @@
+---
+layout: post
+title: Player Selection Page
+---
+
 
   The player-selection page:
  --------------------------------------------------------------

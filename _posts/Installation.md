@@ -1,3 +1,8 @@
+---
+layout: post
+title: Installation
+---
+
 Logos is available for almost any platform you can think of.  Read on to see how to install it on your system.
 
 Installation on Windows

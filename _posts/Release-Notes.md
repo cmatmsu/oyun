@@ -1,3 +1,8 @@
+---
+layout: post
+title: Release Notes
+---
+
 Here you'll find what's been added or changed in various versions of
 Logos.
 

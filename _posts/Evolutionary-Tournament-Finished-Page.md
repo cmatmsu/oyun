@@ -1,3 +1,8 @@
+---
+layout: post
+title: Evolutionary Tournament Finished Page
+---
+
   The evolutionary tournament finished page:
  --------------------------------------------------------------
   ![Screenshot](images/evofinishpage.png)

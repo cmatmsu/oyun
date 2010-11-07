@@ -1,3 +1,8 @@
+---
+layout: post
+title: Tournament Type Page
+---
+
 
   The tournament type page:
  --------------------------------------------------------------

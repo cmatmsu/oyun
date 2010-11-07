@@ -1,3 +1,8 @@
+---
+layout: post
+title: Sample Players
+---
+
 The FSA (finite state automaton) player format is a bit confusing, and a few examples will help you understand how it works.  We begin with the simple "tit-for-tat" strategy -- duplicate the other player's move from the last turn.
 
     Example Player
