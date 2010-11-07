@@ -4,6 +4,9 @@ body
   font-size: 90%;
 }
 
+img
+{ border: 0; }
+
 tt, pre, code
 { font-family: Inconsolata, Consolas, "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace; }
 pre
