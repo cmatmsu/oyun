@@ -90,7 +90,7 @@ bool LogosApp::OnInit()
 				  "  --version    output version information and exit\n"
 				  "\n"
 				  "Report bugs to: <charles@charlespence.net>.\n"
-				  "Logos home page: <http://github.com/cpence/logos/>.\n");
+				  "Logos home page: <http://cpence.github.com/logos/>.\n");
 			wxPrintf(wxT("%s"), helpstring);
 			
 			return false;
