@@ -1,6 +1,8 @@
 README for Logos
 ----------------
 
+See the Logos website: http://cpence.github.com/logos/
+
 Logos is a program you can use to run tournaments between various strategies
 playing normal-form games such as the prisoner's dilemma.  The classic work on
 such tournaments is Robert Axelrod's *The Evolution of Cooperation,* and Logos
@@ -32,7 +34,7 @@ More documentation
 ------------------
 
 For information about Logos development, as well as detailed documentation, see 
-the Logos website at http://github.com/cpence/logos.
+the Logos website at http://cpence.github.com/logos/.
 
 
 Copying
