@@ -35,6 +35,7 @@
 #include "../tourney/evotournament.h"
 
 #include "logosapp.h"
+#include "logoswizard.h"
 #include "evofinishpage.h"
 #include "evopage.h"
 
@@ -53,6 +54,8 @@ BEGIN_EVENT_TABLE(EvoFinishPage, FinishPage)
 	EVT_BUTTON(ID_SAVE_IMAGE, EvoFinishPage::OnSaveImage)
 	EVT_BUTTON(ID_SAVE_SVG, EvoFinishPage::OnSaveSVG)
 	EVT_BUTTON(ID_SAVE_CSV, EvoFinishPage::OnSaveCSV)
+
+	EVT_NOTIFY(wxEVT_DATA_UPDATE, wxID_ANY, EvoFinishPage::OnDataUpdate)
 END_EVENT_TABLE()
 
 
@@ -73,6 +76,38 @@ EvoFinishPage::EvoFinishPage(LogosWizard *parent, EvoPage *prev) :
 	AddButton(ID_SAVE_CSV, _("Save CS&V..."), _("Save a spreadsheet of the detailed tournament data.\n\n"
 	                                            "This is a spreadsheet containing the frequency of each player\n"
 	                                            "at each generation in the evolutionary tournament."));
+}
+
+void EvoFinishPage::OnDataUpdate(wxNotifyEvent & WXUNUSED(event))
+{
+	// Set our focus and defaults if we're visible
+	if (IsShownOnScreen())
+	{
+		if (dataSaved)
+		{
+			// Set the focus to the Next button
+			wxWindow *win = wxWindow::FindWindowById(wxID_FORWARD, GetParent());
+			wxButton *nextButton = wxDynamicCast(win, wxButton);
+			
+			if (nextButton)
+			{
+				nextButton->SetDefault();
+				nextButton->SetFocus();
+			}
+		}
+		else
+		{
+			// Set the focus to the CSV button
+			wxWindow *win = wxWindow::FindWindowById(ID_SAVE_IMAGE, this);
+			wxButton *csvButton = wxDynamicCast(win, wxButton);
+
+			if (csvButton)
+			{
+				csvButton->SetDefault();
+				csvButton->SetFocus();
+			}
+		}
+	}
 }
 
 void EvoFinishPage::OnHelp(wxWizardEvent & WXUNUSED(event))

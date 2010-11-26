@@ -82,7 +82,8 @@ MatchDialog::MatchDialog(wxWindow *parent, Match *match) :
 	
 	ok = new wxButton(this, wxID_OK);
 	ok->SetDefault();
-	
+	ok->SetFocus();
+		
 	// Add the controls to a sizer
 	sizer = new wxBoxSizer(wxVERTICAL);
 	sizer->Add(header, 0, wxEXPAND | wxALL, 6);

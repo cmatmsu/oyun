@@ -108,6 +108,12 @@ private:
 	*/
 	void OnRadioButton(wxCommandEvent &event);
 	
+	/**
+	    \brief Called when the page receives a 'data update' message	    
+	    \param event The event generated
+	*/
+	void OnDataUpdate(wxNotifyEvent &event);
+	
 	
 	/**
 	    \brief The page to travel to if a one-shot tournament is chosen
@@ -144,16 +150,6 @@ private:
 		\brief The text label for the second radio button
 	*/
 	wxStaticText *rbEvolutionaryLabel;
-
-	/**
-		\brief A horizontal sizer containing the first radio button and its text
-	*/
-	wxBoxSizer *rbOneShotSizer;
-
-	/**
-		\brief A horizontal sizer containing the second radio button and its text
-	*/
-	wxBoxSizer *rbEvolutionarySizer;
 };
 
 #endif

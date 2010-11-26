@@ -27,8 +27,9 @@
 #  include <wx/wx.h>
 #endif
 
-#include "typepage.h"
 #include "logosapp.h"
+#include "logoswizard.h"
+#include "typepage.h"
 
 IMPLEMENT_CLASS(TypePage, LogosWizardPage)
 
@@ -45,6 +46,8 @@ BEGIN_EVENT_TABLE(TypePage, LogosWizardPage)
 	EVT_WIZARD_HELP(wxID_ANY, TypePage::OnHelp)
 	EVT_RADIOBUTTON(ID_RB_ONESHOT, TypePage::OnRadioButton)
 	EVT_RADIOBUTTON(ID_RB_EVOLUTIONARY, TypePage::OnRadioButton)
+
+	EVT_NOTIFY(wxEVT_DATA_UPDATE, wxID_ANY, TypePage::OnDataUpdate)
 END_EVENT_TABLE()
 
 
@@ -63,42 +66,49 @@ TypePage::TypePage(LogosWizard *parent, wxWizardPage *prev, wxWizardPage *onesho
 	SetNext(oneshot);
 	
 	// Make some controls
-	rbOneShotSizer = new wxBoxSizer(wxHORIZONTAL);
-	rbEvolutionarySizer = new wxBoxSizer(wxHORIZONTAL);
-
-	rbOneShot = new wxRadioButton(this, ID_RB_ONESHOT, "", wxDefaultPosition, wxDefaultSize, wxRB_GROUP);
+	rbOneShot = new wxRadioButton(this, ID_RB_ONESHOT, "&One-Shot Tournament:",
+	                              wxDefaultPosition, wxDefaultSize, wxRB_GROUP);
+	rbEvolutionary = new wxRadioButton(this, ID_RB_EVOLUTIONARY,
+	                                   "&Evolutionary Tournament:");
 	rbOneShot->SetValue(true);
-	rbEvolutionary = new wxRadioButton(this, ID_RB_EVOLUTIONARY, "");
 
 	rbOneShotLabel = new wxStaticText(this, ID_RB_ONESHOT_LABEL,
-		_("&One-Shot Tournament:\n\n"
-		"\u2022 Run one iterated prisoner's dilemma\n"
+		_("\u2022 Run one iterated prisoner's dilemma\n"
 		"tournament between a group of competitors.\n"
 		"\u2022 Results are presented as a score and\n"
 		"individual match-ups can be viewed in detail."));
 	rbEvolutionaryLabel = new wxStaticText(this, ID_RB_EVOLUTIONARY_LABEL,
-		_("&Evolutionary Tournament:\n\n"
-		"\u2022 Run an evolutionary tournament between\n"
+		_("\u2022 Run an evolutionary tournament between\n"
 		"a group of competitors.\n"
 		"\u2022 Score at each generation is used to\n"
 		"determine each player's proportion in the\n"
 		"population in the next generation.\n"
 		"\u2022 Results are presented as a graph of the\n"
 		"population over time."));
-
-	rbOneShotSizer->Add(rbOneShot, 0, wxALL, 5);
-	rbOneShotSizer->Add(rbOneShotLabel, 0, wxALL, 5);
-
-	rbEvolutionarySizer->Add(rbEvolutionary, 0, wxALL, 5);
-	rbEvolutionarySizer->Add(rbEvolutionaryLabel, 0, wxALL, 5);
 	
 	sizer->AddStretchSpacer();
-	sizer->Add(rbOneShotSizer, 0, wxLEFT | wxRIGHT, 100);
+	sizer->Add(rbOneShot, 0, wxALL, 5);
+	sizer->Add(rbOneShotLabel, 0, wxALL, 15);
 	sizer->AddStretchSpacer();
-	sizer->Add(rbEvolutionarySizer, 0, wxLEFT | wxRIGHT, 100);
+	sizer->Add(rbEvolutionary, 0, wxALL, 5);
+	sizer->Add(rbEvolutionaryLabel, 0, wxALL, 15);
 	sizer->AddStretchSpacer();
 }
 
+void TypePage::OnDataUpdate(wxNotifyEvent & WXUNUSED(event))
+{
+	// Set default and focus if we're visible
+	if (IsShownOnScreen())
+	{
+		rbOneShot->SetFocus();
+		
+		wxWindow *win = wxWindow::FindWindowById(wxID_FORWARD, GetParent());
+		wxButton *nextButton = wxDynamicCast(win, wxButton);
+		
+		if (nextButton)
+			nextButton->SetDefault();
+	}
+}
 
 void TypePage::OnHelp(wxWizardEvent & WXUNUSED(event))
 {

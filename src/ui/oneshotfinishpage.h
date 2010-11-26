@@ -77,6 +77,12 @@ private:
 	    \param event The event generated
 	*/
 	void OnSaveText(wxCommandEvent &event);
+	
+	/**
+	    \brief Called when the page receives a 'data update' message	    
+	    \param event The event generated
+	*/
+	void OnDataUpdate(wxNotifyEvent &event);
 };
 
 #endif

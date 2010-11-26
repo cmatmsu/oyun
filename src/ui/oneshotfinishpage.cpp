@@ -33,6 +33,7 @@
 #include "../tourney/tournament.h"
 
 #include "logosapp.h"
+#include "logoswizard.h"
 #include "oneshotfinishpage.h"
 #include "oneshotpage.h"
 
@@ -49,6 +50,8 @@ BEGIN_EVENT_TABLE(OneShotFinishPage, FinishPage)
 	EVT_WIZARD_HELP(wxID_ANY, OneShotFinishPage::OnHelp)
 	EVT_BUTTON(ID_SAVE_CSV, OneShotFinishPage::OnSaveCSV)
 	EVT_BUTTON(ID_SAVE_TEXT, OneShotFinishPage::OnSaveText)
+
+	EVT_NOTIFY(wxEVT_DATA_UPDATE, wxID_ANY, OneShotFinishPage::OnDataUpdate)
 END_EVENT_TABLE()
 
 
@@ -65,6 +68,38 @@ OneShotFinishPage::OneShotFinishPage(LogosWizard *parent, OneShotPage *prev) :
 	                                                 "This is a document containing not only the information\n"
 	                                                 "about player net scores and match summaries, but the\n"
 	                                                 "detailed list of moves played in each match."));
+}
+
+void OneShotFinishPage::OnDataUpdate(wxNotifyEvent & WXUNUSED(event))
+{
+	// Set our focus and defaults if we're visible
+	if (IsShownOnScreen())
+	{
+		if (dataSaved)
+		{
+			// Set the focus to the Next button
+			wxWindow *win = wxWindow::FindWindowById(wxID_FORWARD, GetParent());
+			wxButton *nextButton = wxDynamicCast(win, wxButton);
+			
+			if (nextButton)
+			{
+				nextButton->SetDefault();
+				nextButton->SetFocus();
+			}
+		}
+		else
+		{
+			// Set the focus to the CSV button
+			wxWindow *win = wxWindow::FindWindowById(ID_SAVE_CSV, this);
+			wxButton *csvButton = wxDynamicCast(win, wxButton);
+
+			if (csvButton)
+			{
+				csvButton->SetDefault();
+				csvButton->SetFocus();
+			}
+		}
+	}
 }
 
 void OneShotFinishPage::OnHelp(wxWizardEvent & WXUNUSED(event))
