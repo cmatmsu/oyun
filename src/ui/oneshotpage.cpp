@@ -46,6 +46,8 @@ IMPLEMENT_CLASS(OneShotPage, LogosWizardPage)
 enum
 {
 	ID_RUN_TOURNAMENT = wxID_HIGHEST + 1,
+	ID_LEFT_WINDOW,
+	ID_RIGHT_WINDOW,
 	ID_SHOW_DETAILS,
 	ID_MATCH_LIST
 };
@@ -79,11 +81,11 @@ OneShotPage::OneShotPage(LogosWizard *parent, wxWizardPage *prev, wxWizardPage *
 
 	// Create the splitter
 	splitter = new wxSplitterWindow(this, wxID_ANY, wxDefaultPosition, wxDefaultSize,
-	                                wxSP_NOBORDER | wxSP_3DSASH | wxTAB_TRAVERSAL);
+	                                wxSP_NOBORDER | wxSP_3DSASH);
 
 	// Create the left and right windows
-	rightWindow = new wxPanel(splitter);
-	leftWindow = new wxPanel(splitter);
+	rightWindow = new wxPanel(splitter, ID_RIGHT_WINDOW);
+	leftWindow = new wxPanel(splitter, ID_LEFT_WINDOW);
 
 
 	// Create the controls in the desired tab-order
