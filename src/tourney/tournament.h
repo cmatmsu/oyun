@@ -123,16 +123,19 @@ public:
 	
 	/**
 	    \brief Has the tournament been played?
+	    \returns True if tournament played, false otherwise
 	*/
 	bool IsPlayed() const {return played;} 
 
 	/**
 	    \brief Get the number of players in the tournament
+	    \returns Number of players
 	*/
 	int GetNumPlayers() const {return playerOneList.size();}
 	
 	/**
 	    \brief Get the number of matches played
+	    \returns Number of matches played
 	*/
 	int GetNumMatches() const {return matches.size();}
 	
@@ -143,6 +146,8 @@ public:
 	    \p idx is less than <tt>GetNumMatches()</tt>.
 	    
 	    \param idx The index of the match to be returned
+
+	    \returns Match at the given index
 	*/
 	Match *GetMatch(int idx) {return matches[idx];}
 	

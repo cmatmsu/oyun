@@ -116,6 +116,7 @@ public:
 	
 	/**
 	    \brief Has the tournament been played?
+	    \returns True if the tournament has been played, false otherwise
 	*/
 	bool IsPlayed() { return played; }
 

@@ -90,6 +90,8 @@ public:
 	    without knowing its type at runtime.  This method returns an
 	    exact duplicate of the current object, and is simply implemented
 	    as <tt>return new [Type](*this);</tt>.
+
+	    \returns A copy of the current player
 	*/
 	virtual Player *Clone() const = 0;
 
@@ -108,6 +110,8 @@ public:
 	    
 	    \param gamePlayed The game currently being played
 	    \param nextOpponent The opponent which is currently being played
+
+	    \returns True if move was made successfully, false otherwise
 	*/
 	virtual bool Think(const Game * WXUNUSED(gamePlayed), const Player * WXUNUSED(nextOpponent)) = 0;
 
@@ -157,6 +161,7 @@ public:
 
 	/**
 	    \brief Get the player's name
+	    \returns Player's name
 	*/
 	virtual const wxString &GetPlayerName() const
 	{
@@ -166,6 +171,7 @@ public:
 
 	/**
 	    \brief Get the player's author
+	    \returns Player's author
 	*/
 	virtual const wxString &GetPlayerAuthor() const
 	{
@@ -175,6 +181,7 @@ public:
 	
 	/**
 	    \brief Get the player's ID
+	    \returns Player's ID
 	*/
 	int GetID() const
 	{
@@ -183,6 +190,7 @@ public:
 	
 	/**
 	    \brief Get the player's score
+	    \returns Player's score
 	*/
 	int GetScore() const
 	{

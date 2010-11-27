@@ -183,11 +183,13 @@ public:
 
 	/**
 	    \brief Get the source code for this player
+	    \returns Source code for player
 	*/
 	const wxString &GetSource() { return playerSource; }
 	
 	/**
 	    \brief Get the number of machine states
+	    \returns Number of machine states
 	*/
 	int GetNumLines() { return machine.size(); }
 

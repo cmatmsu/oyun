@@ -65,6 +65,8 @@ public:
 	    
 	    \param game The game to be played
 	    \param quick If true, only one game will be played (rather than five)
+
+	    \returns True if the match is successfully played, false otherwise
 	*/
 	bool Play(Game *game, bool quick = false);
 

@@ -74,6 +74,8 @@ public:
 	    constructor.
 	    
 	    \param parent The parent window, may be \c NULL
+
+	    \returns True if successfully created, false otherwise
 	*/
 	bool Create(wxWindow *parent);
 	
@@ -270,6 +272,7 @@ public:
 	    \param x The x-coordinate of the mouse
 	    \param y The y-coordinate of the mouse
 	    \param filenames An array of filenames
+	    \returns True if the drop was successful, false otherwise
 	*/
 	virtual bool OnDropFiles(wxCoord WXUNUSED(x), wxCoord WXUNUSED(y), const wxArrayString &filenames)
 	{ return parent->OnFileDrop(filenames);  }

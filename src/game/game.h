@@ -153,12 +153,14 @@ protected:
 public:
 	/**
 	    \brief Get the acceptable moves string for this game
+	    \returns Acceptable moves string
 	*/
 	const wxString &GetGameMoves() const
 	{ return gameMoves; }
 
 	/**
 	    \brief Get the move history for this game
+	    \returns Game move history
 	*/
 	const wxArrayString &GetGameHistory() const
 	{ return gameHistory; }
