@@ -61,7 +61,7 @@ elseif (APPLE)
   set_target_properties (${LOGOS_TARGET} PROPERTIES MACOSX_BUNDLE_LONG_VERSION_STRING "${LOGOS_VERSION}")
   set_target_properties (${LOGOS_TARGET} PROPERTIES MACOSX_BUNDLE_BUNDLE_NAME "Logos")
   set_target_properties (${LOGOS_TARGET} PROPERTIES MACOSX_BUNDLE_SHORT_VERSION_STRING "${LOGOS_VERSION}")
-  set_target_properties (${LOGOS_TARGET} PROPERTIES MACOSX_BUNDLE_COPYRIGHT "Copyright (C) 2004-2010 Charles Pence")
+  set_target_properties (${LOGOS_TARGET} PROPERTIES MACOSX_BUNDLE_COPYRIGHT "Copyright (C) 2004-2011 Charles Pence")
 endif ()
 
 

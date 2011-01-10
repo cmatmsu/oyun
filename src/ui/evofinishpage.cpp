@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2004-2010 by Charles Pence
+    Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
     This file is part of Logos.

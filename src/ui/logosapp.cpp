@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2004-2010 by Charles Pence
+    Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
     This file is part of Logos.
@@ -71,7 +71,7 @@ bool LogosApp::OnInit()
 			const wchar_t *version = wxT(STRINGIZE( LOGOS_VERSION ));
 			const wxChar *verstring =
 				_("Logos %ls\n"
-				  "Copyright (C) 2004-2010 Charles Pence\n"
+				  "Copyright (C) 2004-2011 Charles Pence\n"
 				  "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 				  "This is free software: you are free to change and redistribute it.\n"
 				  "There is NO WARRANTY, to the extent permitted by law.\n");
@@ -221,7 +221,7 @@ void LogosApp::OnMenuAbout(wxCommandEvent & WXUNUSED(event))
 	wxString appName = wxT("Logos");
 	wxString appVersion = wxT( STRINGIZE( LOGOS_VERSION ) );
 	wxString appInfo = _("An evolutionary game theory simulator");
-	wxString appCopyright = _("(C) 2004-2010 Charles Pence");
+	wxString appCopyright = _("(C) 2004-2011 Charles Pence");
 
 	wxAboutDialogInfo info;
 	
