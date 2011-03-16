@@ -1,0 +1,393 @@
+2010-11-26  Charles Pence <charles@charlespence.net>
+
+  * doc/doxygen/annotated.html, doc/doxygen/classEvoFinishPage-members.html,
+  doc/doxygen/classEvoFinishPage.html,
+  doc/doxygen/classEvoGraphRenderer-members.html,
+  doc/doxygen/classEvoGraphWindow-members.html,
+  doc/doxygen/classEvoGraphWindow.html, doc/doxygen/classEvoPage-members.html,
+  doc/doxygen/classEvoPage.html, doc/doxygen/classEvoTournament-members.html,
+  doc/doxygen/classEvoTournament.html, doc/doxygen/classFSAPlayer-members.html,
+  doc/doxygen/classFSAPlayer.html, doc/doxygen/classFSAState-members.html,
+  doc/doxygen/classFSAState.html, doc/doxygen/classFinishPage-members.html,
+  doc/doxygen/classFinishPage.html, doc/doxygen/classGame-members.html,
+  doc/doxygen/classGame.html, doc/doxygen/classHtmlDialog-members.html,
+  doc/doxygen/classHtmlDialog.html, doc/doxygen/classLogosApp-members.html,
+  doc/doxygen/classLogosApp.html, doc/doxygen/classLogosWizard-members.html,
+  doc/doxygen/classLogosWizard.html,
+  .../classLogosWizardDropTarget-members.html,
+  doc/doxygen/classLogosWizardDropTarget.html,
+  doc/doxygen/classLogosWizardPage-members.html,
+  doc/doxygen/classLogosWizardPage.html, doc/doxygen/classMatch-members.html,
+  doc/doxygen/classMatch.html, doc/doxygen/classMatchDialog-members.html,
+  doc/doxygen/classMatchDialog.html,
+  doc/doxygen/classOneShotFinishPage-members.html,
+  doc/doxygen/classOneShotFinishPage.html,
+  doc/doxygen/classOneShotPage-members.html, doc/doxygen/classOneShotPage.html,
+  doc/doxygen/classPlayer-members.html, doc/doxygen/classPlayer.html,
+  doc/doxygen/classPlayersPage-members.html, doc/doxygen/classPlayersPage.html,
+  doc/doxygen/classPrisonerDilemma-members.html,
+  doc/doxygen/classPrisonerDilemma.html,
+  doc/doxygen/classRandomPlayer-members.html,
+  doc/doxygen/classRandomPlayer.html,
+  doc/doxygen/classTitForTatPlayer-members.html,
+  doc/doxygen/classTitForTatPlayer.html,
+  doc/doxygen/classTournament-members.html, doc/doxygen/classTournament.html,
+  doc/doxygen/classTypePage-members.html, doc/doxygen/classTypePage.html,
+  doc/doxygen/classes.html, doc/doxygen/doxygen.css,
+  doc/doxygen/functions.html, doc/doxygen/functions_0x62.html,
+  doc/doxygen/functions_0x63.html, doc/doxygen/functions_0x64.html,
+  doc/doxygen/functions_0x65.html, doc/doxygen/functions_0x66.html,
+  doc/doxygen/functions_0x67.html, doc/doxygen/functions_0x68.html,
+  doc/doxygen/functions_0x69.html, doc/doxygen/functions_0x6c.html,
+  doc/doxygen/functions_0x6d.html, doc/doxygen/functions_0x6e.html,
+  doc/doxygen/functions_0x6f.html, doc/doxygen/functions_0x70.html,
+  doc/doxygen/functions_0x72.html, doc/doxygen/functions_0x73.html,
+  doc/doxygen/functions_0x74.html, doc/doxygen/functions_0x75.html,
+  doc/doxygen/functions_0x77.html, doc/doxygen/functions_func.html,
+  doc/doxygen/functions_type.html, doc/doxygen/functions_vars.html,
+  doc/doxygen/group__common.html, doc/doxygen/group__game.html,
+  doc/doxygen/group__tourney.html, doc/doxygen/group__ui.html,
+  doc/doxygen/hierarchy.html, doc/doxygen/index.html, doc/doxygen/modules.html,
+  doc/doxygen/structEvoGraphRenderer.html,
+  ...structEvoGraphRenderer_1_1SVGColor-members.html,
+  .../structEvoGraphRenderer_1_1SVGColor.html, src/game/fsaplayer.h,
+  src/game/game.h, src/game/player.h, src/tourney/evotournament.h,
+  src/tourney/match.h, src/tourney/tournament.h, src/ui/logoswizard.h: Updated
+  Doxygen docs, fixing all Doxygen warnings.
+
+  * src/ui/oneshotpage.cpp: Trying to get TAB traversal working on the splitter
+  window, still not succeeding.
+
+  * src/ui/evofinishpage.cpp, src/ui/evofinishpage.h, src/ui/matchdialog.cpp,
+  src/ui/oneshotfinishpage.cpp, src/ui/oneshotfinishpage.h,
+  src/ui/typepage.cpp, src/ui/typepage.h: Some work on TAB-traversal, which is
+  pretty broken on wxWizardPages.
+
+2010-11-07  Charles Pence <charles@charlespence.net>
+
+  * CMakeLists.txt, doc/manual/gh-wiki, src/ui/logosapp.cpp: Updating website
+  URL.
+
+  * CMakeLists.txt, README, doc/manual/gh-wiki: Update README with new website
+  link.
+
+  * build/copy-manual.sh: Adding a script to copy the manual over to gh-pages.
+
+2010-10-21  Charles Pence <charles@charlespence.net>
+
+  * src/ui/evofinishpage.cpp, src/ui/evopage.cpp, src/ui/oneshotfinishpage.cpp,
+  src/ui/oneshotpage.cpp, src/ui/playerspage.cpp, src/ui/typepage.cpp: Fixed
+  the help URLs.
+
+  * doc/manual/tools/.gitignore, doc/manual/tools/template.html: Adding pandoc
+  template.
+
+  * doc/manual/.gitignore, doc/manual/CMakeLists.txt,
+  doc/manual/RunHTMLTidy.cmake: Add some commands to clean up pandoc's HTML
+  output.  We're still crashing on OSX/Cocoa, though.
+
+  * doc/manual/CMakeLists.txt: Fixed an installation bug in the manual CML.
+
+  * doc/manual/gh-wiki: Updated version of docs in submodule.
+
+  * doc/doxygen/classFSAPlayer-members.html,
+  doc/doxygen/classPlayer-members.html, doc/doxygen/classPlayer.html,
+  doc/doxygen/classRandomPlayer-members.html,
+  doc/doxygen/classTitForTatPlayer-members.html, doc/doxygen/functions.html,
+  doc/doxygen/functions_0x67.html, doc/doxygen/functions_func.html: Updated
+  Doxygen docs.
+
+  * CMakeLists.txt, NEWS: Added code for building the NEWS file from the
+  Release-Notes.md file.
+
+  * src/game/game.h, src/game/player.h: One name change to a method, the only
+  outcome of the methods audit.  Closes GH-4.
+
+  * doc/manual/gh-wiki, doc/manual/tools/logos-contents.hhc,
+  doc/manual/tools/logos-manual.tex: Added sample-players page to manual.
+
+  * doc/doxygen/classFSAPlayer-members.html, doc/doxygen/classFSAPlayer.html,
+  doc/doxygen/functions_0x64.html, doc/doxygen/functions_0x6c.html,
+  doc/doxygen/functions_func.html: Updated Doxygen docs.
+
+  * src/game/fsaplayer.cpp, src/game/fsaplayer.h: Add support for loading FSA
+  players from strings, which lets us embed our unit-testing players in the
+  executable.
+
+  * doc/manual/.gitignore, doc/manual/CMakeLists.txt,
+  doc/manual/tools/logos-contents.hhc, doc/manual/tools/{manual.tex =>
+  logos-manual.tex}, doc/manual/tools/logos.hhp: Now building the documentation
+  straight out of the gh-wiki.  This is great.  Closes GH-9.
+
+  * .gitmodules, doc/manual/gh-wiki: Added the gh-wiki as a submodule.
+
+  * doc/manual/pdf/.gitignore, doc/manual/source/evofinishpage.png,
+  doc/manual/source/evofinishpage.text, doc/manual/source/evopage.png,
+  doc/manual/source/evopage.text, doc/manual/source/glossary.text,
+  doc/manual/source/install.text, doc/manual/source/oneshotfinishpage.png,
+  doc/manual/source/oneshotfinishpage.text, doc/manual/source/oneshotpage.png,
+  doc/manual/source/oneshotpage.text, doc/manual/source/pages.text,
+  doc/manual/source/playerspage.png, doc/manual/source/playerspage.text,
+  doc/manual/source/release.text, doc/manual/source/started.text,
+  doc/manual/source/typepage.png, doc/manual/source/typepage.text,
+  doc/manual/source/welcome.text, doc/manual/{wxhtml =>
+  tools}/logos-contents.hhc, doc/manual/{wxhtml => tools}/logos-index.hhk,
+  doc/manual/{wxhtml => tools}/logos.hhp, doc/manual/{pdf => tools}/manual.tex:
+  Removing the manual source from the build tree; changes coming.
+
+2010-10-20  Charles Pence <charles@charlespence.net>
+
+  * doc/manual/pdf/.gitignore, doc/manual/pdf/manual.tex,
+  doc/manual/source/evofinishpage.text, doc/manual/source/evopage.text,
+  doc/manual/source/glossary.text, doc/manual/source/install.text,
+  doc/manual/source/oneshotfinishpage.text, doc/manual/source/oneshotpage.text,
+  doc/manual/source/playerspage.text, doc/manual/source/release.text,
+  doc/manual/source/started.text, doc/manual/source/typepage.text: Finished
+  documentation!  Closes GH-1.
+
+  * doc/manual/source/evofinishpage.text, doc/manual/source/evopage.text:
+  Documentation for the EvoPage and EvoFinishPage.
+
+  * src/ui/evopage.cpp: Fixed a bug that was causing the spin-control in the
+  EvoPage to come out small.
+
+  * doc/manual/source/oneshotfinishpage.text,
+  doc/manual/source/oneshotpage.text: Documentation written for OneShotFinish
+  and OneShot.
+
+  * src/game/fsaplayer.h, src/game/prisoner.h, src/tourney/match.h,
+  src/tourney/tournament.cpp: Fixing up some default constructors. Closes GH-7.
+
+  * src/common/error.h, src/common/filesystem.h, src/common/rng.h,
+  src/game/fsaplayer.h, src/game/game.h, src/game/player.h,
+  src/game/prisoner.h, src/game/random.h, src/game/titfortat.h,
+  src/tourney/evotournament.h, src/tourney/match.h, src/tourney/tournament.h,
+  src/ui/evofinishpage.h, src/ui/evopage.h, src/ui/finishpage.h,
+  src/ui/logosapp.h, src/ui/logoswizard.h, src/ui/matchdialog.h,
+  src/ui/oneshotfinishpage.h, src/ui/oneshotpage.h, src/ui/playerspage.h,
+  src/ui/tools/htmldialog.h, src/ui/tools/logoswizardpage.h, src/ui/typepage.h:
+  Add Emacs C++-header tags to all .h files.
+
+  * doc/doxygen/index.html: Rebuilt doxygen docs.
+
+  * doc/doxygen/mainpages/main.h: Update date in Doxygen docs.
+
+2010-10-19  Charles Pence <charles@charlespence.net>
+
+  * Doxyfile, doc/doxygen/classTournament-members.html,
+  doc/doxygen/classTournament.html, doc/doxygen/classTypePage-members.html,
+  doc/doxygen/classTypePage.html, doc/doxygen/functions_0x72.html,
+  doc/doxygen/functions_func.html, doc/doxygen/functions_vars.html,
+  doc/doxygen/index.html, doc/doxygen/mainpages/main.h: Updated Doxygen docs.
+
+  * CMakeLists.txt: Add filenames for the CPack source package generator.
+
+  * src/ui/evofinishpage.cpp: Fix the MIME type for BMPs.
+
+  * src/CMakeLists.txt, src/common/filesystem.cpp: Find the Win32 help file in
+  the right place after install.  Also, remove "Component" speak, which just
+  makes the Windows install strange.
+
+  * src/tourney/tournament.cpp, src/ui/oneshotpage.cpp: Tournament::played was
+  set to true by default (!) causing display problems on Windows.
+
+  * src/ui/tools/logoswizardpage.cpp: We're now quitting when all platforms
+  close the wizard, remove the MAC define.
+
+  * src/ui/typepage.cpp, src/ui/typepage.h: Fix the type-page's radio buttons
+  on Windows, which makes sizers work again.
+
+  * doc/manual/CMakeLists.txt: When building custom commands on Win32,
+  WORKING_DIRECTORY seems to cause problems.  Build the PDF docs in
+  build/doc/manual, not build/doc/manual/pdf.
+
+2010-10-18  Charles Pence <charles@charlespence.net>
+
+  * src/ui/evopage.cpp, src/ui/oneshotpage.cpp: A few cast and type fixes for
+  building on MSVC++10.
+
+  * AUTHORS, README, doc/manual/source/evofinishpage.text,
+  doc/manual/source/evopage.text, doc/manual/source/glossary.text,
+  doc/manual/source/install.text, doc/manual/source/oneshotfinishpage.text,
+  doc/manual/source/oneshotpage.text, doc/manual/source/pages.text,
+  doc/manual/source/playerspage.text, doc/manual/source/release.text,
+  doc/manual/source/started.text, doc/manual/source/typepage.text,
+  doc/manual/source/welcome.text, src/CMakeLists.txt, src/common/error.cpp,
+  src/common/error.h, src/common/filesystem.cpp, src/common/filesystem.h,
+  src/common/rng.cpp, src/common/rng.h, src/game/fsaplayer.cpp,
+  src/game/fsaplayer.h, src/game/game.cpp, src/game/game.h,
+  src/game/player.cpp, src/game/player.h, src/game/prisoner.cpp,
+  src/game/prisoner.h, src/game/random.cpp, src/game/random.h,
+  src/game/titfortat.cpp, src/game/titfortat.h, src/tourney/evotournament.cpp,
+  src/tourney/evotournament.h, src/tourney/match.cpp, src/tourney/match.h,
+  src/tourney/tournament.cpp, src/tourney/tournament.h,
+  src/ui/evofinishpage.cpp, src/ui/evofinishpage.h, src/ui/evopage.cpp,
+  src/ui/evopage.h, src/ui/finishpage.cpp, src/ui/finishpage.h,
+  src/ui/logosapp.cpp, src/ui/logosapp.h, src/ui/logoswizard.cpp,
+  src/ui/logoswizard.h, src/ui/matchdialog.cpp, src/ui/matchdialog.h,
+  src/ui/oneshotfinishpage.cpp, src/ui/oneshotfinishpage.h,
+  src/ui/oneshotpage.cpp, src/ui/oneshotpage.h, src/ui/playerspage.cpp,
+  src/ui/playerspage.h, src/ui/tools/htmldialog.cpp, src/ui/tools/htmldialog.h,
+  src/ui/tools/logoswizardpage.cpp, src/ui/tools/logoswizardpage.h,
+  src/ui/typepage.cpp, src/ui/typepage.h: Change copyright dates to 2010,
+  websites to GitHub, and e-mails to my new e-mail.
+
+  * CMakeLists.txt, doc/manual/CMakeLists.txt, src/CMakeLists.txt: Capitalize
+  the name of the executable target on Mac, so that the bundle's name will be
+  capitalized.
+
+  * src/CMakeLists.txt: Default to a Release build in CMake, which shuts off
+  wxWidgets debug assertions.
+
+  * doc/manual/CMakeLists.txt: The images weren't being added to the HTB
+  manual.  Fixed.
+
+  * CMakeLists.txt, doc/manual/CMakeLists.txt, src/CMakeLists.txt,
+  src/common/filesystem.cpp: Some attempt to make the various build systems
+  find the help file.
+
+  * CMakeLists.txt, doc/manual/CMakeLists.txt, src/CMakeLists.txt: Add CPack
+  and install() instructions throughout the source package.
+
+  * src/tourney/evotournament.cpp: Same bug as earlier -- remove the progress
+  bar from the evolutionary tournament.
+
+  * src/ui/logosapp.cpp: On OS X, go ahead and close when we close all the
+  top-level frames.
+
+  * src/tourney/tournament.cpp, src/tourney/tournament.h: The tournament
+  progress bar -- since it calls wxYield() internally to wait for user input
+  events -- was actually slower than running the tournament.  It's been
+  removed.
+
+  * README: Adding info about required libraries and userspace tools to README.
+
+2010-10-16  Charles Pence <charles@charlespence.net>
+
+  * build/copy-docs.sh: Add script to copy docs to gh-pages.
+
+  * Doxyfile, doc/doxygen/annotated.html, doc/doxygen/bc_s.png,
+  doc/doxygen/classEvoFinishPage-members.html,
+  doc/doxygen/classEvoFinishPage.html,
+  doc/doxygen/classEvoGraphRenderer-members.html,
+  doc/doxygen/classEvoGraphWindow-members.html,
+  doc/doxygen/classEvoGraphWindow.html, doc/doxygen/classEvoPage-members.html,
+  doc/doxygen/classEvoPage.html, doc/doxygen/classEvoTournament-members.html,
+  doc/doxygen/classEvoTournament.html, doc/doxygen/classFSAPlayer-members.html,
+  doc/doxygen/classFSAPlayer.html, doc/doxygen/classFSAState-members.html,
+  doc/doxygen/classFSAState.html, doc/doxygen/classFinishPage-members.html,
+  doc/doxygen/classFinishPage.html, doc/doxygen/classGame-members.html,
+  doc/doxygen/classGame.html, doc/doxygen/classHtmlDialog-members.html,
+  doc/doxygen/classHtmlDialog.html, doc/doxygen/classLogosApp-members.html,
+  doc/doxygen/classLogosApp.html, doc/doxygen/classLogosWizard-members.html,
+  doc/doxygen/classLogosWizard.html,
+  .../classLogosWizardDropTarget-members.html,
+  doc/doxygen/classLogosWizardDropTarget.html,
+  doc/doxygen/classLogosWizardPage-members.html,
+  doc/doxygen/classLogosWizardPage.html, doc/doxygen/classMatch-members.html,
+  doc/doxygen/classMatch.html, doc/doxygen/classMatchDialog-members.html,
+  doc/doxygen/classMatchDialog.html,
+  doc/doxygen/classOneShotFinishPage-members.html,
+  doc/doxygen/classOneShotFinishPage.html,
+  doc/doxygen/classOneShotPage-members.html, doc/doxygen/classOneShotPage.html,
+  doc/doxygen/classPlayer-members.html, doc/doxygen/classPlayer.html,
+  doc/doxygen/classPlayersPage-members.html, doc/doxygen/classPlayersPage.html,
+  doc/doxygen/classPrisonerDilemma-members.html,
+  doc/doxygen/classPrisonerDilemma.html,
+  doc/doxygen/classRandomPlayer-members.html,
+  doc/doxygen/classRandomPlayer.html,
+  doc/doxygen/classTitForTatPlayer-members.html,
+  doc/doxygen/classTitForTatPlayer.html,
+  doc/doxygen/classTournament-members.html, doc/doxygen/classTournament.html,
+  doc/doxygen/classTypePage-members.html, doc/doxygen/classTypePage.html,
+  doc/doxygen/classes.html, doc/doxygen/closed.png, doc/doxygen/doxygen.css,
+  doc/doxygen/doxygen.png, doc/doxygen/functions.html,
+  doc/doxygen/functions_0x62.html, doc/doxygen/functions_0x63.html,
+  doc/doxygen/functions_0x64.html, doc/doxygen/functions_0x65.html,
+  doc/doxygen/functions_0x66.html, doc/doxygen/functions_0x67.html,
+  doc/doxygen/functions_0x68.html, doc/doxygen/functions_0x69.html,
+  doc/doxygen/functions_0x6c.html, doc/doxygen/functions_0x6d.html,
+  doc/doxygen/functions_0x6e.html, doc/doxygen/functions_0x6f.html,
+  doc/doxygen/functions_0x70.html, doc/doxygen/functions_0x72.html,
+  doc/doxygen/functions_0x73.html, doc/doxygen/functions_0x74.html,
+  doc/doxygen/functions_0x75.html, doc/doxygen/functions_0x77.html,
+  doc/doxygen/functions_func.html, doc/doxygen/functions_type.html,
+  doc/doxygen/functions_vars.html, doc/doxygen/group__common.html,
+  doc/doxygen/group__game.html, doc/doxygen/group__tourney.html,
+  doc/doxygen/group__ui.html, doc/doxygen/hierarchy.html,
+  doc/doxygen/index.html, doc/doxygen/modules.html, doc/doxygen/nav_f.png,
+  doc/doxygen/nav_h.png, doc/doxygen/open.png,
+  doc/doxygen/structEvoGraphRenderer.html,
+  ...structEvoGraphRenderer_1_1SVGColor-members.html,
+  .../structEvoGraphRenderer_1_1SVGColor.html, doc/doxygen/tab_a.png,
+  doc/doxygen/tab_b.png, doc/doxygen/tab_h.png, doc/doxygen/tab_s.png,
+  doc/doxygen/tabs.css, doc/doxygen/tools/footer.inc: Added Doxygen
+  documentation.
+
+  * CMakeLists.txt, ChangeLog, build/gitlog2changelog.py: Add git to ChangeLog
+  generator.
+
+  * doc/manual/CMakeLists.txt: Don't attempt to (circularly) copy the
+  manual.tex file if building in-tree, which causes it to be deleted on 'make
+  clean'.
+
+  * doc/manual/pdf/.gitignore: Don't ignore manual.tex.
+
+  * .gitignore, doc/manual/.gitignore, doc/manual/pdf/.gitignore,
+  src/.gitignore, tools/hhp2cached/.gitignore: Added .gitignore files to
+  prevent anything from going into git if you build in-tree. (Don't build
+  in-tree!)
+
+  * CMakeLists.txt, doc/manual/CMakeLists.txt, doc/manual/pdf/manual.tex,
+  doc/manual/source/evofinishpage.png, doc/manual/source/evofinishpage.text,
+  doc/manual/source/evopage.png, doc/manual/source/evopage.text,
+  doc/manual/source/glossary.text, doc/manual/source/install.text,
+  doc/manual/source/oneshotfinishpage.png,
+  doc/manual/source/oneshotfinishpage.text, doc/manual/source/oneshotpage.png,
+  doc/manual/source/oneshotpage.text, doc/manual/source/pages.text,
+  doc/manual/source/playerspage.png, doc/manual/source/playerspage.text,
+  doc/manual/source/release.text, doc/manual/source/started.text,
+  doc/manual/source/typepage.png, doc/manual/source/typepage.text,
+  doc/manual/source/welcome.text, doc/manual/wxhtml/logos-contents.hhc,
+  doc/manual/wxhtml/logos-index.hhk, doc/manual/wxhtml/logos.hhp,
+  src/CMakeLists.txt, tools/hhp2cached/CMakeLists.txt,
+  tools/hhp2cached/hhp2cached.cpp: Added support for building the manual, in
+  PDF and wxHTML modes.
+
+  * .gitignore, CMakeLists.txt, build/logos.icns, build/logos.ico,
+  build/logos.rc, lib/CppUnitLite/CMakeLists.txt, src/CMakeLists.txt: Splitting
+  out the build files a bit, added building support for Mac bundles and the
+  Win32 RC file.
+
+2010-10-15  Charles Pence <charles@charlespence.net>
+
+  * CMakeLists.txt, build/logos.png, build/logos.xpm, src/ui/evofinishpage.cpp,
+  src/ui/evopage.cpp, src/ui/evopage.h, src/ui/logoswizard.cpp,
+  src/ui/oneshotfinishpage.cpp, src/ui/oneshotpage.h, src/ui/playerspage.cpp,
+  src/ui/playerspage.h: Added build system, initial tweaks so that the thing at
+  least builds.
+
+  * AUTHORS, COPYING, ChangeLog-2005, ChangeLog-2006, ChangeLog-2007,
+  ChangeLog-2008, ChangeLog-2009, INSTALL, NEWS, README, THANKS,
+  lib/CppUnitLite/Failure.cpp, lib/CppUnitLite/Failure.h,
+  lib/CppUnitLite/Test.cpp, lib/CppUnitLite/Test.h,
+  lib/CppUnitLite/TestHarness.h, lib/CppUnitLite/TestRegistry.cpp,
+  lib/CppUnitLite/TestRegistry.h, lib/CppUnitLite/TestResult.cpp,
+  lib/CppUnitLite/TestResult.h, src/common/error.cpp, src/common/error.h,
+  src/common/filesystem.cpp, src/common/filesystem.h, src/common/rng.cpp,
+  src/common/rng.h, src/game/fsaplayer.cpp, src/game/fsaplayer.h,
+  src/game/game.cpp, src/game/game.h, src/game/player.cpp, src/game/player.h,
+  src/game/prisoner.cpp, src/game/prisoner.h, src/game/random.cpp,
+  src/game/random.h, src/game/titfortat.cpp, src/game/titfortat.h,
+  src/tourney/evotournament.cpp, src/tourney/evotournament.h,
+  src/tourney/match.cpp, src/tourney/match.h, src/tourney/tournament.cpp,
+  src/tourney/tournament.h, src/ui/evofinishpage.cpp, src/ui/evofinishpage.h,
+  src/ui/evopage.cpp, src/ui/evopage.h, src/ui/finishpage.cpp,
+  src/ui/finishpage.h, src/ui/logosapp.cpp, src/ui/logosapp.h,
+  src/ui/logoswizard.cpp, src/ui/logoswizard.h, src/ui/matchdialog.cpp,
+  src/ui/matchdialog.h, src/ui/oneshotfinishpage.cpp,
+  src/ui/oneshotfinishpage.h, src/ui/oneshotpage.cpp, src/ui/oneshotpage.h,
+  src/ui/playerspage.cpp, src/ui/playerspage.h, src/ui/tools/htmldialog.cpp,
+  src/ui/tools/htmldialog.h, src/ui/tools/logoswizardpage.cpp,
+  src/ui/tools/logoswizardpage.h, src/ui/typepage.cpp, src/ui/typepage.h:
+  Import of source from last version; no build system yet.

@@ -5,7 +5,7 @@
 import string, re, os
 
 # Execute git log with the desired command line options.
-fin = os.popen('git log --summary --stat --no-merges --date=short', 'r')
+fin = os.popen('git log --summary --stat --no-merges --date=short cbe876af5f5001aa58d5dad19e9af59d286a5999..', 'r')
 # Create a ChangeLog file in the current directory.
 fout = open('ChangeLog', 'w')
 
@@ -68,7 +68,6 @@ for line in fin:
     # If this line is hit all of the files have been stored for this commit
     elif re.search('files changed', line) >= 0:
         filesFound = True
-        continue
     # Collect the files for this commit. FIXME: Still need to add +/- to files
     elif authorFound & dateFound & messageFound:
         fileList = re.split(' \| ', line, 2)
