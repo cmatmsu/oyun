@@ -222,7 +222,8 @@ protected:
 	    by address) with a list of moves that player has taken in the past,
 	    stored as a \c wxString.
 	*/
-	WX_DECLARE_VOIDPTR_HASH_MAP(wxString, MoveMap);
+	WX_DECLARE_HASH_MAP(const Player *, wxString, wxPointerHash,
+	    wxPointerEqual, MoveMap);
 
 	/**
 	    \brief Storage for past player interactions.

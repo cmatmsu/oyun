@@ -69,7 +69,7 @@ bool LogosApp::OnInit()
 		if (!wxStrcmp(argv[i], wxT("--version")))
 		{
 			const wchar_t *version = wxT(STRINGIZE( LOGOS_VERSION ));
-			const wxChar *verstring =
+			const wxString verstring =
 				_("Logos %ls\n"
 				  "Copyright (C) 2004-2011 Charles Pence\n"
 				  "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\n"
@@ -81,7 +81,7 @@ bool LogosApp::OnInit()
 		}
 		else if (!wxStrcmp(argv[i], wxT("--help")))
 		{
-			const wxChar *helpstring =
+			const wxString helpstring =
 				_("Usage: logos [OPTION]...\n"
 				  "Run an evolutionary game theory tournament.\n"
 				  "\n"
