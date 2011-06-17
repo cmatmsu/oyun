@@ -1,5 +1,5 @@
 /* XPM */
-const char * logosicon_xpm[] = {
+const char * oyunicon_xpm[] = {
 "32 32 101 2",
 "  	c #FFFFFF",
 ". 	c #EBEBEB",

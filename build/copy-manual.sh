@@ -1,7 +1,7 @@
 #!/bin/sh
 
-MANUAL_PAGES="Welcome-to-Logos.md Installation.md Release-Notes.md \
-	Getting-Started.md Logos-Task-Pages.md Player-Selection-Page.md \
+MANUAL_PAGES="Welcome-to-Oyun.md Installation.md Release-Notes.md \
+	Getting-Started.md Oyun-Task-Pages.md Player-Selection-Page.md \
 	Tournament-Type-Page.md One-Shot-Tournament-Page.md 
 	One-Shot-Tournament-Finished-Page.md Evolutionary-Tournament-Page.md \
 	Evolutionary-Tournament-Finished-Page.md Sample-Players.md Glossary.md"
