@@ -2,7 +2,7 @@
 
 /**
 
-\mainpage Logos: An evolutionary game-theory simulator
+\mainpage Oyun: An evolutionary game-theory simulator
 \author Charles Pence
 \date October 2010
 
