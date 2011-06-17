@@ -3,7 +3,6 @@ layout: post
 title: Player Selection Page
 ---
 
-
   The player-selection page:
  --------------------------------------------------------------
   ![Screenshot](images/playerspage.png){:width="575"}
@@ -30,7 +29,7 @@ Finite State Machines
 =====================
 
 Finite state machines are a file format with which you can design custom players
-for use in Logos.  For a detailed description of their file format and how you
+for use in Oyun.  For a detailed description of their file format and how you
 can write one, visit the Getting Started section of the help, where a tutorial
 is presented.
 
@@ -38,12 +37,12 @@ To add a finite state machine, click the "Add Finite State Machine..." button,
 and select a finite state machine file, which is simply a plain-text file with
 extension ".txt".  Click OK to add the player.  If there is an error in the
 player's syntax (for example, if it doesn't have as many states as listed, or 
-it attempts to make an invalid move or transition to an invalid state), Logos 
+it attempts to make an invalid move or transition to an invalid state), Oyun 
 will display an error message and prevent you from adding that player to the
 tournament.
 
 Also, you can drag and drop finite state machine text files onto the player 
-list, and Logos will add them automatically.
+list, and Oyun will add them automatically.
 
 The Player List
 ===============

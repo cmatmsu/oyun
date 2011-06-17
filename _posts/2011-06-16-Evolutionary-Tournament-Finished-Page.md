@@ -38,5 +38,5 @@ preceding page.
 - - -
 
 That's it!  Once you have saved the data you wish to keep, press
-Finish to quit Logos.
+Finish to quit Oyun.
 

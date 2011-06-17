@@ -3,19 +3,18 @@ layout: post
 title: Getting Started
 ---
 
-
-To get a tournament going in Logos, you'll need to (i) write a set of players,
+To get a tournament going in Oyun, you'll need to (i) write a set of players,
 (ii) load them up, and (iii) run a tournament of your choice.
 
 Writing Players
 ===============
 
-Tournaments in Logos can be run with two different sorts of players: built-in
+Tournaments in Oyun can be run with two different sorts of players: built-in
 players and external players written as finite state machines.  There are only
 two sorts of built-in players available: one player which makes random moves,
 and one which plays the tit-for-tat strategy.
 
-If you want to write a player, you'll need to learn the Logos finite state
+If you want to write a player, you'll need to learn the Oyun finite state
 machine format.  A finite state machine is like a very simple programming
 language.  In this format, you tell your player which move to make, and then
 how to respond to moves made by its opponent.
@@ -62,15 +61,15 @@ will stay in state 0).  If the opponent defects, our player will switch to state
 move of its opponent.
 
 More examples of finite state machine players are available on the wiki at the
-Logos website.
+Oyun website.
 
 Loading Players
 ===============
 
-Load the players you've written on the first page of Logos.  You can also drag
-and drop finite state machine text files onto the Logos window.  If there are
+Load the players you've written on the first page of Oyun.  You can also drag
+and drop finite state machine text files onto the Oyun window.  If there are
 any syntax errors or invalid states in your finite state machine (did you
-remember that the first state is state 0 and not state 1?), Logos will warn you
+remember that the first state is state 0 and not state 1?), Oyun will warn you
 upon loading the file.
 
 Click "Next" to continue.
@@ -85,7 +84,7 @@ accumulates the highest score, or you can choose an evolutionary tournament, in
 which the players seed an initial "population," and their scores against one
 another are used to determine their percentage in the next "generation."  For
 more information on these two tournament types, see the documentation under
-"Logos Task Pages" for the "One-Shot Tournament" and the "Evolutionary
+"Oyun Task Pages" for the "One-Shot Tournament" and the "Evolutionary
 Tournament."
 
 Finally, depending on which tournament you have run, there will be several
@@ -95,6 +94,6 @@ each player made throughout, and for an evolutionary tournament, you can save a
 spreadsheet of the contents of the population at each generation, or the graph
 of the results in a variety of image formats.
 
-Hopefully this is enough information to get you started using Logos!  For more
-information on any of these steps, see the detailed documentation under "Logos 
+Hopefully this is enough information to get you started using Oyun!  For more
+information on any of these steps, see the detailed documentation under "Oyun 
 Task Pages" above.

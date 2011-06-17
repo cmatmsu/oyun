@@ -4,18 +4,22 @@ title: Release Notes
 ---
 
 Here you'll find what's been added or changed in various versions of
-Logos.
+Oyun.
 
 What's New
 ==========
 
-This is the first beta release of Logos 2.0.  Test it thoroughly and report
+This is the first beta release of Oyun 2.0.  Test it thoroughly and report
 any bugs you happen to find!
 
 Change Log
 ==========
 
-* *Version 2.0.b2:* First beta release of Logos 2.0.  New features include:
+* *Version 2.0.?? [???]:*
+
+* *Version 2.0.b4 [June 16, 2010]:* Project renamed to "Oyun".
+
+* *Version 2.0.b2 [October 21, 2010]:* First beta release of Oyun 2.0.  New features include:
     * Entirely reworked "wizard" interface
     * A new graph-drawing system for the evolutionary tournaments
     * Revamped support for saving of tournament data
@@ -30,7 +34,7 @@ interface.
 License
 =======
 
-Logos itself is licensed under the [GNU GPL](http://www.gnu.org/copyleft/gpl.html).
+Oyun itself is licensed under the [GNU GPL](http://www.gnu.org/copyleft/gpl.html).
 The license is available in the root of the source distribution, in a file
 called `COPYING`.  In legalese:
 
@@ -47,12 +51,12 @@ called `COPYING`.  In legalese:
 > You should have received a copy of the GNU General Public License
 > along with this program.  If not, see &lt;[http://www.gnu.org/licenses/](http://www.gnu.org/licenses/)&gt;.
 
-As Logos uses wxWidgets, which uses libjpeg from the Independent JPEG Group, we 
+As Oyun uses wxWidgets, which uses libjpeg from the Independent JPEG Group, we 
 are obligated to say here that "this software is based in part on the work of 
 the Independent JPEG Group."
 
-All of Logos's documentation is subject to the [Creative Commons
+All of Oyun's documentation is subject to the [Creative Commons
 Attribution-Share Alike 3.0 United States](http://creativecommons.org/licenses/by-sa/3.0/us/)
-license, and is copyright &copy; 2009-2010 Charles Pence.
+license, and is copyright &copy; 2009-2011 Charles Pence.
 
 

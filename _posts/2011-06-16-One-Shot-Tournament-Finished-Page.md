@@ -3,7 +3,6 @@ layout: post
 title: One Shot Tournament Finished Page
 ---
 
-
   The one-shot tournament finished page:
  --------------------------------------------------------------
   ![Screensot](images/oneshotfinishpage.png){:width="575"}
@@ -40,4 +39,4 @@ prove invaluable.
 - - -
 
 That's it!  Once you have saved the data you wish to keep, press
-Finish to quit Logos.
+Finish to quit Oyun.

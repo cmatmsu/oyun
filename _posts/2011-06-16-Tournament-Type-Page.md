@@ -3,13 +3,12 @@ layout: post
 title: Tournament Type Page
 ---
 
-
   The tournament type page:
  --------------------------------------------------------------
   ![Screenshot](images/typepage.png){:width="575"}
 
 
-There are two types of tournament in Logos, and this page lets you decide which
+There are two types of tournament in Oyun, and this page lets you decide which
 you would like to run.  You may choose either a One-Shot Tournament or an 
 Evolutionary Tournament.
 
