@@ -1,5 +1,5 @@
 /* XPM */
-static char *oyunicon_xpm[] = {
+static const char *oyunicon_xpm[] = {
 /* columns rows colors chars-per-pixel */
 "32 32 137 2 ",
 "   c black",
