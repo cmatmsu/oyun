@@ -2,20 +2,20 @@
     Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
-    This file is part of Logos.
+    This file is part of Oyun.
 
-    Logos is free software: you can redistribute it and/or modify
+    Oyun is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Logos is distributed in the hope that it will be useful,
+    Oyun is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Logos.  If not, see <http://www.gnu.org/licenses/>.
+    along with Oyun.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <wx/wxprec.h>
@@ -34,12 +34,12 @@
 #include "../game/player.h"
 
 #include "tools/htmldialog.h"
-#include "logosapp.h"
-#include "logoswizard.h"
+#include "oyunapp.h"
+#include "oyunwizard.h"
 #include "evopage.h"
 
 
-IMPLEMENT_CLASS(EvoPage, LogosWizardPage)
+IMPLEMENT_CLASS(EvoPage, OyunWizardPage)
 
 enum
 {
@@ -48,7 +48,7 @@ enum
 	ID_GEN_SPINNER,
 };
 
-BEGIN_EVENT_TABLE(EvoPage, LogosWizardPage)
+BEGIN_EVENT_TABLE(EvoPage, OyunWizardPage)
 	EVT_WIZARD_PAGE_CHANGING(wxID_ANY, EvoPage::OnPageChanging)
 	EVT_WIZARD_HELP(wxID_ANY, EvoPage::OnHelp)
 	
@@ -64,10 +64,10 @@ BEGIN_EVENT_TABLE(EvoPage, LogosWizardPage)
 END_EVENT_TABLE()
 
 
-EvoPage::EvoPage(LogosWizard *parent, wxWizardPage *prev, wxWizardPage *next) :
-	LogosWizardPage(_("Evolutionary Tournament"),
-                        _("This tournament uses scores as weights for future generations in a population."),
-                        parent, prev, next),
+EvoPage::EvoPage(OyunWizard *parent, wxWizardPage *prev, wxWizardPage *next) :
+	OyunWizardPage(_("Evolutionary Tournament"),
+                   _("This tournament uses scores as weights for future generations in a population."),
+                   parent, prev, next),
 	renderer(wxSize(800, 800)) // FIXME: configure this?
 {
 	evoTourney = new EvoTournament(parent->game);	
@@ -124,7 +124,7 @@ void EvoPage::OnRunTournament(wxCommandEvent & WXUNUSED(event))
 	if (!evoTourney->Run(generations))
 	{
 		wxString errStr(wxString::Format(_("Could not run tournament.  Error reported:\n\n%s"), Error::Get().c_str()));
-		wxMessageBox(errStr, _("Logos: Error"), wxOK | wxICON_ERROR, this);
+		wxMessageBox(errStr, _("Oyun: Error"), wxOK | wxICON_ERROR, this);
 		return;
 	}
 	
@@ -201,7 +201,7 @@ void EvoPage::OnShowLegend(wxCommandEvent & WXUNUSED(event))
 {
 	if (!evoTourney->IsPlayed())
 	{
-		wxMessageBox(_("You must play the tournament first!"), _("Logos: Error"),
+		wxMessageBox(_("You must play the tournament first!"), _("Oyun: Error"),
 		             wxOK | wxICON_ERROR, this);
 		return;
 	}
@@ -246,7 +246,7 @@ void EvoPage::OnPageChanging(wxWizardEvent &event)
 	if (!evoTourney->IsPlayed())
 	{
 		wxMessageBox(_("You must run the tournament to continue."),
-		             _("Logos: Error"), wxOK | wxICON_ERROR, this);
+		             _("Oyun: Error"), wxOK | wxICON_ERROR, this);
 		event.Veto();
 		return;
 	}
@@ -301,7 +301,7 @@ void EvoGraphRenderer::StartDrawing(wxWindowDC &windowDC, const wxSize &windowSi
 		wxT("<svg xmlns=\"http://www.w3.org/2000/svg\"\n")
 		wxT(" xmlns:xlink=\"http://www.w3.org/1999/xlink\"\n")
 		wxT(" width='%dpx' height='%dpx'>\n\n")
-		wxT("<title>Logos Tournament Graph</title>\n\n");
+		wxT("<title>Oyun Tournament Graph</title>\n\n");
 	
 	wxString header;
 	header.Printf(svgHeader, dcSize.GetWidth(), dcSize.GetHeight());

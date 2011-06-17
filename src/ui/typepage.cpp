@@ -2,20 +2,20 @@
     Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
-    This file is part of Logos.
+    This file is part of Oyun.
 
-    Logos is free software: you can redistribute it and/or modify
+    Oyun is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Logos is distributed in the hope that it will be useful,
+    Oyun is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Logos.  If not, see <http://www.gnu.org/licenses/>.
+    along with Oyun.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <wx/wxprec.h>
@@ -27,11 +27,11 @@
 #  include <wx/wx.h>
 #endif
 
-#include "logosapp.h"
-#include "logoswizard.h"
+#include "oyunapp.h"
+#include "oyunwizard.h"
 #include "typepage.h"
 
-IMPLEMENT_CLASS(TypePage, LogosWizardPage)
+IMPLEMENT_CLASS(TypePage, OyunWizardPage)
 
 enum
 {
@@ -42,7 +42,7 @@ enum
 };
 
 
-BEGIN_EVENT_TABLE(TypePage, LogosWizardPage)
+BEGIN_EVENT_TABLE(TypePage, OyunWizardPage)
 	EVT_WIZARD_HELP(wxID_ANY, TypePage::OnHelp)
 	EVT_RADIOBUTTON(ID_RB_ONESHOT, TypePage::OnRadioButton)
 	EVT_RADIOBUTTON(ID_RB_EVOLUTIONARY, TypePage::OnRadioButton)
@@ -51,11 +51,11 @@ BEGIN_EVENT_TABLE(TypePage, LogosWizardPage)
 END_EVENT_TABLE()
 
 
-TypePage::TypePage(LogosWizard *parent, wxWizardPage *prev, wxWizardPage *oneshot, 
+TypePage::TypePage(OyunWizard *parent, wxWizardPage *prev, wxWizardPage *oneshot, 
                    wxWizardPage *evolutionary) :
-                   LogosWizardPage(_("Choose Tournament Type"),
-                                   _("Two different types of game-theoretic tournaments are available."),
-                                   parent, prev)
+                   OyunWizardPage(_("Choose Tournament Type"),
+                                  _("Two different types of game-theoretic tournaments are available."),
+                                  parent, prev)
 {
 	// Save member pointers
 	nextOneShot = oneshot;

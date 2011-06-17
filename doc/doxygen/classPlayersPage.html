@@ -44,18 +44,18 @@
 <div class="title">PlayersPage Class Reference<div class="ingroups"><a class="el" href="group__ui.html">UI Module</a></div></div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="PlayersPage" --><!-- doxytag: inherits="LogosWizardPage" -->
+<!-- doxytag: class="PlayersPage" --><!-- doxytag: inherits="OyunWizardPage" -->
 <p>Wizard page on which user selects a list of players.  
  <a href="classPlayersPage.html#details">More...</a></p>
 
-<p>Inherits <a class="el" href="classLogosWizardPage.html">LogosWizardPage</a>.</p>
+<p>Inherits <a class="el" href="classOyunWizardPage.html">OyunWizardPage</a>.</p>
 
 <p><a href="classPlayersPage-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayersPage.html#ad481916cda0b52c36e9cd047a18e0394">PlayersPage</a> (<a class="el" href="classLogosWizard.html">LogosWizard</a> *<a class="el" href="classLogosWizardPage.html#ad914b4a3c767d2081bbbebacd6d347c5">parent</a>, wxWizardPage *next=NULL)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ad481916cda0b52c36e9cd047a18e0394"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayersPage.html#a6f13458775e017897995654885d8daa5">PlayersPage</a> (<a class="el" href="classOyunWizard.html">OyunWizard</a> *<a class="el" href="classOyunWizardPage.html#aed5c2c0cecddf8c13ddbbfced47e9988">parent</a>, wxWizardPage *next=NULL)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a6f13458775e017897995654885d8daa5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayersPage.html#acccebd556f61cdd31de55e8a098a7856">OnFileDrop</a> (const wxArrayString &amp;files)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a dropped list of FSA players.  <a href="#acccebd556f61cdd31de55e8a098a7856"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
@@ -107,14 +107,14 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>Wizard page on which user selects a list of players. </p>
 <p>This wizard page includes a large list box showing the current players loaded for the tournament, as well as buttons allowing the user to add and remove different types of players. Right-click on a player shows a pop-up menu. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad481916cda0b52c36e9cd047a18e0394"></a><!-- doxytag: member="PlayersPage::PlayersPage" ref="ad481916cda0b52c36e9cd047a18e0394" args="(LogosWizard *parent, wxWizardPage *next=NULL)" -->
+<a class="anchor" id="a6f13458775e017897995654885d8daa5"></a><!-- doxytag: member="PlayersPage::PlayersPage" ref="a6f13458775e017897995654885d8daa5" args="(OyunWizard *parent, wxWizardPage *next=NULL)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">PlayersPage::PlayersPage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classLogosWizard.html">LogosWizard</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classOyunWizard.html">OyunWizard</a> *&#160;</td>
           <td class="paramname"><em>parent</em>, </td>
         </tr>
         <tr>
@@ -263,7 +263,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 
 <p>Called when the page receives a 'data update' message. </p>
-<p>This function updates the view after the data has been updated. Notably, when a player is added from this page, we add the player, broadcast the <code>wxEVT_ADD_PLAYER</code> message, and then call <code><a class="el" href="classLogosWizard.html#a7e0c254b209fe169013074e2a785d54f" title="Send a data-update message to all pages.">LogosWizard::Update()</a></code>. Then, the update event invokes this event handler, which triggers a UI update.</p>
+<p>This function updates the view after the data has been updated. Notably, when a player is added from this page, we add the player, broadcast the <code>wxEVT_ADD_PLAYER</code> message, and then call <code><a class="el" href="classOyunWizard.html#a8d27e23c68fe67328186d80417e4f149" title="Send a data-update message to all pages.">OyunWizard::Update()</a></code>. Then, the update event invokes this event handler, which triggers a UI update.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>The event generated </td></tr>
@@ -323,7 +323,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="classLogosWizardPage.html#a05905a8697a1d0f6160ef26f29abab9c">LogosWizardPage</a>.</p>
+<p>Reimplemented from <a class="el" href="classOyunWizardPage.html#a0e429b1f8a1cae6a3e995ed748bf039f">OyunWizardPage</a>.</p>
 
 </div>
 </div>

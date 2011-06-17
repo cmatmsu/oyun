@@ -2,27 +2,27 @@
     Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
-    This file is part of Logos.
+    This file is part of Oyun.
 
-    Logos is free software: you can redistribute it and/or modify
+    Oyun is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Logos is distributed in the hope that it will be useful,
+    Oyun is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Logos.  If not, see <http://www.gnu.org/licenses/>.
+    along with Oyun.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #ifndef TYPEPAGE_H__
 #define TYPEPAGE_H__
 
 #include <wx/wizard.h>
-#include "tools/logoswizardpage.h"
+#include "tools/oyunwizardpage.h"
 
 
 /**
@@ -35,7 +35,7 @@
     which determines whether the tournament will be an evolutionary or
     round-robin tournament.
 */
-class TypePage : public LogosWizardPage
+class TypePage : public OyunWizardPage
 {
 	DECLARE_CLASS(TypePage)
 	
@@ -54,7 +54,7 @@ public:
 	    \param evolutionary The page to go to if an evolutionary tournament
 	                        is selected
 	*/
-	TypePage(LogosWizard *parent, wxWizardPage *prev = NULL, 
+	TypePage(OyunWizard *parent, wxWizardPage *prev = NULL, 
 			 wxWizardPage *oneshot = NULL, 
 			 wxWizardPage *evolutionary = NULL);
 	

@@ -2,20 +2,20 @@
     Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
-    This file is part of Logos.
+    This file is part of Oyun.
 
-    Logos is free software: you can redistribute it and/or modify
+    Oyun is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Logos is distributed in the hope that it will be useful,
+    Oyun is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Logos.  If not, see <http://www.gnu.org/licenses/>.
+    along with Oyun.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #ifndef EVOPAGE_H__
@@ -24,7 +24,7 @@
 #include <wx/spinctrl.h>
 #include <wx/wizard.h>
 #include <wx/graphics.h>
-#include "tools/logoswizardpage.h"
+#include "tools/oyunwizardpage.h"
 
 class EvoTournament;
 class EvoGraphWindow;
@@ -187,7 +187,7 @@ private:
     This page runs an evolutionary tournament and draws its results as
     a graph.
 */
-class EvoPage : public LogosWizardPage
+class EvoPage : public OyunWizardPage
 {
 	DECLARE_CLASS(EvoPage)
 
@@ -201,7 +201,7 @@ public:
 	    \param prev The previous page in the wizard
 	    \param next The next page in the wizard
 	*/
-	EvoPage(LogosWizard *parent, wxWizardPage *prev = NULL, wxWizardPage *next = NULL);
+	EvoPage(OyunWizard *parent, wxWizardPage *prev = NULL, wxWizardPage *next = NULL);
 
 	virtual ~EvoPage();
 	

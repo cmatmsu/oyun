@@ -2,33 +2,33 @@
     Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
-    This file is part of Logos.
+    This file is part of Oyun.
 
-    Logos is free software: you can redistribute it and/or modify
+    Oyun is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Logos is distributed in the hope that it will be useful,
+    Oyun is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Logos.  If not, see <http://www.gnu.org/licenses/>.
+    along with Oyun.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 /**
     \defgroup ui UI Module
     
-    This module contains the user interface code.  Logos is a wxWidgets
-    application.  Its entry-point is handled by the \c LogosApp class, 
+    This module contains the user interface code.  Oyun is a wxWidgets
+    application.  Its entry-point is handled by the \c OyunApp class, 
     which creates a \c wxWizard containing all of our UI.  All pages in
-    the wizard are derived from the \c LogosWizardPage class.
+    the wizard are derived from the \c OyunWizardPage class.
     
-    The general flow of the Logos wizard is as follows:
+    The general flow of the Oyun wizard is as follows:
     
-    \li \c LogosWizard - the overall wizard object
+    \li \c OyunWizard - the overall wizard object
     \li \c PlayersPage - the user selects a list of players
     \li \c TypePage - the user chooses whether they will run a
         \c Tournament or an \c EvoTournament
@@ -40,23 +40,23 @@
     \li \c EvoFinishPage - save the data from an evolutionary tournament
 */
 
-#ifndef LOGOSAPP_H__
-#define LOGOSAPP_H__
+#ifndef OYUNAPP_H__
+#define OYUNAPP_H__
 
 /**
-    \class LogosApp
+    \class OyunApp
     \ingroup ui
     
-    \brief The main Logos application class
+    \brief The main Oyun application class
     
     In usual wxWidgets style, this class constitutes the program entry
     point.  It creates the \c wxWizard and the various pages, links them
     together, and starts the wizard.  When the wizard is closed, execution
     terminates.
 */
-class LogosApp : public wxApp
+class OyunApp : public wxApp
 {
-	DECLARE_DYNAMIC_CLASS(LogosApp)
+	DECLARE_DYNAMIC_CLASS(OyunApp)
 
 public:
 	/**
@@ -65,7 +65,7 @@ public:
 	    We override the constructor to set a few internal wxWidgets
 	    settings, such as configuration paths.
 	*/
-	LogosApp();
+	OyunApp();
 	
 	
 	/**
@@ -80,9 +80,9 @@ public:
 	
 	
 	/**
-	    \brief Create the Logos wizard
+	    \brief Create the Oyun wizard
 	    
-	    This function creates the \c LogosWizard class.  It may be called more
+	    This function creates the \c OyunWizard class.  It may be called more
 	    than once, for example on Mac OS X.
 	*/
 	void CreateWizard();
@@ -162,7 +162,7 @@ private:
 #endif
 };
 
-DECLARE_APP(LogosApp);
+DECLARE_APP(OyunApp);
 
 
 #endif

@@ -2,20 +2,20 @@
     Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
-    This file is part of Logos.
+    This file is part of Oyun.
 
-    Logos is free software: you can redistribute it and/or modify
+    Oyun is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Logos is distributed in the hope that it will be useful,
+    Oyun is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Logos.  If not, see <http://www.gnu.org/licenses/>.
+    along with Oyun.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #ifndef PLAYERSPAGE_H__
@@ -23,7 +23,7 @@
 
 #include <wx/wizard.h>
 #include <wx/listbox.h>
-#include "tools/logoswizardpage.h"
+#include "tools/oyunwizardpage.h"
 #include "../game/player.h"
 
 
@@ -38,7 +38,7 @@
     the user to add and remove different types of players.  Right-click
     on a player shows a pop-up menu.
 */
-class PlayersPage : public LogosWizardPage
+class PlayersPage : public OyunWizardPage
 {
 	DECLARE_CLASS(PlayersPage)
 	
@@ -51,7 +51,7 @@ public:
 	    \param parent The parent of this wizard page
 	    \param next The next page in the wizard
 	*/
-	PlayersPage(LogosWizard *parent, wxWizardPage *next = NULL);
+	PlayersPage(OyunWizard *parent, wxWizardPage *next = NULL);
 
 	virtual ~PlayersPage();
 	
@@ -133,7 +133,7 @@ private:
 	    This function updates the view after the data has been updated.
 	    Notably, when a player is added from this page, we add the player,
 	    broadcast the \c wxEVT_ADD_PLAYER message, and then call
-	    \c LogosWizard::Update().  Then, the update event invokes this
+	    \c OyunWizard::Update().  Then, the update event invokes this
 	    event handler, which triggers a UI update.
 	    
 	    \param event The event generated

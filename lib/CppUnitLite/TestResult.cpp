@@ -25,7 +25,7 @@ TestResult::TestResult()
 
 void TestResult::testsStarted() 
 {
-	wxPrintf (wxT("Beginning unit tests for Logos...\n"));
+	wxPrintf (wxT("Beginning unit tests for Oyun...\n"));
 }
 
 void TestResult::runTest()

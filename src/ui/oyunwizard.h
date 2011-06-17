@@ -2,24 +2,24 @@
     Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
-    This file is part of Logos.
+    This file is part of Oyun.
 
-    Logos is free software: you can redistribute it and/or modify
+    Oyun is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Logos is distributed in the hope that it will be useful,
+    Oyun is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Logos.  If not, see <http://www.gnu.org/licenses/>.
+    along with Oyun.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef LOGOSWIZARD_H__
-#define LOGOSWIZARD_H__
+#ifndef OYUNWIZARD_H__
+#define OYUNWIZARD_H__
 
 #include <wx/wizard.h>
 #include <wx/dnd.h>
@@ -36,18 +36,18 @@ class EvoFinishPage;
 
 
 /**
-    \class LogosWizard
+    \class OyunWizard
     \ingroup ui
     
-    \brief The Logos wizard class
+    \brief The Oyun wizard class
     
     This wizard creates the various wizard pages and adds them to the
     main window.  For the moment, the wizard has the \c Game object as
     well.
 */
-class LogosWizard : public wxWizard
+class OyunWizard : public wxWizard
 {
-	DECLARE_DYNAMIC_CLASS(LogosWizard);
+	DECLARE_DYNAMIC_CLASS(OyunWizard);
 	
 public:
 	/**
@@ -56,16 +56,16 @@ public:
 	    The default constructor is to be used for two-step creation
 	    with the Create() function.
 	*/
-	LogosWizard();
+	OyunWizard();
 	
 	/**
 	    \brief Constructor
 	    
 	    \param parent The parent window, may be \c NULL
 	*/
-	LogosWizard(wxWindow *parent);
+	OyunWizard(wxWindow *parent);
 	
-	virtual ~LogosWizard();
+	virtual ~OyunWizard();
 	
 	/**
 	    \brief Create the dialog
@@ -194,7 +194,7 @@ BEGIN_DECLARE_EVENT_TYPES()
 	    void Handler(wxNotifyEvent &event);
 	    \endcode
 	    
-	    \see LogosWizard::Update
+	    \see OyunWizard::Update
 	*/
 	DECLARE_EVENT_TYPE(wxEVT_DATA_UPDATE, -1)
 	
@@ -218,7 +218,7 @@ BEGIN_DECLARE_EVENT_TYPES()
 	    Player *player = (Player *)event.GetClientData();
 	    \endcode
 	    
-	    \see LogosWizard::AddPlayer
+	    \see OyunWizard::AddPlayer
 	*/
 	DECLARE_EVENT_TYPE(wxEVT_ADD_PLAYER, -1)
 	
@@ -242,19 +242,19 @@ BEGIN_DECLARE_EVENT_TYPES()
 	    Player *player = (Player *)event.GetClientData();
 	    \endcode
 	    
-	    \see LogosWizard::RemovePlayer
+	    \see OyunWizard::RemovePlayer
 	*/
 	DECLARE_EVENT_TYPE(wxEVT_REMOVE_PLAYER, -1)
 END_DECLARE_EVENT_TYPES()
 
 
 /**
-    \class LogosWizardDropTarget
+    \class OyunWizardDropTarget
     \ingroup ui
     
-    \brief This drop target just passes dropped files to the \c LogosWizard.
+    \brief This drop target just passes dropped files to the \c OyunWizard.
 */
-class LogosWizardDropTarget : public wxFileDropTarget
+class OyunWizardDropTarget : public wxFileDropTarget
 {
 	// N.B.: This class should *not* have a DECLARE_DYNAMIC_CLASS, as the
 	// wxFileDropTarget (and wxDropTarget) are not derived from wxObject.
@@ -264,11 +264,11 @@ public:
 	    \brief Constructor
 	    \param wizard The wizard to send file drops to
 	*/
-	LogosWizardDropTarget(LogosWizard *wizard) : wxFileDropTarget(), parent(wizard) { }
-	virtual ~LogosWizardDropTarget() { }
+	OyunWizardDropTarget(OyunWizard *wizard) : wxFileDropTarget(), parent(wizard) { }
+	virtual ~OyunWizardDropTarget() { }
 	
 	/**
-	    \brief Pass dropped files to \c LogosWizard
+	    \brief Pass dropped files to \c OyunWizard
 	    \param x The x-coordinate of the mouse
 	    \param y The y-coordinate of the mouse
 	    \param filenames An array of filenames
@@ -281,7 +281,7 @@ private:
 	/**
 	    \brief The wizard to send file drop messages to
 	*/
-	LogosWizard *parent;
+	OyunWizard *parent;
 };
 
 

@@ -20,27 +20,27 @@ endforeach (image)
 ##########
 # Second step: copy the TeX main-file over to the build directory
 ##########
-set (TEX_DOCS "logos-manual.tex")
+set (TEX_DOCS "oyun-manual.tex")
 
-add_custom_command (OUTPUT logos-manual.tex
-  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/tools/logos-manual.tex" "${CMAKE_CURRENT_BINARY_DIR}/logos-manual.tex"
-  MAIN_DEPENDENCY "tools/logos-manual.tex")
+add_custom_command (OUTPUT oyun-manual.tex
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/tools/oyun-manual.tex" "${CMAKE_CURRENT_BINARY_DIR}/oyun-manual.tex"
+  MAIN_DEPENDENCY "tools/oyun-manual.tex")
 
 
 ##########
 # Third step: copy the HTML utility files over to the build directory
 ##########
-set (HTML_DOCS "logos-contents.hhc;logos-index.hhk;logos.hhp")
+set (HTML_DOCS "oyun-contents.hhc;oyun-index.hhk;oyun.hhp")
 
-add_custom_command (OUTPUT logos-contents.hhc
-  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/tools/logos-contents.hhc" "${CMAKE_CURRENT_BINARY_DIR}/logos-contents.hhc"
-  MAIN_DEPENDENCY tools/logos-contents.hhc)
-add_custom_command (OUTPUT logos-index.hhk
-  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/tools/logos-index.hhk" "${CMAKE_CURRENT_BINARY_DIR}/logos-index.hhk"
-  MAIN_DEPENDENCY tools/logos-index.hhk)
-add_custom_command (OUTPUT logos.hhp
-  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/tools/logos.hhp" "${CMAKE_CURRENT_BINARY_DIR}/logos.hhp"
-  MAIN_DEPENDENCY tools/logos.hhp)
+add_custom_command (OUTPUT oyun-contents.hhc
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/tools/oyun-contents.hhc" "${CMAKE_CURRENT_BINARY_DIR}/oyun-contents.hhc"
+  MAIN_DEPENDENCY tools/oyun-contents.hhc)
+add_custom_command (OUTPUT oyun-index.hhk
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/tools/oyun-index.hhk" "${CMAKE_CURRENT_BINARY_DIR}/oyun-index.hhk"
+  MAIN_DEPENDENCY tools/oyun-index.hhk)
+add_custom_command (OUTPUT oyun.hhp
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/tools/oyun.hhp" "${CMAKE_CURRENT_BINARY_DIR}/oyun.hhp"
+  MAIN_DEPENDENCY tools/oyun.hhp)
 
 
 ##########
@@ -76,29 +76,29 @@ else()
   set (NULDEV "/dev/null")
 endif()
 
-add_custom_command (OUTPUT logos-manual.pdf
-  COMMAND pdflatex logos-manual -interaction batchmode > "${NULDEV}" 2>&1
-  COMMAND pdflatex logos-manual -interaction batchmode > "${NULDEV}" 2>&1
-  COMMAND pdflatex logos-manual -interaction batchmode > "${NULDEV}" 2>&1
-  MAIN_DEPENDENCY logos-manual.tex
+add_custom_command (OUTPUT oyun-manual.pdf
+  COMMAND pdflatex oyun-manual -interaction batchmode > "${NULDEV}" 2>&1
+  COMMAND pdflatex oyun-manual -interaction batchmode > "${NULDEV}" 2>&1
+  COMMAND pdflatex oyun-manual -interaction batchmode > "${NULDEV}" 2>&1
+  MAIN_DEPENDENCY oyun-manual.tex
   DEPENDS ${TEX_DOCS} ${BINARY_DIR_IMAGES})
 
 
 ##########
 # 6. Build the cached version of the HHP
 ##########
-add_custom_command (OUTPUT logos.hhp.cached
-  COMMAND hhp2cached "${CMAKE_CURRENT_BINARY_DIR}/logos.hhp"
-  MAIN_DEPENDENCY "${CMAKE_CURRENT_BINARY_DIR}/logos.hhp"
+add_custom_command (OUTPUT oyun.hhp.cached
+  COMMAND hhp2cached "${CMAKE_CURRENT_BINARY_DIR}/oyun.hhp"
+  MAIN_DEPENDENCY "${CMAKE_CURRENT_BINARY_DIR}/oyun.hhp"
   DEPENDS ${HTML_DOCS})
 
 
 ##########
 # 7. Pack everything into an HTB
 ##########
-add_custom_command (OUTPUT logos.htb
-  COMMAND zip -q --quiet "logos.htb" ${HTML_DOCS} ${BINARY_DIR_IMAGES} logos.hhp.cached
-  DEPENDS logos.hhp.cached ${HTML_DOCS} ${BINARY_DIR_IMAGES})
+add_custom_command (OUTPUT oyun.htb
+  COMMAND zip -q --quiet "oyun.htb" ${HTML_DOCS} ${BINARY_DIR_IMAGES} oyun.hhp.cached
+  DEPENDS oyun.hhp.cached ${HTML_DOCS} ${BINARY_DIR_IMAGES})
 
 
 ##########
@@ -106,16 +106,16 @@ add_custom_command (OUTPUT logos.htb
 ##########
 if (APPLE)
   set (MANUAL_DESTINATION ".")
-  set (DOCBOOK_DESTINATION "Logos.app/Contents/Resources")
+  set (DOCBOOK_DESTINATION "Oyun.app/Contents/Resources")
 else ()
-  set (MANUAL_DESTINATION "share/doc/logos")
-  set (DOCBOOK_DESTINATION "share/logos")
+  set (MANUAL_DESTINATION "share/doc/oyun")
+  set (DOCBOOK_DESTINATION "share/oyun")
 endif ()
 
-install (FILES "${CMAKE_CURRENT_BINARY_DIR}/logos-manual.pdf"
+install (FILES "${CMAKE_CURRENT_BINARY_DIR}/oyun-manual.pdf"
   DESTINATION ${MANUAL_DESTINATION})
-install (FILES "${CMAKE_CURRENT_BINARY_DIR}/logos.htb"
+install (FILES "${CMAKE_CURRENT_BINARY_DIR}/oyun.htb"
   DESTINATION ${DOCBOOK_DESTINATION})
 
 
-add_custom_target (docs-manual ALL DEPENDS logos-manual.pdf logos.htb)
+add_custom_target (docs-manual ALL DEPENDS oyun-manual.pdf oyun.htb)

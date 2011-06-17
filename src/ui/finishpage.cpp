@@ -2,20 +2,20 @@
     Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
-    This file is part of Logos.
+    This file is part of Oyun.
 
-    Logos is free software: you can redistribute it and/or modify
+    Oyun is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Logos is distributed in the hope that it will be useful,
+    Oyun is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Logos.  If not, see <http://www.gnu.org/licenses/>.
+    along with Oyun.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <wx/wxprec.h>
@@ -29,17 +29,17 @@
 
 #include "finishpage.h"
 
-IMPLEMENT_CLASS(FinishPage, LogosWizardPage)
+IMPLEMENT_CLASS(FinishPage, OyunWizardPage)
 
 
-BEGIN_EVENT_TABLE(FinishPage, LogosWizardPage)
+BEGIN_EVENT_TABLE(FinishPage, OyunWizardPage)
 	EVT_WIZARD_PAGE_CHANGING(wxID_ANY, FinishPage::OnChanging)
 END_EVENT_TABLE()
 
 
 
-FinishPage::FinishPage(LogosWizard *parent, wxWizardPage *prev) :
-                       LogosWizardPage(_("Save Tournament Results"),
+FinishPage::FinishPage(OyunWizard *parent, wxWizardPage *prev) :
+                       OyunWizardPage(_("Save Tournament Results"),
                                        _("You can save the data from this tournament in a variety of ways."),
                                        parent, prev, NULL)
 {
@@ -48,7 +48,7 @@ FinishPage::FinishPage(LogosWizard *parent, wxWizardPage *prev) :
 	
 	wxString instructions = _("You have finished running the tournament, and you can now save\n"
 	                          "the data you collected in several different formats.\n\n"
-	                          "Once you press Finish, Logos will quit.");
+	                          "Once you press Finish, Oyun will quit.");
 	
 	// Make all of our controls
 	text = new wxStaticText(this, wxID_ANY, instructions);
@@ -92,7 +92,7 @@ void FinishPage::OnChanging(wxWizardEvent &event)
 		return;
 	}
 	
-	if (wxMessageBox(_("Finishing the wizard will quit Logos, and you haven't saved the data from your tournament yet.\n\n"
+	if (wxMessageBox(_("Finishing the wizard will quit Oyun, and you haven't saved the data from your tournament yet.\n\n"
 	                   "Are you sure you want to quit?"),
 	                 _("Quit"), wxICON_QUESTION | wxYES_NO, this) != wxYES)
 	{

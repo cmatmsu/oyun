@@ -2,20 +2,20 @@
     Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
-    This file is part of Logos.
+    This file is part of Oyun.
 
-    Logos is free software: you can redistribute it and/or modify
+    Oyun is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Logos is distributed in the hope that it will be useful,
+    Oyun is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Logos.  If not, see <http://www.gnu.org/licenses/>.
+    along with Oyun.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <wx/wxprec.h>
@@ -33,12 +33,12 @@
 #include "../game/titfortat.h"
 
 #include "tools/htmldialog.h"
-#include "logosapp.h"
-#include "logoswizard.h"
+#include "oyunapp.h"
+#include "oyunwizard.h"
 #include "playerspage.h"
 
 
-IMPLEMENT_CLASS(PlayersPage, LogosWizardPage)
+IMPLEMENT_CLASS(PlayersPage, OyunWizardPage)
 
 enum
 {
@@ -51,7 +51,7 @@ enum
 };
 
 
-BEGIN_EVENT_TABLE(PlayersPage, LogosWizardPage)
+BEGIN_EVENT_TABLE(PlayersPage, OyunWizardPage)
 	EVT_WIZARD_PAGE_CHANGING(wxID_ANY, PlayersPage::OnNext)
 	EVT_WIZARD_HELP(wxID_ANY, PlayersPage::OnHelp)
 	EVT_CONTEXT_MENU(PlayersPage::OnContextMenu)
@@ -68,12 +68,12 @@ END_EVENT_TABLE()
 
 
 
-PlayersPage::PlayersPage(LogosWizard *parent, wxWizardPage *next) : 
-                         LogosWizardPage(_("Select Players"),
-                                         _("You can choose which players will be used in this tournament."),
-                                         parent, NULL, next)
+PlayersPage::PlayersPage(OyunWizard *parent, wxWizardPage *next) : 
+                         OyunWizardPage(_("Select Players"),
+                                        _("You can choose which players will be used in this tournament."),
+                                        parent, NULL, next)
 {
-	wxString introText(_("Welcome to Logos!  The following wizard will allow you "
+	wxString introText(_("Welcome to Oyun!  The following wizard will allow you "
 	                     "to run an iterated prisoner's dilemma tournament.\n\n"
 	                     "To begin, please construct a list of players."));
 	
@@ -230,7 +230,7 @@ void PlayersPage::OnAddFileButton(wxCommandEvent & WXUNUSED(event))
 				{
 					wxString errStr(wxString::Format(_("Could not load player %s.  Error reported:\n%s"), 
 					                filenames[i].c_str(), Error::Get().c_str()));
-					wxMessageBox(errStr, _("Logos: Error"), wxOK | wxICON_ERROR, this);
+					wxMessageBox(errStr, _("Oyun: Error"), wxOK | wxICON_ERROR, this);
 
 					delete player;
 				}
@@ -255,7 +255,7 @@ bool PlayersPage::OnFileDrop(const wxArrayString &files)
 		{
 			wxString errStr(wxString::Format(_("Could not load player %s.  Error reported:\n%s"), 
 			                files[i].c_str(), Error::Get().c_str()));
-			wxMessageBox(errStr, _("Logos: Error"), wxOK | wxICON_ERROR, this);
+			wxMessageBox(errStr, _("Oyun: Error"), wxOK | wxICON_ERROR, this);
 			
 			delete player;
 			ret = false;
@@ -283,7 +283,7 @@ void PlayersPage::OnNext(wxWizardEvent &event)
 	if (!players.GetCount())
 	{
 		wxMessageBox(_("You must add at least one player to continue."), 
-		             _("Logos: Error"), wxOK | wxICON_ERROR, this);
+		             _("Oyun: Error"), wxOK | wxICON_ERROR, this);
 		event.Veto();
 		return;
 	}

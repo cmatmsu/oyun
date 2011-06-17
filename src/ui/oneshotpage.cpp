@@ -2,20 +2,20 @@
     Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
-    This file is part of Logos.
+    This file is part of Oyun.
 
-    Logos is free software: you can redistribute it and/or modify
+    Oyun is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Logos is distributed in the hope that it will be useful,
+    Oyun is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Logos.  If not, see <http://www.gnu.org/licenses/>.
+    along with Oyun.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <wx/wxprec.h>
@@ -36,12 +36,12 @@
 #include "../tourney/tournament.h"
 #include "../tourney/match.h"
 
-#include "logosapp.h"
-#include "logoswizard.h"
+#include "oyunapp.h"
+#include "oyunwizard.h"
 #include "oneshotpage.h"
 #include "matchdialog.h"
 
-IMPLEMENT_CLASS(OneShotPage, LogosWizardPage)
+IMPLEMENT_CLASS(OneShotPage, OyunWizardPage)
 
 enum
 {
@@ -54,7 +54,7 @@ enum
 
 
 // Implement the event table for TournamentWindow
-BEGIN_EVENT_TABLE(OneShotPage, LogosWizardPage)
+BEGIN_EVENT_TABLE(OneShotPage, OyunWizardPage)
 	EVT_WIZARD_PAGE_CHANGING(wxID_ANY, OneShotPage::OnPageChanging)
 	EVT_WIZARD_HELP(wxID_ANY, OneShotPage::OnHelp)
 	
@@ -70,10 +70,10 @@ BEGIN_EVENT_TABLE(OneShotPage, LogosWizardPage)
 END_EVENT_TABLE()
 
 
-OneShotPage::OneShotPage(LogosWizard *parent, wxWizardPage *prev, wxWizardPage *next) :
-                         LogosWizardPage(_("One-Shot Tournament"),
-                                         _("This tournament runs one round of the prisoner's dilemma between a set of players."),
-                                         parent, prev, next)
+OneShotPage::OneShotPage(OyunWizard *parent, wxWizardPage *prev, wxWizardPage *next) :
+                         OyunWizardPage(_("One-Shot Tournament"),
+                                        _("This tournament runs one round of the prisoner's dilemma between a set of players."),
+                                        parent, prev, next)
 {
 	// Make the tournament
 	tourney = new Tournament(parent->game);
@@ -426,7 +426,7 @@ void OneShotPage::OnPageChanging(wxWizardEvent &event)
 	if (!tourney->IsPlayed())
 	{
 		wxMessageBox(_("You must run the tournament to continue."),
-		             _("Logos: Error"), wxOK | wxICON_ERROR, this);
+		             _("Oyun: Error"), wxOK | wxICON_ERROR, this);
 		event.Veto();
 		return;
         }
@@ -448,7 +448,7 @@ void OneShotPage::OnRunTournament(wxCommandEvent & WXUNUSED(event))
 	if (!tourney->Run())
 	{
 		wxString errStr(wxString::Format(_("Could not run tournament.  Error reported:\n\n%s"), Error::Get().c_str()));
-		wxMessageBox(errStr, _("Logos: Error"), wxOK | wxICON_ERROR, this);
+		wxMessageBox(errStr, _("Oyun: Error"), wxOK | wxICON_ERROR, this);
 		return;
 	}
 	

@@ -2,7 +2,7 @@
 ##########
 # Add a few things for some CMake parameters
 ##########
-add_definitions (-DLOGOS_VERSION=${LOGOS_VERSION})
+add_definitions (-DOYUN_VERSION=${OYUN_VERSION})
 add_definitions (-DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX})
 if (CMAKE_BUILD_TYPE STREQUAL "")
   # Don't let things build without a build type (default to Release)
@@ -13,11 +13,11 @@ endif()
 ##########
 # Get the source lists
 ##########
-file (GLOB_RECURSE LOGOS_SOURCE *.cpp)
+file (GLOB_RECURSE OYUN_SOURCE *.cpp)
 if (MSVC OR WIN32)
-  list (APPEND LOGOS_SOURCE "${CMAKE_SOURCE_DIR}/build/logos.rc")
+  list (APPEND OYUN_SOURCE "${CMAKE_SOURCE_DIR}/build/oyun.rc")
 endif()
-file (GLOB_RECURSE LOGOS_HEADERS *.h)
+file (GLOB_RECURSE OYUN_HEADERS *.h)
 
 
 ##########
@@ -38,36 +38,36 @@ include (${wxWidgets_USE_FILE})
 # Link the executable
 ##########
 if (APPLE)
-  set (LOGOS_TARGET "Logos")
+  set (OYUN_TARGET "Oyun")
 else ()
-  set (LOGOS_TARGET "logos")
+  set (OYUN_TARGET "oyun")
 endif ()
 
-add_executable (${LOGOS_TARGET} ${LOGOS_SOURCE} ${LOGOS_HEADERS})
-target_link_libraries (${LOGOS_TARGET} cppunitlite ${wxWidgets_LIBRARIES})
+add_executable (${OYUN_TARGET} ${OYUN_SOURCE} ${OYUN_HEADERS})
+target_link_libraries (${OYUN_TARGET} cppunitlite ${wxWidgets_LIBRARIES})
 
 
 ##########
 # Set executable properties
 ##########
 if (MSVC OR WIN32)
-  set_target_properties (${LOGOS_TARGET} PROPERTIES WIN32_EXECUTABLE TRUE)
+  set_target_properties (${OYUN_TARGET} PROPERTIES WIN32_EXECUTABLE TRUE)
 elseif (APPLE)
-  set_target_properties (${LOGOS_TARGET} PROPERTIES MACOSX_BUNDLE TRUE)
+  set_target_properties (${OYUN_TARGET} PROPERTIES MACOSX_BUNDLE TRUE)
   
-  set_target_properties (${LOGOS_TARGET} PROPERTIES MACOSX_BUNDLE_INFO_STRING "${LOGOS_VERSION}")
-  set_target_properties (${LOGOS_TARGET} PROPERTIES MACOSX_BUNDLE_ICON_FILE "${CMAKE_SOURCE_DIR}/build/logos.icns")
-  set_target_properties (${LOGOS_TARGET} PROPERTIES MACOSX_BUNDLE_GUI_IDENTIFIER "net.charlespence.logos")
-  set_target_properties (${LOGOS_TARGET} PROPERTIES MACOSX_BUNDLE_LONG_VERSION_STRING "${LOGOS_VERSION}")
-  set_target_properties (${LOGOS_TARGET} PROPERTIES MACOSX_BUNDLE_BUNDLE_NAME "Logos")
-  set_target_properties (${LOGOS_TARGET} PROPERTIES MACOSX_BUNDLE_SHORT_VERSION_STRING "${LOGOS_VERSION}")
-  set_target_properties (${LOGOS_TARGET} PROPERTIES MACOSX_BUNDLE_COPYRIGHT "Copyright (C) 2004-2011 Charles Pence")
+  set_target_properties (${OYUN_TARGET} PROPERTIES MACOSX_BUNDLE_INFO_STRING "${OYUN_VERSION}")
+  set_target_properties (${OYUN_TARGET} PROPERTIES MACOSX_BUNDLE_ICON_FILE "${CMAKE_SOURCE_DIR}/build/oyun.icns")
+  set_target_properties (${OYUN_TARGET} PROPERTIES MACOSX_BUNDLE_GUI_IDENTIFIER "net.charlespence.oyun")
+  set_target_properties (${OYUN_TARGET} PROPERTIES MACOSX_BUNDLE_LONG_VERSION_STRING "${OYUN_VERSION}")
+  set_target_properties (${OYUN_TARGET} PROPERTIES MACOSX_BUNDLE_BUNDLE_NAME "Oyun")
+  set_target_properties (${OYUN_TARGET} PROPERTIES MACOSX_BUNDLE_SHORT_VERSION_STRING "${OYUN_VERSION}")
+  set_target_properties (${OYUN_TARGET} PROPERTIES MACOSX_BUNDLE_COPYRIGHT "Copyright (C) 2004-2011 Charles Pence")
 endif ()
 
 
 ##########
 # Install the executable
 ##########
-install (TARGETS ${LOGOS_TARGET} 
+install (TARGETS ${OYUN_TARGET} 
   RUNTIME DESTINATION bin
   BUNDLE DESTINATION .)

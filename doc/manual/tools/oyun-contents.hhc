@@ -3,7 +3,7 @@
 	<li>
 	<object type="text/sitemap">
 	<param name="Name" value="Welcome">
-	<param name="Local" value="Welcome-to-Logos.html">
+	<param name="Local" value="Welcome-to-Oyun.html">
 	</object>
 	
 	<li>
@@ -26,8 +26,8 @@
 	
 	<li>
 	<object type="text/sitemap">
-	<param name="Name" value="Logos Task Pages">
-	<param name="Local" value="Logos-Task-Pages.html">
+	<param name="Name" value="Oyun Task Pages">
+	<param name="Local" value="Oyun-Task-Pages.html">
 	</object>
 	
 	<ul>

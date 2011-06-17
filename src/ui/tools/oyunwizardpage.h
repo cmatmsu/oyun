@@ -2,42 +2,42 @@
     Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
-    This file is part of Logos.
+    This file is part of Oyun.
 
-    Logos is free software: you can redistribute it and/or modify
+    Oyun is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Logos is distributed in the hope that it will be useful,
+    Oyun is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Logos.  If not, see <http://www.gnu.org/licenses/>.
+    along with Oyun.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef LOGOSWIZARDPAGE_H__
-#define LOGOSWIZARDPAGE_H__
+#ifndef OYUNWIZARDPAGE_H__
+#define OYUNWIZARDPAGE_H__
 
 #include <wx/wizard.h>
-class LogosWizard;
+class OyunWizard;
 
 
 /**
-    \class LogosWizardPage
+    \class OyunWizardPage
     \ingroup ui
     
-    \brief Base class for all Logos wizard pages
+    \brief Base class for all Oyun wizard pages
     
     This class gives us a standardized format for the titles of our
     wizard pages, and standard/default behavior when the user clicks
     the "Cancel" and "Help" buttons within the wizard.
 */
-class LogosWizardPage : public wxWizardPageSimple
+class OyunWizardPage : public wxWizardPageSimple
 {
-	DECLARE_CLASS(LogosWizardPage)
+	DECLARE_CLASS(OyunWizardPage)
 	
 public:
 	/**
@@ -54,20 +54,20 @@ public:
 	    \param prev The previous wizard page
 	    \param next The next wizard page
 	*/
-	LogosWizardPage(const wxString &titleStr, const wxString &subtitleStr, LogosWizard *parent,
-	                wxWizardPage *prev = NULL, wxWizardPage *next = NULL);
+	OyunWizardPage(const wxString &titleStr, const wxString &subtitleStr, OyunWizard *parent,
+	               wxWizardPage *prev = NULL, wxWizardPage *next = NULL);
 
 protected:
 	/**
 	    \brief Parent of this wizard page
 	*/
-	LogosWizard *parent;
+	OyunWizard *parent;
 	
 	/**
 	    \brief Sizer used for this window
 	    
 	    This sizer will contain the title and subtitle after the window
-	    is constructed.  All derived classes of \c LogosWizardPage should
+	    is constructed.  All derived classes of \c OyunWizardPage should
 	    add their controls to this sizer.
 	*/
 	wxBoxSizer *sizer;
@@ -78,7 +78,7 @@ private:
 	/**
 	    \brief Ensure the user wants to quit
 	    
-	    Since the "Cancel" button on the wizard will in fact quit Logos,
+	    Since the "Cancel" button on the wizard will in fact quit Oyun,
 	    present a message box confirming that this is the user's intent.
 	    
 	    \param event Event passed from the \c wxWizard

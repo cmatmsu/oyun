@@ -2,20 +2,20 @@
     Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
-    This file is part of Logos.
+    This file is part of Oyun.
 
-    Logos is free software: you can redistribute it and/or modify
+    Oyun is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Logos is distributed in the hope that it will be useful,
+    Oyun is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Logos.  If not, see <http://www.gnu.org/licenses/>.
+    along with Oyun.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <wx/wxprec.h>
@@ -38,14 +38,14 @@
 #include "../common/filesystem.h"
 #include "../common/rng.h"
 
-#include "logosapp.h"
-#include "logoswizard.h"
+#include "oyunapp.h"
+#include "oyunwizard.h"
 
 // Implement the wxApp
-IMPLEMENT_DYNAMIC_CLASS(LogosApp, wxApp)
-IMPLEMENT_APP(LogosApp)
+IMPLEMENT_DYNAMIC_CLASS(OyunApp, wxApp)
+IMPLEMENT_APP(OyunApp)
 
-LogosApp::LogosApp()
+OyunApp::OyunApp()
 {
 	// Some assorted wxWidgets initialization calls
 	wxInitAllImageHandlers();
@@ -56,21 +56,21 @@ LogosApp::LogosApp()
 	SetUseBestVisual(true, true);
 
 	// Tell the wxApp who we are
-	SetAppName(wxT("Logos"));
-	SetClassName(wxT("Logos"));
-	SetVendorName(wxT("LogosTeam"));
+	SetAppName(wxT("Oyun"));
+	SetClassName(wxT("Oyun"));
+	SetVendorName(wxT("OyunTeam"));
 }
 
-bool LogosApp::OnInit()
+bool OyunApp::OnInit()
 {
 	// Play like a nice Linux application
 	for (int i = 1 ; i < argc ; i++)
 	{
 		if (!wxStrcmp(argv[i], wxT("--version")))
 		{
-			const wchar_t *version = wxT(STRINGIZE( LOGOS_VERSION ));
+			const wchar_t *version = wxT(STRINGIZE( OYUN_VERSION ));
 			const wxString verstring =
-				_("Logos %ls\n"
+				_("Oyun %ls\n"
 				  "Copyright (C) 2004-2011 Charles Pence\n"
 				  "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\n"
 				  "This is free software: you are free to change and redistribute it.\n"
@@ -82,15 +82,15 @@ bool LogosApp::OnInit()
 		else if (!wxStrcmp(argv[i], wxT("--help")))
 		{
 			const wxString helpstring =
-				_("Usage: logos [OPTION]...\n"
+				_("Usage: oyun [OPTION]...\n"
 				  "Run an evolutionary game theory tournament.\n"
 				  "\n"
-				  "  --test       run the Logos testing suite\n"
+				  "  --test       run the Oyun testing suite\n"
 				  "  --help       display this help and exit\n"
 				  "  --version    output version information and exit\n"
 				  "\n"
 				  "Report bugs to: <charles@charlespence.net>.\n"
-				  "Logos home page: <http://cpence.github.com/logos/>.\n");
+				  "Oyun home page: <http://charlespence.net/oyun/>.\n");
 			wxPrintf(wxT("%s"), helpstring);
 			
 			return false;
@@ -110,8 +110,8 @@ bool LogosApp::OnInit()
 		else
 		{
 			// Invalid command-line parameter
-			wxPrintf(_("logos: unrecognized option `%ls'\n"
-			           "Try `logos --help' for more information.\n"), argv[i]);
+			wxPrintf(_("oyun: unrecognized option `%ls'\n"
+			           "Try `oyun --help' for more information.\n"), argv[i]);
 			
 			return false;
 		}
@@ -131,18 +131,18 @@ bool LogosApp::OnInit()
 	return true;
 }
 
-void LogosApp::CreateWizard()
+void OyunApp::CreateWizard()
 {
 	// Create a wizard object, and set it as the top-level window
 	// if we don't have one already
-	LogosWizard *wizard = new LogosWizard(NULL);
+	OyunWizard *wizard = new OyunWizard(NULL);
 	wizard->Show(true);
 	
 	if (!GetTopWindow())
 		SetTopWindow(wizard);
 }
 
-void LogosApp::ShowHelp(wxWindow *parent, const wxString &fileName)
+void OyunApp::ShowHelp(wxWindow *parent, const wxString &fileName)
 {
 	if (parent == NULL)
 		parent = GetTopWindow();
@@ -158,14 +158,14 @@ void LogosApp::ShowHelp(wxWindow *parent, const wxString &fileName)
 #ifdef __WXMAC__
 
 // Handle files dropped on the application icon
-void LogosApp::MacOpenFile(const wxString &filename)
+void OyunApp::MacOpenFile(const wxString &filename)
 {
 	// See if we have a top-level window
 	wxWindow *win = GetTopWindow();
 	if (!win)
 		return;
 	
-	LogosWizard *wizard = wxDynamicCast(win, LogosWizard);
+	OyunWizard *wizard = wxDynamicCast(win, OyunWizard);
 	if (!wizard)
 		return;
 	
@@ -178,14 +178,14 @@ void LogosApp::MacOpenFile(const wxString &filename)
 
 
 // Declare menu events
-BEGIN_EVENT_TABLE(LogosApp, wxApp)
-	EVT_MENU(wxID_NEW, LogosApp::OnMenuNew)
-	EVT_MENU(wxID_EXIT, LogosApp::OnMenuExit)
-	EVT_MENU(wxID_INDEX, LogosApp::OnMenuHelp)
-	EVT_MENU(wxID_ABOUT, LogosApp::OnMenuAbout)
+BEGIN_EVENT_TABLE(OyunApp, wxApp)
+	EVT_MENU(wxID_NEW, OyunApp::OnMenuNew)
+	EVT_MENU(wxID_EXIT, OyunApp::OnMenuExit)
+	EVT_MENU(wxID_INDEX, OyunApp::OnMenuHelp)
+	EVT_MENU(wxID_ABOUT, OyunApp::OnMenuAbout)
 END_EVENT_TABLE()
 
-void LogosApp::CreateMacMenuBar()
+void OyunApp::CreateMacMenuBar()
 {
 	// Make a top-menu bar for Mac OS X
 	wxMenuBar *menuBar = new wxMenuBar();
@@ -204,22 +204,22 @@ void LogosApp::CreateMacMenuBar()
 	wxMenuBar::MacSetCommonMenuBar(menuBar);
 }
 
-void LogosApp::OnMenuNew(wxCommandEvent & WXUNUSED(event))
+void OyunApp::OnMenuNew(wxCommandEvent & WXUNUSED(event))
 {
 	// Create a new wizard
 	CreateWizard();
 }
 
-void LogosApp::OnMenuExit(wxCommandEvent & WXUNUSED(event))
+void OyunApp::OnMenuExit(wxCommandEvent & WXUNUSED(event))
 {
 	// Quit, forcibly
 	ExitMainLoop();
 }
 
-void LogosApp::OnMenuAbout(wxCommandEvent & WXUNUSED(event))
+void OyunApp::OnMenuAbout(wxCommandEvent & WXUNUSED(event))
 {
-	wxString appName = wxT("Logos");
-	wxString appVersion = wxT( STRINGIZE( LOGOS_VERSION ) );
+	wxString appName = wxT("Oyun");
+	wxString appVersion = wxT( STRINGIZE( OYUN_VERSION ) );
 	wxString appInfo = _("An evolutionary game theory simulator");
 	wxString appCopyright = _("(C) 2004-2011 Charles Pence");
 
@@ -236,7 +236,7 @@ void LogosApp::OnMenuAbout(wxCommandEvent & WXUNUSED(event))
 	wxAboutBox(info);
 }
 
-void LogosApp::OnMenuHelp(wxCommandEvent & WXUNUSED(event))
+void OyunApp::OnMenuHelp(wxCommandEvent & WXUNUSED(event))
 {
 	ShowHelp();
 }

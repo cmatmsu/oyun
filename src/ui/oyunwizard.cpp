@@ -2,20 +2,20 @@
     Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
-    This file is part of Logos.
+    This file is part of Oyun.
 
-    Logos is free software: you can redistribute it and/or modify
+    Oyun is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Logos is distributed in the hope that it will be useful,
+    Oyun is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Logos.  If not, see <http://www.gnu.org/licenses/>.
+    along with Oyun.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <wx/wxprec.h>
@@ -32,7 +32,7 @@
 
 #include "../game/prisoner.h"
 
-#include "logoswizard.h"
+#include "oyunwizard.h"
 
 #include "playerspage.h"
 #include "typepage.h"
@@ -43,32 +43,32 @@
 
 
 #if !defined(__WXMSW__) && !defined(__WXPM__)
-  #include "../../build/logos.xpm"
+  #include "../../build/oyun.xpm"
 #endif
 
 
-IMPLEMENT_DYNAMIC_CLASS(LogosWizard, wxWizard);
+IMPLEMENT_DYNAMIC_CLASS(OyunWizard, wxWizard);
 
 DEFINE_EVENT_TYPE(wxEVT_DATA_UPDATE)
 DEFINE_EVENT_TYPE(wxEVT_ADD_PLAYER)
 DEFINE_EVENT_TYPE(wxEVT_REMOVE_PLAYER)
 
-BEGIN_EVENT_TABLE(LogosWizard, wxWizard)
-	EVT_WIZARD_CANCEL(wxID_ANY, LogosWizard::OnFinished)
-	EVT_WIZARD_FINISHED(wxID_ANY, LogosWizard::OnFinished)
+BEGIN_EVENT_TABLE(OyunWizard, wxWizard)
+	EVT_WIZARD_CANCEL(wxID_ANY, OyunWizard::OnFinished)
+	EVT_WIZARD_FINISHED(wxID_ANY, OyunWizard::OnFinished)
 END_EVENT_TABLE()
 
 
-LogosWizard::LogosWizard()
+OyunWizard::OyunWizard()
 {
 }
 
-LogosWizard::LogosWizard(wxWindow *parent)
+OyunWizard::OyunWizard(wxWindow *parent)
 {
 	Create(parent);
 }
 
-bool LogosWizard::Create(wxWindow *parent)
+bool OyunWizard::Create(wxWindow *parent)
 {
 	// Create the game objects
 	game = new PrisonerDilemma;
@@ -89,10 +89,10 @@ bool LogosWizard::Create(wxWindow *parent)
 	            wxMAXIMIZE_BOX | wxMINIMIZE_BOX | wxTAB_TRAVERSAL | wxFULL_REPAINT_ON_RESIZE;
 	
 	SetExtraStyle(wxWIZARD_EX_HELPBUTTON);
-	bool ret = wxWizard::Create(parent, wxID_ANY, wxT("Logos"), wxNullBitmap, windowPos, style);
-	SetDropTarget(new LogosWizardDropTarget(this));
+	bool ret = wxWizard::Create(parent, wxID_ANY, wxT("Oyun"), wxNullBitmap, windowPos, style);
+	SetDropTarget(new OyunWizardDropTarget(this));
 	
-	SetIcon(wxICON(logosicon));
+	SetIcon(wxICON(oyunicon));
 	
 	// Create the wizard pages
 	pagePlayers = new PlayersPage(this);
@@ -134,13 +134,13 @@ bool LogosWizard::Create(wxWindow *parent)
 	return ret;
 }
 
-LogosWizard::~LogosWizard()
+OyunWizard::~OyunWizard()
 {
 	delete game;
 }
 
 
-void LogosWizard::OnFinished(wxWizardEvent & WXUNUSED(event))
+void OyunWizard::OnFinished(wxWizardEvent & WXUNUSED(event))
 {
 	// Save our data out to the configuration file
 	wxConfigBase *config = wxConfig::Get();
@@ -157,7 +157,7 @@ void LogosWizard::OnFinished(wxWizardEvent & WXUNUSED(event))
 	Destroy();
 }
 
-bool LogosWizard::OnFileDrop(const wxArrayString &files)
+bool OyunWizard::OnFileDrop(const wxArrayString &files)
 {
 	// Check the inputs here
 	if (!files.GetCount())
@@ -178,7 +178,7 @@ bool LogosWizard::OnFileDrop(const wxArrayString &files)
 // Custom message functions
 //
 
-void LogosWizard::Update()
+void OyunWizard::Update()
 {
 	wxNotifyEvent event(wxEVT_DATA_UPDATE, wxID_ANY);
 	event.SetEventObject(this);
@@ -192,7 +192,7 @@ void LogosWizard::Update()
 	wxPostEvent(pageEvoFinish, event);
 }
 
-void LogosWizard::AddPlayer(Player *player)
+void OyunWizard::AddPlayer(Player *player)
 {
 	wxNotifyEvent event(wxEVT_ADD_PLAYER, wxID_ANY);
 	event.SetEventObject(this);
@@ -206,7 +206,7 @@ void LogosWizard::AddPlayer(Player *player)
 	pageEvoFinish->GetEventHandler()->ProcessEvent(event);
 }
 
-void LogosWizard::RemovePlayer(Player *player)
+void OyunWizard::RemovePlayer(Player *player)
 {
 	wxNotifyEvent event(wxEVT_REMOVE_PLAYER, wxID_ANY);
 	event.SetEventObject(this);

@@ -2,20 +2,20 @@
     Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
-    This file is part of Logos.
+    This file is part of Oyun.
 
-    Logos is free software: you can redistribute it and/or modify
+    Oyun is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Logos is distributed in the hope that it will be useful,
+    Oyun is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Logos.  If not, see <http://www.gnu.org/licenses/>.
+    along with Oyun.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <wx/wxprec.h>
@@ -32,8 +32,8 @@
 
 #include "../tourney/tournament.h"
 
-#include "logosapp.h"
-#include "logoswizard.h"
+#include "oyunapp.h"
+#include "oyunwizard.h"
 #include "oneshotfinishpage.h"
 #include "oneshotpage.h"
 
@@ -56,7 +56,7 @@ END_EVENT_TABLE()
 
 
 
-OneShotFinishPage::OneShotFinishPage(LogosWizard *parent, OneShotPage *prev) :
+OneShotFinishPage::OneShotFinishPage(OyunWizard *parent, OneShotPage *prev) :
                                      FinishPage(parent, (wxWizardPage *)prev)
 {
 	previous = prev;
@@ -138,7 +138,7 @@ void OneShotFinishPage::OnSaveCSV(wxCommandEvent & WXUNUSED(event))
 	
 	// This is a seven-column CSV:
 	//
-	// Logos Tournament Summary
+	// Oyun Tournament Summary
 	//
 	// Player, Author, Net Score
 	// ...
@@ -147,7 +147,7 @@ void OneShotFinishPage::OnSaveCSV(wxCommandEvent & WXUNUSED(event))
 	// ...
 	
 	// Write the header
-	wxString header = _("Logos Tournament Summary") + wxString(wxT(",,,,,,"));
+	wxString header = _("Oyun Tournament Summary") + wxString(wxT(",,,,,,"));
 	file.AddLine(header);
 	
 	// Write a blank line
@@ -263,7 +263,7 @@ void OneShotFinishPage::OnSaveText(wxCommandEvent & WXUNUSED(event))
 	
 	// Write a heading
 	wxString header = wxString(wxT("{\\par\\pard\\plain \\fs36\\b ")) +
-	                  _("Logos: Detailed Tournament Report") + 
+	                  _("Oyun: Detailed Tournament Report") + 
 	                  wxString(wxT(" \\b0\\fs24}"));
 	file.AddLine(header);
 	file.AddLine(blankLine);

@@ -2,20 +2,20 @@
     Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
-    This file is part of Logos.
+    This file is part of Oyun.
 
-    Logos is free software: you can redistribute it and/or modify
+    Oyun is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Logos is distributed in the hope that it will be useful,
+    Oyun is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Logos.  If not, see <http://www.gnu.org/licenses/>.
+    along with Oyun.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <wx/wxprec.h>
@@ -32,7 +32,7 @@
 #include <stdlib.h>
 #include <set>
 
-#include "../ui/logosapp.h"
+#include "../ui/oyunapp.h"
 #include "filesystem.h"
 
 namespace FS
@@ -346,44 +346,44 @@ wxString GetDocPath()
 
 	// The install structure on Windows looks like this:
 	//
-	// Program Files\Logos
+	// Program Files\Oyun
 	//   \bin
-	//      logos
+	//      oyun.exe
 	//   \share
-	//      \logos
-	//         logos.htb
-	//      \doc\logos
+	//      \oyun
+	//         oyun.htb
+	//      \doc\oyun
 	//         manual.pdf
 
 	// Get the executable file path
 	wxFileName fileName(GetExecutablePath());
 	
-	// Remove the last directory (which should be bin) and add share/logos
+	// Remove the last directory (which should be bin) and add share/oyun
 	fileName.RemoveLastDir();
 	fileName.AppendDir(wxT("share"));
-	fileName.AppendDir(wxT("logos"));
+	fileName.AppendDir(wxT("oyun"));
 	
-	// Change the filename to logos.htb
-	fileName.SetFullName(wxT("logos.htb"));
+	// Change the filename to oyun.htb
+	fileName.SetFullName(wxT("oyun.htb"));
 
 	return fileName.GetFullPath();
 
 #elif defined(__WXMAC__)
 
 	// On Mac, we put the help file inside the application bundle
-	return GetBundleResourcesPath() + wxT("logos.htb");
+	return GetBundleResourcesPath() + wxT("oyun.htb");
 
 #else
 
 	// Everywhere else, assume we've used autoconf to build, and the
-	// user has installed Logos into some prefix or other
+	// user has installed oyun into some prefix or other
 	wxString docDir(STRINGIZE(CMAKE_INSTALL_PREFIX), *wxConvCurrent);
 	if (docDir[docDir.length() - 1] != wxT('/'))
 		docDir.Append(wxT('/'));
-	docDir.Append(wxT("logos/"));
+	docDir.Append(wxT("oyun/"));
 	
 	wxString docFile(docDir);
-	docFile.Append(wxT("logos.htb"));
+	docFile.Append(wxT("oyun.htb"));
 	
 	// If the file doesn't exist, try to get a 'DOCDIR' environment variable
 	if (!wxFileName::FileExists(docFile))
@@ -394,7 +394,7 @@ wxString GetDocPath()
 		
 		if (docDirEnv[docDirEnv.length() - 1] != wxT('/'))
 			docDirEnv.Append(wxT('/'));
-		docDirEnv.Append(wxT("logos.htb"));
+		docDirEnv.Append(wxT("oyun.htb"));
 		
 		if (wxFileName::FileExists(docDirEnv))
 			return docDirEnv;

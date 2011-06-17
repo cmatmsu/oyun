@@ -2,20 +2,20 @@
     Copyright (C) 2004-2011 by Charles Pence
     charles@charlespence.net
 
-    This file is part of Logos.
+    This file is part of Oyun.
 
-    Logos is free software: you can redistribute it and/or modify
+    Oyun is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Logos is distributed in the hope that it will be useful,
+    Oyun is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Logos.  If not, see <http://www.gnu.org/licenses/>.
+    along with Oyun.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #ifndef ONESHOTFINISHPAGE_H__
@@ -35,7 +35,7 @@ class OneShotPage;
     
     This page offers the user the choice to save the data from a
     one-shot tournament (including scores and match details)
-    before quitting Logos.
+    before quitting Oyun.
 */
 class OneShotFinishPage : public FinishPage
 {
@@ -50,7 +50,7 @@ public:
 	    \param parent The parent of this wizard page
 	    \param prev The \c OneShotPage that comes before this
 	*/
-	OneShotFinishPage(LogosWizard *parent, OneShotPage *prev = NULL);
+	OneShotFinishPage(OyunWizard *parent, OneShotPage *prev = NULL);
 	
 private:
 	DECLARE_EVENT_TABLE()
