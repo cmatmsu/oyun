@@ -1,137 +1,82 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="591.94525"
-   height="415.90677"
-   id="svg2"
-   sodipodi:version="0.32"
-   inkscape:version="0.46"
-   sodipodi:docname="logos-logo.svg"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   version="1.0">
-  <defs
-     id="defs4">
-    <inkscape:perspective
-       sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 526.18109 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="744.09448 : 526.18109 : 1"
-       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
-       id="perspective10" />
-  </defs>
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     gridtolerance="10000"
-     guidetolerance="10"
-     objecttolerance="10"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="460.90305"
-     inkscape:cy="358.37559"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:window-width="640"
-     inkscape:window-height="768"
-     inkscape:window-x="226"
-     inkscape:window-y="3" />
-  <metadata
-     id="metadata7">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(-79.578621,-86.234763)">
-    <text
-       xml:space="preserve"
-       style="font-size:152.31809998px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Candara;-inkscape-font-specification:Candara"
-       x="64.639412"
-       y="465.09628"
-       id="text2383"><tspan
-         sodipodi:role="line"
-         id="tspan2385"
-         x="64.639412"
-         y="465.09628"
-         style="font-size:548.34515381px">λ</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Candara;-inkscape-font-specification:Candara"
-       x="28.571428"
-       y="-113.3521"
-       id="text2387"><tspan
-         sodipodi:role="line"
-         id="tspan2389"
-         x="28.571428"
-         y="-113.3521" /></text>
-    <text
-       xml:space="preserve"
-       style="font-size:187.9546814px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Candara;-inkscape-font-specification:Candara"
-       x="289.83273"
-       y="382.6568"
-       id="text2391"><tspan
-         sodipodi:role="line"
-         id="tspan2393"
-         x="289.83273"
-         y="382.6568">ogos</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Candara;-inkscape-font-specification:Candara"
-       x="24.243662"
-       y="121.00154"
-       id="text2395"><tspan
-         sodipodi:role="line"
-         id="tspan2397"
-         x="24.243662"
-         y="121.00154" /></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Consolas;-inkscape-font-specification:Consolas"
-       x="77.781746"
-       y="123.02184"
-       id="text2399"><tspan
-         sodipodi:role="line"
-         id="tspan2401"
-         x="77.781746"
-         y="123.02184">C</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Consolas;-inkscape-font-specification:Consolas"
-       x="89.90358"
-       y="501.82904"
-       id="text2403"><tspan
-         sodipodi:role="line"
-         id="tspan2405"
-         x="89.90358"
-         y="501.82904">C</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Consolas;-inkscape-font-specification:Consolas"
-       x="317.1879"
-       y="496.77829"
-       id="text2407"><tspan
-         sodipodi:role="line"
-         id="tspan2409"
-         x="317.1879"
-         y="496.77829">D</tspan></text>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="332.919px" height="134.573px" viewBox="0 0 332.919 134.573" enable-background="new 0 0 332.919 134.573"
+	 xml:space="preserve">
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M60.062,24.167c-3.982,1.085-9.165,1.589-13.338,3.51
+	c-9.015,4.149-23.945,18.826-24.57,29.484c-0.185,3.159,2.137,5.303,2.106,8.424c-0.027,2.86-1.252,3.778-2.106,7.02
+	c4.369,20.904,17.446,33.098,40.014,35.803c-13.806,0-27.612,0-41.418,0c0-28.081,0-56.161,0-84.241
+	C33.854,24.167,46.958,24.167,60.062,24.167z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M65.679,24.167c13.104,0,26.208,0,39.312,0
+	c0,28.08,0,56.16,0,84.241c-14.04,0-28.08,0-42.12,0c-0.148-0.787-0.779-1.094-1.404-1.404c0.227-4.121,12.471-4.939,9.828,0
+	c8.941-4.953,18.031-6.883,23.868-14.04c6.527-8.003,10.002-19.654,9.126-32.292C102.882,40.39,84.509,26.606,65.679,24.167z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M74.103,29.081c-2.648,1.586-7.844,0.617-9.126-1.404
+	C66.068,24.17,73.705,25.738,74.103,29.081z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M79.017,40.312c-2.062,3.744-10.038,1.926-9.126-3.51
+	C72.938,34.127,78.981,35.861,79.017,40.312z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M60.765,38.909c1.109,5.802-7.267,7.167-10.53,4.212
+	C49.433,37.626,57.41,35.861,60.765,38.909z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M94.46,45.929c-5.295,0.147-7.746-2.55-8.424-7.02
+	C90.403,37.072,94.539,41.032,94.46,45.929z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M79.017,60.67c-4.447,0.023-7.087-2.679-7.02-5.616
+	C72.221,45.233,88.126,53.568,79.017,60.67z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M31.982,83.837c-5.532,1.506-8.399-9.24-2.106-9.126
+	C31.667,76.431,33.935,80.625,31.982,83.837z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M67.083,84.539c0.046,7.408-10.203,7.089-11.232,2.106
+	C54.65,80.833,64.382,78.366,67.083,84.539z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M90.951,81.73c0.501,5.416-1.186,8.642-6.318,8.424
+	C81.08,86.602,86.009,78.987,90.951,81.73z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M79.719,84.539c0.718,5.633-2.228,7.6-7.722,7.02
+	c-0.604-0.566-0.417-1.923-1.404-2.106C70.016,83.567,76.593,80.706,79.719,84.539z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M48.831,101.387c4.7-0.021,9.71-0.351,9.828,4.212
+	C54.782,107.526,46.675,105.579,48.831,101.387z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M61.062,26.167c1.872,0,3.744,0,5.616,0c18.83,2.439,37.204,16.223,38.61,36.504
+	c0.876,12.638-2.599,24.29-9.126,32.292c-5.837,7.157-14.927,9.087-23.868,14.04c2.644-4.939-9.601-4.121-9.828,0
+	c0.625,0.311,1.255,0.617,1.404,1.404c-0.234,0-0.468,0-0.702,0C40.6,107.702,27.523,95.509,23.154,74.604
+	c0.854-3.242,2.079-4.16,2.106-7.02c0.031-3.121-2.291-5.265-2.106-8.424c0.625-10.659,15.556-25.335,24.57-29.484
+	C51.898,27.756,57.08,27.251,61.062,26.167z M65.977,29.676c1.282,2.021,6.478,2.99,9.126,1.404
+	C74.705,27.738,67.068,26.17,65.977,29.676z M70.891,38.803c-0.912,5.436,7.064,7.253,9.126,3.51
+	C79.981,37.861,73.938,36.127,70.891,38.803z M51.234,45.121c3.264,2.956,11.639,1.59,10.53-4.212
+	C58.41,37.861,50.433,39.626,51.234,45.121z M87.037,40.909c0.678,4.47,3.128,7.167,8.424,7.02
+	C95.539,43.032,91.403,39.072,87.037,40.909z M72.997,57.055c-0.067,2.937,2.573,5.639,7.02,5.616
+	C89.126,55.568,73.221,47.233,72.997,57.055z M30.876,76.71c-6.293-0.113-3.426,10.633,2.106,9.126
+	C34.935,82.625,32.667,78.431,30.876,76.71z M56.851,88.645c1.029,4.983,11.278,5.302,11.232-2.106
+	C65.382,80.366,55.65,82.833,56.851,88.645z M85.633,92.155c5.132,0.218,6.819-3.008,6.318-8.424
+	C87.009,80.987,82.08,88.602,85.633,92.155z M71.593,91.453c0.987,0.183,0.8,1.54,1.404,2.106c5.494,0.58,8.44-1.387,7.722-7.02
+	C77.593,82.706,71.016,85.567,71.593,91.453z M59.659,107.599c-0.118-4.562-5.128-4.232-9.828-4.211
+	C47.675,107.579,55.782,109.526,59.659,107.599z"/>
+<g>
+	<path d="M170.814,75.265c0,5.111-0.543,9.607-1.629,13.493c-1.086,3.885-2.59,7.124-4.514,9.712
+		c-1.928,2.591-4.184,4.552-6.773,5.881c-2.59,1.33-5.355,1.994-8.295,1.994c-2.94,0-5.706-0.664-8.295-1.994
+		c-2.59-1.329-4.848-3.29-6.772-5.881c-1.926-2.588-3.449-5.827-4.567-9.712c-1.121-3.885-1.68-8.382-1.68-13.493
+		c0-5.109,0.489-10.201,1.47-15.277c0.979-5.075,2.397-9.624,4.252-13.65c1.854-4.024,4.095-7.28,6.72-9.765
+		c2.625-2.484,5.582-3.728,8.873-3.728c3.289,0,6.23,1.244,8.82,3.728c2.588,2.485,4.812,5.741,6.668,9.765
+		c1.854,4.026,3.271,8.575,4.252,13.65C170.322,65.064,170.814,70.156,170.814,75.265z M137.318,74.425
+		c0,7.63,1.155,13.423,3.465,17.377c2.31,3.956,5.25,5.933,8.82,5.933c1.609,0,3.133-0.508,4.568-1.522
+		c1.434-1.015,2.693-2.502,3.779-4.463c1.084-1.958,1.943-4.392,2.572-7.297c0.631-2.904,0.945-6.248,0.945-10.027
+		c0-3.709-0.281-7.419-0.84-11.13c-0.561-3.709-1.35-7.07-2.363-10.08c-1.016-3.009-2.258-5.46-3.727-7.35
+		c-1.471-1.89-3.115-2.835-4.936-2.835c-1.891,0-3.588,0.945-5.092,2.835c-1.506,1.89-2.783,4.341-3.833,7.35
+		c-1.05,3.01-1.874,6.371-2.468,10.08C137.615,67.006,137.318,70.716,137.318,74.425z"/>
+	<path d="M202.103,33.79c-0.49-0.63-1.155-0.945-1.995-0.945h15.54c-0.98,0-1.663,0.299-2.047,0.893
+		c-0.386,0.596-0.788,1.383-1.208,2.362l-26.985,66.571c-0.351,0.84-0.28,1.663,0.211,2.467c0.488,0.806,1.26,1.207,2.31,1.207
+		h-15.54c0.84,0,1.486-0.473,1.942-1.417c0.454-0.944,0.893-1.837,1.312-2.678l13.125-32.655L175.223,36.1
+		c-0.42-0.979-0.787-1.767-1.103-2.362c-0.314-0.594-0.893-0.893-1.732-0.893h15.54c-1.05,0-1.821,0.368-2.31,1.103
+		c-0.491,0.735-0.562,1.593-0.211,2.572l8.61,20.475l8.19-20.475C202.628,35.331,202.592,34.42,202.103,33.79z"/>
+	<path d="M250.717,32.845h15.54c-0.84,0-1.54,0.281-2.1,0.84c-0.562,0.561-0.84,1.365-0.84,2.415v39.165
+		c0,5.04-0.543,9.468-1.628,13.283c-1.086,3.816-2.591,7.019-4.515,9.607c-1.927,2.59-4.184,4.567-6.772,5.933
+		c-2.591,1.364-5.355,2.118-8.295,2.257h-0.42c-2.871-0.139-5.565-0.893-8.085-2.257c-2.521-1.365-4.726-3.343-6.615-5.933
+		c-1.891-2.589-3.396-5.792-4.516-9.607c-1.12-3.814-1.68-8.243-1.68-13.283V36.1c0-1.05-0.333-1.854-0.997-2.415
+		c-0.666-0.559-1.418-0.84-2.258-0.84h15.54c-0.84,0-1.593,0.281-2.258,0.84c-0.666,0.561-0.997,1.365-0.997,2.415v40.005
+		c0.21,7.211,1.47,12.618,3.78,16.223c2.31,3.606,5.145,5.408,8.505,5.408c3.079,0,5.774-1.82,8.085-5.46
+		c2.31-3.639,3.569-9.03,3.779-16.17V36.1C253.972,33.931,252.886,32.845,250.717,32.845z"/>
+	<path d="M270.299,105.296c0.664-0.699,0.997-1.435,0.997-2.205V36.1c0-0.979-0.333-1.767-0.997-2.362
+		c-0.666-0.594-1.418-0.893-2.258-0.893h20.37c-0.771,0-1.506,0.299-2.205,0.893c-0.7,0.596-1.05,1.383-1.05,2.362
+		c0,0.21,0.331,0.981,0.997,2.31c0.665,1.331,1.47,2.906,2.415,4.725c0.945,1.821,1.978,3.764,3.098,5.828
+		c1.119,2.065,2.169,3.99,3.15,5.775c0.979,1.785,1.801,3.308,2.467,4.567c0.665,1.26,0.998,1.96,0.998,2.1V36.1
+		c0-2.169-1.086-3.255-3.255-3.255h15.435c-0.771,0-1.436,0.299-1.995,0.893c-0.561,0.596-0.84,1.383-0.84,2.362v66.991
+		c0,0.771,0.279,1.506,0.84,2.205c0.56,0.699,1.224,1.049,1.995,1.049h-15.435c0.979,0,1.767-0.35,2.362-1.049
+		c0.594-0.699,0.893-1.435,0.893-2.205V84.295l-17.955-35.07v53.866c0,0.771,0.331,1.506,0.997,2.205
+		c0.665,0.699,1.418,1.049,2.258,1.049h-15.54C268.881,106.345,269.633,105.995,270.299,105.296z"/>
+</g>
 </svg>
