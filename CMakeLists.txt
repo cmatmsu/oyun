@@ -1,11 +1,11 @@
 cmake_minimum_required (VERSION 2.8)
-project (Logos)
+project (Oyun)
 
-set (LOGOS_VERSION "2.0.b3")
+set (OYUN_VERSION "2.0.b3")
 set (CPACK_PACKAGE_VERSION_MAJOR "2")
 set (CPACK_PACKAGE_VERSION_MINOR "0")
 set (CPACK_PACKAGE_VERSION_PATCH "b3")
-set (CPACK_PACKAGE_INSTALL_DIRECTORY "Logos 2.0.b3")
+set (CPACK_PACKAGE_INSTALL_DIRECTORY "Oyun 2.0.b3")
 
 
 ##########
@@ -37,7 +37,7 @@ add_custom_target (news_file pandoc -f markdown -t plain -o ${CMAKE_CURRENT_SOUR
 if (NOT APPLE AND NOT WIN32 AND NOT MSVC)
   install (FILES AUTHORS COPYING ChangeLog ChangeLog-2009 ChangeLog-2008 ChangeLog-2007
     ChangeLog-2006 ChangeLog-2005 NEWS README THANKS
-    DESTINATION share/doc/logos)
+    DESTINATION share/doc/oyun)
 endif()
 
 
@@ -46,32 +46,32 @@ endif()
 ##########
 include (InstallRequiredSystemLibraries)
 
-set (CPACK_PACKAGE_VERSION ${LOGOS_VERSION})
-set (CPACK_PACKAGE_DESCRIPTION_SUMMARY "The Logos evolutionary game-theory simulator")
+set (CPACK_PACKAGE_VERSION ${OYUN_VERSION})
+set (CPACK_PACKAGE_DESCRIPTION_SUMMARY "The Oyun evolutionary game-theory simulator")
 set (CPACK_PACKAGE_VENDOR "Charles Pence")
 set (CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_CURRENT_SOURCE_DIR}/README")
 set (CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/COPYING")
 if (WIN32 OR MSVC)
-  set (CPACK_PACKAGE_EXECUTABLES "logos" "Logos")
-  set (CPACK_PACKAGE_ICON "${CMAKE_CURRENT_SOURCE_DIR}/build\\\\logos.ico")
-  set (CPACK_NSIS_INSTALLED_ICON_NAME "bin\\\\logos.exe")
+  set (CPACK_PACKAGE_EXECUTABLES "oyun" "Oyun")
+  set (CPACK_PACKAGE_ICON "${CMAKE_CURRENT_SOURCE_DIR}/build\\\\oyun.ico")
+  set (CPACK_NSIS_INSTALLED_ICON_NAME "bin\\\\oyun.exe")
   set (CPACK_NSIS_DISPLAY_NAME ${CPACK_PACKAGE_INSTALL_DIRECTORY})
-  set (CPACK_NSIS_HELP_LINK "http://cpence.github.com/logos/")
-  set (CPACK_NSIS_URL_INFO_ABOUT "http://cpence.github.com/")
+  set (CPACK_NSIS_HELP_LINK "http://charlespence.net/oyun/")
+  set (CPACK_NSIS_URL_INFO_ABOUT "http://charlespence.net/")
   set (CPACK_NSIS_CONTACT "charles@charlespence.net")
   set (CPACK_NSIS_MODIFY_PATH ON)
   set (CPACK_GENERATOR "NSIS")
-  set (CPACK_PACKAGE_FILE_NAME "logos-${LOGOS_VERSION}-win32")
+  set (CPACK_PACKAGE_FILE_NAME "oyun-${OYUN_VERSION}-win32")
 elseif (APPLE)
   set (CPACK_GENERATOR "DragNDrop")
-  set (CPACK_PACKAGE_FILE_NAME "logos-${LOGOS_VERSION}-mac")
+  set (CPACK_PACKAGE_FILE_NAME "oyun-${OYUN_VERSION}-mac")
 else ()
-  set (CPACK_STRIP_FILES "bin/logos")
+  set (CPACK_STRIP_FILES "bin/oyun")
   set (CPACK_SOURCE_STRIP_FILES "")
   set (CPACK_GENERATOR "TBZ2")
-  set (CPACK_PACKAGE_FILE_NAME "logos-${LOGOS_VERSION}-linux")
+  set (CPACK_PACKAGE_FILE_NAME "oyun-${OYUN_VERSION}-linux")
 endif()
-set (CPACK_SOURCE_PACKAGE_FILE_NAME "logos-${LOGOS_VERSION}")
+set (CPACK_SOURCE_PACKAGE_FILE_NAME "oyun-${OYUN_VERSION}")
 set (CPACK_SOURCE_GENERATOR "TBZ2;TGZ")
 
 include (CPack)
