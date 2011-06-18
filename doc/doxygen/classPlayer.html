@@ -14,7 +14,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Oyun&#160;<span id="projectnumber">2.0</span></div>
+   <div id="projectname">Oyun&#160;<span id="projectnumber">2.0.b4</span></div>
   </td>
  </tr>
  </tbody>
@@ -86,28 +86,27 @@ Public Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The move the player will take in the next game turn.  <a href="#a1d73a03c568c1adaae84dd4ece4cba81"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef wxMap&lt; const <a class="el" href="classPlayer.html">Player</a> <br class="typebreak"/>
-*, wxString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#ad09b624e8f524761996f22798849df8a">MoveMap</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A map which associates <code><a class="el" href="classPlayer.html" title="Base class for all game players.">Player</a></code> pointers with strings.  <a href="#ad09b624e8f524761996f22798849df8a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef wxMap&lt; <a class="el" href="classPlayer.html">Player</a> *, wxString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a4086686b2e62bfefcaa3fea6f79726f5">MoveMap</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A map which associates <code><a class="el" href="classPlayer.html" title="Base class for all game players.">Player</a></code> pointers with strings.  <a href="#a4086686b2e62bfefcaa3fea6f79726f5"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a05e05f3a23de78da7ec032ec2bcf8c6c">id</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This player's unique identifier.  <a href="#a05e05f3a23de78da7ec032ec2bcf8c6c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#ace6abae8d66534ad0a1fd6458f786a6e">score</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This player's score for this game.  <a href="#ace6abae8d66534ad0a1fd6458f786a6e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html#ad09b624e8f524761996f22798849df8a">MoveMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a224d0a5fa6fb68227aaca3eda387cb0b">opponentMoves</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html#a4086686b2e62bfefcaa3fea6f79726f5">MoveMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a224d0a5fa6fb68227aaca3eda387cb0b">opponentMoves</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Storage for past player interactions.  <a href="#a224d0a5fa6fb68227aaca3eda387cb0b"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Base class for all game players. </p>
 <p>This is the basic encapsulation of a game playing entity--it is capable of coming up with a move, having that move acted upon by <code><a class="el" href="classGame.html#aa8c7a7f8ccecd71a33f2ce1814084f8a" title="Play one round of this game between two players.">Game::Play</a></code>, and then dealing with the results of that interaction. Anything useful is done by derived classes of this base. </p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="ad09b624e8f524761996f22798849df8a"></a><!-- doxytag: member="Player::MoveMap" ref="ad09b624e8f524761996f22798849df8a" args="" -->
+<a class="anchor" id="a4086686b2e62bfefcaa3fea6f79726f5"></a><!-- doxytag: member="Player::MoveMap" ref="a4086686b2e62bfefcaa3fea6f79726f5" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef wxMap&lt; const <a class="el" href="classPlayer.html">Player</a> * , wxString &gt; <a class="el" href="classPlayer.html#ad09b624e8f524761996f22798849df8a">Player::MoveMap</a><code> [protected]</code></td>
+          <td class="memname">typedef wxMap&lt; <a class="el" href="classPlayer.html">Player</a> * , wxString &gt; <a class="el" href="classPlayer.html#a4086686b2e62bfefcaa3fea6f79726f5">Player::MoveMap</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -431,7 +430,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classPlayer.html#ad09b624e8f524761996f22798849df8a">MoveMap</a> <a class="el" href="classPlayer.html#a224d0a5fa6fb68227aaca3eda387cb0b">Player::opponentMoves</a><code> [protected]</code></td>
+          <td class="memname"><a class="el" href="classPlayer.html#a4086686b2e62bfefcaa3fea6f79726f5">MoveMap</a> <a class="el" href="classPlayer.html#a224d0a5fa6fb68227aaca3eda387cb0b">Player::opponentMoves</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
