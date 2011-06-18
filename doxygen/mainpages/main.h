@@ -4,7 +4,7 @@
 
 \mainpage Oyun: An evolutionary game-theory simulator
 \author Charles Pence
-\date October 2010
+\date June 2011
 
 \section code_reference Code Reference:
 
