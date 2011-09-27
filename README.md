@@ -1,5 +1,7 @@
 README for Oyun
-----------------
+===============
+
+[![StillMaintained](http://stillmaintained.com/cpence/oyun.png)](http://stillmaintained.com/cpence/oyun)
 
 See the Oyun website: http://charlespence.net/oyun/
 
@@ -23,7 +25,7 @@ execute the usual `configure', `make', `make install' combo.
 
 In detail, the compilation of Oyun requires:
 
-* wxWidgets (preferably version 2.9, and preferably statically-linked)
+* wxWidgets (preferably version 2.9.2+, and preferably statically-linked)
 * Doxygen (for the compilation of the source-code docs)
 * pandoc (http://johnmacfarlane.net/pandoc/, for compilation of the manual)
 * pdflatex (http://tug.org/texlive/, for compilation of the manual)
