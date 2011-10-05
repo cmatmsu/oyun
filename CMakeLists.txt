@@ -36,7 +36,7 @@ add_custom_target (news_file pandoc -f markdown -t plain -o ${CMAKE_CURRENT_SOUR
 ##########
 if (NOT APPLE AND NOT WIN32 AND NOT MSVC)
   install (FILES AUTHORS COPYING ChangeLog ChangeLog-2009 ChangeLog-2008 ChangeLog-2007
-    ChangeLog-2006 ChangeLog-2005 NEWS README THANKS
+    ChangeLog-2006 ChangeLog-2005 NEWS README.md THANKS
     DESTINATION share/doc/oyun)
 endif()
 
@@ -49,7 +49,7 @@ include (InstallRequiredSystemLibraries)
 set (CPACK_PACKAGE_VERSION ${OYUN_VERSION})
 set (CPACK_PACKAGE_DESCRIPTION_SUMMARY "The Oyun evolutionary game-theory simulator")
 set (CPACK_PACKAGE_VENDOR "Charles Pence")
-set (CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_CURRENT_SOURCE_DIR}/README")
+set (CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
 set (CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/COPYING")
 if (WIN32 OR MSVC)
   set (CPACK_PACKAGE_EXECUTABLES "oyun" "Oyun")
