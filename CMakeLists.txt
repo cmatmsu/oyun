@@ -35,7 +35,8 @@ add_custom_target (news_file pandoc -f markdown -t plain -o ${CMAKE_CURRENT_SOUR
 # Install root-level files to the documentation directory, if we're on *nix
 ##########
 if (NOT APPLE AND NOT WIN32 AND NOT MSVC)
-  install (FILES AUTHORS COPYING ChangeLog ChangeLog-2009 ChangeLog-2008 ChangeLog-2007
+  install (FILES AUTHORS COPYING ChangeLog ChangeLog-2010
+    ChangeLog-2009 ChangeLog-2008 ChangeLog-2007
     ChangeLog-2006 ChangeLog-2005 NEWS README.md THANKS
     DESTINATION share/doc/oyun)
 endif()
