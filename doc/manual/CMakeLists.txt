@@ -97,7 +97,7 @@ add_custom_command (OUTPUT oyun.hhp.cached
 # 7. Pack everything into an HTB
 ##########
 add_custom_command (OUTPUT oyun.htb
-  COMMAND zip -q --quiet "oyun.htb" ${HTML_DOCS} ${BINARY_DIR_IMAGES} oyun.hhp.cached
+  COMMAND zip -q "oyun.htb" ${HTML_DOCS} ${BINARY_DIR_IMAGES} oyun.hhp.cached
   DEPENDS oyun.hhp.cached ${HTML_DOCS} ${BINARY_DIR_IMAGES})
 
 

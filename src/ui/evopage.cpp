@@ -70,8 +70,12 @@ EvoPage::EvoPage(OyunWizard *parent, wxWizardPage *prev, wxWizardPage *next) :
                    parent, prev, next),
 	renderer(wxSize(800, 800)) // FIXME: configure this?
 {
+	// N.B. Create these first, as some of the below window-creation routines will call our
+	// event handlers, which require evoTourney and graphWindow.
 	evoTourney = new EvoTournament(parent->game);	
 	evoTourney->Reset();
+
+	graphWindow = new EvoGraphWindow(this);
 	
 	// Create the controls in the appropriate tab order
 	runTournament = new wxButton(this, ID_RUN_TOURNAMENT, _("&Run Tournament"));
@@ -87,8 +91,6 @@ EvoPage::EvoPage(OyunWizard *parent, wxWizardPage *prev, wxWizardPage *next) :
 	// The spinner seems to come out small unless we call this
 	genSpinner->SetInitialSize(genSpinner->GetBestSize());
 			
-	graphWindow = new EvoGraphWindow(this);
-
 	// Make a sizer and add the controls to it
 	wxBoxSizer *topSizer = new wxBoxSizer(wxHORIZONTAL);
 	
