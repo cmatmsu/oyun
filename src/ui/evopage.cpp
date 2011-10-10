@@ -68,15 +68,12 @@ EvoPage::EvoPage(OyunWizard *parent, wxWizardPage *prev, wxWizardPage *next) :
 	OyunWizardPage(_("Evolutionary Tournament"),
                    _("This tournament uses scores as weights for future generations in a population."),
                    parent, prev, next),
+	graphWindow(NULL),
 	renderer(wxSize(800, 800)) // FIXME: configure this?
 {
-	// N.B. Create these first, as some of the below window-creation routines will call our
-	// event handlers, which require evoTourney and graphWindow.
 	evoTourney = new EvoTournament(parent->game);	
 	evoTourney->Reset();
 
-	graphWindow = new EvoGraphWindow(this);
-	
 	// Create the controls in the appropriate tab order
 	runTournament = new wxButton(this, ID_RUN_TOURNAMENT, _("&Run Tournament"));
 
@@ -90,6 +87,8 @@ EvoPage::EvoPage(OyunWizard *parent, wxWizardPage *prev, wxWizardPage *next) :
 
 	// The spinner seems to come out small unless we call this
 	genSpinner->SetInitialSize(genSpinner->GetBestSize());
+	
+	graphWindow = new EvoGraphWindow(this);
 			
 	// Make a sizer and add the controls to it
 	wxBoxSizer *topSizer = new wxBoxSizer(wxHORIZONTAL);
@@ -139,7 +138,8 @@ void EvoPage::OnDataUpdate(wxNotifyEvent & WXUNUSED(event))
 {
 	// Invalidate the graph window, which will repaint it on the next
 	// event loop
-	graphWindow->Refresh();
+	if (graphWindow)
+		graphWindow->Refresh();
 
 	// Update control states if we're visible
 	if (IsShownOnScreen())
@@ -188,13 +188,15 @@ void EvoPage::OnRemovePlayer(wxNotifyEvent &event)
 void EvoPage::OnSpinner(wxSpinEvent & WXUNUSED(event))
 {
 	evoTourney->Reset();
-	graphWindow->Refresh();
+	if (graphWindow)
+		graphWindow->Refresh();
 }
 
 void EvoPage::OnSpinnerText(wxCommandEvent & WXUNUSED(event))
 {
 	evoTourney->Reset();
-	graphWindow->Refresh();
+	if (graphWindow)
+		graphWindow->Refresh();
 }
 
 
@@ -465,7 +467,7 @@ void EvoPage::PaintGraph(wxWindowDC &pdc)
 {
 	// This will get called occasionally by sizers when we aren't actually
 	// shown
-	if (!IsEnabled() || !IsShownOnScreen())
+	if (!IsEnabled() || !IsShownOnScreen() || !graphWindow)
 		return;
 
 	size_t numGenerations = genSpinner->GetValue();
