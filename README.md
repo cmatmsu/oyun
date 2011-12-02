@@ -21,7 +21,7 @@ Installation
 
 In general, if you have an appropriate version of wxWidgets and a normal set of
 userspace tools (such as on Linux, OS X, or MinGW), you should just be able to
-execute the usual `configure', `make', `make install' combo.
+execute the usual `configure`, `make`, `make install` combo.
 
 In detail, the compilation of Oyun requires:
 
