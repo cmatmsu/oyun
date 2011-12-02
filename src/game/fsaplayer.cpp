@@ -91,8 +91,11 @@ bool FSAPlayer::DoLoad (const Game *game, const wxArrayString &fsaScript)
 	playerName = playerName.BeforeFirst(wxT('\r')).BeforeFirst(wxT('\n'));
 
 	// Get the number of actions
+    wxString numActionsStr(fsaScript[2]);
+    numActionsStr.Trim(true).Trim(false);
+    
 	long numActions;
-	if (!fsaScript[2].ToLong(&numActions))
+	if (!numActionsStr.ToLong(&numActions))
 	{
 		Error::Set(_("FSA script had a number of actions that's not a number"));
 		return false;
@@ -124,8 +127,8 @@ bool FSAPlayer::DoLoad (const Game *game, const wxArrayString &fsaScript)
 		
 		wxString strAction, strTrans0, strTrans1;
 		strAction = tokens.GetNextToken();
-		strTrans0 = tokens.GetNextToken();
-		strTrans1 = tokens.GetNextToken();
+		strTrans0 = tokens.GetNextToken().Trim(true).Trim(false);
+		strTrans1 = tokens.GetNextToken().Trim(true).Trim(false);
 		
 		wxChar action = strAction[0];
 
