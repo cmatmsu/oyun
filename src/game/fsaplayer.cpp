@@ -218,6 +218,7 @@ static const wxString test_notenough("Charles Pence\nNot enough\n2\nC, 0, 0");
 static const wxString test_testc("Charles Pence\nNaive\n1\nC, 0, 0");
 static const wxString test_testd("Charles Pence\nNaive\n1\nD, 0, 0");
 static const wxString test_tft("Charles Pence\nTit-for-Tat\n2\nC, 0, 1\nD, 0, 1");
+static const wxString test_tft_spaces("Charles Pence\nTit-for-Tat\n  2 \nC, 0  , 1   \nD, 0   ,  1 ");
 
 // FSA player tests
 TEST(FSAPlayer, Loading)
@@ -253,6 +254,15 @@ TEST(FSAPlayer, BadData)
 	
 	// A non-numerical transition value
 	CHECK(!fsa.LoadFromString(&game, test_nan));
+}
+
+// Regression test: should strip extra spaces from the FSA moves
+TEST(FSAPlayer, DataWithSpaces)
+{
+    MockGame game;
+    FSAPlayer fsa;
+    
+    CHECK(fsa.LoadFromString(&game, test_tft_spaces));
 }
 
 TEST(FSAPlayer, SimplePlayers)
