@@ -12,6 +12,9 @@ Change Log
 
 -   Version 2.0.?? [???]:
 
+-   Version 2.0.b5 [December 8, 2011]: Fix small bug regarding extra
+    spaces in FSM player files.
+
 -   Version 2.0.b4 [June 16, 2010]: Project renamed to "Oyun".
 
 -   Version 2.0.b2 [October 21, 2010]: First beta release of Oyun 2.0.
