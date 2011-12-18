@@ -1,0 +1,13 @@
+Daniel G.
+Warrior Wasp Larva
+10
+C, 5, 1
+D, 2, 9
+C, 9, 3
+D, 4, 9
+C, 9, 4
+D, 9, 6
+C, 7, 9
+D, 9, 8
+C, 8, 9
+D, 9, 9
