@@ -1,5 +1,5 @@
 Charles Pence
 Tit-For-Tat
 2
-C, 1, 2
-D, 1, 2
+C, 0, 1
+D, 0, 1
