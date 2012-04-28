@@ -1,0 +1,4 @@
+2012-04-28  Charles Pence <charles@charlespence.net>
+
+  * ChangeLog, ChangeLog => ChangeLog-2011, build/gitlog2changelog.py: Rotate
+  ChangeLogs.
