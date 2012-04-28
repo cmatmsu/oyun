@@ -1,0 +1,340 @@
+2011-12-08  Charles Pence <charles@charlespence.net>
+
+  * CMakeLists.txt, Doxyfile, NEWS, doc/doxygen/annotated.html,
+  doc/doxygen/classEvoFinishPage-members.html,
+  doc/doxygen/classEvoFinishPage.html,
+  doc/doxygen/classEvoGraphRenderer-members.html,
+  doc/doxygen/classEvoGraphWindow-members.html,
+  doc/doxygen/classEvoGraphWindow.html, doc/doxygen/classEvoPage-members.html,
+  doc/doxygen/classEvoPage.html, doc/doxygen/classEvoTournament-members.html,
+  doc/doxygen/classEvoTournament.html, doc/doxygen/classFSAPlayer-members.html,
+  doc/doxygen/classFSAPlayer.html, doc/doxygen/classFSAState-members.html,
+  doc/doxygen/classFSAState.html, doc/doxygen/classFinishPage-members.html,
+  doc/doxygen/classFinishPage.html, doc/doxygen/classGame-members.html,
+  doc/doxygen/classGame.html, doc/doxygen/classHtmlDialog-members.html,
+  doc/doxygen/classHtmlDialog.html, doc/doxygen/classMatch-members.html,
+  doc/doxygen/classMatch.html, doc/doxygen/classMatchDialog-members.html,
+  doc/doxygen/classMatchDialog.html,
+  doc/doxygen/classOneShotFinishPage-members.html,
+  doc/doxygen/classOneShotFinishPage.html,
+  doc/doxygen/classOneShotPage-members.html, doc/doxygen/classOneShotPage.html,
+  doc/doxygen/classOyunApp-members.html, doc/doxygen/classOyunApp.html,
+  doc/doxygen/classOyunWizard-members.html, doc/doxygen/classOyunWizard.html,
+  doc/doxygen/classOyunWizardDropTarget-members.html,
+  doc/doxygen/classOyunWizardDropTarget.html,
+  doc/doxygen/classOyunWizardPage-members.html,
+  doc/doxygen/classOyunWizardPage.html, doc/doxygen/classPlayer-members.html,
+  doc/doxygen/classPlayer.html, doc/doxygen/classPlayersPage-members.html,
+  doc/doxygen/classPlayersPage.html,
+  doc/doxygen/classPrisonerDilemma-members.html,
+  doc/doxygen/classPrisonerDilemma.html,
+  doc/doxygen/classRandomPlayer-members.html,
+  doc/doxygen/classRandomPlayer.html,
+  doc/doxygen/classTitForTatPlayer-members.html,
+  doc/doxygen/classTitForTatPlayer.html,
+  doc/doxygen/classTournament-members.html, doc/doxygen/classTournament.html,
+  doc/doxygen/classTypePage-members.html, doc/doxygen/classTypePage.html,
+  doc/doxygen/classes.html, doc/doxygen/functions.html,
+  doc/doxygen/functions_0x62.html, doc/doxygen/functions_0x63.html,
+  doc/doxygen/functions_0x64.html, doc/doxygen/functions_0x65.html,
+  doc/doxygen/functions_0x66.html, doc/doxygen/functions_0x67.html,
+  doc/doxygen/functions_0x68.html, doc/doxygen/functions_0x69.html,
+  doc/doxygen/functions_0x6c.html, doc/doxygen/functions_0x6d.html,
+  doc/doxygen/functions_0x6e.html, doc/doxygen/functions_0x6f.html,
+  doc/doxygen/functions_0x70.html, doc/doxygen/functions_0x72.html,
+  doc/doxygen/functions_0x73.html, doc/doxygen/functions_0x74.html,
+  doc/doxygen/functions_0x75.html, doc/doxygen/functions_0x77.html,
+  doc/doxygen/functions_func.html, doc/doxygen/functions_type.html,
+  doc/doxygen/functions_vars.html, doc/doxygen/group__common.html,
+  doc/doxygen/group__game.html, doc/doxygen/group__tourney.html,
+  doc/doxygen/group__ui.html, doc/doxygen/hierarchy.html,
+  doc/doxygen/index.html, doc/doxygen/modules.html,
+  doc/doxygen/structEvoGraphRenderer.html,
+  doc/doxygen/structEvoGraphRenderer_1_1SVGColor-members.html,
+  doc/doxygen/structEvoGraphRenderer_1_1SVGColor.html, doc/manual/gh-wiki:
+  Proper version bumps for 2.0.b5.
+
+2011-12-02  Charles Pence <charles@charlespence.net>
+
+  * THANKS, src/game/fsaplayer.cpp: Bug fix: trim whitespace from FSM strings
+  before converting to integer.
+
+2011-11-04  Charles Pence <charles@charlespence.net>
+
+  * README.md, doc/manual/gh-wiki: Update README, docs reference.
+
+2011-10-10  Charles Pence <charles@charlespence.net>
+
+  * doc/manual/gh-wiki, src/ui/evopage.cpp: Window creation order matters on
+  Mac, reset it to the way it was, guarding for the Windows error.
+
+2011-10-05  Charles Pence <charles@charlespence.net>
+
+  * doc/manual/CMakeLists.txt, src/ui/evopage.cpp: Two fixes for building on
+  Windows under VC10/wxW292.
+
+  * CMakeLists.txt, doc/doxygen/annotated.html,
+  doc/doxygen/classEvoFinishPage-members.html,
+  doc/doxygen/classEvoFinishPage.html,
+  doc/doxygen/classEvoGraphRenderer-members.html,
+  doc/doxygen/classEvoGraphWindow-members.html,
+  doc/doxygen/classEvoGraphWindow.html, doc/doxygen/classEvoPage-members.html,
+  doc/doxygen/classEvoPage.html, doc/doxygen/classEvoTournament-members.html,
+  doc/doxygen/classEvoTournament.html, doc/doxygen/classFSAPlayer-members.html,
+  doc/doxygen/classFSAPlayer.html, doc/doxygen/classFSAState-members.html,
+  doc/doxygen/classFSAState.html, doc/doxygen/classFinishPage-members.html,
+  doc/doxygen/classFinishPage.html, doc/doxygen/classGame-members.html,
+  doc/doxygen/classGame.html, doc/doxygen/classHtmlDialog-members.html,
+  doc/doxygen/classHtmlDialog.html, doc/doxygen/classMatch-members.html,
+  doc/doxygen/classMatch.html, doc/doxygen/classMatchDialog-members.html,
+  doc/doxygen/classMatchDialog.html,
+  doc/doxygen/classOneShotFinishPage-members.html,
+  doc/doxygen/classOneShotFinishPage.html,
+  doc/doxygen/classOneShotPage-members.html, doc/doxygen/classOneShotPage.html,
+  doc/doxygen/classOyunApp-members.html, doc/doxygen/classOyunApp.html,
+  doc/doxygen/classOyunWizard-members.html, doc/doxygen/classOyunWizard.html,
+  doc/doxygen/classOyunWizardDropTarget-members.html,
+  doc/doxygen/classOyunWizardDropTarget.html,
+  doc/doxygen/classOyunWizardPage-members.html,
+  doc/doxygen/classOyunWizardPage.html, doc/doxygen/classPlayer-members.html,
+  doc/doxygen/classPlayer.html, doc/doxygen/classPlayersPage-members.html,
+  doc/doxygen/classPlayersPage.html,
+  doc/doxygen/classPrisonerDilemma-members.html,
+  doc/doxygen/classPrisonerDilemma.html,
+  doc/doxygen/classRandomPlayer-members.html,
+  doc/doxygen/classRandomPlayer.html,
+  doc/doxygen/classTitForTatPlayer-members.html,
+  doc/doxygen/classTitForTatPlayer.html,
+  doc/doxygen/classTournament-members.html, doc/doxygen/classTournament.html,
+  doc/doxygen/classTypePage-members.html, doc/doxygen/classTypePage.html,
+  doc/doxygen/classes.html, doc/doxygen/doxygen.css,
+  doc/doxygen/functions.html, doc/doxygen/functions_0x62.html,
+  doc/doxygen/functions_0x63.html, doc/doxygen/functions_0x64.html,
+  doc/doxygen/functions_0x65.html, doc/doxygen/functions_0x66.html,
+  doc/doxygen/functions_0x67.html, doc/doxygen/functions_0x68.html,
+  doc/doxygen/functions_0x69.html, doc/doxygen/functions_0x6c.html,
+  doc/doxygen/functions_0x6d.html, doc/doxygen/functions_0x6e.html,
+  doc/doxygen/functions_0x6f.html, doc/doxygen/functions_0x70.html,
+  doc/doxygen/functions_0x72.html, doc/doxygen/functions_0x73.html,
+  doc/doxygen/functions_0x74.html, doc/doxygen/functions_0x75.html,
+  doc/doxygen/functions_0x77.html, doc/doxygen/functions_func.html,
+  doc/doxygen/functions_type.html, doc/doxygen/functions_vars.html,
+  doc/doxygen/group__common.html, doc/doxygen/group__game.html,
+  doc/doxygen/group__tourney.html, doc/doxygen/group__ui.html,
+  doc/doxygen/hierarchy.html, doc/doxygen/index.html,
+  doc/doxygen/mainpages/main.h, doc/doxygen/modules.html,
+  doc/doxygen/structEvoGraphRenderer.html,
+  ...structEvoGraphRenderer_1_1SVGColor-members.html,
+  .../structEvoGraphRenderer_1_1SVGColor.html: Update the Doxygen docs.
+
+2011-06-18  Charles Pence <charles@charlespence.net>
+
+  * doc/doxygen/annotated.html, doc/doxygen/classEvoFinishPage-members.html,
+  doc/doxygen/classEvoFinishPage.html,
+  doc/doxygen/classEvoGraphRenderer-members.html,
+  doc/doxygen/classEvoGraphWindow-members.html,
+  doc/doxygen/classEvoGraphWindow.html, doc/doxygen/classEvoPage-members.html,
+  doc/doxygen/classEvoPage.html, doc/doxygen/classEvoTournament-members.html,
+  doc/doxygen/classEvoTournament.html, doc/doxygen/classFSAPlayer-members.html,
+  doc/doxygen/classFSAPlayer.html, doc/doxygen/classFSAState-members.html,
+  doc/doxygen/classFSAState.html, doc/doxygen/classFinishPage-members.html,
+  doc/doxygen/classFinishPage.html, doc/doxygen/classGame-members.html,
+  doc/doxygen/classGame.html, doc/doxygen/classHtmlDialog-members.html,
+  doc/doxygen/classHtmlDialog.html, doc/doxygen/classMatch-members.html,
+  doc/doxygen/classMatch.html, doc/doxygen/classMatchDialog-members.html,
+  doc/doxygen/classMatchDialog.html,
+  doc/doxygen/classOneShotFinishPage-members.html,
+  doc/doxygen/classOneShotFinishPage.html,
+  doc/doxygen/classOneShotPage-members.html, doc/doxygen/classOneShotPage.html,
+  doc/doxygen/classOyunApp-members.html, doc/doxygen/classOyunApp.html,
+  doc/doxygen/classOyunWizard-members.html, doc/doxygen/classOyunWizard.html,
+  doc/doxygen/classOyunWizardDropTarget-members.html,
+  doc/doxygen/classOyunWizardDropTarget.html,
+  doc/doxygen/classOyunWizardPage-members.html,
+  doc/doxygen/classOyunWizardPage.html, doc/doxygen/classPlayer-members.html,
+  doc/doxygen/classPlayer.html, doc/doxygen/classPlayersPage-members.html,
+  doc/doxygen/classPlayersPage.html,
+  doc/doxygen/classPrisonerDilemma-members.html,
+  doc/doxygen/classPrisonerDilemma.html,
+  doc/doxygen/classRandomPlayer-members.html,
+  doc/doxygen/classRandomPlayer.html,
+  doc/doxygen/classTitForTatPlayer-members.html,
+  doc/doxygen/classTitForTatPlayer.html,
+  doc/doxygen/classTournament-members.html, doc/doxygen/classTournament.html,
+  doc/doxygen/classTypePage-members.html, doc/doxygen/classTypePage.html,
+  doc/doxygen/classes.html, doc/doxygen/functions.html,
+  doc/doxygen/functions_0x62.html, doc/doxygen/functions_0x63.html,
+  doc/doxygen/functions_0x64.html, doc/doxygen/functions_0x65.html,
+  doc/doxygen/functions_0x66.html, doc/doxygen/functions_0x67.html,
+  doc/doxygen/functions_0x68.html, doc/doxygen/functions_0x69.html,
+  doc/doxygen/functions_0x6c.html, doc/doxygen/functions_0x6d.html,
+  doc/doxygen/functions_0x6e.html, doc/doxygen/functions_0x6f.html,
+  doc/doxygen/functions_0x70.html, doc/doxygen/functions_0x72.html,
+  doc/doxygen/functions_0x73.html, doc/doxygen/functions_0x74.html,
+  doc/doxygen/functions_0x75.html, doc/doxygen/functions_0x77.html,
+  doc/doxygen/functions_func.html, doc/doxygen/functions_type.html,
+  doc/doxygen/functions_vars.html, doc/doxygen/group__common.html,
+  doc/doxygen/group__game.html, doc/doxygen/group__tourney.html,
+  doc/doxygen/group__ui.html, doc/doxygen/hierarchy.html,
+  doc/doxygen/index.html, doc/doxygen/modules.html,
+  doc/doxygen/structEvoGraphRenderer.html,
+  .../structEvoGraphRenderer_1_1SVGColor-members.html,
+  doc/doxygen/structEvoGraphRenderer_1_1SVGColor.html: Update Doxygen docs.
+
+  * CMakeLists.txt, Doxyfile, NEWS, doc/doxygen/mainpages/main.h,
+  doc/manual/gh-wiki: Updating to 2.0.b4.
+
+2011-06-17  Charles Pence <charles@charlespence.net>
+
+  * build/oyun.xpm, src/game/player.h: Two quick const-correctness fixes.
+
+  * build/oyun.icns, build/oyun.ico, build/oyun.png, build/oyun.xpm: Add
+  updated graphics to build system.
+
+2011-06-16  Charles Pence <charles@charlespence.net>
+
+  * build/copy-manual.sh, build/{logos.icns => oyun.icns}, build/{logos.ico =>
+  oyun.ico}, build/{logos.png => oyun.png}, build/{logos.rc => oyun.rc},
+  build/{logos.xpm => oyun.xpm}: The last of the renaming.
+
+  * doc/doxygen/classLogosApp-members.html, doc/doxygen/classLogosApp.html,
+  doc/doxygen/classLogosWizard-members.html, doc/doxygen/classLogosWizard.html,
+  .../classLogosWizardDropTarget-members.html,
+  doc/doxygen/classLogosWizardDropTarget.html,
+  doc/doxygen/classLogosWizardPage-members.html,
+  doc/doxygen/classLogosWizardPage.html, doc/doxygen/index.html,
+  doc/doxygen/mainpages/main.h: Clean up doxygen docs.
+
+  * .gitmodules, doc/doxygen/annotated.html,
+  doc/doxygen/classEvoFinishPage-members.html,
+  doc/doxygen/classEvoFinishPage.html, doc/doxygen/classEvoPage-members.html,
+  doc/doxygen/classEvoPage.html, doc/doxygen/classFinishPage-members.html,
+  doc/doxygen/classFinishPage.html,
+  doc/doxygen/classOneShotFinishPage-members.html,
+  doc/doxygen/classOneShotFinishPage.html,
+  doc/doxygen/classOneShotPage-members.html, doc/doxygen/classOneShotPage.html,
+  doc/doxygen/classOyunApp-members.html, doc/doxygen/classOyunApp.html,
+  doc/doxygen/classOyunWizard-members.html, doc/doxygen/classOyunWizard.html,
+  doc/doxygen/classOyunWizardDropTarget-members.html,
+  doc/doxygen/classOyunWizardDropTarget.html,
+  doc/doxygen/classOyunWizardPage-members.html,
+  doc/doxygen/classOyunWizardPage.html, doc/doxygen/classPlayer.html,
+  doc/doxygen/classPlayersPage-members.html, doc/doxygen/classPlayersPage.html,
+  doc/doxygen/classTypePage-members.html, doc/doxygen/classTypePage.html,
+  doc/doxygen/classes.html, doc/doxygen/functions.html,
+  doc/doxygen/functions_0x63.html, doc/doxygen/functions_0x65.html,
+  doc/doxygen/functions_0x66.html, doc/doxygen/functions_0x67.html,
+  doc/doxygen/functions_0x6c.html, doc/doxygen/functions_0x6d.html,
+  doc/doxygen/functions_0x6f.html, doc/doxygen/functions_0x70.html,
+  doc/doxygen/functions_0x72.html, doc/doxygen/functions_0x73.html,
+  doc/doxygen/functions_0x74.html, doc/doxygen/functions_0x75.html,
+  doc/doxygen/functions_func.html, doc/doxygen/functions_vars.html,
+  doc/doxygen/group__common.html, doc/doxygen/group__ui.html,
+  doc/doxygen/hierarchy.html, doc/manual/CMakeLists.txt, doc/manual/gh-wiki,
+  doc/manual/tools/logos.hhp, .../{logos-contents.hhc => oyun-contents.hhc},
+  .../tools/{logos-index.hhk => oyun-index.hhk}, .../tools/{logos-manual.tex =>
+  oyun-manual.tex}, doc/manual/tools/oyun.hhp, lib/CppUnitLite/TestResult.cpp,
+  src/.gitignore, src/CMakeLists.txt, src/common/error.cpp, src/common/error.h,
+  src/common/filesystem.cpp, src/common/filesystem.h, src/common/rng.cpp,
+  src/common/rng.h, src/game/fsaplayer.cpp, src/game/fsaplayer.h,
+  src/game/game.cpp, src/game/game.h, src/game/player.cpp, src/game/player.h,
+  src/game/prisoner.cpp, src/game/prisoner.h, src/game/random.cpp,
+  src/game/random.h, src/game/titfortat.cpp, src/game/titfortat.h,
+  src/tourney/evotournament.cpp, src/tourney/evotournament.h,
+  src/tourney/match.cpp, src/tourney/match.h, src/tourney/tournament.cpp,
+  src/tourney/tournament.h, src/ui/evofinishpage.cpp, src/ui/evofinishpage.h,
+  src/ui/evopage.cpp, src/ui/evopage.h, src/ui/finishpage.cpp,
+  src/ui/finishpage.h, src/ui/matchdialog.cpp, src/ui/matchdialog.h,
+  src/ui/oneshotfinishpage.cpp, src/ui/oneshotfinishpage.h,
+  src/ui/oneshotpage.cpp, src/ui/oneshotpage.h, src/ui/{logosapp.cpp =>
+  oyunapp.cpp}, src/ui/{logosapp.h => oyunapp.h}, src/ui/{logoswizard.cpp =>
+  oyunwizard.cpp}, src/ui/{logoswizard.h => oyunwizard.h},
+  src/ui/playerspage.cpp, src/ui/playerspage.h, src/ui/tools/htmldialog.cpp,
+  src/ui/tools/htmldialog.h, .../{logoswizardpage.cpp => oyunwizardpage.cpp},
+  .../tools/{logoswizardpage.h => oyunwizardpage.h}, src/ui/typepage.cpp,
+  src/ui/typepage.h: More renaming Logos to Oyun.
+
+  * AUTHORS, CMakeLists.txt, NEWS, README, THANKS: Rename Logos -> Oyun in the
+  root docs and the CMakeLists.
+
+  * Doxyfile, doc/doxygen/annotated.html,
+  doc/doxygen/classEvoFinishPage-members.html,
+  doc/doxygen/classEvoFinishPage.html,
+  doc/doxygen/classEvoGraphRenderer-members.html,
+  doc/doxygen/classEvoGraphWindow-members.html,
+  doc/doxygen/classEvoGraphWindow.html, doc/doxygen/classEvoPage-members.html,
+  doc/doxygen/classEvoPage.html, doc/doxygen/classEvoTournament-members.html,
+  doc/doxygen/classEvoTournament.html, doc/doxygen/classFSAPlayer-members.html,
+  doc/doxygen/classFSAPlayer.html, doc/doxygen/classFSAState-members.html,
+  doc/doxygen/classFSAState.html, doc/doxygen/classFinishPage-members.html,
+  doc/doxygen/classFinishPage.html, doc/doxygen/classGame-members.html,
+  doc/doxygen/classGame.html, doc/doxygen/classHtmlDialog-members.html,
+  doc/doxygen/classHtmlDialog.html, doc/doxygen/classLogosApp-members.html,
+  doc/doxygen/classLogosApp.html, doc/doxygen/classLogosWizard-members.html,
+  doc/doxygen/classLogosWizard.html,
+  .../classLogosWizardDropTarget-members.html,
+  doc/doxygen/classLogosWizardDropTarget.html,
+  doc/doxygen/classLogosWizardPage-members.html,
+  doc/doxygen/classLogosWizardPage.html, doc/doxygen/classMatch-members.html,
+  doc/doxygen/classMatch.html, doc/doxygen/classMatchDialog-members.html,
+  doc/doxygen/classMatchDialog.html,
+  doc/doxygen/classOneShotFinishPage-members.html,
+  doc/doxygen/classOneShotFinishPage.html,
+  doc/doxygen/classOneShotPage-members.html, doc/doxygen/classOneShotPage.html,
+  doc/doxygen/classPlayer-members.html, doc/doxygen/classPlayer.html,
+  doc/doxygen/classPlayersPage-members.html, doc/doxygen/classPlayersPage.html,
+  doc/doxygen/classPrisonerDilemma-members.html,
+  doc/doxygen/classPrisonerDilemma.html,
+  doc/doxygen/classRandomPlayer-members.html,
+  doc/doxygen/classRandomPlayer.html,
+  doc/doxygen/classTitForTatPlayer-members.html,
+  doc/doxygen/classTitForTatPlayer.html,
+  doc/doxygen/classTournament-members.html, doc/doxygen/classTournament.html,
+  doc/doxygen/classTypePage-members.html, doc/doxygen/classTypePage.html,
+  doc/doxygen/classes.html, doc/doxygen/doxygen.css,
+  doc/doxygen/functions.html, doc/doxygen/functions_0x62.html,
+  doc/doxygen/functions_0x63.html, doc/doxygen/functions_0x64.html,
+  doc/doxygen/functions_0x65.html, doc/doxygen/functions_0x66.html,
+  doc/doxygen/functions_0x67.html, doc/doxygen/functions_0x68.html,
+  doc/doxygen/functions_0x69.html, doc/doxygen/functions_0x6c.html,
+  doc/doxygen/functions_0x6d.html, doc/doxygen/functions_0x6e.html,
+  doc/doxygen/functions_0x6f.html, doc/doxygen/functions_0x70.html,
+  doc/doxygen/functions_0x72.html, doc/doxygen/functions_0x73.html,
+  doc/doxygen/functions_0x74.html, doc/doxygen/functions_0x75.html,
+  doc/doxygen/functions_0x77.html, doc/doxygen/functions_func.html,
+  doc/doxygen/functions_type.html, doc/doxygen/functions_vars.html,
+  doc/doxygen/group__common.html, doc/doxygen/group__game.html,
+  doc/doxygen/group__tourney.html, doc/doxygen/group__ui.html,
+  doc/doxygen/hierarchy.html, doc/doxygen/index.html, doc/doxygen/jquery.js,
+  doc/doxygen/modules.html, doc/doxygen/structEvoGraphRenderer.html,
+  ...structEvoGraphRenderer_1_1SVGColor-members.html,
+  .../structEvoGraphRenderer_1_1SVGColor.html: Rename Logos -> Oyun in the
+  Doxygen documentation.
+
+2011-03-16  Charles Pence <charles@charlespence.net>
+
+  * src/game/player.h, src/ui/logosapp.cpp: A few const-correctness fixes.
+
+  * ChangeLog, ChangeLog-2010, build/gitlog2changelog.py, doc/manual/gh-wiki:
+  Update wiki submodule, add 2011 ChangeLog.
+
+2011-01-09  Charles Pence <charles@charlespence.net>
+
+  * NEWS, README, src/CMakeLists.txt, src/common/error.cpp, src/common/error.h,
+  src/common/filesystem.cpp, src/common/filesystem.h, src/common/rng.cpp,
+  src/common/rng.h, src/game/fsaplayer.cpp, src/game/fsaplayer.h,
+  src/game/game.cpp, src/game/game.h, src/game/player.cpp, src/game/player.h,
+  src/game/prisoner.cpp, src/game/prisoner.h, src/game/random.cpp,
+  src/game/random.h, src/game/titfortat.cpp, src/game/titfortat.h,
+  src/tourney/evotournament.cpp, src/tourney/evotournament.h,
+  src/tourney/match.cpp, src/tourney/match.h, src/tourney/tournament.cpp,
+  src/tourney/tournament.h, src/ui/evofinishpage.cpp, src/ui/evofinishpage.h,
+  src/ui/evopage.cpp, src/ui/evopage.h, src/ui/finishpage.cpp,
+  src/ui/finishpage.h, src/ui/logosapp.cpp, src/ui/logosapp.h,
+  src/ui/logoswizard.cpp, src/ui/logoswizard.h, src/ui/matchdialog.cpp,
+  src/ui/matchdialog.h, src/ui/oneshotfinishpage.cpp,
+  src/ui/oneshotfinishpage.h, src/ui/oneshotpage.cpp, src/ui/oneshotpage.h,
+  src/ui/playerspage.cpp, src/ui/playerspage.h, src/ui/tools/htmldialog.cpp,
+  src/ui/tools/htmldialog.h, src/ui/tools/logoswizardpage.cpp,
+  src/ui/tools/logoswizardpage.h, src/ui/typepage.cpp, src/ui/typepage.h: Bump
+  all copyright years.
