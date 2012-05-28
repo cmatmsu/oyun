@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Oyun: Documentation Index'
+title: 'Documentation Index'
 ---
 
 -   [Welcome to Oyun](docs/Welcome-to-Oyun.html)
