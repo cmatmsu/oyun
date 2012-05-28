@@ -1,8 +1,6 @@
 README for Oyun
 ===============
 
-[![StillMaintained](http://stillmaintained.com/cpence/oyun.png)](http://stillmaintained.com/cpence/oyun)
-
 See the Oyun website: http://charlespence.net/oyun/
 
 Oyun is a program you can use to run tournaments between various strategies
