@@ -3,21 +3,17 @@ layout: post
 title: Oyun: Documentation Index
 ---
 
-<ul class="posts">
-  <li><a href="docs/Welcome-to-Oyun.html">Welcome to Oyun</a></li>
-  <li><a href="docs/Installation.html">Installation</a></li>
-  <li><a href="docs/Release-Notes.html">Release Notes</a></li>
-  <li><a href="docs/Getting-Started.html">Getting Started</a></li>
-  <li><a href="docs/Oyun-Task-Pages.html">Oyun Task Pages</a>
-  <ul class="posts">
-    <li><a href="docs/Player-Selection-Page.html">Player Selection Page</a></li>
-    <li><a href="docs/Tournament-Type-Page.html">Tournament Type Page</a></li>
-    <li><a href="docs/One-Shot-Tournament-Page.html">One-Shot Tournament Page</a></li>
-    <li><a href="docs/One-Shot-Tournament-Finished-Page.html">One-Shot Tournament Finished Page</a></li>
-    <li><a href="docs/Evolutionary-Tournament-Page.html">Evolutionary Tournament Page</a></li>
-    <li><a href="docs/Evolutionary-Tournament-Finished-Page.html">Evolutionary Tournament Finished Page</a></li>
-  </ul></li>
-  <li><a href="docs/Sample-Players.html">Sample Players</a></li>
-  <li><a href="docs/Glossary.html">Glossary</a></li>
-</ul>
+- [Welcome to Oyun](docs/Welcome-to-Oyun.html)
+- [Installation](docs/Installation.html)
+- [Release Notes](docs/Release-Notes.html)
+- [Getting Started](docs/Getting-Started.html)
+- [Oyun Task Pages](docs/Oyun-Task-Pages.html)
+    - [Player Selection Page](docs/Player-Selection-Page.html)
+    - [Tournament Type Page](docs/Tournament-Type-Page.html)
+    - [One-Shot Tournament Page](docs/One-Shot-Tournament-Page.html)
+    - [One-Shot Tournament Finished Page](docs/One-Shot-Tournament-Finished-Page.html)
+    - [Evolutionary Tournament Page](docs/Evolutionary-Tournament-Page.html)
+    - [Evolutionary Tournament Finished Page](docs/Evolutionary-Tournament-Finished-Page.html)
+- [Sample Players](docs/Sample-Players.html)
+- [Glossary](docs/Glossary.html)
 
