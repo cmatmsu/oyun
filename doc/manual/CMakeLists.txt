@@ -123,7 +123,9 @@ install (FILES "${CMAKE_CURRENT_BINARY_DIR}/oyun.htb"
   DESTINATION ${DOCBOOK_DESTINATION})
 
 
-# Don't add the target i
-if (NOT PANDOC OR NOT PDFLATEX OR NOT ZIP) 
+# Don't add the target unless we find 
+if ((NOT (PANDOC STREQUAL "PANDOC-NOTFOUND")) AND
+      (NOT (PDFLATEX STREQUAL "PDFLATEX-NOTFOUND")) AND
+      (NOT (ZIP STREQUAL "ZIP-NOTFOUND"))) 
   add_custom_target (docs-manual ALL DEPENDS oyun-manual.pdf oyun.htb)
 endif ()
