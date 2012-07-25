@@ -29,7 +29,10 @@
 
 #include <wx/textfile.h>
 #include <wx/tokenzr.h>
-#include <TestHarness.h>
+
+#ifdef BUILD_TESTS
+#  include <TestHarness.h>
+#endif
 
 #include "../common/error.h"
 #include "fsaplayer.h"
@@ -210,6 +213,7 @@ bool FSAPlayer::Think(const Game *gamePlayed, const Player *nextOpponent)
 
 
 /** \cond TEST */
+#ifdef BUILD_TESTS
 
 static const wxString test_badmove("Charles Pence\nBad Move\n2\nC, 0, 1\nX, 0, 1");
 static const wxString test_badtrans("Charles Pence\nBad Transition\n2\nC, 0, 3\nD, 0, 1");
@@ -335,6 +339,7 @@ TEST(FSAPlayer, Clone)
 	delete playerTwo;
 }
 
+#endif
 /** \endcond */
 
 

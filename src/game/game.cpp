@@ -27,12 +27,15 @@
 #  include <wx/wx.h>
 #endif
 
-#include <TestHarness.h>
+#ifdef BUILD_TESTS
+#  include <TestHarness.h>
+#endif
 
 #include "game.h"
 #include "player.h"
 
 /** \cond TEST */
+#ifdef BUILD_TESTS
 
 TEST(Game, GetMoves)
 {
@@ -118,5 +121,6 @@ TEST(Game, Reset)
 	CHECK_EQUAL(0, game.GetGameHistory().GetCount());
 }
 
+#endif
 /** \endcond */
 

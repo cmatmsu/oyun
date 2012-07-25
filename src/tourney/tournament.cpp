@@ -28,7 +28,10 @@
 #endif
 
 #include <wx/progdlg.h>
-#include <TestHarness.h>
+
+#ifdef BUILD_TESTS
+#  include <TestHarness.h>
+#endif
 
 #include "../ui/oyunapp.h"
 #include "../game/game.h"
@@ -165,6 +168,7 @@ bool Tournament::Run()
 }
 
 /** \cond TEST */
+#ifdef BUILD_TESTS
 
 TEST(Tournament, AddPlayer)
 {
@@ -298,6 +302,7 @@ TEST(Tournament, Reset)
 	CHECK_EQUAL(0, tourney.scores.size());
 }
 
+#endif
 /** \endcond */
 
 

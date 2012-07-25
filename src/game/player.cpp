@@ -27,12 +27,15 @@
 #  include <wx/wx.h>
 #endif
 
-#include <TestHarness.h>
+#ifdef BUILD_TESTS
+#  include <TestHarness.h>
+#endif
 
 #include "player.h"
 #include "game.h"
 
 /** \cond TEST */
+#ifdef BUILD_TESTS
 
 TEST(Player, Initial)
 {
@@ -101,6 +104,7 @@ TEST(Player, Reset)
 	CHECK_EQUAL(0, playerOne.GetScore());
 }
 
+#endif
 /** \endcond */
 
 

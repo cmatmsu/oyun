@@ -295,7 +295,13 @@ wxString GetBundleResourcesPath()
 {
 	// If we fail, return current-dir
 	const wxString fail(wxT("./"));
-	
+
+#ifdef BUILD_TESTS
+  
+  return fail;
+  
+#else
+  
 	// Get the real path to the executable
 	wxString executablePath;
 	if (!GetRealPath(wxGetApp().argv[0], executablePath))
@@ -319,6 +325,8 @@ wxString GetBundleResourcesPath()
 	
 	// Return the path in native format
 	return executableFileName.GetFullPath(wxPATH_NATIVE);
+  
+#endif
 }
 
 #endif
@@ -330,12 +338,20 @@ wxString GetExecutablePath()
 	// If we fail, return current-dir
 	const wxString fail(wxT("./"));
 
+#ifdef BUILD_TESTS
+  
+  return fail;
+  
+#else
+  
 	// Get the real path to the executable
 	wxString executablePath;
 	if (!GetRealPath(wxGetApp().argv[0], executablePath))
 		return fail;
 
 	return executablePath;
+  
+#endif
 }
 
 #endif

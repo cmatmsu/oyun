@@ -27,7 +27,9 @@
 #  include <wx/wx.h>
 #endif
 
-#include <TestHarness.h>
+#ifdef BUILD_TESTS
+#  include <TestHarness.h>
+#endif
 
 #include "../common/rng.h"
 #include "random.h"
@@ -46,6 +48,7 @@ bool RandomPlayer::Think(const Game *gamePlayed, const Player * WXUNUSED(nextOpp
 
 
 /** \cond TEST */
+#ifdef BUILD_TESTS
 
 TEST(RandomPlayer, Clone)
 {
@@ -74,5 +77,6 @@ TEST(RandomPlayer, Strategy)
 	CHECK_NOT_EQUAL(0, playerOne.nextMove);
 }
 
+#endif
 /** \endcond */
 

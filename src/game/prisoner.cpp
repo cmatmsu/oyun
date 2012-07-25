@@ -27,7 +27,9 @@
 #  include <wx/wx.h>
 #endif
 
-#include <TestHarness.h>
+#ifdef BUILD_TESTS
+#  include <TestHarness.h>
+#endif
 
 #include "prisoner.h"
 #include "player.h"
@@ -54,6 +56,7 @@ void PrisonerDilemma::GetGamePayoff(const Player *playerOne, int &playerOneScore
 }
 
 /** \cond TEST */
+#ifdef BUILD_TESTS
 
 TEST(PrisonerDilemma, GameMoves)
 {
@@ -108,5 +111,6 @@ TEST(PrisonerDilemma, Payouts)
 	CHECK_EQUAL(1, p2.GetScore());
 }
 
+#endif
 /** \endcond */
 

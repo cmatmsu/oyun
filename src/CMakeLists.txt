@@ -19,6 +19,9 @@ if (MSVC OR WIN32)
 endif()
 file (GLOB_RECURSE OYUN_HEADERS *.h)
 
+file (GLOB_RECURSE TEST_SOURCE common/*.cpp game/*.cpp tourney/*.cpp)
+file (GLOB_RECURSE TEST_HEADERS common/*.h game/*.h tourney/*.h)
+
 
 ##########
 # Add CppUnitLite directories
@@ -44,7 +47,10 @@ else ()
 endif ()
 
 add_executable (${OYUN_TARGET} ${OYUN_SOURCE} ${OYUN_HEADERS})
-target_link_libraries (${OYUN_TARGET} cppunitlite ${wxWidgets_LIBRARIES})
+target_link_libraries (${OYUN_TARGET} ${wxWidgets_LIBRARIES})
+
+add_executable (oyun_test ${TEST_SOURCE} ${TEST_HEADERS})
+target_link_libraries (oyun_test cppunitlite ${wxWidgets_LIBRARIES})
 
 
 ##########
@@ -63,6 +69,8 @@ elseif (APPLE)
   set_target_properties (${OYUN_TARGET} PROPERTIES MACOSX_BUNDLE_SHORT_VERSION_STRING "${OYUN_VERSION}")
   set_target_properties (${OYUN_TARGET} PROPERTIES MACOSX_BUNDLE_COPYRIGHT "Copyright (C) 2004-2011 Charles Pence")
 endif ()
+
+set_target_properties (oyun_test PROPERTIES COMPILE_DEFINITIONS "BUILD_TESTS")
 
 
 ##########

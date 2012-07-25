@@ -33,8 +33,6 @@
 #include <wx/listctrl.h>
 #include <wx/aboutdlg.h>
 
-#include <TestHarness.h>
-
 #include "../common/filesystem.h"
 #include "../common/rng.h"
 
@@ -95,22 +93,7 @@ bool OyunApp::OnInit()
 			
 			return false;
 		}
-	}
-	
-	// See if we are to run unit tests
-	for (int i = 1 ; i < argc ; i++)
-	{
-		if (!wxStrcmp(argv[i], wxT("--test")))
-		{
-			TestResult result;
-
-      // Return the success status in the exit code
-      if (TestRegistry::runAllTests(result))
-        return EXIT_SUCCESS;
-      else
-        return EXIT_FAILURE;
-		}
-		else
+    else
 		{
 			// Invalid command-line parameter
 			wxPrintf(_("oyun: unrecognized option `%ls'\n"

@@ -27,7 +27,9 @@
 #  include <wx/wx.h>
 #endif
 
-#include <TestHarness.h>
+#ifdef BUILD_TESTS
+#  include <TestHarness.h>
+#endif
 
 #include "../game/game.h"
 #include "match.h"
@@ -76,6 +78,7 @@ bool Match::Play(Game *game, bool quick)
 
 
 /** \cond TEST */
+#ifdef BUILD_TESTS
 
 TEST(Match, AssignsPlayers)
 {
@@ -143,6 +146,7 @@ TEST(Match, History)
 	}
 }
 
+#endif
 /** \endcond */
 
 

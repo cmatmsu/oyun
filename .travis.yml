@@ -9,4 +9,4 @@ install:
  - mkdir cmake_build_temp
  - cd cmake_build_temp
  - cmake .. && make
- - src/oyun --test
+ - src/oyun_test

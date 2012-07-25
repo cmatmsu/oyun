@@ -27,7 +27,9 @@
 #  include <wx/wx.h>
 #endif
 
-#include <TestHarness.h>
+#ifdef BUILD_TESTS
+#  include <TestHarness.h>
+#endif
 
 #include "titfortat.h"
 #include "game.h"
@@ -52,6 +54,7 @@ bool TitForTatPlayer::Think(const Game *gamePlayed, const Player *nextOpponent)
 
 
 /** \cond TEST */
+#ifdef BUILD_TESTS
 
 TEST(TitForTatPlayer, Strategy)
 {
@@ -99,5 +102,6 @@ TEST(TitForTatPlayer, Clone)
 	delete playerTwo;
 }
 
+#endif
 /** \endcond */
 
