@@ -103,9 +103,12 @@ bool OyunApp::OnInit()
 		if (!wxStrcmp(argv[i], wxT("--test")))
 		{
 			TestResult result;
-			TestRegistry::runAllTests(result);
-			
-			return false;
+
+      // Return the success status in the exit code
+      if (TestRegistry::runAllTests(result))
+        return EXIT_SUCCESS;
+      else
+        return EXIT_FAILURE;
 		}
 		else
 		{

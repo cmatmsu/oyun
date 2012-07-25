@@ -22,7 +22,7 @@ void TestRegistry::addTest(Test *test)
 }
 
 
-int TestRegistry::runAllTests(TestResult& result) 
+bool TestRegistry::runAllTests(TestResult& result) 
 {
 	return instance().run (result);
 }
@@ -50,7 +50,7 @@ void TestRegistry::add(Test *test)
 }
 
 
-int TestRegistry::run(TestResult& result) 
+bool TestRegistry::run(TestResult& result) 
 {
 	int num = 0;
 
@@ -72,7 +72,7 @@ int TestRegistry::run(TestResult& result)
 	}
 	result.testsEnded ();
 
-	return num;
+	return result.testsPassed ();
 }
 
 

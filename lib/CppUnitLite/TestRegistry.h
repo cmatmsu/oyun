@@ -14,12 +14,12 @@ class TestRegistry
 {
 public:
 	static void addTest (Test *test);
-	static int runAllTests (TestResult& result);
+	static bool runAllTests (TestResult& result);
 
 private:
 	static TestRegistry& instance ();
 	void add (Test *test);
-	int run (TestResult& result);
+	bool run (TestResult& result);
 	
 	std::map<wxString, Test *> tests;
 };

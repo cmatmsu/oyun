@@ -19,6 +19,10 @@ public:
 	virtual void addFailure (const Failure& failure);
 	virtual void testsEnded ();
 
+  inline bool testsPassed () {
+    return failureCount == 0;
+  }
+
 private:
 	long testCount;
 	long checkCount;
