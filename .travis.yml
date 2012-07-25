@@ -11,4 +11,3 @@ install:
  - cd build
  - cmake .. && make
  - src/oyun --test
-
