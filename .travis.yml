@@ -8,5 +8,6 @@ before_install:
 install:
  - mkdir cmake_build_temp
  - cd cmake_build_temp
- - cmake .. && make
- - src/oyun_test
+ - cmake ..
+
+script: "make && src/oyun_test"
