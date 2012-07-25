@@ -1,13 +1,12 @@
 language: cpp
 
 before_install:
- - curl http://apt.wxwidgets.org/key.asc | sudo apt-key add -
  - yes | sudo add-apt-repository ppa:fransschreuder1/usbpicprog-stable
  - sudo apt-get update
- - sudo apt-get install libwxbase2.9-dev libwxgtk2.9-dev wx2.9-i18n doxygen cmake
+ - sudo apt-get install libwxbase2.9-dev libwxgtk2.9-dev wx2.9-i18n cmake
 
 install:
- - mkdir build
- - cd build
+ - mkdir cmake_build_temp
+ - cd cmake_build_temp
  - cmake .. && make
  - src/oyun --test
