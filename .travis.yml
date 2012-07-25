@@ -2,9 +2,9 @@ language: cpp
 
 before_install:
  - curl http://apt.wxwidgets.org/key.asc | sudo apt-key add -
- - yes | sudo add-apt-repository "deb http://apt.wxwidgets.org/ `lsb_release -sc`-wx main"
+ - yes | sudo add-apt-repository ppa:fransschreuder1/usbpicprog-stable
  - sudo apt-get update
- - sudo apt-get install libwxbase2.8-dev libwxgtk2.8-dev wx2.8-i18n doxygen cmake
+ - sudo apt-get install libwxbase2.9-dev libwxgtk2.9-dev wx2.9-i18n doxygen cmake
 
 install:
  - mkdir build
