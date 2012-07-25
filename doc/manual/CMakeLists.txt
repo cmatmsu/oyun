@@ -1,4 +1,9 @@
 
+# Look for dependencies
+find_program (PANDOC pandoc)
+find_program (PDFLATEX pdflatex)
+find_program (ZIP zip)
+
 ##########
 # First step: copy the images to the binary directory
 ##########
@@ -53,13 +58,13 @@ foreach (doc ${WIKI_DOCS})
   get_filename_component (basename ${doc} NAME_WE)
   
   add_custom_command (OUTPUT "${basename}.html"
-    COMMAND pandoc -f markdown -t html --template="${CMAKE_CURRENT_SOURCE_DIR}/tools/template.html" -o "${CMAKE_CURRENT_BINARY_DIR}/${basename}.html" "${CMAKE_CURRENT_SOURCE_DIR}/${doc}"
+    COMMAND ${PANDOC} -f markdown -t html --template="${CMAKE_CURRENT_SOURCE_DIR}/tools/template.html" -o "${CMAKE_CURRENT_BINARY_DIR}/${basename}.html" "${CMAKE_CURRENT_SOURCE_DIR}/${doc}"
     COMMAND ${CMAKE_COMMAND} -D CMAKE_CURRENT_BINARY_DIR:string="${CMAKE_CURRENT_BINARY_DIR}" -D basename:string="${basename}" -P "${CMAKE_CURRENT_SOURCE_DIR}/RunHTMLTidy.cmake"
     COMMAND sed -i "" -e "\"s@<DIV id=.*>@@g\"" "${CMAKE_CURRENT_BINARY_DIR}/${basename}.html"
     COMMAND sed -i "" -e "\"s@</DIV>@@g\"" "${CMAKE_CURRENT_BINARY_DIR}/${basename}.html"
     MAIN_DEPENDENCY "${doc}")
   add_custom_command (OUTPUT "${basename}.tex"
-    COMMAND pandoc -f markdown -t latex -o "${CMAKE_CURRENT_BINARY_DIR}/${basename}.tex" "${CMAKE_CURRENT_SOURCE_DIR}/${doc}"
+    COMMAND ${PANDOC} -f markdown -t latex -o "${CMAKE_CURRENT_BINARY_DIR}/${basename}.tex" "${CMAKE_CURRENT_SOURCE_DIR}/${doc}"
     MAIN_DEPENDENCY "${doc}")
   
   list (APPEND TEX_DOCS "${basename}.tex")
@@ -77,9 +82,9 @@ else()
 endif()
 
 add_custom_command (OUTPUT oyun-manual.pdf
-  COMMAND pdflatex oyun-manual -interaction batchmode > "${NULDEV}" 2>&1
-  COMMAND pdflatex oyun-manual -interaction batchmode > "${NULDEV}" 2>&1
-  COMMAND pdflatex oyun-manual -interaction batchmode > "${NULDEV}" 2>&1
+  COMMAND ${PDFLATEX} oyun-manual -interaction batchmode > "${NULDEV}" 2>&1
+  COMMAND ${PDFLATEX} oyun-manual -interaction batchmode > "${NULDEV}" 2>&1
+  COMMAND ${PDFLATEX} oyun-manual -interaction batchmode > "${NULDEV}" 2>&1
   MAIN_DEPENDENCY oyun-manual.tex
   DEPENDS ${TEX_DOCS} ${BINARY_DIR_IMAGES})
 
@@ -97,7 +102,7 @@ add_custom_command (OUTPUT oyun.hhp.cached
 # 7. Pack everything into an HTB
 ##########
 add_custom_command (OUTPUT oyun.htb
-  COMMAND zip -q "oyun.htb" ${HTML_DOCS} ${BINARY_DIR_IMAGES} oyun.hhp.cached
+  COMMAND ${ZIP} -q "oyun.htb" ${HTML_DOCS} ${BINARY_DIR_IMAGES} oyun.hhp.cached
   DEPENDS oyun.hhp.cached ${HTML_DOCS} ${BINARY_DIR_IMAGES})
 
 
@@ -118,4 +123,7 @@ install (FILES "${CMAKE_CURRENT_BINARY_DIR}/oyun.htb"
   DESTINATION ${DOCBOOK_DESTINATION})
 
 
-add_custom_target (docs-manual ALL DEPENDS oyun-manual.pdf oyun.htb)
+# Don't add the target i
+if (NOT PANDOC OR NOT PDFLATEX OR NOT ZIP) 
+  add_custom_target (docs-manual ALL DEPENDS oyun-manual.pdf oyun.htb)
+endif ()
