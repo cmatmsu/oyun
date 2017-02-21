@@ -12,12 +12,12 @@ set (BINARY_DIR_IMAGES "")
 
 foreach (image ${WIKI_IMAGES})
   get_filename_component (filename ${image} NAME)
-  
+
   add_custom_command (OUTPUT "images/${filename}"
     COMMAND ${CMAKE_COMMAND} -E make_directory "${CMAKE_CURRENT_BINARY_DIR}/images"
     COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/${image}" "${CMAKE_CURRENT_BINARY_DIR}/images/${filename}"
     MAIN_DEPENDENCY "${image}")
-  
+
   list (APPEND BINARY_DIR_IMAGES "images/${filename}")
 endforeach (image)
 
@@ -56,7 +56,7 @@ file (GLOB WIKI_DOCS RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" gh-wiki/*.md)
 
 foreach (doc ${WIKI_DOCS})
   get_filename_component (basename ${doc} NAME_WE)
-  
+
   add_custom_command (OUTPUT "${basename}.html"
     COMMAND ${PANDOC} -f markdown -t html --template="${CMAKE_CURRENT_SOURCE_DIR}/tools/template.html" -o "${CMAKE_CURRENT_BINARY_DIR}/${basename}.html" "${CMAKE_CURRENT_SOURCE_DIR}/${doc}"
     COMMAND ${CMAKE_COMMAND} -D CMAKE_CURRENT_BINARY_DIR:string="${CMAKE_CURRENT_BINARY_DIR}" -D basename:string="${basename}" -P "${CMAKE_CURRENT_SOURCE_DIR}/RunHTMLTidy.cmake"
@@ -66,7 +66,7 @@ foreach (doc ${WIKI_DOCS})
   add_custom_command (OUTPUT "${basename}.tex"
     COMMAND ${PANDOC} -f markdown -t latex -o "${CMAKE_CURRENT_BINARY_DIR}/${basename}.tex" "${CMAKE_CURRENT_SOURCE_DIR}/${doc}"
     MAIN_DEPENDENCY "${doc}")
-  
+
   list (APPEND TEX_DOCS "${basename}.tex")
   list (APPEND HTML_DOCS "${basename}.html")
 endforeach (doc)
@@ -123,9 +123,9 @@ install (FILES "${CMAKE_CURRENT_BINARY_DIR}/oyun.htb"
   DESTINATION ${DOCBOOK_DESTINATION})
 
 
-# Don't add the target unless we find 
+# Don't add the target unless we find
 if ((NOT (PANDOC STREQUAL "PANDOC-NOTFOUND")) AND
       (NOT (PDFLATEX STREQUAL "PDFLATEX-NOTFOUND")) AND
-      (NOT (ZIP STREQUAL "ZIP-NOTFOUND"))) 
+      (NOT (ZIP STREQUAL "ZIP-NOTFOUND")))
   add_custom_target (docs-manual ALL DEPENDS oyun-manual.pdf oyun.htb)
 endif ()
